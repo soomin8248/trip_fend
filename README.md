@@ -4,11 +4,13 @@
 사용 프로그램 : VSCODE
 https://code.visualstudio.com/
 
-스타일 : phtoshap 샤용
+스타일 : phtoshap 사용
         scss 사용
 
-소스 설명
+플러그인:
 
+
+root 설명
 src/js -> javascript 파일 모음
 src/css -> css파일 모음
 src/scss -> scss파일 모음
