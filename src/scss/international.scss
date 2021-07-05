@@ -1,0 +1,90 @@
+//공통 부분 scss
+@import "variable";
+
+// 비주얼영역
+#inter_visual {
+    width: 100%;
+    height: 500px;
+    .visual {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        .in_visual {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -99;
+            .visual_title{
+                margin-top: 210px;
+                h2 {
+                    font-size: 44px;
+                    letter-spacing: -1px;
+                    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+                }
+                p {
+                    font-size: 24px;
+                    letter-spacing: -1px;
+                    text-shadow: 3px 3px 5px rgba(0,0,0,0.6);
+                }
+            }
+        }
+        #europe {
+            width: 100%;
+            height: 100%;
+            background: url(/src/img/sub_page/sub_international/overseas_main_bg1.jpg) center center/cover no-repeat;
+            display: block;
+        }
+        #hawaii {
+            width: 100%;
+            height: 100%;
+            background: url(/src/img/sub_page/sub_international/overseas_main_bg2.jpg) center center/cover no-repeat;
+            display: none;
+        }
+        #swiss {
+            width: 100%;
+            height: 100%;
+            background: url(/src/img/sub_page/sub_international/overseas_main_bg3.jpg) center center/cover no-repeat;
+            display: none;
+        }
+        #sebu {
+            width: 100%;
+            height: 100%;
+            background: url(/src/img/sub_page/sub_international/overseas_main_bg4.jpg) center center/cover no-repeat;
+            display: none;
+        }
+    }
+    .visual_control {
+        .container {
+            position: relative;
+        }
+        ul {
+            width: 1200px;
+            height: 60px;
+            position: absolute;
+            left: 0;
+            top: -60px;
+            display: flex;
+            justify-content: space-between;
+            li {
+                line-height: 60px;
+                font-size: 18px;
+                color: #fff;
+                width: 100%;
+                cursor: pointer;
+                text-align: center;
+                background: rgba(0,0,0,0.7);
+                border: 1px solid #000000;
+                &:hover {
+                    background-color: rgba(#4d8fd0, 0.9);
+                    border: 1px solid #4d8fd0;
+                }
+                &.on {
+                    background-color: rgba(#4d8fd0, 0.9);
+                    border: 1px solid #4d8fd0;
+                }
+            }
+        }
+    }
+}

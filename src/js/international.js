@@ -1,87 +1,52 @@
-$(document).ready(function(){
-    // .visual_con 을 누를때 비쥬얼이미지 나타나고 사라지게하기
-    $('.visual_con').on('click',function(){
-        if ($(this).attr("subSeq")) {
-            var viewIdx = $(this).attr("subSeq");
-            $('.in_visual').each(function (thsIdx) {
-                if (thsIdx == viewIdx) {
-                    $(this).fadeIn(500);
-                } else {
-                    $(this).fadeOut(500);
-                }
-            });
-            // .visual_con 에 클래스 on을 붙이고 때기
-            $(".visual_con").each(function (thsIdx) {
-                if ($(this).attr("subSeq") == viewIdx) {
-                    $(this).addClass('on');
-                } else {
-                    $(this).removeClass('on');
-                }
-            });
+document.addEventListener("DOMContentLoaded", function () {
+    let visual_cons = document.querySelectorAll('.visual_con');
+    let in_visuals = document.querySelectorAll('.in_visual');
+    
+    function fade(type, ms, el) {
+        var isIn = type === 'in',
+            opacity = isIn ? 0 : 1,
+            interval = 50,
+            duration = ms,
+            gap = interval / duration;
+      
+        if(isIn) {
+            el.style.display = 'inline';
+            el.style.opacity = opacity;
         }
-    });
-
-
-    let num = 1;
-    let timer;
-
-    // 이미지가 자동으로 바뀌게 하는 함수
-    function startTimer(){
-    timer = setInterval(function(){
-            imgSlide(num);
-            if(num==3){
-                num=0;
-            }else {
-                num++;
-            }
-        },4000);
-    };
-    startTimer();
-
-    // 이미지가 자동으로 바뀌는것을 멈추게 하는 함수
-    function stopTimer(){
-        clearInterval(timer);
+      
+        function func() {
+            opacity = isIn ? opacity + gap : opacity - gap;
+            el.style.opacity = opacity;
+      
+            if(opacity <= 0) el.style.display = 'none'
+            if(opacity <= 0 || opacity >= 1) window.clearInterval(fading);
+        }
+        var fading = window.setInterval(func, interval);
     }
-    let next;
-    const $imgs = $(".in_visual");
-    function imgSlide(index){
-        $imgs.eq(index-1).hide();
-        $imgs.eq(index).show();
-        
-    
-        $(".visual_con").removeClass('on');
-    
-        $('.visual_con').eq(index).addClass('on');
-    
-    };
 
-    // .visual_con에 마우스를 올렸을때 비주얼 이미지가 바뀌는것을 멈추기
-    $(".visual_con").on("mouseenter",function(){
-        stopTimer();
-    });
-    // .visual_con에서 마우스를 땠을때 비주얼 이미지가 다시 바뀌게 하기
-    $(".visual_con").on("mouseleave",function(){
-        startTimer();
+
+    visual_cons.forEach(visual_con => {
+        visual_con.addEventListener("click",function(){
+            if(this.getAttribute('subSeq')){
+                let viewIdx = this.getAttribute('subSeq');
+                // console.log("viewIdx====?" + viewIdx);
+                in_visuals.forEach(function(thsIdx, index){
+                    if (index == viewIdx) {
+                        fade('in', 500, thsIdx);
+                    } else {
+                        fade('out', 500, thsIdx);
+                    }
+                });
+                visual_cons.forEach(function (thsIdx){
+                    if(thsIdx.getAttribute('subSeq') == viewIdx){
+                        thsIdx.classList.add('on');
+                    } else {
+                        thsIdx.classList.remove('on');
+                    }
+                });
+            }
+        });
     });
 
-    // 해외여행페이지 패키지영역 버튼 누르면 아이템 나타나게하기
-    $('.pack_con').click(function(){
-        if ($(this).attr("subSeq")) {
-            var viewIdx = $(this).attr("subSeq");
-            $('.item').each(function (thsIdx) {
-                if (thsIdx == viewIdx) {
-                    $(this).css('display','flex');
-                } else {
-                    $(this).css('display','none');
-                }
-            });
-            $(".pack_con").each(function (thsIdx) {
-                if ($(this).attr("subSeq") == viewIdx) {
-                    $(this).addClass('on');
-                } else {
-                    $(this).removeClass('on');
-                }
-            });
-        }
-    });
+    
 });

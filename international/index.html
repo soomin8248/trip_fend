@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where trip(어디까지 가봤니?) - 해외여행</title>
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="stylesheet" href="/src/css/international.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="/src/js/w3.js"></script>
+    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
+    <script type="text/javascript" src="/src/js/common.js"></script>
+    <script type="text/javascript" src="/src/js/international.js"></script>
+</head>
+<body>
+    <!-- 헤더 start-->
+    <header id="header">
+        <div w3-include-html="/component/head.html"></div>
+    </header>
+    <!-- 헤더 end -->
+
+    <!-- 메인 start -->
+    <!-- 해외여행페이지 -->
+    <section id="inter_visual">
+        <div class="visual">
+            <div id="europe" class="in_visual" subSeq="0">
+                <div class="visual_title">
+                    <h2>올해에는 진짜! 추석 출발 유럽 여행</h2>
+                    <p>2021년 올해에는 백신맞고 추석에는 유럽으로 GO</p>
+                </div>
+            </div>
+            <div id="hawaii" class="in_visual" subSeq="1">
+                <div class="visual_title">
+                    <h2>지금 떠나는 하와이!</h2>
+                    <p>단 3회(9/17, 9/20, 9/22), 추석 전세기 운항</p>
+                </div>
+            </div>
+            <div id="swiss" class="in_visual" subSeq="2">
+                <div class="visual_title">
+                    <h2>대한 항공 취리히 직항! 스위스 완전 일주</h2>
+                    <p>하늘, 산, 꽃으로 만든 스위스의 대자연을 만끽 할 수 있는 기회!</p>
+                </div>
+            </div>
+            <div id="sebu" class="in_visual" subSeq="3">
+                <div class="visual_title">
+                    <h2>최단거리 휴양 천국, 세부</h2>
+                    <p>두번을 가도, 세번을 가도 새로운 즐거움이 가득!</p>
+                </div>
+            </div>
+        </div>
+        <div class="visual_control">
+            <div class="container">
+                <ul>
+                    <li class="visual_con on" subSeq="0">추석 출발 유럽 여행</li>
+                    <li class="visual_con" subSeq="1">지금 떠나는 하와이</li>
+                    <li class="visual_con" subSeq="2">스위스 완전 일주 9일</li>
+                    <li class="visual_con" subSeq="3">최단거리 휴양 천국, 세부</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 이벤트 -->
+    <section id="event">
+        <div class="container" w3-include-html="/component/info.html"></div>
+    </section>
+    <!-- 메인 end -->
+    <!-- 푸터 start -->
+    <footer id="footer">
+        <div w3-include-html="/component/footer.html"></div>
+    </footer>
+    <!-- 푸터 end -->
+</body>
+</html>
