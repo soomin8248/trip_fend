@@ -1,20 +1,3 @@
-section {
-  width: 100%;
-}
-
-section:not(:last-child) {
-  margin-bottom: 100px;
-}
-
-section:first-child {
-  margin-bottom: 190px;
-}
-
-section .title {
-  font-size: 30px;
-  font-weight: 700;
-}
-
 .product_box {
   position: relative;
 }

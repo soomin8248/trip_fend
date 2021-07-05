@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 서브메뉴에 메인페이지로 이동을 눌렀을때 이동
         international_main.addEventListener("click",function(){
-            location.href = "international/index.html";
+            location.href = "/international/index.html";
         });
 
         koreatrip_main.addEventListener("click",function(){
-            location.href = "koreatrip/index.html";
+            location.href = "/koreatrip/index.html";
         });
 
         //이벤트
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function moveEvent(Top1, Top2) {
             lists_event[0].style.top = Top1 + 'px';
             lists_event[1].style.top = Top2 + 'px';
-            console.log(lists_event[1].style.top)
+            // console.log(lists_event[1].style.top)/
             top1 = Top1;
             top2 = Top2;
             if (lists_event[0].style.top == -(lists_event[0].children.length - 1) * 21 + 'px') {

@@ -6,6 +6,23 @@ body {
   line-height: 1.5;
 }
 
+section {
+  width: 100%;
+}
+
+section:first-child {
+  margin-bottom: 190px;
+}
+
+section .title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+section .title span {
+  color: #4d8fd0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

@@ -3,15 +3,7 @@
 
 // main 통부분
 //공통부분
-section{
-    width: 100%;
-    &:not(:last-child){ margin-bottom: 100px; }
-    &:first-child{ margin-bottom: 190px; }
-    .title {
-        font-size: $title-fontsize;
-        font-weight: 700;
-    }
-}
+
 .product_box {
     position: relative;
     .show_travel {

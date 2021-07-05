@@ -1,28 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
     let visual_cons = document.querySelectorAll('.visual_con');
     let in_visuals = document.querySelectorAll('.in_visual');
-    
-    function fade(type, ms, el) {
-        var isIn = type === 'in',
-            opacity = isIn ? 0 : 1,
-            interval = 50,
-            duration = ms,
-            gap = interval / duration;
-      
-        if(isIn) {
-            el.style.display = 'inline';
-            el.style.opacity = opacity;
-        }
-      
-        function func() {
-            opacity = isIn ? opacity + gap : opacity - gap;
-            el.style.opacity = opacity;
-      
-            if(opacity <= 0) el.style.display = 'none'
-            if(opacity <= 0 || opacity >= 1) window.clearInterval(fading);
-        }
-        var fading = window.setInterval(func, interval);
-    }
+
+    let num = 1;
+    let timer;
+    let next;
+
+    // ** FADE OUT FUNCTION **
+    function fadeOut(el) {
+        el.style.opacity = 1;
+        (function fade() {
+            if ((el.style.opacity -= .1) < 0) {
+                el.style.display = "none";
+            } else {
+                requestAnimationFrame(fade);
+            }
+        })();
+    };
+
+    // ** FADE IN FUNCTION **
+    function fadeIn(el, display) {
+        el.style.opacity = 0;
+        el.style.display = display || "block";
+        (function fade() {
+            var val = parseFloat(el.style.opacity);
+            if (!((val += .1) > 1)) {
+                el.style.opacity = val;
+                requestAnimationFrame(fade);
+            }
+        })();
+    };
 
 
     visual_cons.forEach(visual_con => {
@@ -32,9 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 // console.log("viewIdx====?" + viewIdx);
                 in_visuals.forEach(function(thsIdx, index){
                     if (index == viewIdx) {
-                        fade('in', 500, thsIdx);
+                        //fade('in', 500, thsIdx);
+                        // fadeIn(thsIdx);
+                        fadeIn(thsIdx, "block");
                     } else {
-                        fade('out', 500, thsIdx);
+                        fadeOut(thsIdx);
+                        // fadeOut(thsIdx);
                     }
                 });
                 visual_cons.forEach(function (thsIdx){
@@ -46,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
         });
-    });
-
+    });   
     
 });

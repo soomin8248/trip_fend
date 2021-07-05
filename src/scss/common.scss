@@ -9,6 +9,20 @@ body {
     font-family: 'Noto Sans KR','NanumSquare','sans-serif';
     line-height: 1.5;
 }
+
+section{
+    width: 100%;
+    // &:not(:last-child){ margin-bottom: 100px; }
+    &:first-child{ margin-bottom: 190px; }
+    .title {
+        font-size: $title-fontsize;
+        font-weight: 700;
+        span {
+            color: $main-color;
+        }
+    }
+}
+
 .container {
     max-width: 1200px; 
     margin: 0 auto; 
