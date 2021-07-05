@@ -7,11 +7,13 @@
     <title>Where trip(어디까지 가봤니?)</title>
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/base.css">
+    <link rel="stylesheet" href="./src/css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="./src/js/jquery-1.4.1.js"></script>
     <script type="text/javascript" src="./src/js/w3.js"></script>
     <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
     <script type="text/javascript" src="./src/js/common.js"></script>
+    <script type="text/javascript" src="./src/js/swiper.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -20,7 +22,493 @@
             <div w3-include-html="./component/head.html"></div>
         </header>
         <!-- 헤더 end -->
+         <!-- 메인 start -->
+        <main>
+            <section id="visual">
+                <div class="show_visual">
+                    <div class="lists_visual">
+                        <div class="item_visual">
+                            <img src="/src/img/main/mainvisual_bg1.jpg" alt="비주얼이미지1">
+                            <div>
+                                <h3>제주도 소소한 패키지 여행</h3>
+                                <p>10명 이하 소그룹 출발보장! 2명만 모여도 출발
+                                    <br>8인이상 단체예약고객에게는 신세계 상품권 10만원 증정!
+                                </p>
+                                <a href="#" class="view_icon">
+                                    <p>자세히보기</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item_visual">
+                            <img src="/src/img/main/mainvisual_bg2.jpg" alt="비주얼이미지2">
+                            <div>
+                                <h3>마지막 앵콜딜! 필리핀이 널 기다려!</h3>
+                                <p>다시 없을 특가 + 특전
+                                    <br>놓치면 후회! 지금 예약하세요
+                                </p>
+                                <a href="#" class="view_icon">
+                                    <p>자세히보기</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- 검색 -->
+            <section id="search">
+                <div class="container">
+                    <ul>
+                        <li class="selected">패키지</li>
+                        <li>항공</li>
+                        <li>호텔</li>
+                    </ul>
+                    <div class="lists_search">
+                        <div class="package">
+                            <div>
+                                <p>Where<br><span>어디로 떠날까요?</span></p>
+                                <img src="/src/img/icon/serch_icon.png" alt="돋보기아이콘">
+                            </div>
+                            <div>
+                                <p>Take Off<br><span>인천/김포 출발</span></p>
+                                <img src="/src/img/icon/pin_icon.png" alt="핀아이콘">
+                            </div>
+                            <div>
+                                <p>Date<br><span>여행시작일 선택</span></p>
+                                <img src="/src/img/icon/calendar_icon.png" alt="달력아이콘">
+                            </div>
+                            <button>검색</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 해외여행 -->
+            <section id="oversea">
+                <div class="container">
+                    <div class="title_box">
+                        <h2 class="title">백신맞고 출발하는 해외여행</h2>
+                        <a href="#" class="item_more_icon">
+                            <p>상품 더보기 + </p>
+                        </a>
+                    </div>
+                    <div class="product_box">
+                        <div class="show_travel">
+                            <div class="lists_travel" style="left:0;">
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/international/overseas_trip_img1.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>[패키지]</span>세부 3박 4일</p>
+                                        <p>비행기+숙소+스톤마사지와 함께 바다를 보면서 즐기는 힐링여행</p>
+                                        <span class="cost">970,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/international/overseas_trip_img2.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>[패키지]</span>스페인 포르투갈 7박 9일</p>
+                                        <p>비행기+숙소+패키지여행으로 한번에! 스페인과 포르투갈을 함께 즐기기</p>
+                                        <span class="cost">1,690,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/international/overseas_trip_img3.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>[패키지]</span>오사카/교토 2박 3일</p>
+                                        <p>교토에서 놀고 오사카에서 쇼핑하자! 패키지 여행으로 즐기는 일본</p>
+                                        <span class="cost">760,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/international/overseas_trip_img4.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span class="free">[자유여행]</span>홍콩 2박 3일</p>
+                                        <p>빛나는 야경이 아름다운 홍콩 즐기기</p>
+                                        <span class="free cost">670,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/international/overseas_trip_img5.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span class="free">[자유여행]</span>홍콩 2박 3일</p>
+                                        <p>빛나는 야경이 아름다운 홍콩 즐기기</p>
+                                        <span class="free cost">670,000원 ~</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="circleL_icon">
+                            <p><i class="material-icons">keyboard_arrow_left</i></p>
+                        </a>
+                        <a href="#" class="circleR_icon">
+                            <p><i class="material-icons">keyboard_arrow_right</i></p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 국내여행 -->
+            <section id="local_trip">
+                <div class="container">
+                    <div class="title_box">
+                        <h2 class="title">우리나라 구석구석,<br>국내여행</h2>
+                        <ul>
+                            <li class="click">기차투어<i class="material-icons">keyboard_arrow_right</i></li>
+                            <li>내륙여행<i class="material-icons">keyboard_arrow_right</i></li>
+                            <li>제주여행<i class="material-icons">keyboard_arrow_right</i></li>
+                        </ul>
+                    </div>
+                    <div class="product_box">
+                        <div class="show_travel">
+                            <div class="lists_travel on">
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img1.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>부산 시티투어 기차여행</p>
+                                        <p>(당일)매일 출발!<br>하루동안 부산의 도시를 즐겨보세요</p>
+                                        <span class="cost">94,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img2.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>동해바다 강릉 기차여행</p>
+                                        <p>동해바다 기차여행과 우리끼리<br>택시투어로 하루만에 강릉 즐기기</p>
+                                        <span class="cost">99,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img3.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>여수항로맨스 별미기차여행</p>
+                                        <p>(당일)매일 출발 - 1박2일<br>여수,순천,고흥 / 호텔급 숙소에서</p>
+                                        <span class="cost">285,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img4.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>울산/경주 기차여행</p>
+                                        <p>(당일)매일 출발!<br>울산과 경주를 함께 즐겨보세요</p>
+                                        <span class="free cost">120,000원 ~</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lists_travel">
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img5.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>부산 시티투어 기차여행</p>
+                                        <p>(당일)매일 출발!<br>하루동안 부산의 도시를 즐겨보세요</p>
+                                        <span class="cost">94,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img6.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>동해바다 강릉 기차여행</p>
+                                        <p>동해바다 기차여행과 우리끼리<br>택시투어로 하루만에 강릉 즐기기</p>
+                                        <span class="cost">99,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img7.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>여수항로맨스 별미기차여행</p>
+                                        <p>(당일)매일 출발 - 1박2일<br>여수,순천,고흥 / 호텔급 숙소에서</p>
+                                        <span class="cost">285,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/local_trip_img8.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>울산/경주 기차여행</p>
+                                        <p>(당일)매일 출발!<br>울산과 경주를 함께 즐겨보세요</p>
+                                        <span class="free cost">120,000원 ~</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lists_travel">
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/jeju_img1.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>부산 시티투어 기차여행</p>
+                                        <p>(당일)매일 출발!<br>하루동안 부산의 도시를 즐겨보세요</p>
+                                        <span class="cost">94,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/jeju_img2.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>동해바다 강릉 기차여행</p>
+                                        <p>동해바다 기차여행과 우리끼리<br>택시투어로 하루만에 강릉 즐기기</p>
+                                        <span class="cost">99,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/jeju_img3.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>여수항로맨스 별미기차여행</p>
+                                        <p>(당일)매일 출발 - 1박2일<br>여수,순천,고흥 / 호텔급 숙소에서</p>
+                                        <span class="cost">285,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/koreatrip/jeju_img4.jpg">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>KTX</span>울산/경주 기차여행</p>
+                                        <p>(당일)매일 출발!<br>울산과 경주를 함께 즐겨보세요</p>
+                                        <span class="free cost">120,000원 ~</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide_bar">
+                            <div class="blue_bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 호텔/펜션 -->
+            <section id="hotel">
+                <div class="container">
+                    <div class="title_box">
+                        <h2 class="title">국내호텔 WEEKLY BEST</h2>
+                        <a href="#" class="item_more_icon">
+                            <p>상품 더보기 + </p>
+                        </a>
+                    </div>
+                    <div class="product_box">
+                        <div class="show_travel">
+                            <div class="lists_travel">
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/lodgment/hotel_img1.jpg" alt="">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>[강원]</span>켄싱턴리조트 설악비치</p>
+                                        <span class="cost">970,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/lodgment/hotel_img2.jpg" alt="">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>[제주]</span>롯데호텔</p>
+                                        <span class="cost">1,690,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/lodgment/hotel_img3.jpg" alt="">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span>[서울]</span>인터컨티넨탈 서울 코엑스</p>
+                                        <span class="cost">760,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/lodgment/hotel_img4.jpg" alt="">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span class="free">[부산]</span>힐튼 부산</p>
+                                        <span class="cost">670,000원 ~</span>
+                                    </div>
+                                </div>
+                                <div class="item_travel">
+                                    <div class="img_travel">
+                                        <img src="/src/img/lodgment/hotel_img4.jpg" alt="">
+                                        <div class="blackbg"><a href="#" class="view_icon">
+                                                <p>자세히보기</p>
+                                            </a></div>
+                                    </div>
+                                    <div class="text_travel">
+                                        <p><span class="free">[울산]</span>신라스테이 울산</p>
+                                        <span class="cost">670,000원 ~</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="circleL_icon">
+                            <p><i class="material-icons">keyboard_arrow_left</i></p>
+                        </a>
+                        <a href="#" class="circleR_icon">
+                            <p><i class="material-icons">keyboard_arrow_right</i></p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--배너-->
+            <section id="banner">
+                <div class="container">
+                    <div class="show_banner">
+                        <div class="lists_banner">
+                            <div class="item_banner">
+                                <img src="/src/img/banner/banner_bg1.png" alt="배너 이미지1">
+                                <p>워터파크 개장 기념 특가 오픈</p>
+                                <span>방역수칙 지키며 안전하게 즐기는 물놀이</span>
+                                <div class="btn_banner">특가 보러가기</div>
+                            </div>
+                            <div class="item_banner">
+                                <img src="/src/img/banner/banner_bg2.jpg" alt="배너 이미지2">
+                                <p>안다즈호텔 60만원 → 23만원</p>
+                                <span>7/10 ~ 16 일주일 기간 한정 특가!</span>
+                                <div class="btn_banner">자세히 보기</div>
+                            </div>
+                            <div class="item_banner">
+                                <img src="/src/img/banner/banner_bg3.jpg" alt="배너 이미지3">
+                                <p>맛있으면 0칼로리!</p>
+                                <span>놓칠 수 없는 전국 맛집</span>
+                                <div class="btn_banner">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="slidebtn">
+                            <span class="on"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--공지사항-->
+            <section id="notice">
+                <div class="container">
+                    <div class="notice_left">
+                        <div>
+                            <div>
+                                <img src="/src/img/icon/tel.png" alt="전화예약">
+                                <p>웨어투어 예약문의<br><span>1577-1234</span></p>
+                            </div>
+                            <div>
+                                <img src="/src/img/icon/faq.png" alt="1:1문의">
+                                <p>1:1 문의하기<br><span>문의바로가기</span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>고객센터 운영안내</p>
+                            <span>평일(채팅/유선): 09:00 ~ 18:00 (12~13시 제외) 주말/공휴일 : 채팅 상담만 가능
+                                <br>※ 항공권 환불/변경 : 09:00 ~ 17:00까지 접수 가능</span>
+                        </div>
+                    </div>
+                    <div class="notice_right">
+                        <p><a href="#">공지사항 <span>+</span></a></p>
+                        <ul>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 이벤트 -->
+            <section id="event">
+                <div class="container" w3-include-html="./component/info.html"></div>
+            </section>
+        </main>
+        <!-- 메인 end -->
 
         <!-- 푸터 start -->
         <footer id="footer">

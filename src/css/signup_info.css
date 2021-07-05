@@ -1,0 +1,83 @@
+#agree-info.container {
+  letter-spacing: -1px;
+  padding: 100px 0;
+  width: 100%;
+}
+
+#agree-info.container .title {
+  border-bottom: 2px solid #4d8fd0;
+}
+
+#agree-info.container .title h2 {
+  font-size: 38px;
+  color: #4d8fd0;
+  text-align: center;
+}
+
+#agree-info.container .title p {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  font-weight: 200;
+  padding-bottom: 50px;
+}
+
+#agree-info.container .info-contents {
+  padding: 50px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#agree-info.container .info-contents .joinbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#agree-info.container .info-contents .joinbox div {
+  width: 200px;
+  text-align: center;
+  height: 60px;
+  line-height: 55px;
+  border: 1px solid #4d8fd0;
+  border-radius: 30px;
+  font-size: 18px;
+  color: #4d8fd0;
+  font-weight: 500;
+  background: #fff;
+  position: relative;
+}
+
+#agree-info.container .info-contents .joinbox div span {
+  margin-right: 20px;
+}
+
+#agree-info.container .info-contents .joinbox div:not(:last-child) {
+  margin-right: 60px;
+}
+
+#agree-info.container .info-contents .joinbox div:not(:first-child)::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: -61px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#agree-info.container .info-contents .joinbox div.agreebox {
+  background: #4d8fd0;
+  color: #fff;
+}
+
+#agree-info.container .info-contents form {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 50px;
+}

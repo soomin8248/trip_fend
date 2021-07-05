@@ -1,0 +1,200 @@
+#loginpage {
+  padding: 100px 0;
+}
+
+#loginpage .container {
+  width: 100%;
+}
+
+#loginpage .container .title {
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: 2px solid #4d8fd0;
+}
+
+#loginpage .container .title h2 {
+  font-size: 38px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#loginpage .container .login {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+#loginpage .container .login .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  margin-top: 50px;
+  height: 180px;
+}
+
+#loginpage .container .login .input input {
+  width: 80%;
+  height: 60px;
+  line-height: 60px;
+  padding: 20px 30px;
+  background: #eee;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#loginpage .container .login .input input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+#loginpage .container .login .input input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+#loginpage .container .login .input input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+#loginpage .container .login .input input::placeholder {
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+#loginpage .container .login .input button {
+  width: 17%;
+  height: 130px;
+  border-radius: 5px;
+  background: #4d8fd0;
+  border: 2px solid #4d8fd0;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  vertical-align: top;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#loginpage .container .login .input button:hover {
+  background: #fff;
+  color: #4d8fd0;
+  font-weight: bold;
+}
+
+#loginpage .container .login .jointext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#loginpage .container .login .jointext div {
+  height: 21px;
+}
+
+#loginpage .container .login .jointext div input {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #888;
+  position: relative;
+  top: 1.5px;
+}
+
+#loginpage .container .login .jointext div label {
+  color: #888;
+  position: relative;
+  top: -1.5px;
+}
+
+#loginpage .container .login .jointext ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#loginpage .container .login .jointext ul li {
+  position: relative;
+  color: #888;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#loginpage .container .login .jointext ul li:not(:last-child) {
+  margin-right: 40px;
+}
+
+#loginpage .container .login .jointext ul li:not(:last-child):after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 16px;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#loginpage .container .login .jointext ul li:hover {
+  color: #4d8fd0;
+}
+
+#loginpage .container .sns {
+  padding-top: 30px;
+  width: 60%;
+  margin: 0 auto;
+  border-top: 1px solid #eee;
+}
+
+#loginpage .container .sns p {
+  text-align: center;
+  color: #888;
+}
+
+#loginpage .container .sns ul {
+  width: 35%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#loginpage .container .sns ul li {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#loginpage .container .sns ul li:not(:last-child) {
+  padding-right: 15px;
+}
+
+#loginpage .container .sns ul li:hover img {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+#loginpage .container .sns ul li img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}

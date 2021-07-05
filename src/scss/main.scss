@@ -1,0 +1,431 @@
+//공통 부분 scss
+@import "variable";
+
+// main 통부분
+//공통부분
+section{
+    width: 100%;
+    &:not(:last-child){ margin-bottom: 100px; }
+    &:first-child{ margin-bottom: 190px; }
+    .title {
+        font-size: $title-fontsize;
+        font-weight: 700;
+    }
+}
+.product_box {
+    position: relative;
+    .show_travel {
+        width: 100%;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+        .lists_travel {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: 0.5s;
+            left:0;
+            display: flex;
+            align-items: center;
+            .item_travel {
+                width: 280px;
+                height: 100%;
+                border-radius: 15px;
+                border: 1px solid $light-gray;
+                overflow: hidden;
+                &:not(:last-child) {
+                    margin-right: 26.6666px;
+                }
+                .img_travel {
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+                    img { min-width:280px; height: 100%;}
+                    .blackbg {
+                        width: 100%;
+                        height: 100%;
+                        background-color: $black-bg;
+                        @include position($t: 0, $l: 0);
+                        opacity: 0;
+                        transition: 0.5s;
+                        .view_icon {
+                            @include position($t: 50%, $l: 50%);
+                            transform: translate(-50%, -50%);
+                            p {
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+                &:hover .blackbg {
+                    opacity: 1;
+                }
+            }
+        }
+        .text_travel {
+            width: 100%;
+            height: 50%;
+            padding: 25px;
+            background-color: $white-color;
+            position: relative;
+            p:nth-child(1){
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            span {
+                font-size: 16px;
+                color: $main-color;
+            }
+            span.free {
+                color: $orange-color;
+            }
+            span.cost {
+                @include position ($b: 25px, $r: 25px);
+            }
+        }
+    }
+}
+
+//비주얼
+#visual {
+    .show_visual {
+        width: 100%;
+        height: 550px;
+        overflow: hidden;
+        .lists_visual {
+            width: 200%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            .item_visual {
+                width: 50%;
+                &:nth-child(1) {
+                    color: $white-color;
+                    @include position($t: 0, $l: 0);
+                }
+                &:nth-child(2) {
+                    color: $white-color;
+                    @include position($t: 0, $l: 50%);
+                }
+                img {
+                    width: 100%;
+                    min-height: 550px;
+                }
+                div {
+                    @include position($t: 50%, $l: 18.5%);
+                    transform: translateY(-50%);
+                    h3 {
+                        font-size: 40px;
+                    }
+                    > p { 
+                        font-size: 20px;
+                        margin: 20px 0;
+                    }
+                }
+            }    
+        }
+    }
+}
+
+//검색
+#search {
+    height: 160px;
+    margin-top: -260px;
+    position: relative;
+    > div {
+        width: 100%;
+        height: 100%;
+        background-color: $white-color;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 3px 0px 16px rgba(0,0,0,0.3);
+        ul {
+            height: 70px;
+            line-height: 70px;
+            display: flex;
+            border-bottom: 1px solid $light-gray;
+            font-size: 16px;
+            li {
+                padding-left: 60px;
+                &.selected {
+                    color: $main-color;
+                }
+            }
+        }
+        .package {
+            display: flex;
+            div {
+                width: 30%;
+                height: 90px;
+                padding: 0 60px;
+                @include flex;
+                &:not(:last-child) {
+                    border-right: 1px solid $light-gray;
+                }
+                img {
+                    width: 22px;
+                    height: 22px;
+                }
+                p {
+                    color: $dark-gray;
+                    span {
+                        font-size: 16px;
+                        color: $black-color;
+                    }
+                }
+            }
+            button {
+                width: 10%;
+                height: 90px;
+                background-color: $main-color;
+                color: $white-color;
+                font-size: 16px;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}
+
+// 해외여행
+#oversea {
+    .title_box {
+        @include flex;
+        margin-bottom: 45px;
+    }
+}
+
+// 국내여행
+#local_trip {
+    .container{
+        position: relative;
+        .title_box {
+            width: 435px;
+            height: 565px;
+            padding: 50px 40px;
+            border-radius: 15px;
+            background: center center/cover url(/src/img/main/local_trip_menubg.jpg);
+            color: $white-color;
+            .title {
+                margin-bottom: 50px;
+            }
+            li {
+                width: 150px;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid $white-color;
+                border-radius: 19.5px;
+                margin-bottom: 30px;
+                padding-left: 30px;
+                font-size: 16px;
+                position: relative;
+                transition: 0.5s;
+                cursor: pointer;
+                i {
+                    line-height: 40px;
+                    @include position($t: 50%, $r: 30px);
+                    transform: translateY(-50%);
+                }
+                &:hover {
+                    background-color: $main-color;
+                    border: 1px solid $main-color;
+                }
+                &.click {
+                    background-color: $main-color;
+                    border: 1px solid $main-color;
+                }
+            }
+        }
+        .product_box {
+            width: 905px;
+            @include position ($t: 50%, $r: -10px);
+            transform: translateY(-50%);
+            .show_travel {
+                height: 370px;
+                .lists_travel{ 
+                    display: none;
+                    &.on {
+                        display: flex;
+                    }
+                    .item_travel {
+                        height: 350px;
+                        box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+                    }
+                }
+            }
+            .slide_bar {
+                width: 895px;
+                height: 3px;
+                background-color: $light-gray;
+                margin-top: 40px;
+                border-radius: 1px;
+                .blue_bar {
+                    width: 280px;
+                    height: 3px;
+                    background-color: $main-color;
+                    border-radius: 1px;
+                }
+            }
+        }
+    }
+}
+
+// 호텔/펜션
+#hotel {
+    .title_box {
+        @include flex;
+        margin-bottom: 45px;
+    }
+    .img_travel {
+        height: 230px;
+    }
+    .text_travel {
+        height: 120px;
+    }
+}
+
+//배너
+#banner {
+    .show_banner {
+        width: 100%;
+        height: 330px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        .lists_banner {
+            width: 300%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            .item_banner{
+                width: 33.3333%;
+                &:nth-child(1) { 
+                    @include position($t: 0, $l: 0);
+                    color: $white-color;
+                    .btn_banner { background-color: $violet-color; }
+                }
+                &:nth-child(2) { 
+                    @include position($t: 0, $l: 1200px);
+                    img { @include position($t: -200px);}
+                    .btn_banner { background-color: $main-color; }
+                }
+                &:nth-child(3) { 
+                    @include position($t: 0, $l: 1200*2px);
+                    img { @include position($t: -100px);}
+                    .btn_banner { background-color: $green-color; }
+                }
+                img {
+                    width: 100%;
+                }
+                p {
+                    @include position($t: 90px, $l: 100px);
+                    font-size: 36px;
+                }
+                span {
+                    @include position($t: 145px, $l: 100px);
+                    font-size: 18px;
+                }
+                .btn_banner {
+                    @include position($t:190px, $l:100px);
+                    font-size: 16px;
+                    width: 150px;
+                    line-height: 40px;
+                    border-radius: 19.5px;
+                    text-align: center;
+                    color: $white-color;
+                }
+            }
+            
+        }
+        .slidebtn {
+            display: flex;
+            @include position($b: 23px, $l: 50%);
+            transform: translateX(-50%);
+            span {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid $main-color;
+                background-color: #fff;
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+            span.on {
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+//공지사항
+#notice {
+    background-color: $notice-color;
+    margin: 0;
+    .container {
+        display: flex;
+        padding: 60px 0;
+        .notice_left {
+            width: 50%;
+            > div {
+                &:nth-child(1){
+                    display: flex;
+                    div {
+                        display: flex;
+                        width: 50%;
+                        img {
+                            width: 55px;
+                            height: 54px;
+                            margin-right: 20px;
+                        }
+                        p {
+                            font-size: 24px;
+                            line-height: 1;
+                            span {
+                                font-size: 32px;
+                            }
+                        }
+                    }   
+                }
+                &:nth-child(2) {
+                    p {
+                        font-size: 16px;
+                        margin-top: 35px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .notice_right {
+            width: 50%;
+            padding-left: 40px;
+            p {
+                font-size: 30px;
+                line-height: 1;
+                margin-bottom: 30px;
+                span {
+                    float: right;
+                }
+            }
+            li {
+                line-height: 30px;
+                margin-left: 15px;
+                position: relative;
+                span {
+                    float: right;
+                }
+                &:before {
+                    content: "";
+                    display: block;
+                    @include position($t: 50%, $l: -10px);
+                    transform: translate(-50%, -50%);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}

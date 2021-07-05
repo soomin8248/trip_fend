@@ -1,13 +1,41 @@
 //font-size
 $font-size-14: 14px;
 $font-size-16: 16px;
+$font-size-30: 30px;
+
+$base-fontsize: 14px;
+$product-tit-fontsize: 16px;
+$detail-btn-fontsize: 14px;
+$title-fontsize: 30px;
 
 //font-weight
+$font-weight-700: 700;
 
 // color
 $main-color: #4d8fd0;
 $white-color: #fff;
 $black-color: #333;
+$orange-color: #f5a962;
+$violet-color: #5807ae;
+$green-color: #77a83b;
 $light-gray: #ccc;
-$dark-gray:#888888;
+$dark-gray:#888;
 $side-list-color:#c3e1ff;
+$notice-color : #f9f9f9;
+$black-bg: rgba(17,17,17,0.5);
+$input-bg: #eee;
+$input-bg-placeholder: #9d9d9d;
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin position ( $p: absolute, $t: null, $b: null, $l: null, $r: null) {
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}

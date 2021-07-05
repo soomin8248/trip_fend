@@ -1,142 +1,124 @@
-$(document).ready(function(){
+document.addEventListener("DOMContentLoaded", function () {
     w3.includeHTML(function(){
-         // 헤더 영역 메뉴 나오게하기
-         $('.menu').mouseenter(function(){
-            if ($(this).attr("subSeq")) {
-                var viewIdx = $(this).attr("subSeq");
-                $(".sub_menu").each(function (thsIdx) {
-                    if (thsIdx == viewIdx) {
-                        $(this).show();
-                        $("#sub_nav").show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-                $(".leftsubtitle").each(function (thsIdx) {
-                    if ($(this).attr("subSeq") == viewIdx) {
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
-            }
+        let menus = document.querySelectorAll('.menu');
+        let sub_menus = document.querySelectorAll('.sub_menu');
+        let sub_nav = document.querySelector('#sub_nav');
+        let leftsubtitles = document.querySelectorAll('.leftsubtitle');
+        let heder = document.querySelector('#header');
+
+        let international_main = document.querySelector('#international_main');
+        let koreatrip_main = document.querySelector('#koreatrip_main');
+
+        menus.forEach(menu => {
+            menu.addEventListener("mouseenter",function(){
+                if(this.getAttribute('subSeq')){
+                    let viewIdx = this.getAttribute('subSeq');
+                    sub_menus.forEach(function(thsIdx, index){
+                        if (index == viewIdx) {
+                            thsIdx.style.display = "block";
+                            sub_nav.style.display = "block";
+                        } else {
+                            thsIdx.style.display = "none";
+                        }
+                    });
+                    leftsubtitles.forEach(function(thsIdx){
+                        if(thsIdx.getAttribute('subSeq') == viewIdx){
+                            thsIdx.classList.add('on');
+                        } else {
+                            thsIdx.classList.remove('on');
+                        }
+                    });
+                }
+            });
         });
-        $('.leftsubtitle').click(function(){
-            if ($(this).attr("subSeq")) {
-                var viewIdx = $(this).attr("subSeq");
-                $(".sub_menu").each(function (thsIdx) {
-                    if (thsIdx == viewIdx) {
-                        $(this).show();
-                        $("#sub_nav").show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-                $(".leftsubtitle").each(function (thsIdx) {
-                    if ($(this).attr("subSeq") == viewIdx) {
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
-            }
+        
+        leftsubtitles.forEach(leftsubtitle => {
+            leftsubtitle.addEventListener("click",function(){
+                if(this.getAttribute('subSeq')){
+                    let viewIdx = this.getAttribute('subSeq');
+                    sub_menus.forEach(function(thsIdx, index){
+                        if (index == viewIdx) {
+                            thsIdx.style.display = "block";
+                            sub_nav.style.display = "block";
+                        } else {
+                            thsIdx.style.display = "none";
+                        }
+                    });
+                    leftsubtitles.forEach(function(thsIdx){
+                        if(thsIdx.getAttribute('subSeq') == viewIdx){
+                            thsIdx.classList.add('on');
+                        } else {
+                            thsIdx.classList.remove('on');
+                        }
+                    });
+                }
+            });
         });
-        $('#header').mouseleave(function(){
-            $("#sub_nav").hide();
+
+        heder.addEventListener("mouseleave",function(){
+            sub_nav.style.display = "none";
         });
+
         // 서브메뉴에 메인페이지로 이동을 눌렀을때 이동
-        $('#international_main').click(function(){
+        international_main.addEventListener("click",function(){
             location.href = "international/index.html";
         });
-        $('#koreatrip_main').click(function(){
+
+        koreatrip_main.addEventListener("click",function(){
             location.href = "koreatrip/index.html";
         });
 
-        // .visual_con 을 누를때 비쥬얼이미지 나타나고 사라지게하기
+        //이벤트
+        const lists_event = document.querySelectorAll('#event ul');
+        const item_event = document.querySelectorAll('#event li');
+        let top1 = 0;
+        let top2 = 0;
 
-        $('.visual_con').on('click',function(){
-            if ($(this).attr("subSeq")) {
-                var viewIdx = $(this).attr("subSeq");
-                $('.in_visual').each(function (thsIdx) {
-                    if (thsIdx == viewIdx) {
-                        $(this).fadeIn(500);
-                    } else {
-                        $(this).fadeOut(500);
-                    }
-                });
-                // .visual_con 에 클래스 on을 붙이고 때기
-                $(".visual_con").each(function (thsIdx) {
-                    if ($(this).attr("subSeq") == viewIdx) {
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
+        lists_event.forEach(function (item) {
+            let clonefirst = item.firstElementChild.cloneNode(true);
+            item.appendChild(clonefirst);
+            function update() {
+
             }
-        });
+        })
 
-
-        let num = 1;
-        let timer;
-        
-        // 이미지가 자동으로 바뀌게 하는 함수
-        function startTimer(){
-           timer = setInterval(function(){
-                imgSlide(num);
-                if(num==3){
-                    num=0;
-                }else {
-                    num++;
-                }
-            },4000);
-        };
-        startTimer();
-
-        // 이미지가 자동으로 바뀌는것을 멈추게 하는 함수
-        function stopTimer(){
+        function moveEvent(Top1, Top2) {
+            lists_event[0].style.top = Top1 + 'px';
+            lists_event[1].style.top = Top2 + 'px';
+            console.log(lists_event[1].style.top)
+            top1 = Top1;
+            top2 = Top2;
+            if (lists_event[0].style.top == -(lists_event[0].children.length - 1) * 21 + 'px') {
+                setTimeout(function () {
+                    lists_event[0].style.transition = '0s';
+                    lists_event[0].style.top = 0;
+                    top1 = 0;
+                }, 500);
+            }
+            if (lists_event[1].style.top == -(lists_event[1].children.length - 1) * 21 + 'px') {
+                setTimeout(function () {
+                    lists_event[1].style.transition = '0s';
+                    lists_event[1].style.top = 0;
+                    top2 = 0;
+                }, 500);
+            }
+            lists_event[0].style.transition = '0.5s';
+            lists_event[1].style.transition = '0.5s';
+        }
+        function autoEvent() {
+            timer = setInterval(function () {
+                moveEvent(top1 - 21, top2 - 21);
+            }, 2000);
+        }
+        function stopEvent() {
             clearInterval(timer);
         }
-        let next;
-        const $imgs = $(".in_visual");
-        function imgSlide(index){
-            $imgs.eq(index-1).hide();
-            $imgs.eq(index).show();
-            
-           
-            $(".visual_con").removeClass('on');
-           
-             $('.visual_con').eq(index).addClass('on');
-          
-        };
-        
-        // .visual_con에 마우스를 올렸을때 비주얼 이미지가 바뀌는것을 멈추기
-        $(".visual_con").on("mouseenter",function(){
-            stopTimer();
+
+        lists_event.forEach(function (item) {
+            item.addEventListener('mouseenter', stopEvent);
+            item.addEventListener('mouseleave', autoEvent);
         });
-        // .visual_con에서 마우스를 땠을때 비주얼 이미지가 다시 바뀌게 하기
-        $(".visual_con").on("mouseleave",function(){
-            startTimer();
-        });
-        
-        // 해외여행페이지 패키지영역 버튼 누르면 아이템 나타나게하기
-        $('.pack_con').click(function(){
-            if ($(this).attr("subSeq")) {
-                var viewIdx = $(this).attr("subSeq");
-                $('.item').each(function (thsIdx) {
-                    if (thsIdx == viewIdx) {
-                        $(this).css('display','flex');
-                    } else {
-                        $(this).css('display','none');
-                    }
-                });
-                $(".pack_con").each(function (thsIdx) {
-                    if ($(this).attr("subSeq") == viewIdx) {
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
-            }
-        });
+        autoEvent();
+
     });
 });
