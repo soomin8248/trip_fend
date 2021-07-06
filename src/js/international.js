@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let visual_cons = document.querySelectorAll('.visual_con');
-    let in_visuals = document.querySelectorAll('.in_visual');
+    
+    let pack_cons = document.querySelectorAll('.pack_con');
+    let items = document.querySelectorAll('.item');
 
-    let num = 1;
-    let timer;
-    let next;
+    let visualtext = ['추석 출발 유럽 여행', '지금 떠나는 하와이', '스위스 완전 일주 9일', '최단거리 휴양 천국, 세부'];
 
     // ** FADE OUT FUNCTION **
     function fadeOut(el) {
@@ -31,31 +30,60 @@ document.addEventListener("DOMContentLoaded", function () {
         })();
     };
 
-
-    visual_cons.forEach(visual_con => {
-        visual_con.addEventListener("click",function(){
-            if(this.getAttribute('subSeq')){
-                let viewIdx = this.getAttribute('subSeq');
-                // console.log("viewIdx====?" + viewIdx);
-                in_visuals.forEach(function(thsIdx, index){
-                    if (index == viewIdx) {
-                        //fade('in', 500, thsIdx);
-                        // fadeIn(thsIdx);
-                        fadeIn(thsIdx, "block");
-                    } else {
-                        fadeOut(thsIdx);
-                        // fadeOut(thsIdx);
-                    }
-                });
-                visual_cons.forEach(function (thsIdx){
-                    if(thsIdx.getAttribute('subSeq') == viewIdx){
-                        thsIdx.classList.add('on');
-                    } else {
-                        thsIdx.classList.remove('on');
-                    }
-                });
-            }
+    pack_cons.forEach(pack_con => {
+        pack_con.addEventListener("click",function(){
+            let viewIdx = this.getAttribute('subSeq');
+            items.forEach(function(thsIdx,index){
+                if (index == viewIdx) {
+                    thsIdx.style.display = 'flex';
+                } else {
+                    thsIdx.style.display = 'none';
+                }
+            });
+            pack_cons.forEach(function(thsIdx) {
+                if(thsIdx.getAttribute('subSeq') == viewIdx){
+                    thsIdx.classList.add('on');
+                } else {
+                    thsIdx.classList.remove('on');
+                }
+            });
         });
-    });   
-    
+    });
+
+    new Swiper('.visual-swiper', {
+        effect : 'fade',
+        speed : 1000,
+        loop : true, // 무한 루프 슬라이드, 반복이 되며 슬라이드가 끝이 없다.
+        autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+            delay : 3000,   // 시간 설정
+            disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+        },
+        pagination : {
+            el : '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                // return '<div class="' + className + '"><span>' + (visualtext[index]) + '</span></div>';
+                return '<li class="visual_con ' + className + '">' + (visualtext[index]) + '</li>';
+            }
+        },
+    });
+    new Swiper('.free-item-swiper', {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        loop : true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        mousewheel: {
+            invert: true,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+        },
+        autoplay: {
+            delay: 4000,
+        },
+    });
 });

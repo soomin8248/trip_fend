@@ -3,25 +3,23 @@ $font-size-14: 14px;
 $font-size-16: 16px;
 $font-size-18: 18px;
 $font-size-22: 22px;
+$font-size-24: 24px;
 $font-size-26: 26px;
 $font-size-30: 30px;
 $font-size-38: 38px;
-
-$base-fontsize: 14px;
-$product-tit-fontsize: 16px;
-$detail-btn-fontsize: 14px;
-$title-fontsize: 30px;
+$font-size-44: 44px;
 
 //font-weight
 $font-weight-bold: bold;
 $font-weight-nomal: normal;
-$font-weight-200: 200;
 $font-weight-400: 400;
-$font-weight-500: 500;
 $font-weight-700: 700;
+$font-weight-200: 200;
+$font-weight-500: 500;
 
 // color
 $main-color: #4d8fd0;
+$sub-main-color: f7f7f7;
 $white-color: #fff;
 $black-color: #333;
 $orange-color: #f5a962;
@@ -33,8 +31,13 @@ $side-list-color:#c3e1ff;
 $notice-color : #f9f9f9;
 $red-color: #d00000;
 $black-bg: rgba(17,17,17,0.5);
+
 $input-bg: #eee;
 $input-bg-placeholder: #9d9d9d;
+
+$blue: #4d8fd0;
+$gray-bg: #eee;
+$gray-color: #9d9d9d;
 
 @mixin flex {
     display: flex;
