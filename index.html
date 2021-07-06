@@ -19,7 +19,34 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            new Swiper('.visual-swiper', {
+            let clicks = document.querySelectorAll('.click');
+            let koreatrips = document.querySelectorAll('.koreatrip');
+
+            let trainswiper = document.querySelector('#trainswiper');
+            let inlandswiper = document.querySelector('#inlandswiper');
+            let jejuswiper = document.querySelector('#jejuswiper');
+
+            clicks.forEach(click => {
+                click.addEventListener("click",function(){
+                    let viewIdx = this.getAttribute('subSeq');
+                    koreatrips.forEach(function(thsIdx,index){
+                        if(index == viewIdx){
+                            thsIdx.style.display = "flex";
+                        } else {
+                            thsIdx.style.display = "none";
+                        }
+                    });
+                    clicks.forEach(function(thsIdx){
+                        if(thsIdx.getAttribute('subSeq') == viewIdx){
+                            thsIdx.classList.add('on');
+                        } else {
+                            thsIdx.classList.remove('on');
+                        }
+                    });
+                });
+            });
+            
+            var swiper = new Swiper('.visual-swiper', {
                 // effect : 'fade',
                 slidesPerView: 1,
                 speed : 1000,
@@ -29,7 +56,7 @@
                     disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
                 },
             });
-            new Swiper('.travel-swiper', {
+            var swiper = new Swiper('.travel-swiper', {
                 slidesPerView: 4,
                 spaceBetween: 20,
                 loop : true,
@@ -40,7 +67,38 @@
                 mousewheel: {
                     invert: true,
                 },
-                
+            });
+
+            new Swiper('.train_swiper', {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            });
+
+            inlandswiper.addEventListener("click", function(){
+                new Swiper('.inland_swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                });
+            });
+
+            jejuswiper.addEventListener("click", function(){
+                new Swiper('.jeju_swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                });
+            });
+
+            new Swiper('.hotel-swiper', {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                loop : true,
+                navigation: {
+                    nextEl: '.circleR_icon',
+                    prevEl: '.circleL_icon',
+                },
+                mousewheel: {
+                    invert: true,
+                },
             });
         });
     </script>
@@ -210,6 +268,268 @@
                 </div>
             </section>
 
+            <!-- 국내여행 -->
+            <section id="local_trip">
+                <div class="container">
+                    <div class="title_box">
+                        <h2 class="title">우리나라 구석구석,<br>국내여행</h2>
+                        <ul>
+                            <li class="click on" id="trainswiper" subSeq="0">기차투어<i class="material-icons">keyboard_arrow_right</i></li>
+                            <li class="click"  id="inlandswiper" subSeq="1">내륙여행<i class="material-icons">keyboard_arrow_right</i></li>
+                            <li class="click" id="jejuswiper" subSeq="2">제주여행<i class="material-icons">keyboard_arrow_right</i></li>
+                        </ul>
+                    </div>
+                    <div class="product_box">
+                        <div class="show_travel">
+                            <div class="train_swiper koreatrip lists_travel" subSeq="0">
+                                <!-- 기차투어 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img1.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>부산 시티투어 기차여행</p>
+                                            <p>(당일)매일 출발!<br>하루동안 부산의 도시를 즐겨보세요</p>
+                                            <span class="cost">94,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img2.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>동해바다 강릉 기차여행</p>
+                                            <p>동해바다 기차여행과 우리끼리<br>택시투어로 하루만에 강릉 즐기기</p>
+                                            <span class="cost">99,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img3.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>여수항로맨스 별미기차여행</p>
+                                            <p>(당일)매일 출발 - 1박2일<br>여수,순천,고흥 / 호텔급 숙소에서</p>
+                                            <span class="cost">285,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img4.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>울산/경주 기차여행</p>
+                                            <p>(당일)매일 출발!<br>울산과 경주를 함께 즐겨보세요</p>
+                                            <span class="free cost">120,000원 ~</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inland_swiper koreatrip lists_travel" subSeq="1">
+                                <!-- 내륙여행 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img5.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>부산 시티투어 기차여행</p>
+                                            <p>(당일)매일 출발!<br>하루동안 부산의 도시를 즐겨보세요</p>
+                                            <span class="cost">94,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img6.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>동해바다 강릉 기차여행</p>
+                                            <p>동해바다 기차여행과 우리끼리<br>택시투어로 하루만에 강릉 즐기기</p>
+                                            <span class="cost">99,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img7.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>여수항로맨스 별미기차여행</p>
+                                            <p>(당일)매일 출발 - 1박2일<br>여수,순천,고흥 / 호텔급 숙소에서</p>
+                                            <span class="cost">285,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img8.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>울산/경주 기차여행</p>
+                                            <p>(당일)매일 출발!<br>울산과 경주를 함께 즐겨보세요</p>
+                                            <span class="free cost">120,000원 ~</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jeju_swiper koreatrip lists_travel" subSeq="2">
+                                <!-- 제주여행 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img5.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>부산 시티투어 기차여행</p>
+                                            <p>(당일)매일 출발!<br>하루동안 부산의 도시를 즐겨보세요</p>
+                                            <span class="cost">94,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img6.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>동해바다 강릉 기차여행</p>
+                                            <p>동해바다 기차여행과 우리끼리<br>택시투어로 하루만에 강릉 즐기기</p>
+                                            <span class="cost">99,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img7.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>여수항로맨스 별미기차여행</p>
+                                            <p>(당일)매일 출발 - 1박2일<br>여수,순천,고흥 / 호텔급 숙소에서</p>
+                                            <span class="cost">285,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/koreatrip/local_trip_img8.jpg">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>KTX</span>울산/경주 기차여행</p>
+                                            <p>(당일)매일 출발!<br>울산과 경주를 함께 즐겨보세요</p>
+                                            <span class="free cost">120,000원 ~</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 호텔/펜션 -->
+            <section id="hotel">
+                <div class="container">
+                    <div class="title_box">
+                        <h2 class="title">국내호텔 WEEKLY BEST</h2>
+                        <a href="#" class="item_more_icon">
+                            <p>상품 더보기 + </p>
+                        </a>
+                    </div>
+                    <div class="product_box">
+                        <div class="show_travel">
+                            <div class="lists_travel hotel-swiper">
+                                <div class="item_travel swiper-wrapper">
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/hotel_img1.jpg" alt="">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>[강원]</span>켄싱턴리조트 설악비치</p>
+                                            <span class="cost">970,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/hotel_img2.jpg" alt="">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>[제주]</span>롯데호텔</p>
+                                            <span class="cost">1,690,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/hotel_img3.jpg" alt="">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span>[서울]</span>인터컨티넨탈 서울 코엑스</p>
+                                            <span class="cost">760,000원 ~</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide item_travel">
+                                        <div class="img_travel">
+                                            <img src="/src/img/hotel_img4.jpg" alt="">
+                                            <div class="blackbg"><a href="#" class="view_icon">
+                                                    <p>자세히보기</p>
+                                                </a></div>
+                                        </div>
+                                        <div class="text_travel">
+                                            <p><span class="free">[부산]</span>힐튼 부산</p>
+                                            <span class="cost">670,000원 ~</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="circleL_icon">
+                                <p><i class="material-icons">keyboard_arrow_left</i></p>
+                            </a>
+                            <a href="#" class="circleR_icon">
+                                <p><i class="material-icons">keyboard_arrow_right</i></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- 이벤트 -->
             <section id="event">
