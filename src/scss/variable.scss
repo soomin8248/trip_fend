@@ -1,7 +1,11 @@
 //font-size
 $font-size-14: 14px;
 $font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-22: 22px;
+$font-size-26: 26px;
 $font-size-30: 30px;
+$font-size-38: 38px;
 
 $base-fontsize: 14px;
 $product-tit-fontsize: 16px;
@@ -9,6 +13,11 @@ $detail-btn-fontsize: 14px;
 $title-fontsize: 30px;
 
 //font-weight
+$font-weight-bold: bold;
+$font-weight-nomal: normal;
+$font-weight-200: 200;
+$font-weight-400: 400;
+$font-weight-500: 500;
 $font-weight-700: 700;
 
 // color
@@ -22,7 +31,9 @@ $light-gray: #ccc;
 $dark-gray:#888;
 $side-list-color:#c3e1ff;
 $notice-color : #f9f9f9;
+$red-color: #d00000;
 $black-bg: rgba(17,17,17,0.5);
+
 $input-bg: #eee;
 $input-bg-placeholder: #9d9d9d;
 
