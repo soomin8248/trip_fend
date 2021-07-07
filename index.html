@@ -61,8 +61,8 @@
                 spaceBetween: 20,
                 loop : true,
                 navigation: {
-                    nextEl: '.circleR_icon',
-                    prevEl: '.circleL_icon',
+                    nextEl: '.travel-swiper-right',
+                    prevEl: '.travel-swiper-left',
                 },
                 mousewheel: {
                     invert: true,
@@ -93,11 +93,24 @@
                 spaceBetween: 20,
                 loop : true,
                 navigation: {
-                    nextEl: '.circleR_icon',
-                    prevEl: '.circleL_icon',
+                    nextEl: '.hotel-swiper-right',
+                    prevEl: '.hotel-swiper-left',
                 },
                 mousewheel: {
                     invert: true,
+                },
+            });
+
+            new Swiper('.banner-swiper', {
+                speed : 1000,
+                loop : true, // 무한 루프 슬라이드, 반복이 되며 슬라이드가 끝이 없다.
+                autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
+                    delay : 3000,   // 시간 설정
+                    disableOnInteraction : false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+                },
+                pagination : {
+                    el : '.swiper-pagination',
+                    clickable: true,
                 },
             });
         });
@@ -257,10 +270,10 @@
                             </div>   
                         </div>
                         <div id="slide_con">
-                            <a href="#" class="circleL_icon">
+                            <a href="#" class="circleL_icon travel-swiper-left">
                                 <p><i class="material-icons">keyboard_arrow_left</i></p>
                             </a>
-                            <a href="#" class="circleR_icon">
+                            <a href="#" class="circleR_icon travel-swiper-right">
                                 <p><i class="material-icons">keyboard_arrow_right</i></p>
                             </a>
                         </div>
@@ -400,7 +413,7 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/koreatrip/local_trip_img5.jpg">
+                                            <img src="/src/img/koreatrip/jeju_img1.jpg">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -413,7 +426,7 @@
                                     </div>
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/koreatrip/local_trip_img6.jpg">
+                                            <img src="/src/img/koreatrip/jeju_img2.jpg">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -426,7 +439,7 @@
                                     </div>
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/koreatrip/local_trip_img7.jpg">
+                                            <img src="/src/img/koreatrip/jeju_img3.jpg">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -439,7 +452,7 @@
                                     </div>
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/koreatrip/local_trip_img8.jpg">
+                                            <img src="/src/img/koreatrip/jeju_img4.jpg">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -472,7 +485,7 @@
                                 <div class="item_travel swiper-wrapper">
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/hotel_img1.jpg" alt="">
+                                            <img src="/src/img/lodgment/hotel_img1.jpg" alt="">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -484,7 +497,7 @@
                                     </div>
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/hotel_img2.jpg" alt="">
+                                            <img src="/src/img/lodgment/hotel_img2.jpg" alt="">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -496,7 +509,7 @@
                                     </div>
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/hotel_img3.jpg" alt="">
+                                            <img src="/src/img/lodgment/hotel_img3.jpg" alt="">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -508,7 +521,7 @@
                                     </div>
                                     <div class="swiper-slide item_travel">
                                         <div class="img_travel">
-                                            <img src="/src/img/hotel_img4.jpg" alt="">
+                                            <img src="/src/img/lodgment/hotel_img4.jpg" alt="">
                                             <div class="blackbg"><a href="#" class="view_icon">
                                                     <p>자세히보기</p>
                                                 </a></div>
@@ -520,13 +533,75 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="circleL_icon">
-                                <p><i class="material-icons">keyboard_arrow_left</i></p>
-                            </a>
-                            <a href="#" class="circleR_icon">
-                                <p><i class="material-icons">keyboard_arrow_right</i></p>
-                            </a>
+                            <div id="slide_con">
+                                <a href="#" class="circleL_icon hotel-swiper-left">
+                                    <p><i class="material-icons">keyboard_arrow_left</i></p>
+                                </a>
+                                <a href="#" class="circleR_icon hotel-swiper-right">
+                                    <p><i class="material-icons">keyboard_arrow_right</i></p>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--배너-->
+            <section id="banner">
+                <div class="container">
+                    <div class="show_banner banner-swiper">
+                        <div class="lists_banner swiper-wrapper">
+                            <div class="swiper-slide item_banner waterpark">
+                                <img src="/src/img/banner/banner_bg1.png" alt="배너 이미지1">
+                                <p>워터파크 개장 기념 특가 오픈</p>
+                                <span>방역수칙 지키며 안전하게 즐기는 물놀이</span>
+                                <div class="btn_banner">특가 보러가기</div>
+                            </div>
+                            <div class="swiper-slide item_banner hotel">
+                                <img src="/src/img/banner/banner_bg2.jpg" alt="배너 이미지2">
+                                <p>안다즈호텔 60만원 → 23만원</p>
+                                <span>7/10 ~ 16 일주일 기간 한정 특가!</span>
+                                <div class="btn_banner">자세히 보기</div>
+                            </div>
+                            <div class="swiper-slide item_banner restautant">
+                                <img src="/src/img/banner/banner_bg3.jpg" alt="배너 이미지3">
+                                <p>맛있으면 0칼로리!</p>
+                                <span>놓칠 수 없는 전국 맛집</span>
+                                <div class="btn_banner">자세히 보기</div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!--공지사항-->
+            <section id="notice">
+                <div class="container">
+                    <div class="notice_left">
+                        <div>
+                            <div>
+                                <img src="/src/img/icon/tel.png" alt="전화예약">
+                                <p>웨어투어 예약문의<br><span>1577-1234</span></p>
+                            </div>
+                            <div>
+                                <img src="/src/img/icon/faq.png" alt="1:1문의">
+                                <p>1:1 문의하기<br><span>문의바로가기</span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>고객센터 운영안내</p>
+                            <span>평일(채팅/유선): 09:00 ~ 18:00 (12~13시 제외) 주말/공휴일 : 채팅 상담만 가능
+                                <br>※ 항공권 환불/변경 : 09:00 ~ 17:00까지 접수 가능</span>
+                        </div>
+                    </div>
+                    <div class="notice_right">
+                        <p><a href="#">공지사항 <span>+</span></a></p>
+                        <ul>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                            <li><a href="#">코로나19관련 - 항공편 현황 업데이트(2021/04/19기준)<span>2021-06-23</span></a></li>
+                        </ul>
                     </div>
                 </div>
             </section>

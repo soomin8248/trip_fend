@@ -10,6 +10,10 @@ section {
   width: 100%;
 }
 
+section:not(:last-child) {
+  margin-bottom: 100px;
+}
+
 section:first-child {
   margin-bottom: 190px;
 }
