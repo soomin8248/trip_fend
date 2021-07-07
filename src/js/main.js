@@ -52,12 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
     new Swiper('.train_swiper', {
         slidesPerView: 3,
         spaceBetween: 10,
+        scrollbar: { 
+            el: '.swiper-scrollbar', //要素の指定
+        },
+        mousewheel: {
+            invert: true,
+        },
     });
 
     inlandswiper.addEventListener("click", function(){
         new Swiper('.inland_swiper', {
             slidesPerView: 3,
             spaceBetween: 10,
+            scrollbar: { 
+                el: '.swiper-scrollbar', //要素の指定
+            },
+            mousewheel: {
+                invert: true,
+            },
         });
     });
 
@@ -65,6 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
         new Swiper('.jeju_swiper', {
             slidesPerView: 3,
             spaceBetween: 10,
+            scrollbar: { 
+                el: '.swiper-scrollbar', //要素の指定
+            },
+            mousewheel: {
+                invert: true,
+            },
         });
     });
 

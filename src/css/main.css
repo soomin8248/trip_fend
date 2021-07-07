@@ -319,15 +319,12 @@
   width: 895px;
   height: 3px;
   background-color: #ccc;
-  margin-top: 40px;
+  margin-top: -5px;
   border-radius: 1px;
 }
 
-#local_trip .container .product_box .slide_bar .blue_bar {
-  width: 280px;
-  height: 3px;
-  background-color: #4d8fd0;
-  border-radius: 1px;
+#local_trip .container .product_box .slide_bar .swiper-scrollbar-drag {
+  background-color: #4d8fd0 !important;
 }
 
 #local_trip .container .train_swiper {
