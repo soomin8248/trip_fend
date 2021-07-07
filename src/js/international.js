@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new Swiper('.visual-swiper', {
         effect : 'fade',
-        speed : 1000,
+        speed : 500,
         loop : true, // 무한 루프 슬라이드, 반복이 되며 슬라이드가 끝이 없다.
         autoplay : {  // 자동 슬라이드 설정 , 비 활성화 시 false
             delay : 3000,   // 시간 설정
