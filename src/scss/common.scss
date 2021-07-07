@@ -37,6 +37,12 @@ section{
     text-align: center;
     line-height: 40px;
     border-radius: 19.5px;
+    transition: 0.5s;
+    &:hover {
+        color: $white-color;
+        background-color: $main-color;
+        border: 1px solid $main-color;
+    }
 }
 .item_more_icon {
     display: block;
@@ -47,6 +53,12 @@ section{
     text-align: center;
     line-height: 40px;
     border-radius: 19.5px;
+    transition: 0.5s;
+    &:hover {
+        color: $white-color;
+        background-color: $main-color;
+        border: 1px solid $main-color;
+    }
 }
 .circleL_icon {
     display: block;

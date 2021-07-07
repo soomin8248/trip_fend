@@ -41,6 +41,14 @@ section .title span {
   text-align: center;
   line-height: 40px;
   border-radius: 19.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.view_icon:hover {
+  color: #fff;
+  background-color: #4d8fd0;
+  border: 1px solid #4d8fd0;
 }
 
 .item_more_icon {
@@ -52,6 +60,14 @@ section .title span {
   text-align: center;
   line-height: 40px;
   border-radius: 19.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.item_more_icon:hover {
+  color: #fff;
+  background-color: #4d8fd0;
+  border: 1px solid #4d8fd0;
 }
 
 .circleL_icon {

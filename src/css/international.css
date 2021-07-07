@@ -162,6 +162,8 @@
   border-radius: 19.5px;
   border: 1px solid #4d8fd0;
   color: #4d8fd0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #package .package .pack_control ul li:hover {
@@ -213,13 +215,15 @@
 }
 
 #package .package .pack_item .item .sub_item .Picture .back_bg {
-  display: none;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #package .package .pack_item .item .sub_item .Picture .back_bg a {
@@ -239,7 +243,7 @@
 }
 
 #package .package .pack_item .item .sub_item:hover .back_bg {
-  display: block;
+  opacity: 1;
 }
 
 #package .package .pack_item .item .sub_item .info {
@@ -345,13 +349,15 @@
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .Picture .back_bg {
-  display: none;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .Picture .back_bg a {
@@ -373,7 +379,7 @@
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item:hover .back_bg {
-  display: block;
+  opacity: 1;
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .info {
@@ -517,13 +523,15 @@
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .Picture .back_bg {
-  display: none;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .Picture .back_bg a {
@@ -543,7 +551,7 @@
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item:hover .back_bg {
-  display: block;
+  opacity: 1;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info {
