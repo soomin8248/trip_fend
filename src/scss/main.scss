@@ -242,13 +242,10 @@
                 width: 895px;
                 height: 3px;
                 background-color: $light-gray;
-                margin-top: 40px;
+                margin-top: -5px;
                 border-radius: 1px;
-                .blue_bar {
-                    width: 280px;
-                    height: 3px;
-                    background-color: $main-color;
-                    border-radius: 1px;
+                .swiper-scrollbar-drag {
+                    background-color: $main-color !important;
                 }
             }
         }
