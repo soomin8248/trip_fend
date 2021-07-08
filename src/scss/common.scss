@@ -23,35 +23,34 @@ section{
     }
 
 }
-
 .container {
     max-width: 1200px; 
     margin: 0 auto; 
 }
 .view_icon {
     display: block;
-    width: 150px;
+    width: 130px;
     height: 40px;
-    border: 1px solid $white-color;
+    border: 2px solid $white-color;
     color: $white-color;
     text-align: center;
-    line-height: 40px;
+    line-height: 36px;
     border-radius: 19.5px;
     transition: 0.5s;
     &:hover {
         color: $white-color;
         background-color: $main-color;
-        border: 1px solid $main-color;
+        border: 2px solid $main-color;
     }
 }
 .item_more_icon {
     display: block;
-    width: 150px;
+    width: 130px;
     height: 40px;
     border: 1px solid $black-color;
     color: $black-color;
     text-align: center;
-    line-height: 40px;
+    line-height: 38px;
     border-radius: 19.5px;
     transition: 0.5s;
     &:hover {
