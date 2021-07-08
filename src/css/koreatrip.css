@@ -1,0 +1,108 @@
+.kor_title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#kor_visual {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+#kor_visual .visual_items {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#kor_visual .visual_items .visual_item {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#kor_visual .visual_items .visual_item h2 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: bold;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kor_visual .visual_items .visual_item p {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kor_visual .visual_items .visual_item.on {
+  display: block;
+}
+
+#kor_visual .visual_items .visual_item:nth-child(1) {
+  background: url(../img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
+}
+
+#kor_visual .visual_items .visual_item:nth-child(2) {
+  background: url(../img/sub_page/sub_korea/main_bg2.jpg) center center/cover no-repeat;
+}
+
+#kor_visual #kor_search {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#kor_visual #kor_search div {
+  width: 350px;
+  background-color: #fff;
+  padding: 20px 60px;
+  color: #888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#kor_visual #kor_search div span {
+  font-size: 16px;
+  color: #333;
+}
+
+#kor_visual #kor_search div:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+#kor_visual #kor_search button {
+  width: 150px;
+  background: #4d8fd0;
+  border: none;
+  color: #fff;
+}

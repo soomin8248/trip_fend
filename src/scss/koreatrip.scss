@@ -1,0 +1,81 @@
+@import "variable";
+
+.kor_title {
+    font-size: $font-size-30;
+    font-weight: $font-weight-bold;
+    text-align: center;
+}
+
+#kor_visual {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    .visual_items {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .visual_item {
+            width: 100%;
+            height: 100%;
+            display: none;
+            @include position($t: 0, $l: 0);
+            h2 {
+                color: #fff;
+                font-size: $font-size-44;
+                font-weight: $font-weight-bold;
+                text-shadow: 0px 3px 5px rgba(0,0,0,0.6);
+                @include position($t: 35%, $l: 50%);
+                transform: translateX(-50%);
+            }
+            p {
+                color: #fff;
+                font-size: $font-size-24;
+                text-shadow: 0px 3px 5px rgba(0,0,0,0.6);
+                @include position($t: 49%, $l: 50%);
+                transform: translateX(-50%);
+            }
+            &.on {
+                display: block;
+            }
+            &:nth-child(1) {
+                background: url(../img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
+            }
+            &:nth-child(2) {
+                background: url(../img/sub_page/sub_korea/main_bg2.jpg) center center/cover no-repeat;
+            }
+        }
+    }
+    #kor_search {
+        height: 80px;
+        display: flex;
+        @include position($b: 70px, $l: 50%);
+        transform: translateX(-50%);
+        border-radius: 15px;
+        overflow: hidden;
+        div {
+            width: 350px;
+            background-color: #fff;
+            padding: 20px 60px;
+            color: $dark-gray;
+            @include flex;
+            span {
+                font-size: $font-size-16;
+                color: $black-color;
+            }
+            &:not(:last-child) {
+                border-right: 1px solid $light-gray;
+            }
+        }
+        button {
+            width: 150px;
+            background: $main-color;
+            border: none;
+            color: #fff;
+        }
+    }
+}
+
+#kor_jeju {
+    
+}
