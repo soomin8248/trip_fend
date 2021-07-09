@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +14,100 @@
     <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
     <script type="text/javascript" src="/src/js/common.js"></script>
 </head>
+
 <body>
     <!-- 헤더 start-->
     <header id="header">
         <div w3-include-html="/component/head.html"></div>
     </header>
     <!-- 헤더 end -->
-    <section>
-        
-    </section>
-    <!-- 메인 start -->
 
+    <!-- 메인 start -->
+    <section id="detail-page">
+        <div id="detail-tit">
+            <p class="pack-tag">해외패키지</p>
+            <h2>[오키나와3일] 따스한 햇살 가득 오키나와, 진정한 휴양을 꿈꾼다면 바로 이곳!</h2>
+            <div class="product-num">
+                <span>상품번호</span>
+                <span>abcdef123456</span>
+            </div>
+            <p class="pr-info-btn">여행상품 핵심정보</p>
+            <ul class="imgbox">
+                <li><img src="../src/img/detailpage/title_img1.jpg" alt="오키나와"></li>
+                <li><img src="../src/img/detailpage/title_img2.jpg" alt="오키나와"></li>
+                <li><img src="../src/img/detailpage/title_img3.jpg" alt="오키나와"></li>
+            </ul>
+        </div>
+        <div id="schedule">
+            <h3>여행 주요 일정</h3>
+            <table>
+                <tr>
+                    <th>여행기간</th>
+                    <td>2박 3일</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">이용교통</th>
+                    <td>대한항공</td>
+                    <td>
+                        <div class="air-box">
+                            <span class="flight_number">KE907</span>
+                            <div class="flight_regular">
+                                <p>한국출발<span>2021.11.01 (월) 14:05</span></p>
+                                <p>현지도착<span>2021.11.01 (월) 16:30</span></p>
+                            </div>
+                        </div>
+                        <div class="air-box">
+                            <span class="flight_number">KE908</span>
+                            <div class="flight_regular">
+                                <p>현지출발<span>2021.11.03 (월) 17:30</span></p>
+                                <p>현지도착<span>2021.11.03 (월) 19:55</span></p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>방문도시</th>
+                    <td>인천 → 오키나와 → 인천</td>
+                </tr>
+                <tr>
+                    <th>예약현황</th>
+                    <td>예약 : 0석<span>남은좌석 : 10석 (최소출발 15명)</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="product-price">
+            <table>
+                <tr>
+                    <th>구분</th>
+                    <th>성인</th>
+                    <th>아동<span>(만 2세 ~ 만12세 미만)</span></th>
+                    <th>구분<span>(만 2세 미만)</span></th>
+                </tr>
+                <tr>
+                    <td>기본상품가</td>
+                    <td>1,299,000원</td>
+                    <td>1,299,000원</td>
+                    <td>300,000원</td>
+                </tr>
+                <tr>
+                    <td>유류할증료</td>
+                    <td>0원</td>
+                    <td>0원</td>
+                    <td>0원</td>
+                </tr>
+                <tr class="total-price">
+                    <td>총 상품가</td>
+                    <td>1,299,000원</td>
+                    <td>1,299,000원</td>
+                    <td>300,000원</td>
+                </tr>
+            </table>
+            <ul class="price-matter">
+                <li>항공권 또는 항공권이 포함된 상품의 경우, 표시되는 상품요금은 세금 및 예상 유류할증료가 포함된 가격이며, 유류할증료는 유가 및 환율 등에 따라 변동될 수 있습니다.</li>
+                <li>아동/유아 기준은 항공사마다 상이하여, 예약 후 최종 확정됩니다.</li>
+            </ul>
+        </div>
+    </section>
     <!-- 메인 end -->
 
     <!-- 푸터 start -->
@@ -32,4 +116,5 @@
     </footer>
     <!-- 푸터 end -->
 </body>
+
 </html>
