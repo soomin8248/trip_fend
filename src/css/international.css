@@ -15,6 +15,7 @@
 #inter_visual {
   width: 100%;
   height: 500px;
+  margin-bottom: 100px;
 }
 
 #inter_visual .visual {
@@ -129,10 +130,6 @@
 #package {
   width: 100%;
   letter-spacing: -1px;
-}
-
-#package .package {
-  padding: 100px 0;
 }
 
 #package .package .pack_control {
@@ -262,7 +259,7 @@
 }
 
 #package .package .pack_item .item .sub_item .info h4 span {
-  padding-right: 3px;
+  padding-right: 5px;
   color: #4d8fd0;
 }
 
@@ -315,12 +312,11 @@
 }
 
 #free_travel .free_travel .container .free_item {
-  width: 100%;
+  width: 1196px;
   height: 356px;
 }
 
 #free_travel .free_travel .container .free_item .f_item {
-  width: 100%;
   height: 352px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -398,7 +394,7 @@
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .info h4 span {
-  padding-right: 3px;
+  padding-right: 5px;
   color: #4d8fd0;
 }
 
@@ -425,8 +421,8 @@
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 378px;
-  left: 325px;
+  top: 398px;
+  left: 350px;
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
   z-index: 50;
@@ -451,8 +447,8 @@
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
-  top: 378px;
-  right: 325px;
+  top: 398px;
+  right: 350px;
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
   z-index: 50;
@@ -470,13 +466,11 @@
 
 #best_travel {
   width: 100%;
-  height: 1050px;
+  height: 835px;
   letter-spacing: -1px;
 }
 
 #best_travel .best_travel {
-  height: 100%;
-  padding: 100px 0;
   text-align: center;
 }
 
@@ -570,7 +564,7 @@
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 span {
-  padding-right: 3px;
+  padding-right: 5px;
   color: #4d8fd0;
 }
 
