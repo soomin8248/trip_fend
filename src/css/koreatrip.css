@@ -193,6 +193,7 @@ section[id^="kor_"]:not(:first-child) {
 
 #kor_visual #kor_search button {
   width: 150px;
+  font-size: 16px;
   background: #4d8fd0;
   border: none;
   color: #fff;

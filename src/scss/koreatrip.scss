@@ -142,6 +142,7 @@ section[id^="kor_"]{
         }
         button {
             width: 150px;
+            font-size: $font-size-16;
             background: $main-color;
             border: none;
             color: #fff;
@@ -161,7 +162,7 @@ section[id^="kor_"]{
             height: 50px;
             text-align: center;
             line-height: 50px;
-            font-size: 18px;
+            font-size: $font-size-18;
             border: 1px solid $main-color;
             border-radius: 22px;
             color: $main-color;
@@ -191,7 +192,6 @@ section[id^="kor_"]{
                 @include flex;
             }
         }
-        
     }
 }
 //제주여행 영역 끝

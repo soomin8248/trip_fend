@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    //visual 이미지 fadeIn/fadeOut 효과주기(4초간격)
     const visualItem = document.querySelectorAll('.visual_item');
     let timer;
     let num = 0;
@@ -25,11 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     fadeStart();
 
-
-
-
-
-
+    //제주여행 메뉴 클릭시 해당 아이템들 나타나도록 하기
     const jejuItems = document.querySelectorAll('.jeju_items');
     const jejuMenu = document.querySelectorAll('.jeju_menu li');
 
@@ -42,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 
+    //MD추천 아이템들 무한슬라이드 효과주기(버튼, 스크롤)
     var swiper = new Swiper('.korMD-swiper', {
         slidesPerView: 4,
         spaceBetween: 30,
