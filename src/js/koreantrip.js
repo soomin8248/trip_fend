@@ -2,19 +2,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const visualItem = document.querySelectorAll('.visual_item');
     let timer;
     let num = 0;
-    visual();
     function visual() {
-        timer = setInterval(function () {
-            if (num >= visualItem.length - 1) {
-                num = 0;
-            } else {
-                num += 1;
-            }
-            visualItem.forEach(item => item.classList.remove('on'));
-            visualItem[num].classList.add('on');
-
-        }, 5000)
+        if (num >= visualItem.length - 1) {
+            num = 0;
+        } else {
+            num += 1;
+        }
+        visualItem.forEach(item => item.classList.remove('on'));
+        visualItem[num].classList.add('on');
     }
+    function fadeStart() {
+        timer = setInterval(() => visual(), 4000);
+        console.log('start');
+    }
+    function fadeStop() {
+        clearInterval(timer);
+        console.log('stop');
+    }
+    visualItem.forEach(item => {
+        item.addEventListener('mouseleave', fadeStart);
+        item.addEventListener('mouseenter', fadeStop);
+    });
+    fadeStart();
 
 
 
