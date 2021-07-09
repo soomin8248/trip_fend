@@ -1,0 +1,332 @@
+section[id^="kor_"] {
+  margin: 0;
+}
+
+section[id^="kor_"]:not(:first-child) {
+  padding: 100px 0;
+}
+
+.kor_title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.kor_title span {
+  color: #4d8fd0;
+}
+
+.kor_item {
+  width: 280px;
+  height: 350px;
+  border-radius: 15px;
+}
+
+.kor_item .image {
+  height: 50%;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+}
+
+.kor_item .image img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.kor_item .image .blackbg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px 15px 0 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.kor_item .image .blackbg .view_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.kor_item .image .blackbg .view_icon p {
+  color: #fff;
+}
+
+.kor_item .image:hover .blackbg {
+  opacity: 1;
+}
+
+.kor_item .kor_info {
+  height: 50%;
+  border-radius: 0 0 15px 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 30px;
+  position: relative;
+}
+
+.kor_item .kor_info h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.kor_item .kor_info h4 span {
+  color: #4d8fd0;
+}
+
+.kor_item .kor_info p:last-child {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4d8fd0;
+}
+
+#kor_visual {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+#kor_visual .visual_items {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#kor_visual .visual_items .visual_item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#kor_visual .visual_items .visual_item h2 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: bold;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kor_visual .visual_items .visual_item p {
+  color: #fff;
+  font-size: 24px;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kor_visual .visual_items .visual_item.on {
+  opacity: 1;
+}
+
+#kor_visual .visual_items .visual_item:nth-child(1) {
+  background: url(../img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
+}
+
+#kor_visual .visual_items .visual_item:nth-child(2) {
+  background: url(../img/sub_page/sub_korea/main_bg2.jpg) center center/cover no-repeat;
+}
+
+#kor_visual #kor_search {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#kor_visual #kor_search div {
+  width: 350px;
+  background-color: #fff;
+  padding: 20px 60px;
+  color: #888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#kor_visual #kor_search div span {
+  font-size: 16px;
+  color: #333;
+}
+
+#kor_visual #kor_search div:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+#kor_visual #kor_search button {
+  width: 150px;
+  font-size: 16px;
+  background: #4d8fd0;
+  border: none;
+  color: #fff;
+}
+
+#kor_jeju .jeju_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+#kor_jeju .jeju_menu li {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  border: 1px solid #4d8fd0;
+  border-radius: 22px;
+  color: #4d8fd0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#kor_jeju .jeju_menu li:not(:last-child) {
+  margin-right: 20px;
+}
+
+#kor_jeju .jeju_menu li.on {
+  color: #fff;
+  background: #4d8fd0;
+}
+
+#kor_jeju .jeju_menu li:hover {
+  color: #fff;
+  background: #4d8fd0;
+}
+
+#kor_jeju .jeju_contents {
+  height: 350px;
+  position: relative;
+}
+
+#kor_jeju .jeju_contents .jeju_items {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#kor_jeju .jeju_contents .jeju_items.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#kor_md {
+  background-color: #eee;
+}
+
+#kor_md .md_contents {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+#kor_md .md_contents .md_show {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#kor_md .md_contents .md_show .md_items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+#kor_md .md_contents .md_show .md_items .grayfont {
+  color: #888;
+}
+
+#kor_md .md_contents #slide_con {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #ccc;
+  z-index: 100;
+}
+
+#kor_md .md_contents #slide_con a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#kor_md .md_contents #slide_con a:hover {
+  color: #333;
+}
+
+#kor_best .best_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+#kor_best .best_items .grayfont {
+  color: #888;
+}
