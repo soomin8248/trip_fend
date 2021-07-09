@@ -95,92 +95,94 @@
                     background: $white-color;
                 }
             }
-            #sub_menu {
+            .sub_wrap {
                 width: 85%;
-                height: 390px;
-                padding: 0 25px 32px 70px;
-                background-color: $white-color;
-                display: none;
                 z-index: 3;
-                .sub_menu_title {
-                    height: 88px;
-                    @include flex;
-                    .smenu_t {
-                        height: 100%;
-                        display: flex;
-                        align-items: center;
-                        h2 {
-                            color: $main-color;
-                            font-size: 20px;
-                            margin-right: 40px;
-                        }
-                        .goMain{
+                #sub_menu {
+                    width: 100%;
+                    height: 390px;
+                    padding: 0 25px 32px 70px;
+                    background-color: $white-color;
+                    .sub_menu_title {
+                        height: 88px;
+                        @include flex;
+                        .smenu_t {
+                            height: 100%;
                             display: flex;
                             align-items: center;
-                            p {
-                                font-size: 14px;
-                                color: $dark-gray;
-                                cursor: pointer;
-                                transition: 0.5s;
-                                z-index: 3;
+                            h2 {
+                                color: $main-color;
+                                font-size: 20px;
+                                margin-right: 40px;
                             }
-                            .rightIcon {
-                                padding-left: 5px;
-                                height: 100%;
+                            .goMain{
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;
-                                i {
-                                    font-size: 15px;
-                                    color: $white-color;
-                                    width: 15px;
-                                    height: 15px;
-                                    border-radius: 50%;
-                                    background-color: $dark-gray;
-                                    line-height: 15px;
+                                p {
+                                    font-size: 14px;
+                                    color: $dark-gray;
+                                    cursor: pointer;
                                     transition: 0.5s;
+                                    z-index: 3;
                                 }
-                            }
-                            &:hover p {
-                                color: $main-color;
-                            }
-                            &:hover i {
-                                background-color: $main-color;
-                            }
-                        }
-                    }
-                }
-                #sub_menu_list {
-                    display: flex;
-                    .menu_list {
-                        width: 252px;
-                        margin-right: 110px;
-                        ul {
-                            .menu_title {
-                                font-size: $font-size-16;
-                                padding-bottom: 10px;
-                                border-bottom: 2px solid $main-color;
-                                margin-bottom: 25px;
-                                a {
+                                .rightIcon {
+                                    padding-left: 5px;
+                                    height: 100%;
                                     display: flex;
-                                    justify-content: space-between;
-                                    .material-icons {
+                                    align-items: center;
+                                    justify-content: center;
+                                    i {
+                                        font-size: 15px;
+                                        color: $white-color;
+                                        width: 15px;
+                                        height: 15px;
+                                        border-radius: 50%;
+                                        background-color: $dark-gray;
+                                        line-height: 15px;
                                         transition: 0.5s;
                                     }
                                 }
-                                &:hover .material-icons {
+                                &:hover p {
                                     color: $main-color;
                                 }
-                            }
-                            li {
-                                font-size: 14px;
-                                margin-bottom: 14px;
-                                transition: 0.5s;
-                                &:not(.menu_title):hover {
-                                    color: $main-color;
+                                &:hover i {
+                                    background-color: $main-color;
                                 }
                             }
-                        } 
+                        }
+                    }
+                    #sub_menu_list {
+                        display: flex;
+                        .menu_list {
+                            width: 252px;
+                            margin-right: 110px;
+                            ul {
+                                .menu_title {
+                                    font-size: $font-size-16;
+                                    padding-bottom: 10px;
+                                    border-bottom: 2px solid $main-color;
+                                    margin-bottom: 25px;
+                                    a {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        .material-icons {
+                                            transition: 0.5s;
+                                        }
+                                    }
+                                    &:hover .material-icons {
+                                        color: $main-color;
+                                    }
+                                }
+                                li {
+                                    font-size: 14px;
+                                    margin-bottom: 14px;
+                                    transition: 0.5s;
+                                    &:not(.menu_title):hover {
+                                        color: $main-color;
+                                    }
+                                }
+                            } 
+                        }
                     }
                 }
             }
