@@ -1,11 +1,83 @@
 @import "variable";
 
+//공통 시작
+section[id^="kor_"]{
+    &:not(:first-child){padding: 100px 0;}
+    margin: 0;
+}
 .kor_title {
     font-size: $font-size-30;
     font-weight: $font-weight-bold;
     text-align: center;
+    margin-bottom: 45px;
+    span {
+        color: $main-color;
+    }
 }
+.kor_item {
+    width: 280px;
+    height: 350px;
+    border-radius: 15px;
+    .image {
+        height: 50%;
+        overflow: hidden;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+        img {
+            width: 100%;
+            min-height: 100%;
+        }
+        .blackbg {
+            width: 100%;
+            height: 100%;
+            background-color: $black-bg;
+            @include position($t: 0, $l: 0);
+            border-radius: 15px 15px 0 0;
+            opacity: 0;
+            transition: 0.5s;
+            .view_icon {
+                @include position($t: 50%, $l: 50%);
+                transform: translate(-50%, -50%);
+                p {
+                    color: $white-color;
+                }
+            }
+        }
+        &:hover .blackbg {
+            opacity: 1;
+        }
+    }
+    .kor_info {
+        height: 50%;
+        border-radius: 0 0 15px 15px;
+        background-color: #fff;
+        border: 1px solid $light-gray;
+        border-top: none;
+        padding: 30px;
+        position: relative;
+        h4 {
+            font-size: $font-size-16;
+            font-weight: $font-weight-500;
+            margin-bottom: 15px;
+            span {
+                color: $main-color;
+            }
+        }
+        p {
+            
+            &:last-child {
+                @include position($b: 30px, $r: 30px);
+                font-size: $font-size-16;
+                font-weight: $font-weight-bold;
+                color: $main-color;
+            }
+        }
+    }
+}
+//공통 끝
 
+
+//비주얼 영역 시작
 #kor_visual {
     width: 100%;
     height: 500px;
@@ -18,8 +90,9 @@
         .visual_item {
             width: 100%;
             height: 100%;
-            display: none;
             @include position($t: 0, $l: 0);
+            opacity: 0;
+            transition: 0.8s;
             h2 {
                 color: #fff;
                 font-size: $font-size-44;
@@ -36,7 +109,7 @@
                 transform: translateX(-50%);
             }
             &.on {
-                display: block;
+                opacity: 1;
             }
             &:nth-child(1) {
                 background: url(../img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
@@ -75,7 +148,96 @@
         }
     }
 }
+//비주얼 영역 끝
 
+//제주여행 영역 시작
 #kor_jeju {
-    
+    .jeju_menu {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        li {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            border: 1px solid $main-color;
+            border-radius: 22px;
+            color: $main-color;
+            transition: 0.5s;
+            cursor: pointer;
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+            &.on {
+                color: #fff;
+                background: $main-color;
+            }
+            &:hover {
+                color: #fff;
+                background: $main-color;
+            }
+        }
+    }
+    .jeju_contents {
+        height: 350px;
+        position: relative;
+        .jeju_items {
+            width: 100%;
+            @include position($t: 0, $l: 0);
+            display: none;
+            &.on {
+                @include flex;
+            }
+        }
+        
+    }
+}
+//제주여행 영역 끝
+
+//MDPICK 영역 시작
+#kor_md {
+    background-color: $gray-bg;
+    .md_contents{
+        width: 100%;
+        height: 350px;
+        position: relative;
+        .md_show {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            .md_items {
+                @include position($t:0, $l:0);
+                display: flex;
+                height: 100%;
+                .grayfont { color: $dark-gray;}
+            }
+        }
+        #slide_con {
+            width: 100%;
+            height: 40px;
+            @include position($t:50%, $l:0);
+            transform: translateY(-50%);
+            color: $light-gray;
+            z-index: 100;
+            a {
+                transition: 0.5s;
+                &:hover {
+                    color: $black-color;
+                }
+            }
+        }
+    }
+}
+//MDPICK 영역 끝
+
+//BEST 영역 시작
+#kor_best {
+    .best_items {
+        @include flex;
+        margin-bottom: 30px;
+        .grayfont { color: $dark-gray;}
+    }
 }
