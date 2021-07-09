@@ -391,30 +391,39 @@
 #hotel .img_travel .gangwon {
   width: 100%;
   height: 100%;
-  background: url(../img/lodgment/hotel_img1.jpg) center center/cover no-repeat;
-  background-size: 250%;
+  background: url(../img/lodgment/hotel_img1.jpg) center top/cover no-repeat;
   border-radius: 15px 15px 0 0;
 }
 
 #hotel .img_travel .jeju {
   width: 100%;
   height: 100%;
-  background: url(../img/lodgment/hotel_img2.jpg) center center/cover no-repeat;
-  background-size: 150%;
+  background: url(../img/lodgment/hotel_img2.jpg) left top/cover no-repeat;
   border-radius: 15px 15px 0 0;
 }
 
 #hotel .img_travel .seoul {
   width: 100%;
   height: 100%;
-  background: url(../img/lodgment/hotel_img3.jpg) left top/cover no-repeat;
+  background: url(../img/lodgment/hotel_img3.jpg) no-repeat;
+  background-size: cover;
+  background-position: left -150px top 0;
   border-radius: 15px 15px 0 0;
 }
 
 #hotel .img_travel .busan {
   width: 100%;
   height: 100%;
-  background: url(../img/lodgment/hotel_img4.jpg) center center/cover no-repeat;
+  background: url(../img/lodgment/hotel_img4.jpg) no-repeat;
+  background-size: cover;
+  background-position: left -320px top 0;
+  border-radius: 15px 15px 0 0;
+}
+
+#hotel .img_travel .incheon {
+  width: 100%;
+  height: 100%;
+  background: url(../img/lodgment/hotel_img5.jpg) left top/cover no-repeat;
   border-radius: 15px 15px 0 0;
 }
 
@@ -554,6 +563,11 @@
 #notice .container .notice_left > div:nth-child(2) p {
   font-size: 16px;
   margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+#notice .container .notice_left > div:nth-child(2) span {
+  display: block;
   margin-bottom: 10px;
 }
 
