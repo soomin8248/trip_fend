@@ -19,6 +19,7 @@
 #inter_visual {
     width: 100%;
     height: 500px;
+    margin-bottom: 100px;
     .visual {
         width: 100%;
         height: 100%;
@@ -111,7 +112,6 @@
     width: 100%;
     letter-spacing: -1px;
     .package {
-        padding: 100px 0;
         .pack_control {
             text-align: center;
             width: 850px;
@@ -213,7 +213,7 @@
                             font-weight: $font-weight-bold;
                             margin-bottom: 18px;
                             span {
-                                padding-right: 3px;
+                                padding-right: 5px;
                                 color: $main-color;
                             }
                         }
@@ -260,10 +260,9 @@
         .container {
             overflow: hidden;
             .free_item {
-                width: 100%;
+                width: 1196px;
                 height: 356px;
                 .f_item {
-                    width: 100%;
                     height: 352px;
                     display: flex;
                     justify-content: space-between;
@@ -327,7 +326,7 @@
                                 font-weight: bold;
                                 margin-bottom: 18px;
                                 span {
-                                    padding-right: 3px;
+                                    padding-right: 5px;
                                     color: $main-color;
                                 }
                             }
@@ -357,8 +356,8 @@
                     background-color: $white-color;
                     border-radius: 50%;
                     position: absolute;
-                    top: 378px;
-                    left: 325px;
+                    top: 398px;
+                    left: 350px;
                     box-shadow: 1px 1px 2px rgba(0,0,0,0.75);
                     z-index: 50;
                     background-image:none !important;
@@ -379,8 +378,8 @@
                     background-color: $white-color;
                     border-radius: 50%;
                     position: absolute;
-                    top: 378px;
-                    right: 325px;
+                    top: 398px;
+                    right: 350px;
                     box-shadow: 1px 1px 2px rgba(0,0,0,0.75);
                     z-index: 50;
                     background-image:none !important;
@@ -400,11 +399,10 @@
 // 해외여행 인기상품 영역
 #best_travel {
     width: 100%;
-    height: 1050px;
+    height: 835px;
     letter-spacing: -1px;
     .best_travel {
-        height: 100%;
-        padding: 100px 0;
+        // height: 100%;
         text-align: center;
         .main_title {
             h3 {
@@ -482,7 +480,7 @@
                             font-weight: bold;
                             margin-bottom: 18px;
                             span {
-                                padding-right: 3px;
+                                padding-right: 5px;
                                 color: $main-color;
                             }
                         }
