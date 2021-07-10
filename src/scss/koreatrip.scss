@@ -90,10 +90,7 @@ section[id^="kor_"]{
         .visual_item {
             width: 100%;
             height: 100%;
-            @include position($t: 0, $l: 0);
-            opacity: 0;
-            transition: 0.8s;
-            h2 {
+            h2{
                 color: #fff;
                 font-size: $font-size-44;
                 font-weight: $font-weight-bold;
@@ -108,15 +105,12 @@ section[id^="kor_"]{
                 @include position($t: 49%, $l: 50%);
                 transform: translateX(-50%);
             }
-            &.on {
-                opacity: 1;
-            }
-            &:nth-child(1) {
-                background: url(../img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
-            }
-            &:nth-child(2) {
-                background: url(../img/sub_page/sub_korea/main_bg2.jpg) center center/cover no-repeat;
-            }
+        }
+        .jeju {
+            background: url(/src/img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
+        }
+        .seoul {
+            background: url(/src/img/sub_page/sub_korea/main_bg2.jpg) center center/cover no-repeat;
         }
     }
     #kor_search {
@@ -126,6 +120,7 @@ section[id^="kor_"]{
         transform: translateX(-50%);
         border-radius: 15px;
         overflow: hidden;
+        z-index: 99;
         div {
             width: 350px;
             background-color: #fff;
