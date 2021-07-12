@@ -204,7 +204,6 @@ section[id^="kor_"]{
         width: 100%;
         height: 350px;
         position: relative;
-        // overflow: hidden;
         .md_show {
             width: 100%;
             height: 100%;
@@ -213,7 +212,7 @@ section[id^="kor_"]{
                 // @include position($t:0, $l:0);
                 display: flex;
                 justify-content: flex-start;
-                width: 1198px;
+                width: 1200px;
                 height: 348px;
                 .grayfont { color: $dark-gray;}
             }

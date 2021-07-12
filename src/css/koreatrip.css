@@ -283,7 +283,7 @@ section[id^="kor_"]:not(:first-child) {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 1198px;
+  width: 1200px;
   height: 348px;
 }
 
