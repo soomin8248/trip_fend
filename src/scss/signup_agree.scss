@@ -165,6 +165,7 @@
             color: $main-color;
             font-weight: bold;
             transition: 0.5s;
+            cursor: pointer;
             &:hover {
                 background: $main-color;
                 color: $white-color;
