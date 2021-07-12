@@ -205,6 +205,7 @@
   font-weight: bold;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 #agree.container .joinbtn button:hover {

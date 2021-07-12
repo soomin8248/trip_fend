@@ -6,13 +6,13 @@ footer {
     .f_menu {
         height: 60px; 
         background: $black-color;
-        color: $light-gray;
         .f_info {
             width: 650px; 
             height: 60px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center;
+            color: $footer-info-color;
             li {
                 display: flex;
                 height: 100%;
@@ -22,7 +22,7 @@ footer {
                     content: '';
                     width: 1px;
                     height: 14px;
-                    background-color: $white-color;
+                    background-color: $footer-info-color;
                     margin: 0 24px;
                 }
                 &:last-child::after {
