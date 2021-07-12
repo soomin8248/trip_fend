@@ -166,13 +166,11 @@
 
 #visual .show_visual .lists_visual .item_visual div h3 {
   font-size: 44px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 #visual .show_visual .lists_visual .item_visual div > p {
   font-size: 24px;
   margin: 20px 0;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 #search {
