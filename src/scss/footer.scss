@@ -12,18 +12,26 @@ footer {
             display: flex; 
             justify-content: space-between; 
             align-items: center;
-            color: $footer-info-color;
             li {
+                color: $white-color;
                 display: flex;
                 height: 100%;
                 align-items: center;
+                a {
+                    opacity: 0.5;
+                    transition: 0.5s;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
                 &::after {
                     display: block;
                     content: '';
                     width: 1px;
                     height: 14px;
-                    background-color: $footer-info-color;
+                    background-color: $white-color;
                     margin: 0 24px;
+                    opacity: 0.5;
                 }
                 &:last-child::after {
                     display: none;

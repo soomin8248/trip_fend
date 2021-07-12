@@ -1,7 +1,7 @@
 #header {
   width: 100%;
   height: 150px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
 }
 
 #header #top {
@@ -158,6 +158,8 @@
 #header #sub_nav .sub_nav_body #side_list {
   width: 15%;
   background-color: #c3e1ff;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
   cursor: pointer;
   z-index: 3;
 }
@@ -178,6 +180,8 @@
 #header #sub_nav .sub_nav_body .sub_wrap {
   width: 85%;
   z-index: 3;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 
 #header #sub_nav .sub_nav_body .sub_wrap #sub_menu {

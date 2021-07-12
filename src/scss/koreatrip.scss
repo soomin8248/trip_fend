@@ -18,6 +18,7 @@ section[id^="kor_"]{
     width: 280px;
     height: 350px;
     border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
     .image {
         height: 50%;
         overflow: hidden;
@@ -90,27 +91,32 @@ section[id^="kor_"]{
         .visual_item {
             width: 100%;
             height: 100%;
-            h2{
-                color: #fff;
+            h3 { 
+                color: $white-color;
                 font-size: $font-size-44;
-                font-weight: $font-weight-bold;
-                text-shadow: 0px 3px 5px rgba(0,0,0,0.6);
-                @include position($t: 35%, $l: 50%);
+                font-weight: $font-weight-500;
+                text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+                @include position($t: 30%, $l: 50%);
                 transform: translateX(-50%);
             }
             p {
-                color: #fff;
-                font-size: $font-size-24;
-                text-shadow: 0px 3px 5px rgba(0,0,0,0.6);
-                @include position($t: 49%, $l: 50%);
+                color: $white-color;
+                font-size: $font-size-22;
+                font-weight: $font-weight-200;
+                text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+                @include position($t: 43%, $l: 50%);
                 transform: translateX(-50%);
             }
         }
         .jeju {
-            background: url(/src/img/sub_page/sub_korea/main_bg1.jpg) center 60%/cover no-repeat;
+            background: url(/src/img/sub_page/sub_korea/main_bg1.jpg) no-repeat;
+            background-size: cover;
+            background-position: left 50% top 60% ;
         }
         .seoul {
-            background: url(/src/img/sub_page/sub_korea/main_bg2.jpg) center center/cover no-repeat;
+            background: url(/src/img/sub_page/sub_korea/main_bg2.jpg) no-repeat;
+            background-size: cover;
+            background-position: left 0 top 34% ;
         }
     }
     #kor_search {
@@ -120,7 +126,7 @@ section[id^="kor_"]{
         transform: translateX(-50%);
         border-radius: 15px;
         overflow: hidden;
-        z-index: 99;
+        z-index: 2;
         div {
             width: 350px;
             background-color: #fff;
@@ -180,7 +186,7 @@ section[id^="kor_"]{
         height: 350px;
         position: relative;
         .jeju_items {
-            width: 100%;
+            width: 1196px;
             @include position($t: 0, $l: 0);
             display: none;
             &.on {
@@ -198,15 +204,17 @@ section[id^="kor_"]{
         width: 100%;
         height: 350px;
         position: relative;
+        // overflow: hidden;
         .md_show {
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            position: relative;
+            border-radius: 15px;
             .md_items {
-                @include position($t:0, $l:0);
+                // @include position($t:0, $l:0);
                 display: flex;
-                height: 100%;
+                justify-content: flex-start;
+                width: 1198px;
+                height: 348px;
                 .grayfont { color: $dark-gray;}
             }
         }
