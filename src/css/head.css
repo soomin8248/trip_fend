@@ -97,6 +97,15 @@
   width: 450px;
 }
 
+#header #nav .nav_menu ul li {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#header #nav .nav_menu ul li:hover {
+  color: #4d8fd0;
+}
+
 #header #nav .nav_menu ul li p {
   height: 23px;
   display: -webkit-box;
@@ -133,6 +142,7 @@
 }
 
 #header #sub_nav {
+  margin-top: 1px;
   font-size: 16px;
   display: none;
 }
