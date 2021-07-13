@@ -10,10 +10,24 @@
     <link rel="stylesheet" href="/src/css/base.css">
     <link rel="stylesheet" href="/src/css/detailpage.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
     <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
     <script type="text/javascript" src="/src/js/w3.js"></script>
     <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
     <script type="text/javascript" src="/src/js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper('.packimg-swiper', {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                },
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -35,16 +49,32 @@
                 </p>
                 <button class="pack_info_btn">여행상품 핵심정보</button>
             </div>
-            <!-- <p class="pack_info_btn">여행상품 핵심정보</p> -->
-            <ul class="imgbox">
-                <li><img src="../src/img/detailpage/title_img1.jpg" alt="오키나와"></li>
-                <li><img src="../src/img/detailpage/title_img2.jpg" alt="오키나와"></li>
-                <li><img src="../src/img/detailpage/title_img3.jpg" alt="오키나와"></li>
-            </ul>
+            <div class="packimg-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../src/img/detailpage/title_img1.jpg" alt="오키나와">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/detailpage/title_img2.jpg" alt="오키나와">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/detailpage/title_img3.jpg" alt="오키나와">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/detailpage/title_img4.jpg" alt="오키나와">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/detailpage/title_img6.jpg" alt="오키나와">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../src/img/detailpage/title_img7.png" alt="오키나와">
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="detail_wrap">
             <div id="schedule">
-                <h3>여행 주요 일정</h3>
+                <h3 class="tit_style">여행 주요 일정</h3>
                 <div class="trip_schedule_box">
                     <ul>
                         <li>
@@ -85,13 +115,15 @@
                 </div>
             </div>
             <div id="product_price">
-                <h3>상품 가격</h3>
+                <h3 class="tit_style">상품 가격</h3>
                 <table>
                     <thead>
                         <tr>
                             <th>구분</th>
                             <th>성인</th>
-                            <th>아동<span>(만 2세 ~ 만12세 미만)</span></th>
+                            <th>
+                                아동<span>(만 2세 ~ 만12세 미만)</span>
+                            </th>
                             <th>구분<span>(만 2세 미만)</span></th>
                         </tr>
                     </thead>
@@ -117,13 +149,14 @@
                     </tbody>
                 </table>
                 <ul class="price_matter">
-                    <li>항공권 또는 항공권이 포함된 상품의 경우, 표시되는 상품요금은 세금 및 예상 유류할증료가 포함된 가격이며, 유류할증료는 유가 및 환율 등에 따라 변동될 수 있습니다.
+                    <li>항공권 또는 항공권이 포함된 상품의 경우, 표시되는 상품요금은 세금 및 예상 유류할증료가 포함된 가격이며, 유류할증료는 유가 및 환율 등에 따라<br />변동될 수
+                        있습니다.
                     </li>
                     <li>아동/유아 기준은 항공사마다 상이하여, 예약 후 최종 확정됩니다.</li>
                 </ul>
             </div>
             <div id="infomation">
-                <h3>포함/불포함/선택경비 정보</h3>
+                <h3 class="tit_style">포함/불포함/선택경비 정보</h3>
                 <div class="incl_info">
                     <span>포함사항</span>
                     <ul>
@@ -151,6 +184,7 @@
                 </div>
             </div>
             <div id="reservation">
+                <h3 class="tit_style">예약시 유의사항</h3>
                 <table>
                     <tr>
                         <th>여권</th>
@@ -195,7 +229,7 @@
                 </table>
             </div>
             <div id="product_info">
-                <h3>상품안내</h3>
+                <h3 class="tit_style">상품안내</h3>
                 <div class="prod_imgbox">
                     <img src="../src/img/detailpage/tourimg.jpg" alt="상품안내 배너이미지">
                 </div>
@@ -1231,7 +1265,7 @@
                 </div>
             </div>
             <div id="city_info">
-                <h3>방문 도시 정보</h3>
+                <h3 class="tit_style">방문 도시 정보</h3>
                 <table>
                     <thead>
                         <tr>

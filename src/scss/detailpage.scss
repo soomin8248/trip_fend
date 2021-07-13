@@ -17,6 +17,8 @@ $black-color: #333;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
+    font-size: 15px;
     #detail_tit {
         .pack_tag {
             width: 100px;
@@ -70,27 +72,37 @@ $black-color: #333;
                 background: $main-color;
             }
         }
-        .imgbox {
-            padding: 20px 0 60px;
-            display: flex;
-            justify-content: space-between;
-            li {
-                width: 32%;
-                img {
-                    width: 100%;
+        // swiper 슬라이드
+        .packimg-swiper {
+            width: 1200px;
+            height: 300px;
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                .swiper-slide {
+                    height: 300px;
+                    width: 32%;
+                    img {
+                        width: 100%;
+                        height: 300px;
+                    }
                 }
             }
         }
     }
     #detail_wrap {
+        padding-top: 60px;
         max-width: 900px;
+        .tit_style{
+            font-size: 24px;
+            font-weight: 500;
+            padding-bottom: 30px;
+        }
+        // 여행 주요 일정
         #schedule {
             width: 100%;
-            h3 {
-                font-size: 24px;
-                font-weight: 500;
-                padding-bottom: 30px;
-            }
             .trip_schedule_box {
                 border-top: 1px solid $black-color;
                 li {
@@ -162,6 +174,86 @@ $black-color: #333;
                                     }
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+        // 상품가격
+        #product_price {
+            padding: 60px 0;
+            table {
+                width: 100%;
+                thead {
+                    height: 70px;
+                    tr{
+                        
+                        border-top: 1px solid $black-color;
+                        background: rgba(195,225,255,0.3);
+                        font-size: 16px;
+                        th {
+                            font-weight: normal;
+                            line-height: 1.2;
+                            span {
+                                display: block;
+                                color: #777;
+                                font-size: 15px;
+                            }
+                        }
+                            
+                    }
+                }
+                tbody {
+                    border-bottom: 1px solid $light-gray;
+                    tr {
+                        text-align: center;
+                        td {
+                            padding: 15px 0;
+                        }
+                    }
+                    .total_price {
+                        td {
+                            &:not(:nth-child(1)) {
+                                color: $main-color;
+                                font-size: 17px;
+                                font-weight: 500;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .price_matter {
+                padding-top: 20px;
+                li {
+                    padding-left: 10px;
+                    position: relative;
+                    color: #888;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background: $main-color;
+                        position: absolute;
+                        top: 50%; left: 0;
+                        transform: translateY(-50%);
+                    }
+                    &:nth-child(1) {
+                        &::before {
+                            
+                                content: "";
+                                display: block;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background: $main-color;
+                                position: absolute;
+                                top: 11px; left: 0;
+                            
                         }
                     }
                 }

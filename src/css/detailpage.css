@@ -4,6 +4,8 @@
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+  font-size: 15px;
 }
 
 #detail_page #detail_tit .pack_tag {
@@ -71,8 +73,14 @@
   background: #4d8fd0;
 }
 
-#detail_page #detail_tit .imgbox {
-  padding: 20px 0 60px;
+#detail_page #detail_tit .packimg-swiper {
+  width: 1200px;
+  height: 300px;
+}
+
+#detail_page #detail_tit .packimg-swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,26 +89,29 @@
           justify-content: space-between;
 }
 
-#detail_page #detail_tit .imgbox li {
+#detail_page #detail_tit .packimg-swiper .swiper-wrapper .swiper-slide {
+  height: 300px;
   width: 32%;
 }
 
-#detail_page #detail_tit .imgbox li img {
+#detail_page #detail_tit .packimg-swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
+  height: 300px;
 }
 
 #detail_page #detail_wrap {
+  padding-top: 60px;
   max-width: 900px;
+}
+
+#detail_page #detail_wrap .tit_style {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 30px;
 }
 
 #detail_page #detail_wrap #schedule {
   width: 100%;
-}
-
-#detail_page #detail_wrap #schedule h3 {
-  font-size: 24px;
-  font-weight: 500;
-  padding-bottom: 30px;
 }
 
 #detail_page #detail_wrap #schedule .trip_schedule_box {
@@ -203,4 +214,89 @@
   left: -15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+#detail_page #detail_wrap #product_price {
+  padding: 60px 0;
+}
+
+#detail_page #detail_wrap #product_price table {
+  width: 100%;
+}
+
+#detail_page #detail_wrap #product_price table thead {
+  height: 70px;
+}
+
+#detail_page #detail_wrap #product_price table thead tr {
+  border-top: 1px solid #333;
+  background: rgba(195, 225, 255, 0.3);
+  font-size: 16px;
+}
+
+#detail_page #detail_wrap #product_price table thead tr th {
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+#detail_page #detail_wrap #product_price table thead tr th span {
+  display: block;
+  color: #777;
+  font-size: 15px;
+}
+
+#detail_page #detail_wrap #product_price table tbody {
+  border-bottom: 1px solid #ccc;
+}
+
+#detail_page #detail_wrap #product_price table tbody tr {
+  text-align: center;
+}
+
+#detail_page #detail_wrap #product_price table tbody tr td {
+  padding: 15px 0;
+}
+
+#detail_page #detail_wrap #product_price table tbody .total_price td:not(:nth-child(1)) {
+  color: #4d8fd0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#detail_page #detail_wrap #product_price .price_matter {
+  padding-top: 20px;
+}
+
+#detail_page #detail_wrap #product_price .price_matter li {
+  padding-left: 10px;
+  position: relative;
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#detail_page #detail_wrap #product_price .price_matter li::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4d8fd0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#detail_page #detail_wrap #product_price .price_matter li:nth-child(1)::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4d8fd0;
+  position: absolute;
+  top: 11px;
+  left: 0;
 }
