@@ -1,0 +1,171 @@
+$main-color: #4d8fd0;
+$gray-color: #9d9d9d;
+$light-gray: #ccc;
+$black-color: #333;
+
+@mixin position ( $p: absolute, $t: null, $b: null, $l: null, $r: null) {
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}
+
+#detail_page {
+    padding: 50px 0 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    #detail_tit {
+        .pack_tag {
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            background: $main-color;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+        h2 {
+            padding: 30px 0;
+            font-size: 30px;
+            font-weight: 500;
+            border-bottom: 2px solid $main-color;   
+        }
+        .pack_num {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            p {
+                color: $gray-color;
+                span {
+                    &:nth-child(1) {
+                        margin-right: 40px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 15px;
+                            background: $light-gray;
+                            position: absolute;
+                            top: 50%; right: -20px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .pack_info_btn {
+                letter-spacing: -1px;
+                border: none;
+                outline: none;
+                width: 150px;
+                height: 45px;
+                border-radius: 22.5px;
+                padding: 6px;
+                color: #fff;
+                background: $main-color;
+            }
+        }
+        .imgbox {
+            padding: 20px 0 60px;
+            display: flex;
+            justify-content: space-between;
+            li {
+                width: 32%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    #detail_wrap {
+        max-width: 900px;
+        #schedule {
+            width: 100%;
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+                padding-bottom: 30px;
+            }
+            .trip_schedule_box {
+                border-top: 1px solid $black-color;
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    border-bottom: 1px solid $light-gray;
+                    font-size: 15px;
+                    .sceh_tit{
+                        width: 20%;
+                        font-size: 16px;
+                    }
+                    .traffic_con {
+                        width: 80%;
+                        .float_name {
+                            padding-bottom: 20px;
+                            padding-left: 20px;
+                            border-bottom: 1px solid $light-gray;
+                            position: relative;
+                            line-height: 18px;
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                width: 18px; height: 18px;
+                                background: url('../img/detailpage/KE.png') center center no-repeat;
+                                position: absolute;
+                                top: 0; left: 0;
+                            }
+                        }
+                        .float-schedule {
+                            display: flex;
+                            .air_box {
+                                padding-top: 20px;
+                                display: flex;
+                                align-items: center;
+                                width: 50%;
+                                .flight_number {
+                                    padding-top: 22px;
+                                    position: relative;
+                                    color: $main-color;
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 27px;
+                                        height: 16px;
+                                        background: url('../img/detailpage/ico_flight.jpg');
+                                        position: absolute;
+                                        top: 5px; left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                }
+                                .flight_regular {
+                                    padding-left: 20px;
+                                    p {
+                                        span {
+                                            margin-left: 30px;
+                                            position: relative;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 1px;
+                                                height: 15px;
+                                                background: $light-gray;
+                                                position: absolute;
+                                                top: 50%; left: -15px;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
