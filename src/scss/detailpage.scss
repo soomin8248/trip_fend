@@ -259,5 +259,235 @@ $black-color: #333;
                 }
             }
         }
+        #infomation {
+            padding-bottom: 60px;
+            .info{
+                border-bottom: 1px solid $light-gray;
+                padding: 45px 0;
+                display: flex;
+                .incl_tit {
+                    display: block;
+                    width: 20%;
+                    padding: 46px 0;
+                    display: flex;
+                    justify-content: center;
+                    span{
+                        font-size: 18px;
+                        position: relative;
+                        text-align: center;
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            position: absolute;
+                            top: -40px; left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+            ul {
+                width: 80%;
+                padding-left: 30px;
+                li {
+                    padding-bottom: 20px;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 5px; height: 5px;
+                        border-radius: 50%;
+                        background: $main-color;
+                        position: absolute;
+                        top: 9px; left: -10px;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+            }
+            .include {
+                border-top: 1px solid $black-color;
+                span {
+                    &::before {
+                        background: url('../img/detailpage/info_circle.png') center center no-repeat;
+                    }
+                }
+            }
+            .not_include {
+                span {
+                    &::before {
+                        background: url('../img/detailpage/info_x.png') center center no-repeat;
+                    }
+                }
+                ul {
+                    li {
+                        &::before {
+                            background: #f1454c;
+                        }
+                    }
+                }
+            }
+        }
+        #reservation {
+            padding-bottom: 60px;
+            table {
+                width: 100%;
+                tbody {
+                    border-top: 1px solid $black-color;
+                    border-bottom: 1px solid $light-gray;
+                    th {
+                        padding: 15px 30px;
+                        text-align: left;
+                        background: rgba(195, 225, 255, 0.3);
+                        font-weight: normal;
+                    }
+                    td {
+                        padding: 15px 0 15px 30px;
+                    }
+                }
+            }
+        }
+        #product_info {
+            padding-bottom: 60px;
+            .prod_imgbox {
+                height: 400px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            #prod_more {
+                width: 100%;
+                padding: 16px;
+                border: 1px solid $main-color;
+                border-radius: 0;
+                outline: none;
+                background: #fff;
+                color: $main-color;
+                font-size: 16px;
+                letter-spacing: -1px;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+        }
+        #guide_trip_box {
+            .guide_menu_tab {
+                display: flex;
+                li {
+                    width: 16.666%;
+                    text-align: center;
+                    border-top: 1px solid #ddd;
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    border-bottom: 1px solid $main-color;
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 20px 0;
+                    }
+                }
+                .on {
+                    border-top: 1px solid $main-color;
+                    border-left: 1px solid $main-color;
+                    border-right: 1px solid $main-color;
+                    border-bottom: 1px solid #fff;
+                }
+                & + & {
+                    border-bottom: 1px solid $main-color;
+                }
+            }
+            #content_tab {
+                padding-top: 30px;
+                .tabpage {
+                    .submenu_tab {
+                        width: 100%;
+                        border-bottom: 1px solid $light-gray;
+                        padding-bottom: 10px;
+                        display: flex;
+                        li {
+                            padding-right: 30px;
+                            position: relative;
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 36px;
+                                height: 3px;
+                                background: $main-color;
+                                position: absolute;
+                                bottom: -12px; left: 0;
+                            }
+                        }
+                    }
+                    h4 {
+                        padding: 40px 0;
+                        font-size: 22px;
+                    }
+                    .trip_notice {
+                        width: 100%;
+                        height: 120px;
+                        background: rgba(195,225,255,0.3);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        div {
+                            width: 83%;
+                            p {
+                                position: relative;
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    width: 18px;
+                                    height: 18px;
+                                    background: url('../img/detailpage/trip_notice_icon.png') center center no-repeat;
+                                    position: absolute;
+                                    top: 50%; left: -25px;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                    .meeting_info {
+                        margin: 30px 0;
+                        padding: 0 60px;
+                        width: 100%;
+                        height: 200px;
+                        border: 1px solid #ddd;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .meet_left {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .flag_circle {
+                                width: 50px;
+                                height: 50px;
+                                background: $main-color;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            p {
+                                padding-top: 10px;
+                            }
+                        }
+                        .meet_text {
+                            padding-left: 0px;
+                            p {
+                                padding-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

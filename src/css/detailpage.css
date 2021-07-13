@@ -300,3 +300,306 @@
   top: 11px;
   left: 0;
 }
+
+#detail_page #detail_wrap #infomation {
+  padding-bottom: 60px;
+}
+
+#detail_page #detail_wrap #infomation .info {
+  border-bottom: 1px solid #ccc;
+  padding: 45px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#detail_page #detail_wrap #infomation .info .incl_tit {
+  display: block;
+  width: 20%;
+  padding: 46px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#detail_page #detail_wrap #infomation .info .incl_tit span {
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+}
+
+#detail_page #detail_wrap #infomation .info .incl_tit span::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#detail_page #detail_wrap #infomation ul {
+  width: 80%;
+  padding-left: 30px;
+}
+
+#detail_page #detail_wrap #infomation ul li {
+  padding-bottom: 20px;
+  position: relative;
+}
+
+#detail_page #detail_wrap #infomation ul li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4d8fd0;
+  position: absolute;
+  top: 9px;
+  left: -10px;
+}
+
+#detail_page #detail_wrap #infomation ul li span {
+  display: block;
+}
+
+#detail_page #detail_wrap #infomation .include {
+  border-top: 1px solid #333;
+}
+
+#detail_page #detail_wrap #infomation .include span::before {
+  background: url("../img/detailpage/info_circle.png") center center no-repeat;
+}
+
+#detail_page #detail_wrap #infomation .not_include span::before {
+  background: url("../img/detailpage/info_x.png") center center no-repeat;
+}
+
+#detail_page #detail_wrap #infomation .not_include ul li::before {
+  background: #f1454c;
+}
+
+#detail_page #detail_wrap #reservation {
+  padding-bottom: 60px;
+}
+
+#detail_page #detail_wrap #reservation table {
+  width: 100%;
+}
+
+#detail_page #detail_wrap #reservation table tbody {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #ccc;
+}
+
+#detail_page #detail_wrap #reservation table tbody th {
+  padding: 15px 30px;
+  text-align: left;
+  background: rgba(195, 225, 255, 0.3);
+  font-weight: normal;
+}
+
+#detail_page #detail_wrap #reservation table tbody td {
+  padding: 15px 0 15px 30px;
+}
+
+#detail_page #detail_wrap #product_info {
+  padding-bottom: 60px;
+}
+
+#detail_page #detail_wrap #product_info .prod_imgbox {
+  height: 400px;
+  overflow: hidden;
+}
+
+#detail_page #detail_wrap #product_info .prod_imgbox img {
+  width: 100%;
+  height: auto;
+}
+
+#detail_page #detail_wrap #product_info #prod_more {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #4d8fd0;
+  border-radius: 0;
+  outline: none;
+  background: #fff;
+  color: #4d8fd0;
+  font-size: 16px;
+  letter-spacing: -1px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#detail_page #detail_wrap #guide_trip_box .guide_menu_tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#detail_page #detail_wrap #guide_trip_box .guide_menu_tab li {
+  width: 16.666%;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #4d8fd0;
+}
+
+#detail_page #detail_wrap #guide_trip_box .guide_menu_tab li a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+
+#detail_page #detail_wrap #guide_trip_box .guide_menu_tab .on {
+  border-top: 1px solid #4d8fd0;
+  border-left: 1px solid #4d8fd0;
+  border-right: 1px solid #4d8fd0;
+  border-bottom: 1px solid #fff;
+}
+
+#detail_page #detail_wrap #guide_trip_box .guide_menu_tab + #detail_page #detail_wrap #guide_trip_box .guide_menu_tab {
+  border-bottom: 1px solid #4d8fd0;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab {
+  padding-top: 30px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .submenu_tab {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .submenu_tab li {
+  padding-right: 30px;
+  position: relative;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .submenu_tab li::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #4d8fd0;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage h4 {
+  padding: 40px 0;
+  font-size: 22px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice {
+  width: 100%;
+  height: 120px;
+  background: rgba(195, 225, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div {
+  width: 83%;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div p {
+  position: relative;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div p::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url("../img/detailpage/trip_notice_icon.png") center center no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div span {
+  display: block;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info {
+  margin: 30px 0;
+  padding: 0 60px;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_left .flag_circle {
+  width: 50px;
+  height: 50px;
+  background: #4d8fd0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_left p {
+  padding-top: 10px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_text {
+  padding-left: 0px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_text p {
+  padding-bottom: 15px;
+}
