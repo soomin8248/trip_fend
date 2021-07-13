@@ -8,7 +8,7 @@
         height: 352px;
         position: relative;
         overflow: hidden;
-        border-radius: 15px;
+        border-radius: 19.5px;
         .lists_travel {
             width: 1196px;
             height: 348px;
@@ -18,21 +18,24 @@
             .item_travel {
                 margin-right: 20px;
                 height: 100%;
-                border-radius: 15px;
-                border: 1px solid $light-gray;
+                border-radius: 19.5px;
                 box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
                 .img_travel {
                     width: 100%;
                     height: 50%;
                     position: relative;
                     overflow: hidden;
-                    img { border-radius: 15px 15px 0 0; width: 100%; height: 100%;}
+                    img { 
+                        border-radius: 19.5px 19.5px 0 0; 
+                        width: 100%; 
+                        height: 100%;
+                    }
                     .blackbg {
                         width: 100%;
                         height: 100%;
                         background-color: $black-bg;
                         @include position($t: 0, $l: 0);
-                        border-radius: 15px 15px 0 0;
+                        border-radius: 19.5px 19.5px 0 0;
                         opacity: 0;
                         transition: 0.5s;
                         .view_icon {
@@ -60,7 +63,8 @@
             padding: 25px;
             background-color: $white-color;
             position: relative;
-            border-radius: 0 0 15px 15px;
+            border-radius: 0 0 19.5px 19.5px;
+            border: 1px solid $light-gray;
             p:nth-child(1){
                 font-size: $font-size-16;
                 margin-bottom: 10px;

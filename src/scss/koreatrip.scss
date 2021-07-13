@@ -237,10 +237,11 @@
         text-align: center;
         position: relative;
         .container {
-            overflow: hidden;
             .md_show {
-                width: 1196px;
+                width: 1200px;
                 height: 356px;
+                overflow: hidden;
+                border-radius: 19.5px;
                 .md_items{
                     height: 352px;
                     display: flex;
@@ -307,6 +308,9 @@
                                 span {
                                     padding-right: 5px;
                                     color: $main-color;
+                                }
+                                .grayfont {
+                                    color: $dark-gray;
                                 }
                             }
                             p {
@@ -461,6 +465,9 @@
                             span {
                                 padding-right: 5px;
                                 color: $main-color;
+                            }
+                            .grayfont {
+                                color: $dark-gray;
                             }
                         }
                         p {

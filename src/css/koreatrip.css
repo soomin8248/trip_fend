@@ -295,13 +295,11 @@
   position: relative;
 }
 
-#kor_md .kor_md .container {
-  overflow: hidden;
-}
-
 #kor_md .kor_md .container .md_show {
-  width: 1196px;
+  width: 1200px;
   height: 356px;
+  overflow: hidden;
+  border-radius: 19.5px;
 }
 
 #kor_md .kor_md .container .md_show .md_items {
@@ -384,6 +382,10 @@
 #kor_md .kor_md .container .md_show .md_items .sub_item .info h4 span {
   padding-right: 5px;
   color: #4d8fd0;
+}
+
+#kor_md .kor_md .container .md_show .md_items .sub_item .info h4 .grayfont {
+  color: #888;
 }
 
 #kor_md .kor_md .container .md_show .md_items .sub_item .info p {
@@ -554,6 +556,10 @@
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 span {
   padding-right: 5px;
   color: #4d8fd0;
+}
+
+#best_travel .best_travel .best_item .b_item .sub_item .info h4 .grayfont {
+  color: #888;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info p {
