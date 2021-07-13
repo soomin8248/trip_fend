@@ -7,6 +7,7 @@
     <title>Where trip(어디까지 가봤니?) - 공지사항</title>
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="stylesheet" href="/src/css/notice.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
     <script type="text/javascript" src="/src/js/w3.js"></script>
@@ -19,11 +20,52 @@
         <div w3-include-html="/component/head.html"></div>
     </header>
     <!-- 헤더 end -->
-    <section>
-        
-    </section>
+    
     <!-- 메인 start -->
-
+    <section id="notice">
+        <div class="container">
+            <div id="notice_left">
+                <div id="service_side_menu">
+                    <h2>고객센터</h2>
+                    <span id="blue_bar"></span>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">온라인 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="notice_right">
+                <div id="notice_title">
+                    <h1>공지사항</h1>
+                </div>
+                <div id="notice_search">
+                    <div class="search_title">
+                        <select name="" id="search_title">
+                            <option value="" selected>전체</option>
+                            <option value="" >공지사항</option>
+                            <option value="" >허니문</option>
+                            <option value="" >골프</option>
+                            <option value="" >크루즈</option>
+                            <option value="" >국내</option>
+                            <option value="" >부산/대구</option>
+                            <option value="" >항공권 소식</option>
+                            <option value="" >호텔</option>
+                        </select>
+                    </div>
+                    <div class="search_menu">
+                        <select name="" id="search_menu">
+                            <option value="" selected>전체</option>
+                            <option value="" >제목</option>
+                            <option value="" >내용</option>
+                        </select>
+                    </div>
+                    <input class="search_input" type="text" placeholder="검색어를 입력하세요">
+                    <button>검색</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- 메인 end -->
 
     <!-- 푸터 start -->
