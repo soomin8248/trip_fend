@@ -4,14 +4,15 @@
 
 .product_box .show_travel {
   width: 100%;
-  height: 350px;
+  height: 352px;
   position: relative;
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .product_box .show_travel .lists_travel {
-  width: 100%;
-  height: 100%;
+  width: 1196px;
+  height: 348px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: -webkit-box;
@@ -23,11 +24,12 @@
 }
 
 .product_box .show_travel .lists_travel .item_travel {
-  margin-left: -0.1px;
-  width: 100%;
+  margin-right: 20px;
   height: 100%;
   border-radius: 15px;
   border: 1px solid #ccc;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .product_box .show_travel .lists_travel .item_travel .img_travel {
@@ -68,6 +70,11 @@
   color: #fff;
 }
 
+.product_box .show_travel .lists_travel .item_travel .img_travel .blackbg .view_icon:hover {
+  background: none;
+  border: 2px solid #fff;
+}
+
 .product_box .show_travel .lists_travel .item_travel .img_travel:hover .blackbg {
   opacity: 1;
 }
@@ -87,6 +94,7 @@
 }
 
 .product_box .show_travel .text_travel span {
+  margin-right: 5px;
   font-size: 16px;
   color: #4d8fd0;
 }
@@ -118,8 +126,25 @@
 }
 
 #visual .show_visual .lists_visual .philippines {
-  color: #fff;
+  color: #333;
   display: block;
+}
+
+#visual .show_visual .lists_visual .philippines a {
+  border: 2px solid #333;
+}
+
+#visual .show_visual .lists_visual .philippines a p {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#visual .show_visual .lists_visual .philippines a:hover {
+  border: 2px solid #4d8fd0;
+}
+
+#visual .show_visual .lists_visual .philippines a:hover p {
+  color: #fff;
 }
 
 #visual .show_visual .lists_visual .item_visual {
@@ -140,11 +165,11 @@
 }
 
 #visual .show_visual .lists_visual .item_visual div h3 {
-  font-size: 40px;
+  font-size: 44px;
 }
 
 #visual .show_visual .lists_visual .item_visual div > p {
-  font-size: 20px;
+  font-size: 24px;
   margin: 20px 0;
 }
 
@@ -297,7 +322,7 @@
 }
 
 #local_trip .container .product_box {
-  width: 905px;
+  width: 900px;
   position: absolute;
   top: 50%;
   right: -10px;
@@ -305,21 +330,23 @@
           transform: translateY(-50%);
 }
 
-#local_trip .container .product_box .show_travel {
-  height: 370px;
+#local_trip .container .product_box .show_travel .lists_travel {
+  width: 100%;
 }
 
 #local_trip .container .product_box .show_travel .lists_travel .item_travel {
-  height: 350px;
-  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 284px !important;
+  height: 348px;
+  margin-right: 20px !important;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 #local_trip .container .product_box .slide_bar {
   width: 895px;
   height: 3px;
   background-color: #ccc;
-  margin-top: -5px;
+  margin-top: 35px;
   border-radius: 1px;
 }
 
@@ -356,6 +383,46 @@
 
 #hotel .img_travel {
   height: 230px;
+  overflow: hidden;
+}
+
+#hotel .img_travel .gangwon {
+  width: 100%;
+  height: 100%;
+  background: url(../img/lodgment/hotel_img1.jpg) center top/cover no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+
+#hotel .img_travel .jeju {
+  width: 100%;
+  height: 100%;
+  background: url(../img/lodgment/hotel_img2.jpg) left top/cover no-repeat;
+  border-radius: 15px 15px 0 0;
+}
+
+#hotel .img_travel .seoul {
+  width: 100%;
+  height: 100%;
+  background: url(../img/lodgment/hotel_img3.jpg) no-repeat;
+  background-size: cover;
+  background-position: left -150px top 0;
+  border-radius: 15px 15px 0 0;
+}
+
+#hotel .img_travel .busan {
+  width: 100%;
+  height: 100%;
+  background: url(../img/lodgment/hotel_img4.jpg) no-repeat;
+  background-size: cover;
+  background-position: left -320px top 0;
+  border-radius: 15px 15px 0 0;
+}
+
+#hotel .img_travel .incheon {
+  width: 100%;
+  height: 100%;
+  background: url(../img/lodgment/hotel_img5.jpg) left top/cover no-repeat;
+  border-radius: 15px 15px 0 0;
 }
 
 #hotel .text_travel {
@@ -494,6 +561,11 @@
 #notice .container .notice_left > div:nth-child(2) p {
   font-size: 16px;
   margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+#notice .container .notice_left > div:nth-child(2) span {
+  display: block;
   margin-bottom: 10px;
 }
 

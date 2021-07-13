@@ -1,7 +1,6 @@
 //공통 부분 scss
 @import "variable";
 
-//해외 여행 타이틀 부분(공통)
 .main_title {
     text-align: center;
     font-size: $font-size-30;
@@ -14,105 +13,86 @@
     }
 }
 
-
-// 비주얼영역
-#inter_visual {
+//비주얼 영역 시작
+#kor_visual {
     width: 100%;
     height: 500px;
     margin-bottom: 100px;
-    .visual {
+    overflow: hidden;
+    position: relative;
+    .visual_items {
         width: 100%;
         height: 100%;
-        text-align: center;
-        color: $white-color;
         position: relative;
-        .in_visual {
-            @include flex;
-            left: 0;
-            top: 0;
-            z-index: -99;
-            .visual_title{
-                margin-top: 210px;
-                h2 {
-                    font-size: $font-size-44;
-                    letter-spacing: -1px;
-                    text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
-                }
-                p {
-                    font-size: $font-size-24;
-                    letter-spacing: -1px;
-                    text-shadow: 3px 3px 5px rgba(0,0,0,0.6);
-                }
+        .visual_item {
+            width: 100%;
+            height: 100%;
+            h3 { 
+                color: $white-color;
+                font-size: $font-size-44;
+                font-weight: $font-weight-500;
+                text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+                @include position($t: 30%, $l: 50%);
+                transform: translateX(-50%);
+            }
+            p {
+                color: $white-color;
+                font-size: $font-size-22;
+                font-weight: $font-weight-200;
+                text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+                @include position($t: 43%, $l: 50%);
+                transform: translateX(-50%);
             }
         }
-        #europe {
-            width: 100%;
-            height: 100%;
-            background: url(/src/img/sub_page/sub_international/overseas_main_bg1.jpg) center center/cover no-repeat;
-            display: block;
+        .jeju {
+            background: url(/src/img/sub_page/sub_korea/main_bg1.jpg) no-repeat;
+            background-size: cover;
+            background-position: left 50% top 60% ;
         }
-        #hawaii {
-            width: 100%;
-            height: 100%;
-            background: url(/src/img/sub_page/sub_international/overseas_main_bg2.jpg) center center/cover no-repeat;
-            display: block;
-        }
-        #swiss {
-            width: 100%;
-            height: 100%;
-            background: url(/src/img/sub_page/sub_international/overseas_main_bg3.jpg) center center/cover no-repeat;
-            display: block;
-        }
-        #sebu {
-            width: 100%;
-            height: 100%;
-            background: url(/src/img/sub_page/sub_international/overseas_main_bg4.jpg) center center/cover no-repeat;
-            display: block;
+        .seoul {
+            background: url(/src/img/sub_page/sub_korea/main_bg2.jpg) no-repeat;
+            background-size: cover;
+            background-position: left 0 top 34% ;
         }
     }
-    .visual_control {
-        .container {
-            position: relative;
-        }
-        ul {
-            width: 1200px;
-            height: 60px;
-            position: absolute;
-            left: 0;
-            top: -60px;
-            display: flex;
-            justify-content: space-between;
-            li {
-                line-height: 60px;
-                font-size: $font-size-18;
-                color: $white-color;
-                width: 100%;
-                cursor: pointer;
-                text-align: center;
-                opacity: 1 !important;
-                background: rgba(0,0,0,0.7);
-                border: 1px solid #000000;
-                border-radius: 0 !important;
-                height: auto !important;
-                &:hover {
-                    background-color: rgba($main-color, 0.9);
-                    border: 1px solid $main-color;
-                }
-                &.swiper-pagination-bullet-active {
-                    background-color: rgba($main-color, 0.9);
-                    border: 1px solid $main-color;
-                }
+    #kor_search {
+        height: 80px;
+        display: flex;
+        @include position($b: 70px, $l: 50%);
+        transform: translateX(-50%);
+        border-radius: 15px;
+        overflow: hidden;
+        z-index: 2;
+        div {
+            width: 350px;
+            background-color: #fff;
+            padding: 20px 60px;
+            color: $dark-gray;
+            @include flex;
+            span {
+                font-size: $font-size-16;
+                color: $black-color;
             }
+            &:not(:last-child) {
+                border-right: 1px solid $light-gray;
+            }
+        }
+        button {
+            width: 150px;
+            font-size: $font-size-16;
+            background: $main-color;
+            border: none;
+            color: #fff;
         }
     }
 }
+//비주얼 영역 끝
 
-// 패키지여행 영역
-#package {
+#kor_jeju{
     width: 100%;
     letter-spacing: -1px;
-    .package {
-        .pack_control {
+    .kor_jeju{
+        .jeju_control{
             text-align: center;
             width: 850px;
             height: 45px;
@@ -143,7 +123,7 @@
                 }
             }
         }
-        .pack_item {
+        .jeju_contents {
             width: 100%;
             position: relative;
             height: 356px;
@@ -232,37 +212,36 @@
                     }
                 }
             }
-            .three-days {
+            .kid {
                 display: flex;
             }
-            .six-days {
+            .purity {
                 display: none;
             }
-            .nine-days {
+            .vacation {
                 display: none;
             }
-            .eleven {
+            .jejuacation {
                 display: none;
             }
         }
     }
 }
 
-// 해외자유여행 영역
-#free_travel {
+#kor_md{
     width: 100%;
     letter-spacing: -1px;
     background-color: #f7f7f7;
-    .free_travel {
+    .kor_md{
         padding: 100px 0;
         text-align: center;
         position: relative;
         .container {
             overflow: hidden;
-            .free_item {
+            .md_show {
                 width: 1196px;
                 height: 356px;
-                .f_item {
+                .md_items{
                     height: 352px;
                     display: flex;
                     justify-content: space-between;
@@ -396,7 +375,7 @@
     }
 }
 
-// 해외여행 인기상품 영역
+// 국내여행 인기상품 영역
 #best_travel {
     width: 100%;
     height: 835px;

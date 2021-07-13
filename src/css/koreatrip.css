@@ -12,21 +12,81 @@
   color: #4d8fd0;
 }
 
-#inter_visual {
+#kor_visual {
   width: 100%;
   height: 500px;
   margin-bottom: 100px;
-}
-
-#inter_visual .visual {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  color: #fff;
+  overflow: hidden;
   position: relative;
 }
 
-#inter_visual .visual .in_visual {
+#kor_visual .visual_items {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#kor_visual .visual_items .visual_item {
+  width: 100%;
+  height: 100%;
+}
+
+#kor_visual .visual_items .visual_item h3 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 500;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kor_visual .visual_items .visual_item p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 200;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#kor_visual .visual_items .jeju {
+  background: url(/src/img/sub_page/sub_korea/main_bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: left 50% top 60%;
+}
+
+#kor_visual .visual_items .seoul {
+  background: url(/src/img/sub_page/sub_korea/main_bg2.jpg) no-repeat;
+  background-size: cover;
+  background-position: left 0 top 34%;
+}
+
+#kor_visual #kor_search {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#kor_visual #kor_search div {
+  width: 350px;
+  background-color: #fff;
+  padding: 20px 60px;
+  color: #888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,110 +96,38 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  left: 0;
-  top: 0;
-  z-index: -99;
 }
 
-#inter_visual .visual .in_visual .visual_title {
-  margin-top: 210px;
+#kor_visual #kor_search div span {
+  font-size: 16px;
+  color: #333;
 }
 
-#inter_visual .visual .in_visual .visual_title h2 {
-  font-size: 44px;
-  letter-spacing: -1px;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+#kor_visual #kor_search div:not(:last-child) {
+  border-right: 1px solid #ccc;
 }
 
-#inter_visual .visual .in_visual .visual_title p {
-  font-size: 24px;
-  letter-spacing: -1px;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-}
-
-#inter_visual .visual #europe {
-  width: 100%;
-  height: 100%;
-  background: url(/src/img/sub_page/sub_international/overseas_main_bg1.jpg) center center/cover no-repeat;
-  display: block;
-}
-
-#inter_visual .visual #hawaii {
-  width: 100%;
-  height: 100%;
-  background: url(/src/img/sub_page/sub_international/overseas_main_bg2.jpg) center center/cover no-repeat;
-  display: block;
-}
-
-#inter_visual .visual #swiss {
-  width: 100%;
-  height: 100%;
-  background: url(/src/img/sub_page/sub_international/overseas_main_bg3.jpg) center center/cover no-repeat;
-  display: block;
-}
-
-#inter_visual .visual #sebu {
-  width: 100%;
-  height: 100%;
-  background: url(/src/img/sub_page/sub_international/overseas_main_bg4.jpg) center center/cover no-repeat;
-  display: block;
-}
-
-#inter_visual .visual_control .container {
-  position: relative;
-}
-
-#inter_visual .visual_control ul {
-  width: 1200px;
-  height: 60px;
-  position: absolute;
-  left: 0;
-  top: -60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#inter_visual .visual_control ul li {
-  line-height: 60px;
-  font-size: 18px;
+#kor_visual #kor_search button {
+  width: 150px;
+  font-size: 16px;
+  background: #4d8fd0;
+  border: none;
   color: #fff;
-  width: 100%;
-  cursor: pointer;
-  text-align: center;
-  opacity: 1 !important;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid #000000;
-  border-radius: 0 !important;
-  height: auto !important;
 }
 
-#inter_visual .visual_control ul li:hover {
-  background-color: rgba(77, 143, 208, 0.9);
-  border: 1px solid #4d8fd0;
-}
-
-#inter_visual .visual_control ul li.swiper-pagination-bullet-active {
-  background-color: rgba(77, 143, 208, 0.9);
-  border: 1px solid #4d8fd0;
-}
-
-#package {
+#kor_jeju {
   width: 100%;
   letter-spacing: -1px;
 }
 
-#package .package .pack_control {
+#kor_jeju .kor_jeju .jeju_control {
   text-align: center;
   width: 850px;
   height: 45px;
   margin: 0 auto 54px auto;
 }
 
-#package .package .pack_control ul {
+#kor_jeju .kor_jeju .jeju_control ul {
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,7 +137,7 @@
           justify-content: space-between;
 }
 
-#package .package .pack_control ul li {
+#kor_jeju .kor_jeju .jeju_control ul li {
   font-size: 18px;
   line-height: 43px;
   width: 23%;
@@ -163,23 +151,23 @@
   transition: 0.5s;
 }
 
-#package .package .pack_control ul li:hover {
+#kor_jeju .kor_jeju .jeju_control ul li:hover {
   background-color: #4d8fd0;
   color: #fff;
 }
 
-#package .package .pack_control ul li.on {
+#kor_jeju .kor_jeju .jeju_control ul li.on {
   background-color: #4d8fd0;
   color: #fff;
 }
 
-#package .package .pack_item {
+#kor_jeju .kor_jeju .jeju_contents {
   width: 100%;
   position: relative;
   height: 356px;
 }
 
-#package .package .pack_item .item {
+#kor_jeju .kor_jeju .jeju_contents .item {
   width: 100%;
   position: absolute;
   left: 0;
@@ -192,7 +180,7 @@
           justify-content: space-between;
 }
 
-#package .package .pack_item .item .sub_item {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item {
   width: 23.5%;
   height: 100%;
   border-radius: 19.5px;
@@ -201,17 +189,17 @@
   overflow: hidden;
 }
 
-#package .package .pack_item .item .sub_item .Picture {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .Picture {
   height: 176px;
   position: relative;
 }
 
-#package .package .pack_item .item .sub_item .Picture div:nth-child(1) img {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .Picture div:nth-child(1) img {
   width: 100%;
   height: 176px;
 }
 
-#package .package .pack_item .item .sub_item .Picture .back_bg {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .Picture .back_bg {
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -223,7 +211,7 @@
   transition: 0.5s;
 }
 
-#package .package .pack_item .item .sub_item .Picture .back_bg a {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .Picture .back_bg a {
   text-align: center;
   line-height: 36px;
   display: block;
@@ -239,11 +227,11 @@
           transform: translate(-50%, -50%);
 }
 
-#package .package .pack_item .item .sub_item:hover .back_bg {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item:hover .back_bg {
   opacity: 1;
 }
 
-#package .package .pack_item .item .sub_item .info {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .info {
   height: 176px;
   padding: 25px 30px;
   text-align: left;
@@ -252,22 +240,22 @@
   border-radius: 0  0 19.5px 19.5px;
 }
 
-#package .package .pack_item .item .sub_item .info h4 {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .info h4 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 18px;
 }
 
-#package .package .pack_item .item .sub_item .info h4 span {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .info h4 span {
   padding-right: 5px;
   color: #4d8fd0;
 }
 
-#package .package .pack_item .item .sub_item .info p {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .info p {
   font-size: 14px;
 }
 
-#package .package .pack_item .item .sub_item .info > span {
+#kor_jeju .kor_jeju .jeju_contents .item .sub_item .info > span {
   position: absolute;
   right: 30px;
   bottom: 25px;
@@ -277,46 +265,46 @@
   color: #4d8fd0;
 }
 
-#package .package .pack_item .three-days {
+#kor_jeju .kor_jeju .jeju_contents .kid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#package .package .pack_item .six-days {
+#kor_jeju .kor_jeju .jeju_contents .purity {
   display: none;
 }
 
-#package .package .pack_item .nine-days {
+#kor_jeju .kor_jeju .jeju_contents .vacation {
   display: none;
 }
 
-#package .package .pack_item .eleven {
+#kor_jeju .kor_jeju .jeju_contents .jejuacation {
   display: none;
 }
 
-#free_travel {
+#kor_md {
   width: 100%;
   letter-spacing: -1px;
   background-color: #f7f7f7;
 }
 
-#free_travel .free_travel {
+#kor_md .kor_md {
   padding: 100px 0;
   text-align: center;
   position: relative;
 }
 
-#free_travel .free_travel .container {
+#kor_md .kor_md .container {
   overflow: hidden;
 }
 
-#free_travel .free_travel .container .free_item {
+#kor_md .kor_md .container .md_show {
   width: 1196px;
   height: 356px;
 }
 
-#free_travel .free_travel .container .free_item .f_item {
+#kor_md .kor_md .container .md_show .md_items {
   height: 352px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,7 +314,7 @@
           justify-content: space-between;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item {
+#kor_md .kor_md .container .md_show .md_items .sub_item {
   width: 282px;
   border-radius: 19.5px;
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
@@ -334,17 +322,17 @@
   overflow: hidden;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .Picture {
+#kor_md .kor_md .container .md_show .md_items .sub_item .Picture {
   height: 176px;
   position: relative;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .Picture div:nth-child(1) img {
+#kor_md .kor_md .container .md_show .md_items .sub_item .Picture div:nth-child(1) img {
   width: 100%;
   height: 176px;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .Picture .back_bg {
+#kor_md .kor_md .container .md_show .md_items .sub_item .Picture .back_bg {
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -356,7 +344,7 @@
   transition: 0.5s;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .Picture .back_bg a {
+#kor_md .kor_md .container .md_show .md_items .sub_item .Picture .back_bg a {
   cursor: pointer;
   text-align: center;
   line-height: 36px;
@@ -374,11 +362,11 @@
   z-index: 55;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item:hover .back_bg {
+#kor_md .kor_md .container .md_show .md_items .sub_item:hover .back_bg {
   opacity: 1;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .info {
+#kor_md .kor_md .container .md_show .md_items .sub_item .info {
   height: 176px;
   padding: 25px 30px;
   text-align: left;
@@ -387,22 +375,22 @@
   border-radius: 0  0 19.5px 19.5px;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .info h4 {
+#kor_md .kor_md .container .md_show .md_items .sub_item .info h4 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 18px;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .info h4 span {
+#kor_md .kor_md .container .md_show .md_items .sub_item .info h4 span {
   padding-right: 5px;
   color: #4d8fd0;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .info p {
+#kor_md .kor_md .container .md_show .md_items .sub_item .info p {
   font-size: 14px;
 }
 
-#free_travel .free_travel .container .free_item .f_item .sub_item .info > span {
+#kor_md .kor_md .container .md_show .md_items .sub_item .info > span {
   position: absolute;
   right: 30px;
   bottom: 25px;
@@ -412,7 +400,7 @@
   color: #4d8fd0;
 }
 
-#free_travel .free_travel .container #slide_con .swiper-button-prev {
+#kor_md .kor_md .container #slide_con .swiper-button-prev {
   display: block;
   width: 40px;
   height: 40px;
@@ -429,7 +417,7 @@
   background-image: none !important;
 }
 
-#free_travel .free_travel .container #slide_con .swiper-button-prev i {
+#kor_md .kor_md .container #slide_con .swiper-button-prev i {
   font-size: 30px;
   position: absolute;
   top: 50%;
@@ -438,7 +426,7 @@
           transform: translate(-50%, -50%);
 }
 
-#free_travel .free_travel .container #slide_con .swiper-button-next {
+#kor_md .kor_md .container #slide_con .swiper-button-next {
   display: block;
   width: 40px;
   height: 40px;
@@ -455,7 +443,7 @@
   background-image: none !important;
 }
 
-#free_travel .free_travel .container #slide_con .swiper-button-next i {
+#kor_md .kor_md .container #slide_con .swiper-button-next i {
   font-size: 30px;
   position: absolute;
   top: 50%;
