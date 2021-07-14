@@ -2,6 +2,7 @@ $main-color: #4d8fd0;
 $gray-color: #9d9d9d;
 $light-gray: #ccc;
 $black-color: #333;
+$red-color: #f1454c;
 
 @mixin position ( $p: absolute, $t: null, $b: null, $l: null, $r: null) {
     position: $p;
@@ -324,7 +325,7 @@ $black-color: #333;
                 ul {
                     li {
                         &::before {
-                            background: #f1454c;
+                            background: $red-color;
                         }
                     }
                 }
@@ -412,7 +413,7 @@ $black-color: #333;
                             position: relative;
                             &::after {
                                 content: "";
-                                display: block;
+                                display: none;
                                 width: 36px;
                                 height: 3px;
                                 background: $main-color;
@@ -420,8 +421,13 @@ $black-color: #333;
                                 bottom: -12px; left: 0;
                             }
                         }
+                        li.on {
+                            &::after {
+                                display: block;
+                            }
+                        }
                     }
-                    h4 {
+                    > h4 {
                         padding: 40px 0;
                         font-size: 22px;
                     }
@@ -483,6 +489,218 @@ $black-color: #333;
                             padding-left: 0px;
                             p {
                                 padding-bottom: 15px;
+                            }
+                        }
+                    }
+                    .trip_timeline {
+                        border: 1px solid #ddd;
+                        width: 100%;
+                        background: #fff;
+                        .timeline {
+                            width: 100%;
+                            .day_title {
+                                width: 100%;
+                                background: rgba(195,225,255,0.3);
+                                height: 60px;
+                                line-height: 60px;
+                                padding: 0 30px;
+                                display: flex;
+                                align-items: center;
+                                p {
+                                    font-size: 18px;
+                                    span {
+                                        font-size: 14px;
+                                        margin-left: 30px;
+                                    }
+                                }
+                            }
+                            .timeline_contents {
+                                padding: 40px 30px;
+                                .float_route {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 16px;
+                                    padding-bottom: 40px;
+                                    .way_start {
+                                        text-align: center;
+                                        padding-right: 10px;
+                                    }
+                                    .float_time {
+                                        img {
+                                            &:nth-child(1) {
+                                                position: relative;
+                                                &::after {
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 100px;
+                                                    height: 4px;
+                                                    position: absolute;
+                                                    top: 0; left: 0;
+                                                    background: #ddd;
+                                                }
+                                            }
+                                        }
+                                        .float_icon {
+                                            padding: 0 120px;
+                                        }
+                                    }
+                                    .way_fin {
+                                        text-align: center;
+                                        padding-left: 10px;
+                                    }
+                                }
+                                .location_box {
+                                    padding-left: 100px;
+                                    position: relative;
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 4px;
+                                        height: 100%;
+                                        background: #f1f1f1;
+                                        position: absolute;
+                                        top: 0; left: 35px;
+                                    }
+                                    .location {
+                                        h3 {
+                                            font-size: 18px;
+                                            position: relative;
+                                            font-weight: 500;
+                                            padding: 8px 0 30px;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: #fff;
+                                                background-image: url('../img/detailpage/ico_place.jpg');
+                                                background-position: center center;
+                                                background-repeat: no-repeat;
+                                                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                                                border-radius: 50%;
+                                                position: absolute;
+                                                top: 0; left: -83px;
+                                            }
+                                        }
+                                        .location_oki {
+                                            padding-top: 30px;
+                                            &::before {
+                                                top: 22px;
+                                            }
+                                        }
+                                        > p {
+                                            padding: 10px 0;
+                                            position: relative;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 16px;
+                                                height: 16px;
+                                                background: url('../img/detailpage/ico_now.jpg') center center no-repeat;
+                                                position: absolute;
+                                                top: 12px; left: -71px;
+                                            }
+                                        }
+                                        > span {
+                                            color: $red-color;
+                                        }
+                                        .randmark_contents {
+                                            .mark_title {
+                                                p {
+                                                    padding-left: 20px;
+                                                    position: relative;
+                                                    &::before {
+                                                        content: "";
+                                                        display: inline-block;
+                                                        width: 12px;
+                                                        height: 25px;
+                                                        background: url('../img/detailpage/pin.png') center center no-repeat;
+                                                        position: absolute;
+                                                        top: 0; left: 0;
+                                                    }
+                                                }
+                                            }
+                                            .randmark_box {
+                                                border: 1px solid #ddd;
+                                                margin: 30px 0;
+                                                padding: 30px;
+                                                width: 700px;
+                                                h4 {
+                                                    font-size: 18px;
+                                                    padding-bottom: 10px;
+                                                    border-bottom: 1px solid #ddd;
+                                                }
+                                                ul {
+                                                    
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    padding: 25px 0;
+                                                    li {
+                                                        width: 49%;
+                                                        img {
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+                                                    }
+                                                }
+                                                > p {
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .hotel_box {
+                                        border: 1px solid #ddd;
+                                        margin: 30px 0;
+                                        padding: 30px;
+                                        width: 700px;
+                                        h4 {
+                                            font-size: 18px;
+                                            padding-bottom: 10px;
+                                            border-bottom: 1px solid #ddd;
+                                        }
+                                        ul {
+                                            
+                                            display: flex;
+                                            justify-content: space-between;
+                                            padding: 25px 0;
+                                            li {
+                                                width: 49%;
+                                                img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                }
+                                            }
+                                        }
+                                        > p {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                .meal_guide {
+                                    border-top: 1px solid #ddd;
+                                    margin-top: 40px;
+                                    padding-top: 30px;
+                                    display: flex;
+                                    > span {
+                                        display: inline-block;
+                                        width: 55px;
+                                        height: 25px;
+                                        color: $main-color;
+                                        border: 1px solid $main-color;
+                                        border-radius: 12.5px;
+                                        text-align: center;
+                                        font-size: 14px;
+                                        margin-right: 30px;
+                                    }
+                                    .meal_list {
+                                        display: flex;
+                                        p {
+                                            padding-right: 20px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

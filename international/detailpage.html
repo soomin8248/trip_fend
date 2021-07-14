@@ -250,7 +250,7 @@
                     <!-- 여행일정 -->
                     <div class="tabpage daytab">
                         <ul class="submenu_tab">
-                            <li><a href="#">1일차</a></li>
+                            <li class="on"><a href="#">1일차</a></li>
                             <li><a href="#">2일차</a></li>
                             <li><a href="#">3일차</a></li>
                         </ul>
@@ -276,7 +276,7 @@
                         <!-- 일정 timeline -->
                         <div class="trip_timeline">
                             <!-- 1일차 -->
-                            <div class="timeline_day1">
+                            <div class="timeline day1">
                                 <div class="day_title">
                                     <p>1일차<span>2021.11.01(월)-인천/오키나와</span></p>
                                 </div>
@@ -289,8 +289,13 @@
                                         </div>
                                         <div class="float_time">
                                             <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
-                                            <img src="../src//img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
+                                            <img class="float_icon" src="../src//img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
                                             <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
+                                        </div>
+                                        <div class="way_fin">
+                                            <p>현지도착</p>
+                                            <p>16:30</p>
+                                            <p>2021.11.01(월)</p>
                                         </div>
                                     </div>
                                     <div class="location_box">
@@ -303,21 +308,20 @@
                                             <p>[14:05/KE907] 인천 국제 공항 출발 (소요시간 - 약 2시간 15분 / 기내식 미제공)</p>
                                         </div>
                                         <div class="location">
-                                            <h3>오키나와</h3>
+                                            <h3 class="location_oki">오키나와</h3>
                                             <p>[16:30/TW271] 나하 국제공항 도착 및 입국수속</p>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>오키나와 최대 번화가, 기적의 1마일 국제거리</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>국제거리</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img1.jpg"
-                                                            alt="국제거리 낮 풍경">
-                                                        <img src="../src/img/detailpage/japantour_img2.jpg"
-                                                            alt="국제거리 야경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img1.jpg"
+                                                            alt="국제거리 낮 풍경"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img2.jpg"
+                                                            alt="국제거리 야경"></li>
+                                                    </ul>
                                                     <p>
                                                         나하에서 가장 번화한 거리로 약 1.6km 일직선으로 뻗은 거리에 오키나와 수호신과 토산품을 판매하는 상점들이 많이
                                                         있으며,레스토랑, 쇼핑센터, 호텔 등이 모여 있다. 이곳은 2차 세계대전 당시 미군의 공습으로 폐허가 되었으나
@@ -329,12 +333,12 @@
                                         </div>
                                         <div class="location">
                                             <p>석식 후 호텔로 이동 체크인 및 휴식</p>
-                                            <div class="randmark_contents">
+                                            <div class="hotel_box">
                                                 <h4>하얏트 리젠시 나하 오키나와</h4>
-                                                <div>
-                                                    <img src="../src/img/detailpage/japantour_img3.jpg" alt="호텔 건물 이미지">
-                                                    <img src="../src/img/detailpage/japantour_img4.jpg" alt="호텔 내부 이미지">
-                                                </div>
+                                                <ul>
+                                                    <li><img src="../src/img/detailpage/japantour_img3.jpg" alt="호텔 건물 이미지"></li>
+                                                    <li><img src="../src/img/detailpage/japantour_img4.jpg" alt="호텔 내부 이미지"></li>
+                                                </ul>
                                                 <p>
                                                     나하 시에 자리한 하얏트 리젠시 나하 오키나와는 숙박, 식사, 미팅 및 휴식을 취할 수 있는 인상 깊은 지역 랜드마크이다.
                                                     객실
@@ -353,7 +357,7 @@
                             </div>
                             <!-- 1일차 /-->
                             <!-- 2일차 -->
-                            <div class="timeline_day2">
+                            <div class="timeline day2">
                                 <div class="day_title">
                                     <p>2일차<span>2021.11.02(화) - 오키나와</span></p>
                                 </div>
@@ -364,18 +368,17 @@
                                         </div>
                                         <div class="location">
                                             <p>호텔 조식 후</p>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>해양박람회기념공원(츄라우미 수족관)</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>EXPO 해양공원</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img5.jpg"
-                                                            alt="돌고래쇼 이미지">
-                                                        <img src="../src/img/detailpage/japantour_img6.jpg" alt="수족관">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img5.jpg"
+                                                            alt="돌고래쇼 이미지"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img6.jpg" alt="수족관"></li>
+                                                    </ul>
                                                     <p>
                                                         새하얀 모래시장과 새파란 바다의 콘트라스트가 일품이며, 눈앞에는 이에지마 섬이 위치한 인공해변과 점프 및 독특한
                                                         행동으로 관광객들을 즐겁게 해주는 귀여운 돌고래들의 쇼. 세계적 규모를 자랑하는 츄라우미 수족관은
@@ -384,19 +387,18 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>만좌모</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>만좌모</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img7.jpg"
-                                                            alt="만좌모 절경">
-                                                        <img src="../src/img/detailpage/japantour_img8.jpg"
-                                                            alt="만좌모 절경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img7.jpg"
+                                                            alt="만좌모 절경"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img8.jpg"
+                                                            alt="만좌모 절경"></li>
+                                                    </ul>
                                                     <p>
                                                         높이200m의 석회암 절벽위에 천연잔디가 자라난 코끼리 모양의 절벽이다. 명칭은 '만인이 앉아도 충분한 잔디
                                                         벌판'이라는
@@ -405,19 +407,18 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>아메리칸 빌리지</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>아메리칸 빌리지</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img9.jpg"
-                                                            alt="만좌모 절경">
-                                                        <img src="../src/img/detailpage/japantour_img10.jpg"
-                                                            alt="만좌모 절경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img9.jpg"
+                                                            alt="만좌모 절경"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img10.jpg"
+                                                            alt="만좌모 절경"></li>
+                                                    </ul>
                                                     <p>
                                                         오키나와 중부 차탄초 미하마에 위치해 있으며, 선셋이 아름다운 선셋비치로 부터 불어오는 상쾌한 바닷바람을 맞으면서
                                                         쇼핑이나
@@ -433,12 +434,12 @@
                                         </div>
                                         <div class="location">
                                             <p>석식 후 호텔로 이동 체크인 및 휴식</p>
-                                            <div class="randmark_contents">
+                                            <div class="hotel_box">
                                                 <h4>하얏트 리젠시 나하 오키나와</h4>
-                                                <div>
-                                                    <img src="../src/img/detailpage/japantour_img3.jpg" alt="호텔 건물 이미지">
-                                                    <img src="../src/img/detailpage/japantour_img4.jpg" alt="호텔 내부 이미지">
-                                                </div>
+                                                <ul>
+                                                    <li><img src="../src/img/detailpage/japantour_img3.jpg" alt="호텔 건물 이미지"></li>
+                                                    <li><img src="../src/img/detailpage/japantour_img4.jpg" alt="호텔 내부 이미지"></li>
+                                                </ul>
                                                 <p>
                                                     나하 시에 자리한 하얏트 리젠시 나하 오키나와는 숙박, 식사, 미팅 및 휴식을 취할 수 있는 인상 깊은 지역 랜드마크이다.
                                                     객실
@@ -452,16 +453,16 @@
                                     <div class="meal_guide">
                                         <span>식사</span>
                                         <div class="meal_list">
-                                            <p>[석식] 현지식(웰빙뷔페)</p>
-                                            <p>[중식]현지식(토반야키)</p>
-                                            <p>[석식]자유식(불포함)</p>
+                                            <p>[조식] 호텔식</p>
+                                            <p>[중식] 현지식(토반야키)</p>
+                                            <p>[석식] 자유식(불포함)</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- 2일차 /-->
                             <!-- 3일차 -->
-                            <div class="timeline_day3">
+                            <div class="timeline day3">
                                 <div class="day_title">
                                     <p>3일차<span>2021.11.03(수) - 오키나와/인천</span></p>
                                 </div>
@@ -472,19 +473,18 @@
                                         </div>
                                         <div class="location">
                                             <p>호텔 조식 및 체크아웃 후 이동</p>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>치넨미사키</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>치넨미사키</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img11.jpg"
-                                                            alt="치넨미사키 풍경">
-                                                        <img src="../src/img/detailpage/japantour_img12.jpg"
-                                                            alt="치넨미사키 풍경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img11.jpg"
+                                                            alt="치넨미사키 풍경"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img12.jpg"
+                                                            alt="치넨미사키 풍경"></li>
+                                                    </ul>
                                                     <p>
                                                         오키나와 남동부 해안 끝에 180도로 펼쳐지는 아름다운 바다와 푸른 하늘의 조화가 돋보이는 공원이다. 일출명소로
                                                         유명하며,
@@ -494,19 +494,18 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>마사히로 주조 공장</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>마사히로 주조 공장</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img13.jpg"
-                                                            alt="만좌모 절경">
-                                                        <img src="../src/img/detailpage/japantour_img14.jpg"
-                                                            alt="만좌모 절경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img13.jpg"
+                                                            alt="공장 외관"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img14.jpg"
+                                                            alt="공장 내부"></li>
+                                                    </ul>
                                                     <p>
                                                         창업 130 여년의 마사히로 주조는 전통적인 제법을 지키면서 매일 절차 탁마 항상 양질의 아와모리를 생산하고 있다.
                                                         '아와모리'라 하는 일본 오키나와식 소주 제조과정을 볼 수 있으며, 공장에서 생산하는 다양한 제품은 물론이고, 무료
@@ -515,19 +514,18 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>슈리성</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>슈리성</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img15.jpg"
-                                                            alt="만좌모 절경">
-                                                        <img src="../src/img/detailpage/japantour_img16.jpg"
-                                                            alt="만좌모 절경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img15.jpg"
+                                                            alt="슈리성 입구"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img16.jpg"
+                                                            alt="슈리성 풍경"></li>
+                                                    </ul>
                                                     <p>
                                                         오키나와의 옛 이름인 류큐왕조의 정치,외교,문화의 중심으로서 위용을 자랑하는 거성(구스쿠)으로 세계문화유산에 등재
                                                         되었으며, 일본과 중국의 융합된 건축양식을 볼 수 있는 것이 특징이다. 성터 곳곳을 둘러보며 안내센터에서 받은
@@ -536,19 +534,18 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="randmark_box">
+                                            <div class="randmark_contents">
                                                 <div class="mark_title">
-                                                    <img src="../src/img/detailpage/pin.png" alt="핀 모양 아이콘">
                                                     <p>우미카지테라스</p>
                                                 </div>
-                                                <div class="randmark_contents">
+                                                <div class="randmark_box">
                                                     <h4>우미카지테라스</h4>
-                                                    <div>
-                                                        <img src="../src/img/detailpage/japantour_img17.jpg"
-                                                            alt="만좌모 절경">
-                                                        <img src="../src/img/detailpage/japantour_img18.jpg"
-                                                            alt="만좌모 절경">
-                                                    </div>
+                                                    <ul>
+                                                        <li><img src="../src/img/detailpage/japantour_img17.jpg"
+                                                            alt="우미카지테라스 야경"></li>
+                                                        <li><img src="../src/img/detailpage/japantour_img18.jpg"
+                                                            alt="우미카지테라스 낮 풍경"></li>
+                                                    </ul>
                                                     <p>
                                                         계단식으로 이루어진 상업시설로, 하얗고 아기자기한 샵들과 카페등의 각종 가게가 있고 야자수가 어우러진 지중해
                                                         느낌으로
@@ -572,22 +569,26 @@
                                     </div>
                                     <div class="float_route">
                                         <div class="way_start">
-                                            <p>인천출발</p>
-                                            <p>14:05</p>
-                                            <p>2021.11.01(월)</p>
+                                            <p>오키나와출발</p>
+                                            <p>17:30</p>
+                                            <p>2021.11.03(수)</p>
                                         </div>
                                         <div class="float_time">
                                             <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
                                             <img src="../src//img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
                                             <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
                                         </div>
+                                        <div class="way_fin">
+                                            <p>한국도착</p>
+                                            <p>19:55</p>
+                                            <p>2021.11.03(수)</p>
+                                        </div>
                                     </div>
                                     <div class="meal_guide">
                                         <span>식사</span>
                                         <div class="meal_list">
-                                            <p>[석식] 현지식(웰빙뷔페)</p>
-                                            <p>[중식]현지식(토반야키)</p>
-                                            <p>[석식]자유식(불포함)</p>
+                                            <p>[조식] 호텔식</p>
+                                            <p>[중식] 현지식(토반야키)</p>
                                         </div>
                                     </div>
                                 </div>
