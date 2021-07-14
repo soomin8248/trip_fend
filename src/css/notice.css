@@ -1,0 +1,128 @@
+#notice {
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+#notice .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#notice .container #notice_left {
+  width: 20%;
+  height: 100%;
+  padding-right: 40px;
+}
+
+#notice .container #notice_left #service_side_menu {
+  height: 250px;
+  border: 1px solid #333;
+  padding-top: 20px;
+}
+
+#notice .container #notice_left #service_side_menu h2 {
+  padding-left: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#notice .container #notice_left #service_side_menu #blue_bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #4d8fd0;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+#notice .container #notice_left #service_side_menu ul li {
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+#notice .container #notice_left #service_side_menu ul li:hover {
+  background-color: #4d8fd0;
+  color: #fff;
+}
+
+#notice .container #notice_right {
+  width: 80%;
+  height: 100vh;
+}
+
+#notice .container #notice_right #notice_title {
+  width: 100%;
+  border-bottom: 1px solid #333;
+}
+
+#notice .container #notice_right #notice_title h1 {
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#notice .container #notice_right #notice_search {
+  width: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#notice .container #notice_right #notice_search .search_title #search_title {
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#notice .container #notice_right #notice_search .search_menu #search_menu {
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#notice .container #notice_right #notice_search .search_input {
+  width: 305px;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#notice .container #notice_right #notice_search button {
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

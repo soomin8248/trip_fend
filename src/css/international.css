@@ -307,13 +307,11 @@
   position: relative;
 }
 
-#free_travel .free_travel .container {
-  overflow: hidden;
-}
-
 #free_travel .free_travel .container .free_item {
   width: 1196px;
   height: 356px;
+  overflow: hidden;
+  border-radius: 19.5px;
 }
 
 #free_travel .free_travel .container .free_item .f_item {

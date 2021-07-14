@@ -258,10 +258,11 @@
         text-align: center;
         position: relative;
         .container {
-            overflow: hidden;
             .free_item {
                 width: 1196px;
                 height: 356px;
+                overflow: hidden;
+                border-radius: 19.5px;
                 .f_item {
                     height: 352px;
                     display: flex;
