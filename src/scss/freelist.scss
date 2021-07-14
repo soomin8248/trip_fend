@@ -1,0 +1,205 @@
+@import "variable";
+
+
+.tour_bigmenu {
+    ul {
+        font-size: $font-size-20;
+        display: flex;
+        margin-bottom: 50px;
+        li {
+            width: 50%;
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 2px solid $main-color;
+            background-color: $gray-bg;
+            color: $dark-gray;
+            &.on {
+                border: 2px solid $main-color;
+                background-color: #fff;
+                border-bottom: none;
+                color: $black-color;
+            }
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+.tour_bigcontents {
+    position: relative;
+    .tour_type {
+        display: none;
+        &.on {
+            display: block;
+        }
+        .show_tourslide {
+            width: 100%;
+            height: 430px;
+            margin-bottom: 50px;
+            overflow: hidden;
+            .list_tourslide {
+                height: 100%;
+                display: flex;
+                .item_tourslide {
+                    height: 100%;
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        #slide_con {
+            a {
+                color: $light-gray;
+                transition: 0.5s;
+                &:hover {
+                    color: $black-color;
+                }
+                &.circleR_icon {
+                    @include position($t: 215px ,$r: 0);
+                    transform: translate(50%, -50%);
+                }
+                &.circleL_icon {
+                    @include position($t: 215px ,$l: 0);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .tour_smallmenu {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            border: 1px solid $light-gray;
+            li {
+                width: 25%;
+                line-height: 50px;
+                text-align: center;
+                font-size: $font-size-16;
+                position: relative;
+                transition: 0.5s;
+                a {
+                    display: block;
+                    width: 100%;
+                }
+                &:not(:nth-child(4n)):before {
+                    content:"";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 50px;
+                    background-color: $light-gray;
+                }
+                &:after {
+                    content:"";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $light-gray;
+                    margin-bottom: -1px;
+                }
+                &:hover, &.on{
+                    color: #fff;
+                    background-color: $main-color;
+                }
+            }
+        }
+        .tour_smallcontents {
+            .tour_lists {
+                display: none;
+                &.on {
+                    display: block;
+                }
+                .tour_item {
+                    display: flex;
+                    padding: 20px 0;
+                    border-bottom: 1px solid $light-gray;
+                    .item_img {
+                        width: 25%;
+                        position: relative;
+                        overflow: hidden;
+                        &:after {
+                            content: "";
+                            display: block;
+                            padding-bottom: 57%;
+                        }
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            min-height: 100%;
+                        }
+                        .tour_level {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 50px;
+                            height: 50px;
+                            line-height: 50px;
+                            text-align: center;
+                            color: #fff;
+                            z-index: 10;
+                            &.high { background-color: $orange-color; }
+                            &.middle { background-color: $violet-color; }
+                            &.low { background-color: $green-color;}
+                        }
+                        .departure_date {
+                            width: 100%;
+                            height: 50px;
+                            line-height: 50px;
+                            text-align: center;
+                            background-color: rgba(0,0,0,0.5);
+                            color: #fff;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .item_info {
+                        width: 75%;
+                        padding: 0 20px;
+                        p {
+                            &:nth-child(1) {
+                                margin-bottom: 10px;
+                            }
+                            &:nth-child(3) {
+                                margin-bottom: 20px;
+                                span {
+                                    font-size: $font-size-18;
+                                    font-weight: $font-weight-500;
+                                    color: $main-color;
+                                    float: right;
+                                }
+                            }
+                            &.gray-font {
+                                color: $dark-gray;
+                            }
+                        }
+                        h3 {
+                            font-size: $font-size-16;
+                            font-weight: $font-weight-500;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
