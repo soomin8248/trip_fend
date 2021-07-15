@@ -185,9 +185,9 @@
                                 li {
                                     font-size: 14px;
                                     margin-bottom: 14px;
-                                    transition: 0.5s;
                                     &:not(.menu_title):hover {
                                         color: $main-color;
+                                        transition: 0.5s;
                                     }
                                 }
                             } 
