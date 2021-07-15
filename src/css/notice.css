@@ -62,7 +62,7 @@
 
 #notice .container #notice_right #notice_title {
   width: 100%;
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #333;
 }
 
 #notice .container #notice_right #notice_title h1 {
