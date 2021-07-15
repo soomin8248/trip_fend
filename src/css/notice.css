@@ -1,6 +1,6 @@
 #notice {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   padding-top: 40px;
 }
 
@@ -125,4 +125,94 @@
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+#notice .container #notice_right #notice_list > p {
+  padding-bottom: 5px;
+}
+
+#notice .container #notice_right #notice_list .list_title {
+  height: 55px;
+  padding: 0 50px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f0f0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #ccc;
+}
+
+#notice .container #notice_right #notice_list .notice_list li {
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+#notice .container #notice_right #notice_list .notice_list li .list_no {
+  margin-left: 35px;
+  font-size: 14px;
+}
+
+#notice .container #notice_right #notice_list .notice_list li .blue_icon {
+  height: 23px;
+  line-height: 21px;
+  padding: 0 8px;
+  border: 1px solid #4d8fd0;
+  border-radius: 15px;
+  background: #fff;
+  font-size: 13px;
+  color: #4d8fd0;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 30px;
+}
+
+#notice .container #notice_right #notice_list .notice_list li a {
+  display: inline-block;
+  position: absolute;
+  left: 130px;
+}
+
+#notice .container #notice_right #notice_list .notice_list li a .red_icon {
+  display: inline-block;
+  height: 23px;
+  line-height: 21px;
+  padding: 0 8px;
+  border: 1px solid #d00000;
+  border-radius: 15px;
+  background: #fff;
+  font-size: 13px;
+  color: #d00000;
+  vertical-align: middle;
+  text-align: center;
+  margin-right: 15px;
+}
+
+#notice .container #notice_right #notice_list .notice_list li a p {
+  display: inline-block;
+  font-size: 16px;
+}
+
+#notice .container #notice_right #notice_list .notice_list li > span {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
 }
