@@ -45,6 +45,11 @@
   line-height: 30px;
 }
 
+#notice .container #notice_left #service_side_menu ul li:first-child {
+  background-color: #4d8fd0;
+  color: #fff;
+}
+
 #notice .container #notice_left #service_side_menu ul li:hover {
   background-color: #4d8fd0;
   color: #fff;
