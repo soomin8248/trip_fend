@@ -1,26 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bigmenu = document.querySelectorAll('.tour_bigmenu ul li');
     const tourtype = document.querySelectorAll('.tour_type');
-    const tourslide = document.querySelectorAll('.show_tourslide');
-    // var swiper;
+    const freeswiper = document.querySelector('.free-swiper');
+    const packgeswiper = document.querySelector('.package-swiper');
 
-    bigmenu.forEach((item, index) => {
-        item.addEventListener('click', function () {
-            bigmenu.forEach(item => item.classList.remove('on'));
-            item.classList.add('on');
+    let swiper = '';
+    let classon = '';
 
-            tourtype.forEach(item => item.classList.remove('on'));
-            tourtype[index].classList.add('on');
-
-            // swiper.destroy(true, true);
-            let classon = tourslide[index];
-            slideOn(classon);
-        });
-    });
-
-
+    if( classon == '' || classon == null){
+        slideOn(freeswiper);
+    }
+    
     function slideOn(classon) {
-        new Swiper(classon, {
+        swiper = new Swiper(classon, {
             slidesPerView: 2,
             spaceBetween: 20,
             loop: true,
@@ -31,9 +23,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            observer: true,
+            observeParents: true,
         });
     }
-    // slideOn(tourslide[0]);
+    
+    bigmenu.forEach((item, index) => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            bigmenu.forEach(item => item.classList.remove('on'));
+            item.classList.add('on');
+
+            tourtype.forEach(item => item.classList.remove('on'));
+            tourtype[index].classList.add('on');
+
+            if(index == 0){
+                classon = freeswiper;
+                swiper.destroy();
+            } else if (index == 1 ) {
+                classon = packgeswiper;
+                swiper.destroy();
+            }
+            slideOn(classon);
+        });
+    });
 
 
     const smallmenu = document.querySelectorAll('.tour_smallmenu li');
