@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Where trip(어디까지 가봤니?) - 해외여행(상세페이지)</title>
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/base.css">
     <link rel="stylesheet" href="/src/css/detailpage.css">
@@ -73,6 +74,7 @@
             </div>
         </div>
         <div id="detail_wrap">
+            <!-- 여행 주요 일정 -->
             <div id="schedule">
                 <h3 class="tit_style">여행 주요 일정</h3>
                 <div class="trip_schedule_box">
@@ -114,6 +116,9 @@
                     </ul>
                 </div>
             </div>
+            <!-- 여행 주요 일정 /-->
+
+            <!-- 상품가격 -->
             <div id="product_price">
                 <h3 class="tit_style">상품 가격</h3>
                 <table>
@@ -155,6 +160,9 @@
                     <li>아동/유아 기준은 항공사마다 상이하여, 예약 후 최종 확정됩니다.</li>
                 </ul>
             </div>
+            <!-- 상품가격 /-->
+
+            <!-- 포함/불포함/선택경비 정보 -->
             <div id="infomation">
                 <h3 class="tit_style">포함/불포함/선택경비 정보</h3>
                 <div class="include info">
@@ -183,6 +191,9 @@
                     </ul>
                 </div>
             </div>
+            <!-- 포함/불포함/선택경비 정보/ -->
+
+            <!-- 예약시 유의사항 -->
             <div id="reservation">
                 <h3 class="tit_style">예약시 유의사항</h3>
                 <table>
@@ -230,6 +241,9 @@
                     </tbody>
                 </table>
             </div>
+            <!-- 예약시 유의사항 /-->
+
+            <!-- 상품안내 -->
             <div id="product_info">
                 <h3 class="tit_style">상품안내</h3>
                 <div class="prod_imgbox">
@@ -237,6 +251,9 @@
                 </div>
                 <button id="prod_more">상품 안내<span> 더 보기</span></button>
             </div>
+            <!-- 상품안내 /-->
+
+            <!-- 패키지 일정 및 안내사항 -->
             <div id="guide_trip_box">
                 <ul class="guide_menu_tab">
                     <li class="on"><a href="#">여행일정</a></li>
@@ -287,12 +304,13 @@
                                             <p>14:05</p>
                                             <p>2021.11.01(월)</p>
                                         </div>
-                                        <div class="float_time">
-                                            <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
-                                            <img class="float_icon" src="../src//img/detailpage/ico_flight_39x22.jpg"
-                                                alt="비행기 아이콘">
-                                            <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
-                                        </div>
+                                        <ul class="float_time">
+                                            <li><img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                            <li class="float_icon"><img
+                                                    src="../src//img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
+                                            </li>
+                                            <li><img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                        </ul>
                                         <div class="way_fin">
                                             <p>현지도착</p>
                                             <p>16:30</p>
@@ -579,11 +597,13 @@
                                             <p>17:30</p>
                                             <p>2021.11.03(수)</p>
                                         </div>
-                                        <div class="float_time">
-                                            <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
-                                            <img src="../src//img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
-                                            <img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘">
-                                        </div>
+                                        <ul class="float_time">
+                                            <li><img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                            <li class="float_icon"><img
+                                                    src="../src//img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
+                                            </li>
+                                            <li><img src="../src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                        </ul>
                                         <div class="way_fin">
                                             <p>한국도착</p>
                                             <p>19:55</p>
@@ -1289,6 +1309,9 @@
                     <!-- 주의 및 참고사항 /-->
                 </div>
             </div>
+            <!-- 패키지 일정 및 안내사항 /-->
+
+            <!-- 방문도시 정보 -->
             <div id="city_info">
                 <h3 class="tit_style">방문 도시 정보</h3>
                 <table>
@@ -1310,6 +1333,7 @@
                     </tbody>
                 </table>
             </div>
+            <!-- 방문도시 정보 /-->
         </div>
         <div id="floating_box">
             <div class="booking_box">
@@ -1324,7 +1348,7 @@
                     </li>
                     <li>
                         <span>교통</span>
-                        <span>대한항공</span>
+                        <span class="book_float_icon">대한항공</span>
                     </li>
                     <li>
                         <span>남은좌석</span>

@@ -514,7 +514,11 @@
   font-weight: 500;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip {
+  display: none;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_notice {
   width: 100%;
   height: 120px;
   background: rgba(195, 225, 255, 0.3);
@@ -529,15 +533,15 @@
           align-items: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_notice div {
   width: 83%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_notice div p {
   position: relative;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div p::before {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_notice div p::before {
   content: "";
   display: block;
   width: 18px;
@@ -550,11 +554,11 @@
           transform: translateY(-50%);
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_notice div span {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_notice div span {
   display: block;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .meeting_info {
   margin: 30px 0;
   padding: 0 60px;
   width: 100%;
@@ -571,7 +575,7 @@
           align-items: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_left {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .meeting_info .meet_left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,7 +591,7 @@
           align-items: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_left .flag_circle {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .meeting_info .meet_left .flag_circle {
   width: 50px;
   height: 50px;
   background: #4d8fd0;
@@ -603,29 +607,29 @@
           align-items: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_left p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .meeting_info .meet_left p {
   padding-top: 10px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_text {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .meeting_info .meet_text {
   padding-left: 0px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .meeting_info .meet_text p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .meeting_info .meet_text p {
   padding-bottom: 15px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline {
   border: 1px solid #ddd;
   width: 100%;
   background: #fff;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline {
   width: 100%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .day_title {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .day_title {
   width: 100%;
   background: rgba(195, 225, 255, 0.3);
   height: 60px;
@@ -639,20 +643,20 @@
           align-items: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .day_title p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .day_title p {
   font-size: 18px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .day_title p span {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .day_title p span {
   font-size: 14px;
   margin-left: 30px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents {
   padding: 40px 30px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .float_route {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,41 +670,62 @@
   padding-bottom: 40px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .float_route .way_start {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route .way_start {
   text-align: center;
   padding-right: 10px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .float_route .float_time img:nth-child(1) {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route .float_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon {
+  padding: 0 120px;
   position: relative;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .float_route .float_time img:nth-child(1)::after {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon::before {
   content: "";
   display: inline-block;
   width: 100px;
   height: 4px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   background: #ddd;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon {
-  padding: 0 120px;
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #ddd;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .float_route .way_fin {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .float_route .way_fin {
   text-align: center;
   padding-left: 10px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box {
   padding-left: 100px;
   position: relative;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box::before {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box::before {
   content: "";
   display: block;
   width: 4px;
@@ -711,14 +736,14 @@
   left: 35px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location h3 {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location h3 {
   font-size: 18px;
   position: relative;
   font-weight: 500;
   padding: 8px 0 30px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location h3::before {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location h3::before {
   content: "";
   display: inline-block;
   width: 40px;
@@ -735,20 +760,20 @@
   left: -83px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .location_oki {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .location_oki {
   padding-top: 30px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .location_oki::before {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .location_oki::before {
   top: 22px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location > p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location > p {
   padding: 10px 0;
   position: relative;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location > p::before {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location > p::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -759,16 +784,16 @@
   left: -71px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location > span {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location > span {
   color: #f1454c;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p {
   padding-left: 20px;
   position: relative;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p::before {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -779,20 +804,20 @@
   left: 0;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box {
   border: 1px solid #ddd;
   margin: 30px 0;
   padding: 30px;
   width: 700px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box h4 {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box h4 {
   font-size: 18px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,33 +827,33 @@
   padding: 25px 0;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li {
   width: 49%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li img {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li img {
   width: 100%;
   height: 100%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box > p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box > p {
   font-size: 14px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .hotel_box {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .hotel_box {
   border: 1px solid #ddd;
   margin: 30px 0;
   padding: 30px;
   width: 700px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .hotel_box h4 {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .hotel_box h4 {
   font-size: 18px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,20 +863,20 @@
   padding: 25px 0;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul li {
   width: 49%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul li img {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul li img {
   width: 100%;
   height: 100%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .location_box .hotel_box > p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .location_box .hotel_box > p {
   font-size: 14px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .meal_guide {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .meal_guide {
   border-top: 1px solid #ddd;
   margin-top: 40px;
   padding-top: 30px;
@@ -860,7 +885,7 @@
   display: flex;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .meal_guide > span {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .meal_guide > span {
   display: inline-block;
   width: 55px;
   height: 25px;
@@ -872,23 +897,19 @@
   margin-right: 30px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .meal_guide .meal_list {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .meal_guide .meal_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline .timeline_contents .meal_guide .meal_list p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline .timeline_contents .meal_guide .meal_list p {
   padding-right: 20px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tabpage .trip_timeline .timeline.day3 .float_route {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline.day3 .float_route {
   padding-top: 30px;
   padding-bottom: 0;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .trip {
-  display: none;
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .shopping {
@@ -1207,7 +1228,23 @@
   left: 0;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .notedbox .agree_box {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential {
+  display: block;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .essential_items > ul > li::before {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .essential_items > ul > li:nth-child(2)::before {
+  position: absolute;
+  top: 29%;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .agree_box {
   margin-left: 10px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
@@ -1216,55 +1253,166 @@
   width: 95%;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .notedbox .agree_box li ol {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .agree_box li ol {
   padding-top: 5px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .notedbox .agree_box li ol li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .agree_box li ol li {
   font-size: 14px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .notedbox .agree_box li ol:last-child {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .agree_box li ol:last-child {
   padding-left: 16px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .essential_items > ul > li::before {
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter {
+  display: none;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .essential_items > ul > li:nth-child(2)::before {
-  position: absolute;
-  top: 29%;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .matter_con > ul > li span {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul > li span {
   display: block;
   color: #777;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .matter_con > ul > li::before {
-  top: 10px;
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul > li::before {
+  top: 8px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .matter_con > ul .matter_tit {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul .matter_tit {
   font-size: 16px;
   font-weight: 500;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .matter_con > ul .matter_tit ul {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul .matter_tit::before {
+  top: 10px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul .matter_tit ul {
   padding-top: 10px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .matter_con > ul .matter_tit ul li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul .matter_tit ul li {
   font-size: 15px;
   font-weight: normal;
   padding-bottom: 5px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content .matter_con > ul .matter_tit ul li span {
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul .matter_tit ul li span {
   display: block;
   color: #777;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .visa {
+  display: none;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .visa .visa_con > ul > li span {
+  display: block;
+  color: #777;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .visa .visa_con > ul > li::before {
+  top: 8px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .safety_info {
+  display: none;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .safety_info .safety_con p {
+  padding-bottom: 10px;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .safety_info .safety_con a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  border: 1px solid #4d8fd0;
+  color: #4d8fd0;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: -1px;
+  margin-top: 10px;
+}
+
+#detail_page #detail_wrap #city_info {
+  padding: 60px 0;
+}
+
+#detail_page #detail_wrap #city_info table {
+  width: 100%;
+}
+
+#detail_page #detail_wrap #city_info table thead tr {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #ddd;
+  background: rgba(195, 225, 255, 0.3);
+  height: 70px;
+  text-align: center;
+}
+
+#detail_page #detail_wrap #city_info table thead tr th {
+  font-weight: normal;
+}
+
+#detail_page #detail_wrap #city_info table tbody tr td {
+  width: 25%;
+  padding: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#detail_page #floating_box {
+  position: absolute;
+  top: 700px;
+  right: 0;
+  width: 250px;
+  height: 600px;
+  border: 1px solid #4d8fd0;
+  background: #fff;
+  padding: 30px;
+}
+
+#detail_page #floating_box .booking_box ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+#detail_page #floating_box .booking_box ul li span:nth-child(1) {
+  font-weight: 500;
+}
+
+#detail_page #floating_box .booking_box ul li .book_float_icon {
+  position: relative;
+}
+
+#detail_page #floating_box .booking_box ul li .book_float_icon::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(/src/img/detailpage/KE.png) center center no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#detail_page #floating_box .booking_box button {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  letter-spacing: -1px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #4d8fd0;
+  background: #4d8fd0;
+  outline: none;
 }
