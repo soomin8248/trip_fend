@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let swiper = '';
     let classon = '';
 
-    if( classon == '' || classon == null){
+    if (classon == '' || classon == null) {
         slideOn(freeswiper);
     }
-    
+
     function slideOn(classon) {
         swiper = new Swiper(classon, {
             slidesPerView: 2,
@@ -27,20 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
             observeParents: true,
         });
     }
-    
+
     bigmenu.forEach((item, index) => {
         item.addEventListener('click', function (e) {
             e.preventDefault();
+
             bigmenu.forEach(item => item.classList.remove('on'));
             item.classList.add('on');
 
             tourtype.forEach(item => item.classList.remove('on'));
             tourtype[index].classList.add('on');
 
-            if(index == 0){
+            if (index == 0) {
                 classon = freeswiper;
                 swiper.destroy();
-            } else if (index == 1 ) {
+            } else if (index == 1) {
                 classon = packgeswiper;
                 swiper.destroy();
             }
