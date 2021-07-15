@@ -45,6 +45,11 @@
   line-height: 30px;
 }
 
+#notice .container #notice_left #service_side_menu ul li:first-child {
+  background-color: #4d8fd0;
+  color: #fff;
+}
+
 #notice .container #notice_left #service_side_menu ul li:hover {
   background-color: #4d8fd0;
   color: #fff;
@@ -89,6 +94,19 @@
           box-sizing: border-box;
   font-size: 14px;
   margin-right: 10px;
+  -webkit-appearance: none;
+  /* for chrome */
+  -moz-appearance: none;
+  /*for firefox*/
+  appearance: none;
+  background: url(../img/icon/bl_sel_arrow.png) no-repeat;
+  background-position: right center;
+  background-size: 19px;
+}
+
+#notice .container #notice_right #notice_search .search_title #search_title::-ms-expand {
+  display: none;
+  /*for IE10,11*/
 }
 
 #notice .container #notice_right #notice_search .search_menu #search_menu {
@@ -101,6 +119,19 @@
           box-sizing: border-box;
   font-size: 14px;
   margin-right: 10px;
+  -webkit-appearance: none;
+  /* for chrome */
+  -moz-appearance: none;
+  /*for firefox*/
+  appearance: none;
+  background: url(../img/icon/bl_sel_arrow.png) no-repeat;
+  background-position: right center;
+  background-size: 19px;
+}
+
+#notice .container #notice_right #notice_search .search_menu #search_menu::-ms-expand {
+  display: none;
+  /*for IE10,11*/
 }
 
 #notice .container #notice_right #notice_search .search_input {
@@ -169,13 +200,13 @@
 }
 
 #notice .container #notice_right #notice_list .notice_list li .blue_icon {
-  height: 23px;
-  line-height: 21px;
+  height: 22px;
+  line-height: 20px;
   padding: 0 8px;
   border: 1px solid #4d8fd0;
   border-radius: 15px;
   background: #fff;
-  font-size: 13px;
+  font-size: 12px;
   color: #4d8fd0;
   vertical-align: middle;
   text-align: center;
@@ -190,13 +221,13 @@
 
 #notice .container #notice_right #notice_list .notice_list li a .red_icon {
   display: inline-block;
-  height: 23px;
-  line-height: 21px;
+  height: 22px;
+  line-height: 20px;
   padding: 0 8px;
   border: 1px solid #d00000;
   border-radius: 15px;
   background: #fff;
-  font-size: 13px;
+  font-size: 12px;
   color: #d00000;
   vertical-align: middle;
   text-align: center;
@@ -215,4 +246,69 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   display: inline-block;
+}
+
+#notice .container #notice_right #notice_control {
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+#notice .container #notice_right #notice_control .control_box {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 3px;
+}
+
+#notice .container #notice_right #notice_control .control_box i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#notice .container #notice_right #notice_control .light_box {
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+#notice .container #notice_right #notice_control .dark_box {
+  border: 1px solid #888;
+  color: #888;
+}
+
+#notice .container #notice_right #notice_control ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#notice .container #notice_right #notice_control ul li {
+  padding: 0 10px;
+  position: relative;
+}
+
+#notice .container #notice_right #notice_control ul li:first-child ::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  left: 9px;
+}
+
+#notice .container #notice_right #notice_control ul li:not(:first-child) {
+  color: #888;
 }
