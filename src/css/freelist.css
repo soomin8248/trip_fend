@@ -3,7 +3,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .tour_bigmenu ul li {
@@ -28,10 +28,6 @@
   height: 100%;
 }
 
-.tour_bigcontents {
-  position: relative;
-}
-
 .tour_bigcontents .tour_type {
   display: none;
 }
@@ -43,7 +39,7 @@
 .tour_bigcontents .tour_type .show_tourslide {
   width: 100%;
   height: 430px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   overflow: hidden;
 }
 
@@ -66,39 +62,13 @@
   height: 100%;
 }
 
-.tour_bigcontents .tour_type #slide_con a {
-  color: #ccc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.tour_bigcontents .tour_type #slide_con a:hover {
-  color: #333;
-}
-
-.tour_bigcontents .tour_type #slide_con a.circleR_icon {
-  position: absolute;
-  top: 215px;
-  right: 0;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-}
-
-.tour_bigcontents .tour_type #slide_con a.circleL_icon {
-  position: absolute;
-  top: 215px;
-  left: 0;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .tour_bigcontents .tour_type .tour_smallmenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   border: 1px solid #ccc;
 }
 
@@ -157,7 +127,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px 0;
+  padding: 30px 0;
   border-bottom: 1px solid #ccc;
 }
 
