@@ -69,7 +69,16 @@
                         box-sizing: border-box;
                         font-size: $font-size-14;
                         margin-right: 10px;
+                        -webkit-appearance:none; /* for chrome */
+                        -moz-appearance:none; /*for firefox*/
+                        appearance:none;
+                        background: url(../img/icon/bl_sel_arrow.png) no-repeat;
+                        background-position: right center;
+                        background-size: 19px;
                     }
+                    #search_title::-ms-expand{
+                        display:none;/*for IE10,11*/
+                     }
                 }
                 .search_menu {
                     #search_menu {
@@ -81,7 +90,16 @@
                         box-sizing: border-box;
                         font-size: $font-size-14;
                         margin-right: 10px;
+                        -webkit-appearance:none; /* for chrome */
+                        -moz-appearance:none; /*for firefox*/
+                        appearance:none;
+                        background: url(../img/icon/bl_sel_arrow.png) no-repeat;
+                        background-position: right center;
+                        background-size: 19px;
                     }
+                    #search_menu::-ms-expand{
+                        display:none;/*for IE10,11*/
+                     }
                 }
                 .search_input {
                     width: 305px;
@@ -132,13 +150,13 @@
                             font-size: $font-size-14;
                         }
                         .blue_icon {
-                            height: 23px;
-                            line-height: 21px;
+                            height: 22px;
+                            line-height: 20px;
                             padding: 0 8px;
                             border: 1px solid $main-color;
                             border-radius: 15px;
-                            background: #fff;
-                            font-size: $font-size-13;
+                            background: $white-color;
+                            font-size: $font-size-12;
                             color: $main-color;
                             vertical-align: middle;
                             text-align: center;
@@ -150,13 +168,13 @@
                             left: 130px;
                             .red_icon {
                                 display: inline-block;
-                                height: 23px;
-                                line-height: 21px;
+                                height: 22px;
+                                line-height: 20px;
                                 padding: 0 8px;
                                 border: 1px solid $red-color;
                                 border-radius: 15px;
-                                background: #fff;
-                                font-size: $font-size-13;
+                                background: $white-color;
+                                font-size: $font-size-12;
                                 color: $red-color;
                                 vertical-align: middle;
                                 text-align: center;
@@ -174,6 +192,54 @@
                             transform: translateY(-50%);
                             display: inline-block;
                         }
+                    }
+                }
+            }
+            #notice_control {
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15px;
+                .control_box {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    position: relative;
+                    margin: 0 3px;
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .light_box {
+                    border: 1px solid $light-gray;
+                    color: $light-gray;
+                }
+                .dark_box {
+                    border: 1px solid $dark-gray;
+                    color: $dark-gray;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        padding: 0 10px;
+                        position: relative;
+                        &:first-child ::after {
+                            content: '';
+                            display: block;
+                            width: 10px;
+                            height: 1px;
+                            background-color: $black-color;
+                            position: absolute;
+                            left: 9px;
+                        }
+                        &:not(:first-child) {
+                            color: $dark-gray;
+                        }
+
                     }
                 }
             }
