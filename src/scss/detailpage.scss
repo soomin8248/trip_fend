@@ -396,12 +396,11 @@ $red-color: #f1454c;
                     border-right: 1px solid $main-color;
                     border-bottom: 1px solid #fff;
                 }
-                & + & {
-                    border-bottom: 1px solid $main-color;
-                }
             }
             #content_tab {
                 padding-top: 30px;
+                position: relative;
+                // 여행일정
                 .tabpage {
                     .submenu_tab {
                         width: 100%;
@@ -409,27 +408,40 @@ $red-color: #f1454c;
                         padding-bottom: 10px;
                         display: flex;
                         li {
-                            padding-right: 30px;
-                            position: relative;
-                            &::after {
-                                content: "";
-                                display: none;
-                                width: 36px;
-                                height: 3px;
-                                background: $main-color;
-                                position: absolute;
-                                bottom: -12px; left: 0;
+                            width: 8%;
+                            color: #9d9d9d;
+                            a {
+                                width: 100%;
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    display: none;
+                                    width: 100%;
+                                    height: 3px;
+                                    background: $main-color;
+                                    position: absolute;
+                                    bottom: -12px; left: 0;
+                                }
                             }
-                        }
-                        li.on {
+                            a.on {
+                                color: $black-color;
                             &::after {
                                 display: block;
                             }
+                            }
+                            
                         }
+                        // li.on {
+                        //     color: $black-color;
+                        //     &::after {
+                        //         display: block;
+                        //     }
+                        // }
                     }
                     > h4 {
-                        padding: 40px 0;
-                        font-size: 22px;
+                        padding: 30px 0;
+                        font-size: 24px;
+                        font-weight: 500;
                     }
                     .trip_notice {
                         width: 100%;
@@ -703,7 +715,366 @@ $red-color: #f1454c;
                                 }
                             }
                         }
+                        .timeline.day3 {
+                            .float_route {
+                                padding-top: 30px;
+                                padding-bottom: 0;
+                            }
+                        }
                     }
+                }
+                .trip {
+                    display: none;
+                }
+                // 선택관광/쇼핑
+                .shopping {
+                    display: none;
+                    .shopping_box {
+                        border: 1px solid #ddd;
+                        padding: 30px;
+                        > p {
+                            padding-bottom: 25px;
+                            font-size: 16px;
+                        }
+                        .shoptext {
+                            h4 {
+                                font-size: 16px;
+                                color: $main-color;
+                                font-weight: 500;
+                                padding-bottom: 10px;
+                            }
+                            p {
+                                font-size: 15px;
+                                margin-bottom: 10px;                             
+                            }
+                            .notice_text {
+                                font-size: 14px;
+                                color: $red-color;
+                                padding-top: 10px;
+                            }
+                        }
+                        .shopping_detail {
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                // 관광지/숙소
+                .tourist_spots {
+                    display: none;
+                    .tourLists_con {
+                        > h4 {
+                            padding: 30px 0;
+                            font-size: 24px;
+                            font-weight: 500;
+                        }
+                        .tourLists_box {
+                            width: 100%;
+                            .tourList {
+                                width: 100%;
+                                border: 1px solid #ddd;
+                                padding: 30px;
+                                margin-bottom: 40px;
+                                h4 {
+                                    padding-bottom: 20px;
+                                    border-bottom: 1px solid #ddd;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                }
+                                ul {
+                                    padding: 25px 0;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    li {
+                                        width: 49%;
+                                        img{ 
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .spots {
+                        display: block;
+                    }
+                    .hotels {
+                        display: none;
+                    }
+                }
+                // 약관/취소수수료
+                .terms {
+                    display: none;
+                    h4 {
+                        padding-top: 0;
+                    }
+                    .terms_box {
+                        border: 1px solid #ddd;
+                        padding: 30px;
+                    }
+                    h5 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $main-color;
+                        padding-bottom: 10px;
+                    }
+                    .terms_detail {
+                        padding-bottom: 20px;
+                    }
+                    .terms_cancle {
+                        .cancle_tit {
+                            font-size: 16px;
+                            padding-bottom: 20px;
+                            ul {
+                                padding-top: 10px;
+                                padding-left: 15px;
+                                li {
+                                    font-size: 15px;
+                                    line-height: 1.8;
+                                }
+                                .cancle_text_box {
+                                    border: 1px solid #ddd;
+                                    padding: 10px 15px;
+                                    font-size: 14px;
+                                    color: #888;
+                                    width: 90%;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                // 여행자보험
+                .tourist_insurance {
+                    display: none;
+                    .submenu_tab {
+                        li {
+                            width: 10%;
+                        }
+                    }
+                    h4 {
+                        font-size: 24px;
+                        font-weight: 500;
+                        padding: 30px 0;
+                    }
+                    
+                    // 보상한도
+                    .insurance_limit {
+                        display: block;
+                        .limit_con{
+                            p {
+                                text-align: right;
+                                padding-bottom: 10px;
+                                color: $gray-color;
+                            }
+                            table {
+                                width: 100%;
+                                border-top: 2px solid $black-color;
+                                thead {
+                                    tr {
+                                        border-bottom: 1px solid #ddd;
+                                        height: 80px;
+                                        background: rgba(195, 225, 255, 0.3);
+                                        th {
+                                            font-weight: normal;
+                                            text-align: center;
+                                            &:not(:last-child){
+                                                border-right: 1px solid #ddd;
+                                            } 
+                                        }
+                                    }
+                                    
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            border-bottom: 1px solid #ddd;
+                                            height: 50px;
+                                            padding: 5px 15px;
+                                            &:not(:last-child){
+                                                border-right: 1px solid #ddd;
+                                            }
+                                        }
+                                        .limit_tit {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 보상기준
+                    .insurance_standard {
+                        display: none;
+                        .standard_con {
+                            border: 1px solid #ddd;
+                            padding: 30px;
+                            div {
+                                padding-bottom: 15px;
+                                h5 {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    padding-bottom: 10px;
+                                }
+                                p {
+                                    color: #555;
+                                    padding-bottom: 5px;
+                                }
+                            }
+                            ul {
+                                color: #555;
+                                li {
+                                    padding-bottom: 5px;
+                                }
+                            }
+                            .example_box {
+                                width: 90%;
+                                border: 1px solid #ddd;
+                                padding: 20px 30px;
+                                font-size: 14px;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    // 보험 약관
+                    .insurance_agree {
+                        display: none;
+                        .insu_agree_con {
+                            border: 1px solid #ddd;
+                            padding: 30px;
+                            overflow-y: scroll;
+                            height: 300px;
+                            h5, h6 {
+                                font-size: 16px;
+                                padding: 10px 0;
+                                font-weight: 500;
+                            }
+                            p {
+                                color: #555;
+                            }
+                            .agree_num {
+                                padding-top: 15px;
+                                color: #555;
+                                > li {
+                                    padding-bottom: 15px;
+                                    .agree_list {
+                                        padding-left: 18px;
+                                        li {
+                                            padding-top: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                // 주의 및 참고사항
+                .noted_items {
+                    display: block;
+                    .submenu_tab {
+                        li {
+                            width: 13%;
+                        }
+                    }
+                    .noted_content {
+                        width: 100%;
+                        h4 {
+                            font-size: 24px;
+                            font-weight: 500;
+                            padding: 30px 0;
+                        }
+                        .notedbox {
+                            border: 1px solid #ddd;
+                            padding: 30px;
+                            > ul {
+                                > li {
+                                    margin-bottom: 15px;
+                                    padding-left: 10px;
+                                    position: relative;
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 5px;
+                                        height: 5px;
+                                        border-radius: 50%;
+                                        background: $main-color;
+                                        position: absolute;
+                                        top: 0; left: 0;
+                                    }
+                                }
+                            }
+                            .agree_box {
+                                margin-left: 10px;
+                                margin-bottom: 20px;
+                                border: 1px solid #ddd;
+                                padding: 20px;
+                                color: #777;
+                                width: 95%;
+                                li {
+                                    ol {
+                                        padding-top: 5px;
+                                        li {
+                                            font-size: 14px;
+                                        }
+                                        &:last-child {
+                                            padding-left: 16px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                        // 필수사항
+                        .essential_items {
+                            > ul {
+                                > li {
+                                    &::before {
+                                        top: 50%; left: 0;
+                                        transform: translateY(-50%);
+                                    }
+                                    &:nth-child(2) {
+                                        &::before {
+                                            position: absolute;
+                                            top: 29%;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                        // 유의사항
+                        .matter_con {
+                            > ul {
+                                > li {
+                                    span {
+                                        display: block;
+                                        color: #777;
+                                    }
+                                    &::before {
+                                        top: 10px;
+                                    }
+                                }
+                                .matter_tit {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    ul {
+                                        padding-top: 10px;
+                                        li {
+                                            font-size: 15px;
+                                            font-weight: normal;
+                                            padding-bottom: 5px;
+                                            span {
+                                                display: block;
+                                                color: #777;
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }         
                 }
             }
         }
