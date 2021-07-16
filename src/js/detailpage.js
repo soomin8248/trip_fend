@@ -64,24 +64,6 @@ tripSubTab.forEach(function (item, index) {
         item.classList.add('on');
     })
 })
-// tourListTab.forEach(function (item, index) {
-//     item.addEventListener('click', function () {
-//         tourListTab.forEach(item => item.classList.remove('on'));
-//         tourListTab.classList.add('on');
-//     })
-// })
-// 관광지
 
 
 
-// const smallmenu = document.querySelectorAll('.tour_smallmenu li');
-// const tour_lists = document.querySelectorAll('.tour_lists');
-
-// smallmenu.forEach(function (item, index) {
-//     item.addEventListener('click', function () {
-//         smallmenu.forEach(item => item.classList.remove('on'));
-//         item.classList.add('on');
-//         tour_lists.forEach(item => item.classList.remove('on'));
-//         tour_lists[index].classList.add('on');
-//     })
-// })
