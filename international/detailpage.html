@@ -16,19 +16,8 @@
     <script type="text/javascript" src="/src/js/w3.js"></script>
     <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
     <script type="text/javascript" src="/src/js/common.js"></script>
+    <script type="text/javascript" defer src="/src/js/detailpage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            new Swiper('.packimg-swiper', {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 4000,
-                },
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -249,27 +238,28 @@
                 <div class="prod_imgbox">
                     <img src="../src/img/detailpage/tourimg.jpg" alt="상품안내 배너이미지">
                 </div>
-                <button id="prod_more">상품 안내<span> 더 보기</span></button>
+                <button id="prod_more" class="on" onclick="moreImg()">상품 안내<span> 더 보기</span></button>
+                <button id="prod_close" onclick="moreImg()">상품 안내<span> 닫기</span></button>
             </div>
             <!-- 상품안내 /-->
 
             <!-- 패키지 일정 및 안내사항 -->
             <div id="guide_trip_box">
                 <ul class="guide_menu_tab">
-                    <li class="on"><a href="#">여행일정</a></li>
-                    <li><a href="#">선택관광/쇼핑</a></li>
-                    <li><a href="#">관광지</a></li>
-                    <li><a href="#">약관/취소수수료</a></li>
-                    <li><a href="#">여행자보험</a></li>
-                    <li><a href="#">주의 및 참고사항</a></li>
+                    <li class="on"><a href="#/">여행일정</a></li>
+                    <li><a href="#/">선택관광/쇼핑</a></li>
+                    <li><a href="#/">관광지</a></li>
+                    <li><a href="#/">약관/취소수수료</a></li>
+                    <li><a href="#/">여행자보험</a></li>
+                    <li><a href="#/">주의 및 참고사항</a></li>
                 </ul>
                 <div id="content_tab">
                     <!-- 여행일정 -->
-                    <div class="tabpage trip">
+                    <div class="tabpage trip on">
                         <ul class="submenu_tab">
-                            <li><a href="#" class="on">1일차</a></li>
-                            <li><a href="#">2일차</a></li>
-                            <li><a href="#">3일차</a></li>
+                            <li><a href="#/" class="on">1일차</a></li>
+                            <li><a href="#/">2일차</a></li>
+                            <li><a href="#/">3일차</a></li>
                         </ul>
                         <h4>여행일정</h4>
                         <div class="trip_notice">
@@ -628,7 +618,7 @@
                     <!-- 선택관광/쇼핑 -->
                     <div class="tabpage shopping">
                         <ul class="submenu_tab">
-                            <li><a href="#" class="on">쇼핑</a></li>
+                            <li><a href="#/" class="on">쇼핑</a></li>
                         </ul>
                         <h4>쇼핑</h4>
                         <div class="shopping_box">
@@ -662,11 +652,11 @@
                     <!-- 관광지 -->
                     <div class="tabpage tourist_spots">
                         <ul class="submenu_tab">
-                            <li><a href="#" class="on">관광지</a></li>
-                            <li><a href="#">숙소</a></li>
+                            <li><a href="#/" class="on">관광지</a></li>
+                            <li><a href="#/">숙소</a></li>
                         </ul>
                         <!-- 관광지 contents -->
-                        <div class="spots tourLists_con">
+                        <div class="spots tourLists_con on">
                             <h4>관광지</h4>
                             <div class="tourLists_box">
                                 <div class="tourList">
@@ -842,9 +832,9 @@
                     <!-- 여행자보험 -->
                     <div class="tabpage tourist_insurance">
                         <ul class="submenu_tab">
-                            <li><a href="#" class="on">보상한도</a></li>
-                            <li><a href="#">보상기준</a></li>
-                            <li><a href="#">보험약관</a></li>
+                            <li><a href="#/" class="on">보상한도</a></li>
+                            <li><a href="#/">보상기준</a></li>
+                            <li><a href="#/">보험약관</a></li>
                         </ul>
 
                         <!-- 보상한도 -->
@@ -1176,10 +1166,10 @@
                     <!-- 주의 및 참고사항 -->
                     <div class="tabpage noted_items">
                         <ul class="submenu_tab">
-                            <li><a href="#" class="on">필수사항</a></li>
-                            <li><a href="#">유의사항</a></li>
-                            <li><a href="#">여권비자</a></li>
-                            <li><a href="#">해외여행안전정보</a></li>
+                            <li><a href="#/" class="on">필수사항</a></li>
+                            <li><a href="#/">유의사항</a></li>
+                            <li><a href="#/">여권비자</a></li>
+                            <li><a href="#/">해외여행안전정보</a></li>
                         </ul>
                         <!-- 필수사항 -->
                         <div class="essential noted_content">
