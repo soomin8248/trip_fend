@@ -4,6 +4,18 @@ $light-gray: #ccc;
 $black-color: #333;
 $red-color: #f1454c;
 
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-24: 24px;
+$font-size-30: 30px;
+
+$font-weight-nomal: normal;
+$font-weight-200: 200;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-700: 700;
+
 @mixin position ( $p: absolute, $t: null, $b: null, $l: null, $r: null) {
     position: $p;
     top: $t;
@@ -33,8 +45,8 @@ $red-color: #f1454c;
         }
         h2 {
             padding: 30px 0;
-            font-size: 30px;
-            font-weight: 500;
+            font-size: $font-size-30;
+            font-weight: $font-weight-500;
             border-bottom: 2px solid $main-color;   
         }
         .pack_num {
@@ -97,8 +109,8 @@ $red-color: #f1454c;
         padding-top: 60px;
         max-width: 900px;
         .tit_style{
-            font-size: 24px;
-            font-weight: 500;
+            font-size: $font-size-24;
+            font-weight: $font-weight-500;
             padding-bottom: 30px;
         }
         // 여행 주요 일정
@@ -114,7 +126,7 @@ $red-color: #f1454c;
                     font-size: 15px;
                     .sceh_tit{
                         width: 20%;
-                        font-size: 16px;
+                        font-size: $font-size-16;
                     }
                     .traffic_con {
                         width: 80%;
@@ -191,9 +203,9 @@ $red-color: #f1454c;
                         
                         border-top: 1px solid $black-color;
                         background: rgba(195,225,255,0.3);
-                        font-size: 16px;
+                        font-size: $font-size-16;
                         th {
-                            font-weight: normal;
+                            font-weight: $font-weight-nomal;
                             line-height: 1.2;
                             span {
                                 display: block;
@@ -217,7 +229,7 @@ $red-color: #f1454c;
                             &:not(:nth-child(1)) {
                                 color: $main-color;
                                 font-size: 17px;
-                                font-weight: 500;
+                                font-weight: $font-weight-500;
                             }
                         }
                         
@@ -230,7 +242,7 @@ $red-color: #f1454c;
                     padding-left: 10px;
                     position: relative;
                     color: #888;
-                    font-size: 14px;
+                    font-size: $font-size-14;
                     margin-bottom: 10px;
                     &::before {
                         content: "";
@@ -274,7 +286,7 @@ $red-color: #f1454c;
                     display: flex;
                     justify-content: center;
                     span{
-                        font-size: 18px;
+                        font-size: $font-size-18;
                         position: relative;
                         text-align: center;
                         &::before {
@@ -345,7 +357,7 @@ $red-color: #f1454c;
                         padding: 15px 30px;
                         text-align: left;
                         background: rgba(195, 225, 255, 0.3);
-                        font-weight: normal;
+                        font-weight: $font-weight-nomal;
                     }
                     td {
                         padding: 15px 0 15px 30px;
@@ -373,9 +385,9 @@ $red-color: #f1454c;
                 outline: none;
                 background: #fff;
                 color: $main-color;
-                font-size: 16px;
+                font-size: $font-size-16;
                 letter-spacing: -1px;
-                font-weight: 500;
+                font-weight: $font-weight-500;
                 margin-top: 10px;
             }
         }
@@ -441,8 +453,8 @@ $red-color: #f1454c;
                     }
                     > h4 {
                         padding: 30px 0;
-                        font-size: 24px;
-                        font-weight: 500;
+                        font-size: $font-size-24;
+                        font-weight: $font-weight-500;
                     }
                 }
                 // 여행일정
@@ -524,9 +536,9 @@ $red-color: #f1454c;
                                 display: flex;
                                 align-items: center;
                                 p {
-                                    font-size: 18px;
+                                    font-size: $font-size-18;
                                     span {
-                                        font-size: 14px;
+                                        font-size: $font-size-14;
                                         margin-left: 30px;
                                     }
                                 }
@@ -537,7 +549,7 @@ $red-color: #f1454c;
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
-                                    font-size: 16px;
+                                    font-size: $font-size-16;
                                     padding-bottom: 40px;
                                     .way_start {
                                         text-align: center;
@@ -590,9 +602,9 @@ $red-color: #f1454c;
                                     }
                                     .location {
                                         h3 {
-                                            font-size: 18px;
+                                            font-size: $font-size-18;
                                             position: relative;
-                                            font-weight: 500;
+                                            font-weight: $font-weight-500;
                                             padding: 8px 0 30px;
                                             &::before {
                                                 content: "";
@@ -653,7 +665,7 @@ $red-color: #f1454c;
                                                 padding: 30px;
                                                 width: 700px;
                                                 h4 {
-                                                    font-size: 18px;
+                                                    font-size: $font-size-18;
                                                     padding-bottom: 10px;
                                                     border-bottom: 1px solid #ddd;
                                                 }
@@ -671,7 +683,7 @@ $red-color: #f1454c;
                                                     }
                                                 }
                                                 > p {
-                                                    font-size: 14px;
+                                                    font-size: $font-size-14;
                                                 }
                                             }
                                         }
@@ -682,7 +694,7 @@ $red-color: #f1454c;
                                         padding: 30px;
                                         width: 700px;
                                         h4 {
-                                            font-size: 18px;
+                                            font-size: $font-size-18;
                                             padding-bottom: 10px;
                                             border-bottom: 1px solid #ddd;
                                         }
@@ -700,7 +712,7 @@ $red-color: #f1454c;
                                             }
                                         }
                                         > p {
-                                            font-size: 14px;
+                                            font-size: $font-size-14;
                                         }
                                     }
                                 }
@@ -717,7 +729,7 @@ $red-color: #f1454c;
                                         border: 1px solid $main-color;
                                         border-radius: 12.5px;
                                         text-align: center;
-                                        font-size: 14px;
+                                        font-size: $font-size-14;
                                         margin-right: 30px;
                                     }
                                     .meal_list {
@@ -745,13 +757,13 @@ $red-color: #f1454c;
                         padding: 30px;
                         > p {
                             padding-bottom: 25px;
-                            font-size: 16px;
+                            font-size: $font-size-16;
                         }
                         .shoptext {
                             h4 {
-                                font-size: 16px;
+                                font-size: $font-size-16;
                                 color: $main-color;
-                                font-weight: 500;
+                                font-weight: $font-weight-500;
                                 padding-bottom: 10px;
                             }
                             p {
@@ -759,7 +771,7 @@ $red-color: #f1454c;
                                 margin-bottom: 10px;                             
                             }
                             .notice_text {
-                                font-size: 14px;
+                                font-size: $font-size-14;
                                 color: $red-color;
                                 padding-top: 10px;
                             }
@@ -775,8 +787,8 @@ $red-color: #f1454c;
                     .tourLists_con {
                         > h4 {
                             padding: 30px 0;
-                            font-size: 24px;
-                            font-weight: 500;
+                            font-size: $font-size-24;
+                            font-weight: $font-weight-500;
                         }
                         .tourLists_box {
                             width: 100%;
@@ -788,8 +800,8 @@ $red-color: #f1454c;
                                 h4 {
                                     padding-bottom: 20px;
                                     border-bottom: 1px solid #ddd;
-                                    font-size: 18px;
-                                    font-weight: 500;
+                                    font-size: $font-size-18;
+                                    font-weight: $font-weight-500;
                                 }
                                 ul {
                                     padding: 25px 0;
@@ -824,8 +836,8 @@ $red-color: #f1454c;
                         padding: 30px;
                     }
                     h5 {
-                        font-size: 18px;
-                        font-weight: 500;
+                        font-size: $font-size-18;
+                        font-weight: $font-weight-500;
                         color: $main-color;
                         padding-bottom: 10px;
                     }
@@ -834,7 +846,7 @@ $red-color: #f1454c;
                     }
                     .terms_cancle {
                         .cancle_tit {
-                            font-size: 16px;
+                            font-size: $font-size-16;
                             padding-bottom: 20px;
                             ul {
                                 padding-top: 10px;
@@ -846,7 +858,7 @@ $red-color: #f1454c;
                                 .cancle_text_box {
                                     border: 1px solid #ddd;
                                     padding: 10px 15px;
-                                    font-size: 14px;
+                                    font-size: $font-size-14;
                                     color: #888;
                                     width: 90%;
                                     margin: 10px 0;
@@ -864,8 +876,8 @@ $red-color: #f1454c;
                         }
                     }
                     h4 {
-                        font-size: 24px;
-                        font-weight: 500;
+                        font-size: $font-size-24;
+                        font-weight: $font-weight-500;
                         padding: 30px 0;
                     }
                     
@@ -887,7 +899,7 @@ $red-color: #f1454c;
                                         height: 80px;
                                         background: rgba(195, 225, 255, 0.3);
                                         th {
-                                            font-weight: normal;
+                                            font-weight: $font-weight-nomal;
                                             text-align: center;
                                             &:not(:last-child){
                                                 border-right: 1px solid #ddd;
@@ -923,8 +935,8 @@ $red-color: #f1454c;
                             div {
                                 padding-bottom: 15px;
                                 h5 {
-                                    font-size: 16px;
-                                    font-weight: 500;
+                                    font-size: $font-size-16;
+                                    font-weight: $font-weight-500;
                                     padding-bottom: 10px;
                                 }
                                 p {
@@ -942,7 +954,7 @@ $red-color: #f1454c;
                                 width: 90%;
                                 border: 1px solid #ddd;
                                 padding: 20px 30px;
-                                font-size: 14px;
+                                font-size: $font-size-14;
                                 margin: 10px 0;
                             }
                         }
@@ -956,9 +968,9 @@ $red-color: #f1454c;
                             overflow-y: scroll;
                             height: 300px;
                             h5, h6 {
-                                font-size: 16px;
+                                font-size: $font-size-16;
                                 padding: 10px 0;
-                                font-weight: 500;
+                                font-weight: $font-weight-500;
                             }
                             p {
                                 color: #555;
@@ -992,8 +1004,8 @@ $red-color: #f1454c;
                     .noted_content {
                         width: 100%;
                         h4 {
-                            font-size: 24px;
-                            font-weight: 500;
+                            font-size: $font-size-24;
+                            font-weight: $font-weight-500;
                             padding: 30px 0;
                         }
                         .notedbox {
@@ -1048,7 +1060,7 @@ $red-color: #f1454c;
                                 ol {
                                     padding-top: 5px;
                                     li {
-                                        font-size: 14px;
+                                        font-size: $font-size-14;
                                     }
                                     &:last-child {
                                         padding-left: 16px;
@@ -1072,8 +1084,8 @@ $red-color: #f1454c;
                                     }
                                 }
                                 .matter_tit {
-                                    font-size: 16px;
-                                    font-weight: 500;
+                                    font-size: $font-size-16;
+                                    font-weight: $font-weight-500;
                                     &::before {
                                         top: 10px;
                                     }
@@ -1081,7 +1093,7 @@ $red-color: #f1454c;
                                         padding-top: 10px;
                                         li {
                                             font-size: 15px;
-                                            font-weight: normal;
+                                            font-weight: $font-weight-nomal;
                                             padding-bottom: 5px;
                                             span {
                                                 display: block;
@@ -1137,7 +1149,7 @@ $red-color: #f1454c;
 
         // 방문도시 정보
         #city_info {
-            padding: 60px 0;
+            padding-top: 60px;
             table {
                 width: 100%;
                 thead {
@@ -1148,7 +1160,7 @@ $red-color: #f1454c;
                         height: 70px;
                         text-align: center;
                         th {
-                            font-weight: normal;
+                            font-weight: $font-weight-nomal;
                         }
                     }
                 }
@@ -1169,11 +1181,12 @@ $red-color: #f1454c;
         position: absolute;
         top: 700px; right: 0;
         width: 250px;
-        height: 600px;
+        height: 650px;
         border: 1px solid $main-color;
         background: #fff;
-        padding: 30px;
         .booking_box {
+            border-bottom: 1px solid #ccc;
+            padding: 30px 30px 35px;
             ul {
                 li {
                     display: flex;
@@ -1181,7 +1194,7 @@ $red-color: #f1454c;
                     padding-bottom: 10px;
                     span {
                         &:nth-child(1) {
-                            font-weight: 500;
+                            font-weight: $font-weight-500;
                         }
                     }
                     .book_float_icon {
@@ -1203,14 +1216,87 @@ $red-color: #f1454c;
                 width: 100%;
                 height: 35px;
                 line-height: 35px;
-                color: #fff;
-                letter-spacing: -1px;
-                font-size: 14px;
-                font-weight: bold;
                 border: 1px solid $main-color;
                 background: $main-color;
                 outline: none;
+                span {
+                    color: #fff;
+                    letter-spacing: -1px;
+                    font-size: $font-size-14;
+                    font-weight: bold;
+                    padding-left: 26px;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 19px;
+                        height: 11px;
+                        background: url(/src/img/detailpage/ico_flight_w.jpg) center center no-repeat;
+                        position: absolute;
+                        top: 50%; left: 0;
+                        transform: translateY(-50%);
+                    }
+                }
                 
+            }
+        }
+        .booking_box_price {
+            padding: 30px 30px 35px;
+            border-bottom: 1px solid #ccc;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                p {
+                    span {
+                        display: block;
+                        color: $main-color;
+                        font-size: $font-size-16;
+                        font-weight: $font-weight-500;
+                    }
+                }
+                .select_num {
+                    border: 1px solid $gray-color;
+                    width: 70px; padding: 5px;
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .booking_box_total {
+            padding: 30px 30px 35px;
+            .price_box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: $font-weight-500;
+                .all_price {
+                    font-size: 20px;
+                    font-weight: $font-weight-500;
+                    color: $main-color;
+                }
+            }
+            p {
+                text-align: right;
+                font-size: 13px;
+                color: $gray-color;
+                padding-bottom: 10px;
+            }
+            button {
+                width: 190px;
+                height: 45px;
+                margin-top: 10px;
+                border: none;
+                outline: none;
+                background: $main-color;
+                color: #fff;
+                font-size: $font-size-16;
+                font-weight: $font-weight-500;
+                letter-spacing: -1px;
             }
         }
     }
