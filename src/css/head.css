@@ -2,6 +2,7 @@
   width: 100%;
   height: 150px;
   border-bottom: 1px solid #ddd;
+  letter-spacing: -1px;
 }
 
 #header #top {
@@ -169,8 +170,11 @@
   margin-top: 22px;
 }
 
-#header #sub_nav .sub_nav_body #side_list ul li {
+#header #sub_nav .sub_nav_body #side_list ul li a {
   padding: 17px 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #header #sub_nav .sub_nav_body #side_list .leftsubtitle.on {
@@ -283,12 +287,12 @@
   margin-right: 110px;
 }
 
-#header #sub_nav .sub_nav_body .sub_wrap #sub_menu #sub_menu_list .menu_list ul li {
+#header #sub_nav .sub_nav_body .sub_wrap #sub_menu #sub_menu_list .menu_list ul .menu_item {
   font-size: 14px;
   margin-bottom: 14px;
 }
 
-#header #sub_nav .sub_nav_body .sub_wrap #sub_menu #sub_menu_list .menu_list ul li:not(.menu_title):hover {
+#header #sub_nav .sub_nav_body .sub_wrap #sub_menu #sub_menu_list .menu_list ul .menu_item:hover {
   color: #4d8fd0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
