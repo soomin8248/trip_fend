@@ -1,0 +1,147 @@
+@import "variable";
+
+#notice {
+    width: 100%;
+    height: 110vh;
+    padding-top: 40px;
+    letter-spacing: -1px;
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        #notice_left {
+            width: 20%;
+            height: 100%;
+            padding-right: 40px;
+            #service_side_menu {
+                height: 300px;
+                border: 1px solid $black-color;
+                padding-top: 20px;
+                h2 {
+                    padding-left: 20px;
+                    font-size: $font-size-24;
+                    margin-bottom: 20px;
+                }
+                ul {
+                    li {
+                        font-size: $font-size-16;
+                        line-height: 45px;
+                        a {
+                            padding-left: 20px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:first-child {
+                            background-color: $main-color;
+                            color: $white-color;
+                        }
+                        &:hover {
+                            background-color: $main-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+        #notice_right {
+            width: 80%;
+            height: 100vh;
+            #notice_title {
+                width: 100%;
+                border-bottom: 2px solid $black-color;
+                h1 {
+                    font-size: $font-size-30;
+                    padding: 10px 0;
+                }
+            }
+            #sub_title {
+                height: 80px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                border-bottom: 1px solid $black-color;
+                position: relative;
+                .blue_icon {
+                    height: 22px;
+                    line-height: 20px;
+                    padding: 0 8px;
+                    border: 1px solid $main-color;
+                    border-radius: 15px;
+                    background: $white-color;
+                    font-size: $font-size-12;
+                    color: $main-color;
+                    vertical-align: middle;
+                    text-align: center;
+                    margin-left: 30px;
+                }
+                .sub_title {
+                    position: absolute;
+                    left: 90px;
+                    display: inline-block;
+                    font-size: $font-size-18;
+                }
+                 > span {
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: inline-block;
+                }
+            }
+            #notice_contents {
+                padding: 45px 30px 100px 30px;
+                font-size: $font-size-16;
+                border-bottom: 1px solid $black-color;
+                p {
+                    margin: 5px 0;
+                }
+                .blank {
+                    opacity: 0;
+                }
+            }
+            #next_prev_contents {
+                height: 120px;
+                margin-top: 50px;
+                border-top: 1px solid $light-gray;
+                > ul {
+                    > li {
+                        height: 60px;
+                        border-bottom: 1px solid $light-gray;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 30px;
+                        font-size: $font-size-16;
+                        ul {
+                            display: flex;
+                            li {
+                                margin-right: 60px;
+                                a {
+                                    &:hover {
+                                        border-bottom: 1px solid $black-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #list_icon {
+                text-align: center;
+                margin-top: 40px;
+                a {
+                    display: inline-block;
+                    width: 140px;
+                    height: 50px;
+                    line-height: 50px;
+                    margin: 0 4px;
+                    background: $black-color;
+                    font-size: 18px;
+                    color: $white-color;
+                    vertical-align: top;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

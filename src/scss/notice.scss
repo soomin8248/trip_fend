@@ -2,8 +2,9 @@
 
 #notice {
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     padding-top: 40px;
+    letter-spacing: -1px;
     .container {
         width: 100%;
         height: 100%;
@@ -13,27 +14,28 @@
             height: 100%;
             padding-right: 40px;
             #service_side_menu {
-                height: 250px;
+                height: 300px;
                 border: 1px solid $black-color;
                 padding-top: 20px;
                 h2 {
                     padding-left: 20px;
                     font-size: $font-size-24;
-                    margin-bottom: 10px;
-                }
-                #blue_bar {
-                    display: block;
-                    width: 25px;
-                    height: 3px;
-                    background-color: $main-color;
-                    margin-bottom: 10px;
-                    margin-left: 20px;
+                    margin-bottom: 20px;
                 }
                 ul {
                     li {
-                        padding-left: 20px;
                         font-size: $font-size-16;
-                        line-height: 30px;
+                        line-height: 45px;
+                        a {
+                            padding-left: 20px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:first-child {
+                            background-color: $main-color;
+                            color: $white-color;
+                        }
                         &:hover {
                             background-color: $main-color;
                             color: $white-color;
@@ -47,7 +49,7 @@
             height: 100vh;
             #notice_title {
                 width: 100%;
-                border-bottom: 1px solid $black-color;
+                border-bottom: 2px solid $black-color;
                 h1 {
                     font-size: $font-size-30;
                     padding: 10px 0;
@@ -69,7 +71,17 @@
                         box-sizing: border-box;
                         font-size: $font-size-14;
                         margin-right: 10px;
+                        -webkit-appearance:none; /* for chrome */
+                        -moz-appearance:none; /*for firefox*/
+                        appearance:none;
+                        background: url(../img/icon/bl_sel_arrow.png) no-repeat;
+                        background-position: right center;
+                        background-size: 19px;
+                        cursor: pointer;
                     }
+                    #search_title::-ms-expand{
+                        display:none;/*for IE10,11*/
+                     }
                 }
                 .search_menu {
                     #search_menu {
@@ -81,7 +93,17 @@
                         box-sizing: border-box;
                         font-size: $font-size-14;
                         margin-right: 10px;
+                        -webkit-appearance:none; /* for chrome */
+                        -moz-appearance:none; /*for firefox*/
+                        appearance:none;
+                        background: url(../img/icon/bl_sel_arrow.png) no-repeat;
+                        background-position: right center;
+                        background-size: 19px;
+                        cursor: pointer;
                     }
+                    #search_menu::-ms-expand{
+                        display:none;/*for IE10,11*/
+                     }
                 }
                 .search_input {
                     width: 305px;
@@ -103,6 +125,127 @@
                     outline: none;
                     border:none;
                     cursor: pointer;
+                }
+            }
+            #notice_list {
+                > p {
+                    padding-bottom: 5px;
+                }
+                .list_title {
+                    height: 65px;
+                    font-size: $font-size-16;
+                    padding: 0 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: rgb(240, 240, 240);
+                    border-top: 1px solid $black-color;
+                    border-bottom: 1px solid $light-gray;
+                }
+                .notice_list {
+                    li {
+                        height: 55px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        border-bottom: 1px solid $light-gray;
+                        position: relative;
+                        .list_no {
+                            margin-left: 35px;
+                            font-size: $font-size-14;
+                        }
+                        .blue_icon {
+                            height: 22px;
+                            line-height: 20px;
+                            padding: 0 8px;
+                            border: 1px solid $main-color;
+                            border-radius: 15px;
+                            background: $white-color;
+                            font-size: $font-size-12;
+                            color: $main-color;
+                            vertical-align: middle;
+                            text-align: center;
+                            margin-left: 30px;
+                        }
+                        a {
+                            display: inline-block;
+                            position: absolute;
+                            left: 130px;
+                            .red_icon {
+                                display: inline-block;
+                                height: 22px;
+                                line-height: 20px;
+                                padding: 0 8px;
+                                border: 1px solid $red-color;
+                                border-radius: 15px;
+                                background: $white-color;
+                                font-size: $font-size-12;
+                                color: $red-color;
+                                vertical-align: middle;
+                                text-align: center;
+                                margin-right: 15px;
+                            }
+                            p {
+                                display: inline-block;
+                                font-size: $font-size-16;
+                            }
+                        }
+                         > span {
+                            position: absolute;
+                            right: 25px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            #notice_control {
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15px;
+                .control_box {
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    position: relative;
+                    margin: 0 3px;
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .light_box {
+                    border: 1px solid $light-gray;
+                    color: $light-gray;
+                }
+                .dark_box {
+                    border: 1px solid $dark-gray;
+                    color: $dark-gray;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        padding: 0 10px;
+                        position: relative;
+                        &:first-child ::after {
+                            content: '';
+                            display: block;
+                            width: 10px;
+                            height: 1px;
+                            background-color: $black-color;
+                            position: absolute;
+                            left: 9px;
+                        }
+                        &:not(:first-child) {
+                            color: $dark-gray;
+                        }
+
+                    }
                 }
             }
         }
