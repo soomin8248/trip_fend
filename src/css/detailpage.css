@@ -470,6 +470,17 @@
   width: 100%;
   z-index: 9;
   padding-bottom: 30px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#detail_page #detail_wrap #guide_trip_box .guide_menu_tab.on {
+  position: fixed;
+  top: 0;
+  left: 352px;
+  width: 900px;
+  padding: 0;
 }
 
 #detail_page #detail_wrap #guide_trip_box .guide_menu_tab li {
@@ -559,6 +570,22 @@
   position: relative;
   width: 100%;
   display: none;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .submenu_tab {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .submenu_tab.on {
+  position: fixed;
+  top: 60px;
+  left: 352px;
+  width: 900px;
+  background: #fff;
+  z-index: 9;
+  padding-top: 30px;
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_notice {
@@ -959,6 +986,10 @@
   display: none;
 }
 
+#detail_page #detail_wrap #guide_trip_box #content_tab .shopping > h4 {
+  padding-top: 0;
+}
+
 #detail_page #detail_wrap #guide_trip_box #content_tab .shopping .shopping_box {
   border: 1px solid #ddd;
   padding: 30px;
@@ -1108,83 +1139,83 @@
   padding: 30px 0;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance {
+  display: none;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance.on {
   display: block;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con p {
   text-align: right;
   padding-bottom: 10px;
   color: #9d9d9d;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table {
   width: 100%;
   border-top: 2px solid #333;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table thead tr {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table thead tr {
   border-bottom: 1px solid #ddd;
   height: 80px;
   background: rgba(195, 225, 255, 0.3);
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table thead tr th {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table thead tr th {
   font-weight: normal;
   text-align: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table thead tr th:not(:last-child) {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table thead tr th:not(:last-child) {
   border-right: 1px solid #ddd;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table tbody tr td {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table tbody tr td {
   border-bottom: 1px solid #ddd;
   height: 50px;
   padding: 5px 15px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table tbody tr td:not(:last-child) {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table tbody tr td:not(:last-child) {
   border-right: 1px solid #ddd;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_limit .limit_con table tbody tr .limit_tit {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .limit .limit_con table tbody tr .limit_tit {
   text-align: center;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard {
-  display: none;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con {
   border: 1px solid #ddd;
   padding: 30px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con div {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con div {
   padding-bottom: 15px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con div h5 {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con div h5 {
   font-size: 16px;
   font-weight: 500;
   padding-bottom: 10px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con div p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con div p {
   color: #555;
   padding-bottom: 5px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con ul {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con ul {
   color: #555;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con ul li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con ul li {
   padding-bottom: 5px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_standard .standard_con .example_box {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .standard .standard_con .example_box {
   width: 90%;
   border: 1px solid #ddd;
   padding: 20px 30px;
@@ -1192,41 +1223,37 @@
   margin: 10px 0;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree {
-  display: none;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con {
   border: 1px solid #ddd;
   padding: 30px;
   overflow-y: scroll;
   height: 300px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con h5, #detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con h6 {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con h5, #detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con h6 {
   font-size: 16px;
   padding: 10px 0;
   font-weight: 500;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con p {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con p {
   color: #555;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con .agree_num {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con .agree_num {
   padding-top: 15px;
   color: #555;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con .agree_num > li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con .agree_num > li {
   padding-bottom: 15px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con .agree_num > li .agree_list {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con .agree_num > li .agree_list {
   padding-left: 18px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .insurance_agree .insu_agree_con .agree_num > li .agree_list li {
+#detail_page #detail_wrap #guide_trip_box #content_tab .tourist_insurance .agree .insu_agree_con .agree_num > li .agree_list li {
   padding-top: 10px;
 }
 
@@ -1239,7 +1266,12 @@
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content {
+  display: none;
   width: 100%;
+}
+
+#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content.on {
+  display: block;
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .noted_content h4 {
@@ -1269,10 +1301,6 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential {
-  display: block;
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .essential .essential_items > ul > li::before {
@@ -1308,10 +1336,6 @@
   padding-left: 16px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter {
-  display: none;
-}
-
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .matter .matter_con > ul > li span {
   display: block;
   color: #777;
@@ -1345,10 +1369,6 @@
   color: #777;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .visa {
-  display: none;
-}
-
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .visa .visa_con > ul > li span {
   display: block;
   color: #777;
@@ -1356,10 +1376,6 @@
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .visa .visa_con > ul > li::before {
   top: 8px;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .safety_info {
-  display: none;
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .noted_items .safety_info .safety_con p {
@@ -1413,6 +1429,12 @@
   height: 650px;
   border: 1px solid #4d8fd0;
   background: #fff;
+}
+
+#detail_page #floating_box.on {
+  position: fixed;
+  top: 0;
+  right: 360px;
 }
 
 #detail_page #floating_box .booking_box {
