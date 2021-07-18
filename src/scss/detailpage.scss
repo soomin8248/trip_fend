@@ -1,0 +1,1363 @@
+$main-color: #4d8fd0;
+$gray-color: #9d9d9d;
+$light-gray: #ccc;
+$black-color: #333;
+$red-color: #f1454c;
+
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-24: 24px;
+$font-size-30: 30px;
+
+$font-weight-nomal: normal;
+$font-weight-200: 200;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-700: 700;
+
+@mixin position ( $p: absolute, $t: null, $b: null, $l: null, $r: null) {
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}
+
+#detail_page {
+    padding: 50px 0 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    // overflow: hidden;
+    font-size: 15px;
+    #detail_tit {
+        .pack_tag {
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            background: $main-color;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            font-size: 13px;
+        }
+        h2 {
+            padding: 30px 0;
+            font-size: $font-size-30;
+            font-weight: $font-weight-500;
+            border-bottom: 2px solid $main-color;   
+        }
+        .pack_num {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            p {
+                color: $gray-color;
+                span {
+                    &:nth-child(1) {
+                        margin-right: 40px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 15px;
+                            background: $light-gray;
+                            position: absolute;
+                            top: 50%; right: -20px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .pack_info_btn {
+                letter-spacing: -1px;
+                border: none;
+                outline: none;
+                width: 150px;
+                height: 45px;
+                border-radius: 22.5px;
+                padding: 6px;
+                color: #fff;
+                background: $main-color;
+            }
+        }
+        // swiper 슬라이드
+        .packimg-swiper {
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                .swiper-slide {
+                    height: 300px;
+                    width: 32%;
+                    img {
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+    #detail_wrap {
+        padding-top: 60px;
+        max-width: 900px;
+        .tit_style{
+            font-size: $font-size-24;
+            font-weight: $font-weight-500;
+            padding-bottom: 30px;
+        }
+        // 여행 주요 일정
+        #schedule {
+            width: 100%;
+            .trip_schedule_box {
+                border-top: 1px solid $black-color;
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    border-bottom: 1px solid $light-gray;
+                    font-size: 15px;
+                    .sceh_tit{
+                        width: 20%;
+                        font-size: $font-size-16;
+                    }
+                    .traffic_con {
+                        width: 80%;
+                        .float_name {
+                            padding-bottom: 20px;
+                            padding-left: 20px;
+                            border-bottom: 1px solid $light-gray;
+                            position: relative;
+                            line-height: 18px;
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                width: 18px; height: 18px;
+                                background: url('../img/detailpage/KE.png') center center no-repeat;
+                                position: absolute;
+                                top: 0; left: 0;
+                            }
+                        }
+                        .float-schedule {
+                            display: flex;
+                            .air_box {
+                                padding-top: 20px;
+                                display: flex;
+                                align-items: center;
+                                width: 50%;
+                                .flight_number {
+                                    padding-top: 22px;
+                                    position: relative;
+                                    color: $main-color;
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 27px;
+                                        height: 16px;
+                                        background: url('../img/detailpage/ico_flight.jpg');
+                                        position: absolute;
+                                        top: 5px; left: 50%;
+                                        transform: translateX(-50%);
+                                    }
+                                }
+                                .flight_regular {
+                                    padding-left: 20px;
+                                    p {
+                                        span {
+                                            margin-left: 30px;
+                                            position: relative;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 1px;
+                                                height: 15px;
+                                                background: $light-gray;
+                                                position: absolute;
+                                                top: 50%; left: -15px;
+                                                transform: translateY(-50%);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 상품가격
+        #product_price {
+            padding: 60px 0;
+            table {
+                width: 100%;
+                thead {
+                    height: 70px;
+                    tr{
+                        
+                        border-top: 1px solid $black-color;
+                        background: rgba(195,225,255,0.3);
+                        font-size: $font-size-16;
+                        th {
+                            font-weight: $font-weight-nomal;
+                            line-height: 1.2;
+                            span {
+                                display: block;
+                                color: #777;
+                                font-size: 15px;
+                            }
+                        }
+                            
+                    }
+                }
+                tbody {
+                    border-bottom: 1px solid $light-gray;
+                    tr {
+                        text-align: center;
+                        td {
+                            padding: 15px 0;
+                        }
+                    }
+                    .total_price {
+                        td {
+                            &:not(:nth-child(1)) {
+                                color: $main-color;
+                                font-size: 17px;
+                                font-weight: $font-weight-500;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .price_matter {
+                padding-top: 20px;
+                li {
+                    padding-left: 10px;
+                    position: relative;
+                    color: #888;
+                    font-size: $font-size-14;
+                    margin-bottom: 10px;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background: $main-color;
+                        position: absolute;
+                        top: 50%; left: 0;
+                        transform: translateY(-50%);
+                    }
+                    &:nth-child(1) {
+                        &::before {
+                            
+                                content: "";
+                                display: block;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background: $main-color;
+                                position: absolute;
+                                top: 11px; left: 0;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        // 포함/불포함/선택경비 정보
+        #infomation {
+            padding-bottom: 60px;
+            .info{
+                border-bottom: 1px solid $light-gray;
+                padding: 45px 0;
+                display: flex;
+                .incl_tit {
+                    display: block;
+                    width: 20%;
+                    padding: 46px 0;
+                    display: flex;
+                    justify-content: center;
+                    span{
+                        font-size: $font-size-18;
+                        position: relative;
+                        text-align: center;
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            position: absolute;
+                            top: -40px; left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+            ul {
+                width: 80%;
+                padding-left: 30px;
+                li {
+                    padding-bottom: 20px;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 5px; height: 5px;
+                        border-radius: 50%;
+                        background: $main-color;
+                        position: absolute;
+                        top: 9px; left: -10px;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+            }
+            .include {
+                border-top: 1px solid $black-color;
+                span {
+                    &::before {
+                        background: url('../img/detailpage/info_circle.png') center center no-repeat;
+                    }
+                }
+            }
+            .not_include {
+                span {
+                    &::before {
+                        background: url('../img/detailpage/info_x.png') center center no-repeat;
+                    }
+                }
+                ul {
+                    li {
+                        &::before {
+                            background: $red-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 예약시 유의사항
+        #reservation {
+            padding-bottom: 60px;
+            table {
+                width: 100%;
+                tbody {
+                    border-top: 1px solid $black-color;
+                    border-bottom: 1px solid $light-gray;
+                    th {
+                        padding: 15px 30px;
+                        text-align: left;
+                        background: rgba(195, 225, 255, 0.3);
+                        font-weight: $font-weight-nomal;
+                    }
+                    td {
+                        padding: 15px 0 15px 30px;
+                    }
+                }
+            }
+        }
+
+        // 상품안내
+        #product_info {
+            padding-bottom: 60px;
+            position: relative;
+            .prod_imgbox {
+                height: 400px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .prod_imgbox.on {
+                height: 3804px;
+            }
+            #prod_more, #prod_close {
+                width: 100%;
+                padding: 16px;
+                border: 1px solid $main-color;
+                border-radius: 0;
+                outline: none;
+                background: #fff;
+                color: $main-color;
+                font-size: $font-size-16;
+                letter-spacing: -1px;
+                font-weight: $font-weight-500;
+                margin-top: 10px;
+            }
+            #prod_more {
+                display: none;
+            }
+            #prod_more.on {
+                display: block;
+            }
+            #prod_close {
+                display: none;
+            }
+            #prod_close.on {
+                display: block;
+            }
+        }
+
+        // 패키지 일정 및 안내사항
+        #guide_trip_box {
+            position: relative;
+            width: 100%;
+            .guide_menu_tab {
+                display: flex;
+                width: 100%;
+                z-index: 9;
+                padding-bottom: 30px;
+                position: relative;
+                top: 0; left: 0;
+                &.on {
+                    position: fixed;
+                    top: 0;
+                    left: 352px;
+                    width: 900px;
+                    padding: 0;
+                }
+                li {
+                    width: 16.666%;
+                    text-align: center;
+                    border-top: 1px solid #ddd;
+                    border-left: 1px solid #ddd;
+                    border-right: 1px solid #ddd;
+                    border-bottom: 1px solid $main-color;
+                    background: #f9f9f9;
+                    color: $gray-color;
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 20px 0;
+                    }
+                }
+                .on {
+                    border-top: 1px solid $main-color;
+                    border-left: 1px solid $main-color;
+                    border-right: 1px solid $main-color;
+                    border-bottom: 1px solid #fff;
+                    background: #fff;
+                    color: $black-color;
+                }
+            }
+            #content_tab {
+                position: relative;
+                // 공통 설정
+                .tabpage {
+                    display: none;
+                    &.on {
+                        display: block;
+                    }
+                    .submenu_tab {
+                        width: 100%;
+                        border-bottom: 1px solid $light-gray;
+                        padding-bottom: 10px;
+                        display: flex;
+                        background: #fff;
+                        li {
+                            width: 8%;
+                            color: #9d9d9d;
+                            a {
+                                width: 100%;
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    display: none;
+                                    width: 100%;
+                                    height: 3px;
+                                    background: $main-color;
+                                    position: absolute;
+                                    bottom: -12px; left: 0;
+                                }
+                            }
+                            a.on {
+                                color: $black-color;
+                            &::after {
+                                display: block;
+                            }
+                            }
+                        }
+                    }
+                    > h4 {
+                        padding: 30px 0;
+                        font-size: $font-size-24;
+                        font-weight: $font-weight-500;
+                    }
+                }
+                // 여행일정
+                .trip {
+                    position: relative;
+                    width: 100%;
+                    display: none;
+                    .submenu_tab {
+                        position: relative;
+                        top: 0; left: 0;
+                        &.on {
+                            position: fixed;
+                            top: 60px; left: 352px;
+                            width: 900px;
+                            background: #fff;
+                            z-index: 9;
+                            padding-top: 30px;
+                            
+                        }
+                    }
+                    .trip_notice {
+                        width: 100%;
+                        height: 120px;
+                        background: rgba(195,225,255,0.3);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        div {
+                            width: 83%;
+                            p {
+                                position: relative;
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    width: 18px;
+                                    height: 18px;
+                                    background: url('../img/detailpage/trip_notice_icon.png') center center no-repeat;
+                                    position: absolute;
+                                    top: 50%; left: -25px;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                    .meeting_info {
+                        margin: 30px 0;
+                        padding: 0 60px;
+                        width: 100%;
+                        height: 200px;
+                        border: 1px solid #ddd;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .meet_left {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .flag_circle {
+                                width: 50px;
+                                height: 50px;
+                                background: $main-color;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            p {
+                                padding-top: 10px;
+                            }
+                        }
+                        .meet_text {
+                            padding-left: 0px;
+                            p {
+                                padding-bottom: 15px;
+                            }
+                        }
+                    }
+                    .trip_timeline {
+                        border: 1px solid #ddd;
+                        width: 100%;
+                        background: #fff;
+                        .timeline {
+                            width: 100%;
+                            .day_title {
+                                width: 100%;
+                                background: rgba(195,225,255,0.3);
+                                height: 60px;
+                                line-height: 60px;
+                                padding: 0 30px;
+                                display: flex;
+                                align-items: center;
+                                p {
+                                    font-size: $font-size-18;
+                                    span {
+                                        font-size: $font-size-14;
+                                        margin-left: 30px;
+                                    }
+                                }
+                            }
+                            .timeline_contents {
+                                padding: 40px 30px;
+                                .float_route {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: $font-size-16;
+                                    padding-bottom: 40px;
+                                    .way_start {
+                                        text-align: center;
+                                        padding-right: 10px;
+                                    }
+                                    .float_time {
+                                        display: flex;
+                                        align-items: center;
+                                        .float_icon {
+                                            padding: 0 120px;
+                                            position: relative;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 100px;
+                                                height: 4px;
+                                                position: absolute;
+                                                top: 50%; left: 10px;
+                                                transform: translateY(-50%);
+                                                background: #ddd;
+                                            }
+                                            &::after {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 100px;
+                                                height: 4px;
+                                                position: absolute;
+                                                top: 50%; right: 10px;
+                                                transform: translateY(-50%);
+                                                background: #ddd;
+                                            }
+                                        }
+                                    }
+                                    .way_fin {
+                                        text-align: center;
+                                        padding-left: 10px;
+                                    }
+                                }
+                                .location_box {
+                                    padding-left: 100px;
+                                    position: relative;
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 4px;
+                                        height: 100%;
+                                        background: #f1f1f1;
+                                        position: absolute;
+                                        top: 0; left: 35px;
+                                    }
+                                    .location {
+                                        h3 {
+                                            font-size: $font-size-18;
+                                            position: relative;
+                                            font-weight: $font-weight-500;
+                                            padding: 8px 0 30px;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 40px;
+                                                height: 40px;
+                                                background-color: #fff;
+                                                background-image: url('../img/detailpage/ico_place.jpg');
+                                                background-position: center center;
+                                                background-repeat: no-repeat;
+                                                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                                                border-radius: 50%;
+                                                position: absolute;
+                                                top: 0; left: -83px;
+                                            }
+                                        }
+                                        .location_oki {
+                                            padding-top: 30px;
+                                            &::before {
+                                                top: 22px;
+                                            }
+                                        }
+                                        > p {
+                                            padding: 10px 0;
+                                            position: relative;
+                                            &::before {
+                                                content: "";
+                                                display: inline-block;
+                                                width: 16px;
+                                                height: 16px;
+                                                background: url('../img/detailpage/ico_now.jpg') center center no-repeat;
+                                                position: absolute;
+                                                top: 12px; left: -71px;
+                                            }
+                                        }
+                                        > span {
+                                            color: $red-color;
+                                        }
+                                        .randmark_contents {
+                                            .mark_title {
+                                                p {
+                                                    padding-left: 20px;
+                                                    position: relative;
+                                                    &::before {
+                                                        content: "";
+                                                        display: inline-block;
+                                                        width: 12px;
+                                                        height: 25px;
+                                                        background: url('../img/detailpage/pin.png') center center no-repeat;
+                                                        position: absolute;
+                                                        top: 0; left: 0;
+                                                    }
+                                                }
+                                            }
+                                            .randmark_box {
+                                                border: 1px solid #ddd;
+                                                margin: 30px 0;
+                                                padding: 30px;
+                                                width: 700px;
+                                                h4 {
+                                                    font-size: $font-size-18;
+                                                    padding-bottom: 10px;
+                                                    border-bottom: 1px solid #ddd;
+                                                }
+                                                ul {
+                                                    
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    padding: 25px 0;
+                                                    li {
+                                                        width: 49%;
+                                                        img {
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+                                                    }
+                                                }
+                                                > p {
+                                                    font-size: $font-size-14;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .hotel_box {
+                                        border: 1px solid #ddd;
+                                        margin: 30px 0;
+                                        padding: 30px;
+                                        width: 700px;
+                                        h4 {
+                                            font-size: $font-size-18;
+                                            padding-bottom: 10px;
+                                            border-bottom: 1px solid #ddd;
+                                        }
+                                        ul {
+                                            
+                                            display: flex;
+                                            justify-content: space-between;
+                                            padding: 25px 0;
+                                            li {
+                                                width: 49%;
+                                                img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                }
+                                            }
+                                        }
+                                        > p {
+                                            font-size: $font-size-14;
+                                        }
+                                    }
+                                }
+                                .meal_guide {
+                                    border-top: 1px solid #ddd;
+                                    margin-top: 40px;
+                                    padding-top: 30px;
+                                    display: flex;
+                                    > span {
+                                        display: inline-block;
+                                        width: 55px;
+                                        height: 25px;
+                                        color: $main-color;
+                                        border: 1px solid $main-color;
+                                        border-radius: 12.5px;
+                                        text-align: center;
+                                        font-size: $font-size-14;
+                                        margin-right: 30px;
+                                    }
+                                    .meal_list {
+                                        display: flex;
+                                        p {
+                                            padding-right: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .timeline.day3 {
+                            .float_route {
+                                padding-top: 30px;
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                // 선택관광/쇼핑
+                .shopping {
+                    display: none;
+                    > h4 {
+                        padding-top: 0;
+                    }
+                    .shopping_box {
+                        border: 1px solid #ddd;
+                        padding: 30px;
+                        > p {
+                            padding-bottom: 25px;
+                            font-size: $font-size-16;
+                        }
+                        .shoptext {
+                            h4 {
+                                font-size: $font-size-16;
+                                color: $main-color;
+                                font-weight: $font-weight-500;
+                                padding-bottom: 10px;
+                            }
+                            p {
+                                font-size: 15px;
+                                margin-bottom: 10px;                             
+                            }
+                            .notice_text {
+                                font-size: $font-size-14;
+                                color: $red-color;
+                                padding-top: 10px;
+                            }
+                        }
+                        .shopping_detail {
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+                // 관광지/숙소
+                .tourist_spots {
+                    display: none;
+                    .tourLists_con {
+                        display: none;
+                        &.on {
+                            display: block;
+                        }
+                        > h4 {
+                            padding: 30px 0;
+                            font-size: $font-size-24;
+                            font-weight: $font-weight-500;
+                        }
+                        .tourLists_box {
+                            width: 100%;
+                            .tourList {
+                                width: 100%;
+                                border: 1px solid #ddd;
+                                padding: 30px;
+                                margin-bottom: 40px;
+                                h4 {
+                                    padding-bottom: 20px;
+                                    border-bottom: 1px solid #ddd;
+                                    font-size: $font-size-18;
+                                    font-weight: $font-weight-500;
+                                }
+                                ul {
+                                    padding: 25px 0;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    li {
+                                        width: 49%;
+                                        img{ 
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // 약관/취소수수료
+                .terms {
+                    display: none;
+                    h4 {
+                        padding-top: 0;
+                    }
+                    .terms_box {
+                        border: 1px solid #ddd;
+                        padding: 30px;
+                    }
+                    h5 {
+                        font-size: $font-size-18;
+                        font-weight: $font-weight-500;
+                        color: $main-color;
+                        padding-bottom: 10px;
+                    }
+                    .terms_detail {
+                        padding-bottom: 20px;
+                    }
+                    .terms_cancle {
+                        .cancle_tit {
+                            font-size: $font-size-16;
+                            padding-bottom: 20px;
+                            ul {
+                                padding-top: 10px;
+                                padding-left: 15px;
+                                li {
+                                    font-size: 15px;
+                                    line-height: 1.8;
+                                }
+                                .cancle_text_box {
+                                    border: 1px solid #ddd;
+                                    padding: 10px 15px;
+                                    font-size: $font-size-14;
+                                    color: #888;
+                                    width: 90%;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                // 여행자보험
+                .tourist_insurance {
+                    display: none;
+                    .submenu_tab {
+                        li {
+                            width: 10%;
+                        }
+                    }
+                    h4 {
+                        font-size: $font-size-24;
+                        font-weight: $font-weight-500;
+                        padding: 30px 0;
+                    }
+                    .insurance {
+                        display: none;
+                        &.on {
+                            display: block;
+                        }
+                    }
+                    // 보상한도
+                    .limit {
+                        .limit_con{
+                            p {
+                                text-align: right;
+                                padding-bottom: 10px;
+                                color: $gray-color;
+                            }
+                            table {
+                                width: 100%;
+                                border-top: 2px solid $black-color;
+                                thead {
+                                    tr {
+                                        border-bottom: 1px solid #ddd;
+                                        height: 80px;
+                                        background: rgba(195, 225, 255, 0.3);
+                                        th {
+                                            font-weight: $font-weight-nomal;
+                                            text-align: center;
+                                            &:not(:last-child){
+                                                border-right: 1px solid #ddd;
+                                            } 
+                                        }
+                                    }
+                                    
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            border-bottom: 1px solid #ddd;
+                                            height: 50px;
+                                            padding: 5px 15px;
+                                            &:not(:last-child){
+                                                border-right: 1px solid #ddd;
+                                            }
+                                        }
+                                        .limit_tit {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 보상기준
+                    .standard {
+                        .standard_con {
+                            border: 1px solid #ddd;
+                            padding: 30px;
+                            div {
+                                padding-bottom: 15px;
+                                h5 {
+                                    font-size: $font-size-16;
+                                    font-weight: $font-weight-500;
+                                    padding-bottom: 10px;
+                                }
+                                p {
+                                    color: #555;
+                                    padding-bottom: 5px;
+                                }
+                            }
+                            ul {
+                                color: #555;
+                                li {
+                                    padding-bottom: 5px;
+                                }
+                            }
+                            .example_box {
+                                width: 90%;
+                                border: 1px solid #ddd;
+                                padding: 20px 30px;
+                                font-size: $font-size-14;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    // 보험 약관
+                    .agree {
+                        .insu_agree_con {
+                            border: 1px solid #ddd;
+                            padding: 30px;
+                            overflow-y: scroll;
+                            height: 300px;
+                            h5, h6 {
+                                font-size: $font-size-16;
+                                padding: 10px 0;
+                                font-weight: $font-weight-500;
+                            }
+                            p {
+                                color: #555;
+                            }
+                            .agree_num {
+                                padding-top: 15px;
+                                color: #555;
+                                > li {
+                                    padding-bottom: 15px;
+                                    .agree_list {
+                                        padding-left: 18px;
+                                        li {
+                                            padding-top: 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+                // 주의 및 참고사항
+                .noted_items {
+                    display: none;
+                    //공통 설정
+                    .submenu_tab {
+                        li {
+                            width: 13%;
+                        }
+                    }
+                    .noted_content {
+                        display: none;
+                        &.on {
+                            display: block;
+                        }
+                        width: 100%;
+                        h4 {
+                            font-size: $font-size-24;
+                            font-weight: $font-weight-500;
+                            padding: 30px 0;
+                        }
+                        .notedbox {
+                            border: 1px solid #ddd;
+                            padding: 30px;
+                            > ul {
+                                > li {
+                                    margin-bottom: 15px;
+                                    padding-left: 10px;
+                                    position: relative;
+                                    &::before {
+                                        content: "";
+                                        display: block;
+                                        width: 5px;
+                                        height: 5px;
+                                        border-radius: 50%;
+                                        background: $main-color;
+                                        position: absolute;
+                                        top: 0; left: 0;
+                                    }
+                                }
+                            }
+                        }   
+                    }
+                    // 필수사항
+                    .essential {
+                        .essential_items {
+                            > ul {
+                                > li {
+                                    &::before {
+                                        top: 50%; left: 0;
+                                        transform: translateY(-50%);
+                                    }
+                                    &:nth-child(2) {
+                                        &::before {
+                                            position: absolute;
+                                            top: 29%;
+                                        }
+                                    }
+                                }
+                            }   
+                        }
+                        .agree_box {
+                            margin-left: 10px;
+                            margin-bottom: 20px;
+                            border: 1px solid #ddd;
+                            padding: 20px;
+                            color: #777;
+                            width: 95%;
+                            li {
+                                ol {
+                                    padding-top: 5px;
+                                    li {
+                                        font-size: $font-size-14;
+                                    }
+                                    &:last-child {
+                                        padding-left: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 유의사항 
+                    .matter {
+                        .matter_con {
+                            > ul {
+                                > li {
+                                    span {
+                                        display: block;
+                                        color: #777;
+                                    }
+                                    &::before {
+                                        top: 8px;
+                                    }
+                                }
+                                .matter_tit {
+                                    font-size: $font-size-16;
+                                    font-weight: $font-weight-500;
+                                    &::before {
+                                        top: 10px;
+                                    }
+                                    ul {
+                                        padding-top: 10px;
+                                        li {
+                                            font-size: 15px;
+                                            font-weight: $font-weight-nomal;
+                                            padding-bottom: 5px;
+                                            span {
+                                                display: block;
+                                                color: #777;
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    //여권비자
+                    .visa {
+                        .visa_con {
+                            > ul {
+                                > li {
+                                    span {
+                                        display: block;
+                                        color: #777;
+                                    }
+                                    &::before {
+                                        top: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //해외여행 안전정보
+                    .safety_info {
+                        .safety_con {
+                            p { 
+                                padding-bottom: 10px;
+                            }
+                            a {
+                                display: block;
+                                width: 150px;
+                                height: 40px;
+                                border: 1px solid $main-color;
+                                color: $main-color;
+                                text-align: center;
+                                line-height: 40px;
+                                letter-spacing: -1px;
+                                margin-top: 10px;
+                            }
+                        }
+                    }    
+                }
+            }
+        }
+
+        // 방문도시 정보
+        #city_info {
+            padding-top: 60px;
+            table {
+                width: 100%;
+                thead {
+                    tr {
+                        border-top: 1px solid $black-color;
+                        border-bottom: 1px solid #ddd;
+                        background: rgba(195, 225, 255, 0.3);
+                        height: 70px;
+                        text-align: center;
+                        th {
+                            font-weight: $font-weight-nomal;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            width: 25%;
+                            padding: 35px 0;
+                            text-align: center;
+                            border-bottom: 1px solid #ddd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #floating_box {
+        position: absolute;
+        top: 700px; right: 0;
+        width: 250px;
+        height: 650px;
+        border: 1px solid $main-color;
+        background: #fff;
+        &.on {
+            position: fixed;
+            top: 0; right: 360px;
+        }
+        .booking_box {
+            border-bottom: 1px solid #ccc;
+            padding: 30px 30px 35px;
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    span {
+                        &:nth-child(1) {
+                            font-weight: $font-weight-500;
+                        }
+                    }
+                    .book_float_icon {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 18px;
+                            height: 18px;
+                            background: url(/src/img/detailpage/KE.png) center center no-repeat;
+                            position: absolute;
+                            top: 50%; left: -20px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            button {
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                border: 1px solid $main-color;
+                background: $main-color;
+                outline: none;
+                span {
+                    color: #fff;
+                    letter-spacing: -1px;
+                    font-size: $font-size-14;
+                    font-weight: bold;
+                    padding-left: 26px;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 19px;
+                        height: 11px;
+                        background: url(/src/img/detailpage/ico_flight_w.jpg) center center no-repeat;
+                        position: absolute;
+                        top: 50%; left: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+                
+            }
+        }
+        .booking_box_price {
+            padding: 30px 30px 35px;
+            border-bottom: 1px solid #ccc;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                p {
+                    span {
+                        display: block;
+                        color: $main-color;
+                        font-size: $font-size-16;
+                        font-weight: $font-weight-500;
+                    }
+                }
+                .select_num {
+                    border: 1px solid $gray-color;
+                    width: 70px; padding: 5px;
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .booking_box_total {
+            padding: 30px 30px 35px;
+            .price_box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: $font-weight-500;
+                .all_price {
+                    font-size: 20px;
+                    font-weight: $font-weight-500;
+                    color: $main-color;
+                }
+            }
+            p {
+                text-align: right;
+                font-size: 13px;
+                color: $gray-color;
+                padding-bottom: 10px;
+            }
+            button {
+                width: 190px;
+                height: 45px;
+                margin-top: 10px;
+                border: none;
+                outline: none;
+                background: $main-color;
+                color: #fff;
+                font-size: $font-size-16;
+                font-weight: $font-weight-500;
+                letter-spacing: -1px;
+            }
+        }
+    }
+}
