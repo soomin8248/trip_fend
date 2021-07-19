@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const tourtype = document.querySelectorAll('.tour_type');
     const freeswiper = document.querySelector('.free-swiper');
     const packgeswiper = document.querySelector('.package-swiper');
+    const smallmenu = document.querySelectorAll('.tour_smallmenu li');
+    const tour_lists = document.querySelectorAll('.tour_lists');
 
     let swiper = '';
     let classon = '';
@@ -38,6 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
             tourtype.forEach(item => item.classList.remove('on'));
             tourtype[index].classList.add('on');
 
+            smallmenu[0].classList.add('on');
+            tour_lists[0].classList.add('on');
+
             if (index == 0) {
                 classon = freeswiper;
                 swiper.destroy();
@@ -48,10 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
             slideOn(classon);
         });
     });
-
-
-    const smallmenu = document.querySelectorAll('.tour_smallmenu li');
-    const tour_lists = document.querySelectorAll('.tour_lists');
 
     smallmenu.forEach(function (item, index) {
         item.addEventListener('click', function () {
