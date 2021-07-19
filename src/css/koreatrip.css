@@ -295,10 +295,13 @@
   position: relative;
 }
 
-#kor_md .kor_md .container .md_show {
-  width: 1200px;
-  height: 356px;
+#kor_md .kor_md .container {
   overflow: hidden;
+}
+
+#kor_md .kor_md .container .md_show {
+  width: 1196px;
+  height: 356px;
   border-radius: 19.5px;
 }
 
