@@ -257,9 +257,9 @@
                     <!-- 여행일정 -->
                     <div class="tabpage trip on">
                         <ul class="submenu_tab">
-                            <li><a href="#/" class="on">1일차</a></li>
-                            <li><a href="#/">2일차</a></li>
-                            <li><a href="#/">3일차</a></li>
+                            <li><a href="#/" class="dayOne on">1일차</a></li>
+                            <li><a href="#/" class="dayTwo">2일차</a></li>
+                            <li><a href="#/" class="dayThree">3일차</a></li>
                         </ul>
                         <h4>여행일정</h4>
                         <div class="trip_notice">
@@ -283,12 +283,12 @@
                         <!-- 일정 timeline -->
                         <div class="trip_timeline">
                             <!-- 1일차 -->
-                            <div class="timeline day1">
+                            <div class="timeline">
                                 <div class="day_title">
                                     <p>1일차<span>2021.11.01(월)-인천/오키나와</span></p>
                                 </div>
                                 <div class="timeline_contents">
-                                    <div class="float_route">
+                                    <div class="float_route" id="day1">
                                         <div class="way_start">
                                             <p>인천출발</p>
                                             <p>14:05</p>
@@ -368,7 +368,7 @@
                             </div>
                             <!-- 1일차 /-->
                             <!-- 2일차 -->
-                            <div class="timeline day2">
+                            <div class="timeline" id="day2">
                                 <div class="day_title">
                                     <p>2일차<span>2021.11.02(화) - 오키나와</span></p>
                                 </div>
@@ -476,7 +476,7 @@
                             </div>
                             <!-- 2일차 /-->
                             <!-- 3일차 -->
-                            <div class="timeline day3">
+                            <div class="timeline" id="day3">
                                 <div class="day_title">
                                     <p>3일차<span>2021.11.03(수) - 오키나와/인천</span></p>
                                 </div>

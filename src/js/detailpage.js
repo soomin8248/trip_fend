@@ -38,6 +38,9 @@ tripTabs.forEach(function (item, index) {
 });
 
 const tripSubTab = document.querySelectorAll('.trip > .submenu_tab > li > a');
+const dayOne = document.querySelector('#day1');
+const dayTwo = document.querySelector('#day2');
+const dayThree = document.querySelector('#day3');
 // 서브 탭 이동
 tripSubTab.forEach(function (item, index) {
     item.addEventListener('click', function () {
@@ -99,15 +102,37 @@ addEventListener('scroll', function () {
 // 스크롤하면 메인 탭 박스 상단 고정
 const tabScroll = document.querySelector('.guide_menu_tab');
 const subTabScroll = document.querySelector('.submenu_tab');
-addEventListener('scroll', function(){
+addEventListener('scroll', function () {
     let sctTop = tabScroll.offsetTop;
     let sct = document.documentElement.scrollTop;
-    if (sct > sctTop+3700){
+    if (sct > sctTop + 3700) {
         tabScroll.classList.add('on');
         subTabScroll.classList.add('on');
-    }else {
+    } else {
         tabScroll.classList.remove('on');
         subTabScroll.classList.remove('on');
     }
 });
 
+// 여행일정 서브 탭 클릭 했을 때 클릭한 내용 위치로 스크롤
+const dayOnetit = document.querySelector('.dayOne');
+let sct = document.documentElement.scrollTop;
+dayOnetit.addEventListener('click', function () {
+    let dayOneSct = dayOne.offsetTop + 3525;
+    window.scrollTo({ top: dayOneSct, left: 0, behavior: 'smooth' });
+    if (sct > dayOneSct) {
+
+    } else {
+        tripSubTab.classList.remove('on');
+    }
+})
+const dayTwotit = document.querySelector('.dayTwo');
+dayTwotit.addEventListener('click', function () {
+    let dayTwoSct = dayTwo.offsetTop + 3625;
+    window.scrollTo({ top: dayTwoSct, left: 0, behavior: 'smooth' });
+})
+const dayThreetit = document.querySelector('.dayThree');
+dayThreetit.addEventListener('click', function () {
+    let dayThreeSct = dayThree.offsetTop + 3621;
+    window.scrollTo({ top: dayThreeSct, left: 0, behavior: 'smooth' });
+})
