@@ -977,7 +977,7 @@
   padding-right: 20px;
 }
 
-#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline.day3 .float_route {
+#detail_page #detail_wrap #guide_trip_box #content_tab .trip .trip_timeline .timeline#day3 .float_route {
   padding-top: 30px;
   padding-bottom: 0;
 }
