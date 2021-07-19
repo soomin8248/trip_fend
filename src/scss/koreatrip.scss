@@ -227,7 +227,7 @@
         }
     }
 }
-
+// MD Pick
 #kor_md{
     width: 100%;
     letter-spacing: -1px;
@@ -237,10 +237,10 @@
         text-align: center;
         position: relative;
         .container {
+            overflow: hidden;
             .md_show {
-                width: 1200px;
-                height: 356px;
-                overflow: hidden;
+                width: 1196px;
+                height: 356px;  
                 border-radius: 19.5px;
                 .md_items{
                     height: 352px;
