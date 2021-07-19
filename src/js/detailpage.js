@@ -16,11 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
 const moreBtn = document.querySelector('#prod_more');
 const closeBtn = document.querySelector('#prod_close');
 const imgBox = document.querySelector('.prod_imgbox');
+let numch = 0;
 
 function moreImg() {
     imgBox.classList.toggle('on');
     moreBtn.classList.toggle('on');
     closeBtn.classList.toggle('on');
+    if (numch == 0) {
+        numch = 1;
+    } else {
+        numch = 0;
+    }
 }
 
 
@@ -33,7 +39,6 @@ tripTabs.forEach(function (item, index) {
         item.classList.add('on');
         tabPage.forEach(item => item.classList.remove('on'));
         tabPage[index].classList.add('on');
-
     })
 });
 
@@ -87,6 +92,7 @@ notedSubTab.forEach(function (item, index) {
 
 // 스크롤하면 플로팅 박스 상단 고정
 const scheScroll = document.querySelector('#schedule');
+const floating = document.querySelector('#floating_box');
 addEventListener('scroll', function () {
     let sctTop = scheScroll.offsetTop; // schedule이 떨어져있는 거리
     let sct = document.documentElement.scrollTop; // 스크롤 값
@@ -105,36 +111,72 @@ const subTabScroll = document.querySelector('.submenu_tab');
 addEventListener('scroll', function () {
     let sctTop = tabScroll.offsetTop;
     let sct = document.documentElement.scrollTop;
-    if (sct > sctTop + 3700) {
-        tabScroll.classList.add('on');
-        subTabScroll.classList.add('on');
+    if (numch == 1) {
+        if (sct > sctTop + 7150) {
+            tabScroll.classList.add('on');
+            subTabScroll.classList.add('on');
+        } else {
+            tabScroll.classList.remove('on');
+            subTabScroll.classList.remove('on');
+        }
     } else {
-        tabScroll.classList.remove('on');
-        subTabScroll.classList.remove('on');
+        if (sct > sctTop + 3605) {
+            tabScroll.classList.add('on');
+            subTabScroll.classList.add('on');
+        } else {
+            tabScroll.classList.remove('on');
+            subTabScroll.classList.remove('on');
+        }
     }
 });
 
 // 여행일정 서브 탭 클릭 했을 때 클릭한 내용 위치로 스크롤
+const dayOneCon = document.querySelector('.day_title');
+const absoluteTop = window.pageYOffset + dayOneCon.getBoundingClientRect().top;
+
 const dayOnetit = document.querySelector('.dayOne');
-const dayOneCon = document.querySelector('.day_title')
-let sct = document.documentElement.scrollTop;
 dayOnetit.addEventListener('click', function () {
-    let dayOneSct = dayOneCon.offsetTop;
-    window.scrollTo({ top: dayOneSct, left: 0, behavior: 'smooth' });
-    console.log(dayOneSct);
-})
-const dayTwotit = document.querySelector('.dayTwo');
-dayTwotit.addEventListener('click', function () {
-    let dayTwoSct = dayTwo.offsetTop + 3625;
-    window.scrollTo({ top: dayTwoSct, left: 0, behavior: 'smooth' });
-    if (sct > dayOneSct) {
-        tripSubTab.classList.add('on');
+    if (numch == 1) {
+        window.scrollTo({ top: absoluteTop + 3155, left: 0, behavior: 'smooth' });
     } else {
-        tripSubTab.classList.remove('on');
+        window.scrollTo({ top: absoluteTop - 250, left: 0, behavior: 'smooth' });
     }
 })
+
+const dayTwotit = document.querySelector('.dayTwo');
+dayTwotit.addEventListener('click', function () {
+    if (numch == 1) {
+        window.scrollTo({ top: absoluteTop + 4800, left: 0, behavior: 'smooth' });
+    } else {
+        window.scrollTo({ top: absoluteTop + 1400, left: 0, behavior: 'smooth' });
+    }
+})
+
 const dayThreetit = document.querySelector('.dayThree');
 dayThreetit.addEventListener('click', function () {
-    let dayThreeSct = dayThree.offsetTop + 3621;
-    window.scrollTo({ top: dayThreeSct, left: 0, behavior: 'smooth' });
+    if (numch == 1) {
+        window.scrollTo({ top: absoluteTop + 7190, left: 0, behavior: 'smooth' });
+    } else {
+        window.scrollTo({ top: absoluteTop + 3785, left: 0, behavior: 'smooth' });
+    }
+
 })
+
+// topbtn 클릭하면 상단으로 이동하기
+const topBtn = document.querySelector('#topbtn');
+
+topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+// topbtn 스크롤하면 나타나기
+addEventListener('scroll', function () {
+    let sct = document.documentElement.scrollTop;
+    if (sct > 600) {
+        topBtn.classList.add('on');
+    } else {
+        topBtn.classList.remove('on');
+    }
+})
+
+
+

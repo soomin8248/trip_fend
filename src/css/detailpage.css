@@ -470,9 +470,6 @@
   width: 100%;
   z-index: 9;
   padding-bottom: 30px;
-  position: relative;
-  top: 0;
-  left: 0;
 }
 
 #detail_page #detail_wrap #guide_trip_box .guide_menu_tab.on {
@@ -570,12 +567,6 @@
   position: relative;
   width: 100%;
   display: none;
-}
-
-#detail_page #detail_wrap #guide_trip_box #content_tab .trip .submenu_tab {
-  position: relative;
-  top: 0;
-  left: 0;
 }
 
 #detail_page #detail_wrap #guide_trip_box #content_tab .trip .submenu_tab.on {
@@ -1583,4 +1574,40 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -1px;
+}
+
+#detail_page #topbtn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #4d8fd0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  top: 600px;
+  right: 290px;
+}
+
+#detail_page #topbtn.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#detail_page #topbtn img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#detail_page #topbtn p {
+  text-align: center;
+  color: #4d8fd0;
+  font-weight: 500;
 }
