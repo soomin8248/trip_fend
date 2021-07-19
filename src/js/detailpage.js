@@ -116,20 +116,22 @@ addEventListener('scroll', function () {
 
 // 여행일정 서브 탭 클릭 했을 때 클릭한 내용 위치로 스크롤
 const dayOnetit = document.querySelector('.dayOne');
+const dayOneCon = document.querySelector('.day_title')
 let sct = document.documentElement.scrollTop;
 dayOnetit.addEventListener('click', function () {
-    let dayOneSct = dayOne.offsetTop + 3525;
+    let dayOneSct = dayOneCon.offsetTop;
     window.scrollTo({ top: dayOneSct, left: 0, behavior: 'smooth' });
-    if (sct > dayOneSct) {
-
-    } else {
-        tripSubTab.classList.remove('on');
-    }
+    console.log(dayOneSct);
 })
 const dayTwotit = document.querySelector('.dayTwo');
 dayTwotit.addEventListener('click', function () {
     let dayTwoSct = dayTwo.offsetTop + 3625;
     window.scrollTo({ top: dayTwoSct, left: 0, behavior: 'smooth' });
+    if (sct > dayOneSct) {
+        tripSubTab.classList.add('on');
+    } else {
+        tripSubTab.classList.remove('on');
+    }
 })
 const dayThreetit = document.querySelector('.dayThree');
 dayThreetit.addEventListener('click', function () {
