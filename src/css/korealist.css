@@ -13,7 +13,7 @@
 }
 
 .tour_bigmenu ul li {
-  width: 50%;
+  width: 33.3333%;
   text-align: center;
   padding: 15px 0;
   border-bottom: 2px solid #4d8fd0;
@@ -194,11 +194,11 @@
   margin-bottom: 10px;
 }
 
-.tour_bigcontents .tour_type .tour_smallcontents .tour_lists .tour_item .item_info p:nth-child(3) {
+.tour_bigcontents .tour_type .tour_smallcontents .tour_lists .tour_item .item_info p:nth-child(2) {
   margin-bottom: 20px;
 }
 
-.tour_bigcontents .tour_type .tour_smallcontents .tour_lists .tour_item .item_info p:nth-child(3) span {
+.tour_bigcontents .tour_type .tour_smallcontents .tour_lists .tour_item .item_info p:nth-child(2) span {
   font-size: 18px;
   font-weight: 500;
   color: #4d8fd0;

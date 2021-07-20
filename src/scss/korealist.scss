@@ -13,7 +13,7 @@
         display: flex;
         margin-bottom: 30px;
         li {
-            width: 50%;
+            width: 33.3333%;
             text-align: center;
             padding: 15px 0;
             border-bottom: 2px solid $main-color;
@@ -153,7 +153,7 @@
                             &:nth-child(1) {
                                 margin-bottom: 10px;
                             }
-                            &:nth-child(3) {
+                            &:nth-child(2) {
                                 margin-bottom: 20px;
                                 span {
                                     font-size: $font-size-18;
