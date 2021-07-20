@@ -31,7 +31,7 @@ function moreImg() {
 
 
 const tripTabs = document.querySelectorAll('.guide_menu_tab > li');
-const content_tab = document.querySelector('#content_tab'); 
+const content_tab = document.querySelector('#content_tab');
 const tabPage = document.querySelectorAll('.tabpage');
 const toplet = window.pageYOffset + content_tab.getBoundingClientRect().top;
 //메인 탭 이동
@@ -42,9 +42,9 @@ tripTabs.forEach(function (item, index) {
         tabPage.forEach(item => item.classList.remove('on'));
         tabPage[index].classList.add('on');
         if (numch == 1) {
-            window.scrollTo({ top: toplet + 3300, left: 0, behavior: 'smooth' });
+            window.scrollTo({ top: toplet + 3300, left: 0 });
         } else {
-            window.scrollTo({ top: toplet - 210, left: 0, behavior: 'smooth' });
+            window.scrollTo({ top: toplet - 210, left: 0 });
         }
     })
 });
