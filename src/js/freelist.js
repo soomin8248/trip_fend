@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bigmenu = document.querySelectorAll('.tour_bigmenu ul li');
     const tourtype = document.querySelectorAll('.tour_type');
+
     const freeswiper = document.querySelector('.free-swiper');
     const packgeswiper = document.querySelector('.package-swiper');
+
+    const smallmenu = document.querySelectorAll('.tour_smallmenu');
+    const smallmenuList = document.querySelectorAll('.tour_smallmenu li');
+
+    const smallcontents = document.querySelectorAll('.tour_smallcontents');
+    const tour_lists = document.querySelectorAll('.tour_lists');
 
     let swiper = '';
     let classon = '';
@@ -38,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
             tourtype.forEach(item => item.classList.remove('on'));
             tourtype[index].classList.add('on');
 
+            smallmenu[index].firstElementChild.classList.add('on');
+            smallcontents[index].firstElementChild.classList.add('on');
+
             if (index == 0) {
                 classon = freeswiper;
                 swiper.destroy();
@@ -49,14 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    smallmenuList.forEach(function (item, index) {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
 
-    const smallmenu = document.querySelectorAll('.tour_smallmenu li');
-    const tour_lists = document.querySelectorAll('.tour_lists');
-
-    smallmenu.forEach(function (item, index) {
-        item.addEventListener('click', function () {
-            smallmenu.forEach(item => item.classList.remove('on'));
+            smallmenuList.forEach(item => item.classList.remove('on'));
             item.classList.add('on');
+
             tour_lists.forEach(item => item.classList.remove('on'));
             tour_lists[index].classList.add('on');
         })
