@@ -1,0 +1,272 @@
+#mypage {
+  width: 100%;
+  height: 150vh;
+  padding-top: 40px;
+  letter-spacing: -1px;
+}
+
+#mypage .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_left {
+  width: 22%;
+  height: 100%;
+  padding-right: 40px;
+}
+
+#mypage .container #mypage_left #mypage_side_menu {
+  height: 550px;
+  border: 1px solid #9d9d9d;
+  padding-top: 20px;
+}
+
+#mypage .container #mypage_left #mypage_side_menu h2 {
+  padding-left: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li {
+  font-size: 16px;
+  line-height: 45px;
+  border-bottom: 1px solid #ccc;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li a {
+  padding-left: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li:hover {
+  background-color: #4d8fd0;
+  color: #fff;
+}
+
+#mypage .container #mypage_right {
+  width: 78%;
+  height: 100vh;
+}
+
+#mypage .container #mypage_right #mypage_title {
+  width: 100%;
+}
+
+#mypage .container #mypage_right #mypage_title h1 {
+  font-size: 33px;
+  padding: 20px 0;
+}
+
+#mypage .container #mypage_right #mypage_title h1 span:nth-child(1) {
+  color: #4d8fd0;
+  font-weight: bold;
+}
+
+#mypage .container #mypage_right #mypage_title h1 span:nth-child(2) {
+  font-weight: bold;
+}
+
+#mypage .container #mypage_right .mypage_btn_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 50px;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  margin: 0 57px;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li:last-child::after {
+  display: none;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a p {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a p i {
+  font-size: 65px;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a p span {
+  display: inline-block;
+  color: #4d8fd0;
+  font-size: 36px;
+  margin-left: 10px;
+}
+
+#mypage .container #mypage_right #reservation {
+  padding-top: 30px;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn h3 {
+  font-size: 24px;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li {
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li:nth-child(1) {
+  color: #fff;
+  background: #333;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li:nth-child(2) {
+  border: 1px solid #ccc;
+  margin-left: 5px;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub {
+  height: 100px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 35px 40px;
+  margin-bottom: 60px;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li {
+  width: 45%;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li span {
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li span a {
+  display: inline-block;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li span a em {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+#mypage .container #mypage_right #activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+#mypage .container #mypage_right #activity .act {
+  width: 48%;
+}
+
+#mypage .container #mypage_right #activity .act h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mypage .container #mypage_right #activity .act ul {
+  padding: 25px 40px;
+  height: 255px;
+  background-color: #ddd;
+}
+
+#mypage .container #mypage_right #activity .act ul li {
+  font-size: 16px;
+  line-height: 48px;
+}
+
+#mypage .container #mypage_right #activity .act ul li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #activity .act ul li span em {
+  font-size: 22px;
+  text-decoration: underline;
+}

@@ -1,0 +1,201 @@
+@import "variable";
+
+#mypage {
+    width: 100%;
+    height: 150vh;
+    padding-top: 40px;
+    letter-spacing: -1px;
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        #mypage_left {
+            width: 22%;
+            height: 100%;
+            padding-right: 40px;
+            #mypage_side_menu {
+                height: 550px;
+                border: 1px solid #9d9d9d;
+                padding-top: 20px;
+                h2 {
+                    padding-left: 20px;
+                    font-size: $font-size-24;
+                    margin-bottom: 20px;
+                }
+                ul {
+                    li {
+                        font-size: $font-size-16;
+                        line-height: 45px;
+                        border-bottom: 1px solid $light-gray;
+                        a {
+                            padding-left: 20px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        &:first-child {
+                            border-top: 1px solid $light-gray;
+                        }
+                        &:hover {
+                            background-color: $main-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+        #mypage_right {
+            width: 78%;
+            height: 100vh;
+            #mypage_title {
+                width: 100%;
+                h1 {
+                    font-size: $font-size-33;
+                    padding: 20px 0;
+                    span {
+                        &:nth-child(1) {
+                            color: $main-color;
+                            font-weight: $font-weight-bold;
+                        }
+                        &:nth-child(2) {
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+            }
+            .mypage_btn_link {
+                display: flex;
+                justify-content: space-between;
+                margin: 30px 50px;
+                li {
+                    text-align: center;
+                    display: flex;
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        width: 1px;
+                        height: 100%;
+                        background-color: $light-gray;
+                        margin: 0 57px;
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        p {
+                            font-size: $font-size-18;
+                            display: flex;
+                            justify-content: center;
+                            i {
+                                font-size: 65px;
+                            }
+                            span {
+                                display: inline-block;
+                                color: $main-color;
+                                font-size: $font-size-36;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            #reservation {
+                padding-top: 30px;
+                .reser_btn {
+                    display: flex;
+                    justify-content: space-between;
+                    h3 {
+                        font-size: $font-size-24;
+                    }
+                    ul {    
+                        display: flex;
+                        li {
+                            width: 110px;
+                            height: 38px;
+                            line-height: 38px;
+                            font-size: 14px;
+                            text-align: center; 
+                            &:nth-child(1) {
+                                color: $white-color;
+                                background: $black-color;
+                            }
+                            &:nth-child(2) {
+                                border: 1px solid $light-gray;
+                                margin-left: 5px;
+                            }
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+                .reser_sub {
+                    height: 100px;
+                    margin-top: 10px;
+                    border: 1px solid $light-gray;
+                    padding: 35px 40px;
+                    margin-bottom: 60px;
+                    .booking_count {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        li {
+                            width: 45%;
+                            span {
+                                height: 24px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: $font-size-16;
+                                a {
+                                    display: inline-block;
+                                    em {
+                                        font-size: $font-size-22;
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #activity {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 60px;
+                .act {
+                    width: 48%;
+                    h3 {
+                        font-size: $font-size-24;
+                        margin-bottom: 20px;
+                    }
+                    ul {
+                        padding: 25px 40px;
+                        height: 255px;
+                        background-color: $more-light-gray;
+                        li {
+                            font-size: $font-size-16;
+                            line-height: 48px;
+                            span {
+                                display: flex;
+                                justify-content: space-between;
+                                em {
+                                    font-size: $font-size-22;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
