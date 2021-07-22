@@ -99,12 +99,9 @@
   transition: 0.5s;
 }
 
-#specialtrip #special_contents #tab_btn li:hover {
-  background: rgba(195, 225, 255, 0.3);
-}
-
 #specialtrip #special_contents #tab_btn li:hover a {
   color: #4d8fd0;
+  border: 1px solid #4d8fd0;
 }
 
 #specialtrip #special_contents #tab_btn li.on {
