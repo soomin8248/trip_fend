@@ -138,13 +138,13 @@
 }
 
 #kor_jeju .kor_jeju .jeju_control ul li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 43px;
   width: 23%;
   height: 100%;
   background-color: #fff;
   cursor: pointer;
-  border-radius: 19.5px;
+  border-radius: 22px;
   border: 1px solid #4d8fd0;
   color: #4d8fd0;
   -webkit-transition: 0.5s;
@@ -242,8 +242,8 @@
 
 #kor_jeju .kor_jeju .jeju_contents .item .sub_item .info h4 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 #kor_jeju .kor_jeju .jeju_contents .item .sub_item .info h4 span {
@@ -378,8 +378,8 @@
 
 #kor_md .kor_md .container .md_show .md_items .sub_item .info h4 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 #kor_md .kor_md .container .md_show .md_items .sub_item .info h4 span {
@@ -552,8 +552,8 @@
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 span {

@@ -172,10 +172,11 @@
 
 #visual .show_visual .lists_visual .item_visual div h3 {
   font-size: 44px;
+  font-weight: 700;
 }
 
 #visual .show_visual .lists_visual .item_visual div > p {
-  font-size: 24px;
+  font-size: 20px;
   margin: 20px 0;
 }
 
@@ -583,7 +584,7 @@
 #notice .container .notice_right p {
   font-size: 30px;
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 #notice .container .notice_right p span {
