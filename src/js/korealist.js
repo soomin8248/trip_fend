@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const tourtype = document.querySelectorAll('.tour_type');
 
     const kortourswiper = document.querySelector('.kortour-swiper');
+    const ticketswiper = document.querySelector('.ticket-swiper');
     const trainswiper = document.querySelector('.train-swiper');
     const golfswiper = document.querySelector('.golf-swiper');
 
@@ -46,7 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
             tourtype.forEach(item => item.classList.remove('on'));
             tourtype[index].classList.add('on');
 
-            smallmenu[index].firstElementChild.classList.add('on');
+            if (index < 3) {
+                smallmenu[index].firstElementChild.classList.add('on');
+            }
             smallcontents[index].firstElementChild.classList.add('on');
 
             if (index == 0) {
@@ -57,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 swiper.destroy();
             } else if (index == 2) {
                 classon = golfswiper;
+                swiper.destroy();
+            } else if (index == 3) {
+                classon = ticketswiper;
                 swiper.destroy();
             }
             slideOn(classon);
