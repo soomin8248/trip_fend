@@ -1,0 +1,511 @@
+#mypage {
+  width: 100%;
+  height: auto;
+  padding-top: 40px;
+  letter-spacing: -1px;
+}
+
+#mypage .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_left {
+  width: 22%;
+  height: 100%;
+  padding-right: 40px;
+}
+
+#mypage .container #mypage_left #mypage_side_menu {
+  height: 550px;
+  border: 1px solid #9d9d9d;
+  padding-top: 20px;
+}
+
+#mypage .container #mypage_left #mypage_side_menu h2 {
+  padding-left: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li {
+  font-size: 16px;
+  line-height: 45px;
+  border-bottom: 1px solid #ccc;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li a {
+  padding-left: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li:first-child {
+  border-top: 1px solid #ccc;
+}
+
+#mypage .container #mypage_left #mypage_side_menu ul li:hover {
+  background-color: #4d8fd0;
+  color: #fff;
+}
+
+#mypage .container #mypage_right {
+  width: 78%;
+  height: auto;
+}
+
+#mypage .container #mypage_right #mypage_title {
+  width: 100%;
+}
+
+#mypage .container #mypage_right #mypage_title h1 {
+  font-size: 33px;
+  padding: 20px 0;
+}
+
+#mypage .container #mypage_right #mypage_title h1 span:nth-child(1) {
+  color: #4d8fd0;
+  font-weight: bold;
+}
+
+#mypage .container #mypage_right #mypage_title h1 span:nth-child(2) {
+  font-weight: bold;
+}
+
+#mypage .container #mypage_right .mypage_btn_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 50px;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  margin: 0 57px;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li:last-child::after {
+  display: none;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a p {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a p i {
+  font-size: 65px;
+}
+
+#mypage .container #mypage_right .mypage_btn_link li a p span {
+  display: inline-block;
+  color: #4d8fd0;
+  font-size: 36px;
+  margin-left: 10px;
+}
+
+#mypage .container #mypage_right #reservation {
+  padding-top: 30px;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn h3 {
+  font-size: 24px;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li {
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li:nth-child(1) {
+  color: #fff;
+  background: #333;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li:nth-child(2) {
+  border: 1px solid #ccc;
+  margin-left: 5px;
+}
+
+#mypage .container #mypage_right #reservation .reser_btn ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub {
+  height: 100px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 35px 40px;
+  margin-bottom: 60px;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li {
+  width: 45%;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li span {
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li span a {
+  display: inline-block;
+}
+
+#mypage .container #mypage_right #reservation .reser_sub .booking_count li span a em {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+#mypage .container #mypage_right #activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+#mypage .container #mypage_right #activity .act {
+  width: 48%;
+}
+
+#mypage .container #mypage_right #activity .act h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mypage .container #mypage_right #activity .act ul {
+  padding: 25px 40px;
+  height: 255px;
+  background-color: #ddd;
+}
+
+#mypage .container #mypage_right #activity .act ul li {
+  font-size: 16px;
+  line-height: 48px;
+}
+
+#mypage .container #mypage_right #activity .act ul li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #activity .act ul li span em {
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+#mypage .container #mypage_right #goods {
+  margin-bottom: 60px;
+}
+
+#mypage .container #mypage_right #goods h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mypage .container #mypage_right #goods .lately {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #goods .lately .goods {
+  width: 48%;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .more_btn {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .more_btn h4 {
+  font-size: 18px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .more_btn a {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .more_btn a img {
+  width: 100%;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods {
+  height: 258px;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods.black_goods {
+  position: relative;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .img {
+  position: relative;
+  margin-right: 20px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .img img {
+  display: block;
+  width: 210px;
+  height: 150px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .img p {
+  width: 55px;
+  font-size: 12px;
+  height: 55px;
+  line-height: 55px;
+  background-color: #4d8fd0;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul {
+  font-size: 14px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul li {
+  position: relative;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul li p {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  line-height: 24px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul li p i {
+  line-height: 24px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul li p span {
+  width: 50px;
+  position: absolute;
+  left: 25px;
+  top: 0;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul .text_title {
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text ul .price {
+  font-size: 16px;
+  color: #4d8fd0;
+  padding-top: 8px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text .price_text {
+  margin-top: 10px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text .price_text li .blue_color {
+  color: #4d8fd0;
+  font-size: 16px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_img .text .price_text li span {
+  padding: 0 15px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.social li {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+  margin-right: -1px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.social li i {
+  color: #888;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.btn li {
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.btn li:nth-child(1) {
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.btn li:nth-child(2) {
+  color: #fff;
+  background: #333;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.btn li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .detail_btn ul.black_btn li:nth-child(2) {
+  color: #fff;
+  background: #888;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .black_bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 258px;
+}
+
+#mypage .container #mypage_right #goods .lately .goods .detailgoods .not_list {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 216px;
+  font-size: 16px;
+}

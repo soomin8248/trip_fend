@@ -14,7 +14,7 @@
 }
 
 #notice .container #notice_left {
-  width: 20%;
+  width: 22%;
   height: 100%;
   padding-right: 40px;
 }
@@ -55,7 +55,7 @@
 }
 
 #notice .container #notice_right {
-  width: 80%;
+  width: 78%;
   height: 100vh;
 }
 
@@ -65,7 +65,7 @@
 }
 
 #notice .container #notice_right #notice_title h1 {
-  font-size: 30px;
+  font-size: 33px;
   padding: 10px 0;
 }
 
