@@ -78,6 +78,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
             tour_lists.forEach(item => item.classList.remove('on'));
             tour_lists[index].classList.add('on');
-        })
+        });
+    });
+
+    const viewbtn = document.querySelector('.viewbtn');
+    const notview = document.querySelectorAll('.notview');
+    let i = 0;
+
+    viewbtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        notview[i].classList.remove('notview');
+        if (i == notview.length - 1) {
+            viewbtn.style.display = 'none';
+        }
+        i += 1;
     })
 })
