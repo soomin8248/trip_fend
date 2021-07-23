@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let btnMoreBut = document.querySelector('.btn_more');
+           
             
             new Swiper('.packimg-swiper', {
                 slidesPerView: 3,
@@ -31,15 +31,86 @@
                 },
             });
 
+            let goodsInfoDetail = document.getElementById('goodsInfoDetail');
+            let box_detail_prod = document.getElementById('box_detail_prod');
+            let goodsMore = document.getElementById('goodsMore');
+
+            let goodsInfoDetailhight = goodsInfoDetail.clientHeight;
+            let box_detail_prodhight = box_detail_prod.clientHeight;
+
+            if( goodsInfoDetailhight > box_detail_prodhight ) {
+                goodsMore.style.display = 'block';
+            } else {
+                goodsMore.style.display = 'none';
+            }
+
+            let btnMoreBut = document.querySelector('.btn_more');
             btnMoreBut.addEventListener('click',function(){
                 let boxDetailProd = document.querySelector('.box_detail_prod');
+                let body = document.querySelector('body');
+
                 let detailBox = this.closest('#boxDetailProd');
                 let openName = 'open';
                 let absoluteTop = window.pageYOffset + boxDetailProd.getBoundingClientRect().top;
                 
-                
+                // console.log(this.children);
+                if(boxDetailProd.classList.contains('open')){
+                    this.innerHTML="상품안내 <span>더보기</span>"; 
+                    boxDetailProd.classList.remove('open');
+                    window.scrollTo({ top: absoluteTop, behavior: 'smooth' });
+                } else {
+                    boxDetailProd.classList.add('open');
+                    this.innerHTML="<span>닫기</span>"; 
+                }
             });
-        
+
+            let tabList = document.querySelector('#tabList');
+            let tablis = document.querySelectorAll('#tabList > li');
+            let tabPages = document.querySelectorAll('.tab_page');
+            tabList.children[0].classList.add('on');
+            tabPages[0].style.display = 'block';
+            tabPages.forEach((tabpage, index) => {
+                tabpage.setAttribute("index", index);
+            });
+                
+            tablis.forEach((tab, index) => {
+                tab.setAttribute("index",index);
+                tab.addEventListener('click',function(e){
+                    e.preventDefault();
+                    let viewIdx = this.getAttribute('index');
+                    tabPages.forEach(tabpage => {
+                        if(tabpage.getAttribute("index") == viewIdx){
+                            tabpage.style.display = 'block';
+                        } else {
+                            tabpage.style.display = 'none';
+                        }
+                    })
+
+                    tablis.forEach(thsIdx => {
+                        if(thsIdx.getAttribute('index') == viewIdx){
+                            thsIdx.classList.add('on');
+                        } else {
+                            thsIdx.classList.remove('on');
+                        }
+                    })
+                });
+            });
+
+            let tabfixlis = document.querySelectorAll('.tab_sub_prod > ul > li');
+            tabfixlis.forEach((tabfitli, index) => {
+                tabfitli.setAttribute("index", index);
+                tabfitli.addEventListener('click',function(e){
+                    e.preventDefault();
+                    let viewIdx = this.getAttribute('index');
+                    tabfixlis.forEach(thsIdx => {
+                        if(thsIdx.getAttribute('index') == viewIdx){
+                            thsIdx.classList.add('on');
+                        } else {
+                            thsIdx.classList.remove('on');
+                        }
+                    })
+                })
+            });
         });
     </script>
 </head>
@@ -275,7 +346,440 @@
                         </button>
                     </div>
                 </div>
+                <!-- 상품안내 /-->
 
+                <!-- 패키지 일정 및 안내사항 -->
+                <div class="box_guide_trip tab_wrap tabWrap" id="tripDetail">
+                    <ul class="tab_page_cont tabs_fixed tabPageCont" id="tabList">
+                        <li class=""><a href="#">여행일정</a></li>
+                        <li class=""><a href="#">선택 관광/쇼핑</a></li>
+                        <li class=""><a href="#">관광지</a></li>
+                        <li class=""><a href="#">약관/취소수수료</a></li>
+                        <li class=""><a href="#">여행자보험</a></li>
+                        <li class=""><a href="#">주의 및 참고사항</a></li>
+                    </ul>
+                    <div class="cont_tabs">
+                        <div class="tab_page tab_day calendar">
+                            <div class="tab_sub_prod tabs_fixed" data-tabs="tabsScroll">
+                                <ul class="scroll_area" id="scroll_area">
+                                    <li class="on"><span><a href="#day1">1일차</a></span></li>
+                                    <li><span><a href="#">2일차</a></span></li>
+                                    <li><span><a href="#">3일차</a></span></li>
+                                </ul>
+                            </div>
+                            <h4>여행일정</h4>
+                            <div class="trip_notice">
+                                <div>
+                                    <p>참고하세요</p>
+                                    <span>
+                                        여행 일정은 계약 체결 시 예상하지 못한 부득이한 사정 등이 발생하는 경우 여행자의 사전 동의를 거쳐 변경될 수 있음을 양지하여 주시기 바랍니다.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="meeting_info">
+                                <div class="meet_left">
+                                    <div class="flag_circle"><img src="../src/img/detailpage/flag.png" alt="깃발 아이콘"></div>
+                                    <p>미팅 일시 및 장소</p>
+                                </div>
+                                <div class="meet_text">
+                                    <p>일시 : 2021년 11월 01일 12시 00분</p>
+                                    <p>장소 : 인천국제공항 1터미널 3층 출국장 14번 출구 앞(N카운터 옆 창측) 여행사카운터 38~42번 테이블</p>
+                                </div>
+                            </div>
+                            <!-- 일정 timeline -->
+                            <div class="trip_timeline">
+                                <!-- 1일차 -->
+                                <div class="timeline">
+                                    <div class="day_title">
+                                        <p>1일차<span>2021.11.01(월)-인천/오키나와</span></p>
+                                    </div>
+                                    <div class="timeline_contents">
+                                        <div class="float_route" id="day1">
+                                            <div class="way_start">
+                                                <p>인천출발</p>
+                                                <p>14:05</p>
+                                                <p>2021.11.01(월)</p>
+                                            </div>
+                                            <ul class="float_time">
+                                                <li><img src="/src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                                <li class="float_icon">
+                                                    <img src="/src/img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
+                                                </li>
+                                                <li><img src="/src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                            </ul>
+                                            <div class="way_fin">
+                                                <p>현지도착</p>
+                                                <p>16:30</p>
+                                                <p>2021.11.01(월)</p>
+                                            </div>
+                                        </div>
+                                        <div class="location_box">
+                                            <div class="location">
+                                                <h3>인천</h3>
+                                                <p>[12:00] 인천국제공항 1터미널 미팅</p>
+                                                <span>※ 예약 인원에 따라서 현지 가이드로 진행될 수 있습니다.</span>
+                                            </div>
+                                            <div class="location">
+                                                <p>[14:05/KE907] 인천 국제 공항 출발 (소요시간 - 약 2시간 15분 / 기내식 미제공)</p>
+                                            </div>
+                                            <div class="location">
+                                                <h3 class="location_oki">오키나와</h3>
+                                                <p>[16:30/TW271] 나하 국제공항 도착 및 입국수속</p>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>오키나와 최대 번화가, 기적의 1마일 국제거리</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>국제거리</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img1.jpg"
+                                                                    alt="국제거리 낮 풍경"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img2.jpg"
+                                                                    alt="국제거리 야경"></li>
+                                                        </ul>
+                                                        <p>
+                                                            나하에서 가장 번화한 거리로 약 1.6km 일직선으로 뻗은 거리에 오키나와 수호신과 토산품을 판매하는 상점들이 많이
+                                                            있으며,레스토랑, 쇼핑센터, 호텔 등이 모여 있다. 이곳은 2차 세계대전 당시 미군의 공습으로 폐허가 되었으나
+                                                            급속한
+                                                            성장으로 기적의 1마일이라고도 불린다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="location">
+                                                <p>석식 후 호텔로 이동 체크인 및 휴식</p>
+                                                <div class="hotel_box">
+                                                    <h4>하얏트 리젠시 나하 오키나와</h4>
+                                                    <ul>
+                                                        <li><img src="/src/img/detailpage/japantour_img3.jpg"
+                                                                alt="호텔 건물 이미지"></li>
+                                                        <li><img src="/src/img/detailpage/japantour_img4.jpg"
+                                                                alt="호텔 내부 이미지"></li>
+                                                    </ul>
+                                                    <p>
+                                                        나하 시에 자리한 하얏트 리젠시 나하 오키나와는 숙박, 식사, 미팅 및 휴식을 취할 수 있는 인상 깊은 지역 랜드마크이다.
+                                                        객실
+                                                        내 무료 와이파이(Wi-Fi)가 완비되어 있다. 내부에는 수영장과 함께 피트니스센터가 있다. 각 객실에 슬리퍼, 샤워
+                                                        시설,
+                                                        헤어드라이어 등이 구비된 욕실이 있다. 나하 공항에서 차편으로 20분 거리이다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="meal_guide">
+                                            <span>식사</span>
+                                            <p>[석식] 현지식(웰빙뷔페)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 1일차 /-->
+
+                                <!-- 2일차 -->
+                                <div class="timeline" id="day2">
+                                    <div class="day_title">
+                                        <p>2일차<span>2021.11.02(화) - 오키나와</span></p>
+                                    </div>
+                                    <div class="timeline_contents">
+                                        <div class="location_box">
+                                            <div class="location">
+                                                <h3>오키나와</h3>
+                                            </div>
+                                            <div class="location">
+                                                <p>호텔 조식 후</p>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>해양박람회기념공원(츄라우미 수족관)</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>EXPO 해양공원</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img5.jpg"
+                                                                    alt="돌고래쇼 이미지"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img6.jpg"
+                                                                    alt="수족관"></li>
+                                                        </ul>
+                                                        <p>
+                                                            새하얀 모래시장과 새파란 바다의 콘트라스트가 일품이며, 눈앞에는 이에지마 섬이 위치한 인공해변과 점프 및 독특한
+                                                            행동으로 관광객들을 즐겁게 해주는 귀여운 돌고래들의 쇼. 세계적 규모를 자랑하는 츄라우미 수족관은
+                                                            고래상어,귀가오리등
+                                                            쉽게 볼 수 없는 다양한 열대어 등을 접할 수 있어 남녀노소 즐겨 찾는 명소이다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>만좌모</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>만좌모</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img7.jpg"
+                                                                    alt="만좌모 절경"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img8.jpg"
+                                                                    alt="만좌모 절경"></li>
+                                                        </ul>
+                                                        <p>
+                                                            높이200m의 석회암 절벽위에 천연잔디가 자라난 코끼리 모양의 절벽이다. 명칭은 '만인이 앉아도 충분한 잔디
+                                                            벌판'이라는
+                                                            뜻에서 류큐왕조 시절 붙여진 이름이다. 코발트빛을 내는 탁트인 바다와 산호초가 만들어 내는 절경을 만끽 할 수
+                                                            있다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>아메리칸 빌리지</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>아메리칸 빌리지</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img9.jpg"
+                                                                    alt="만좌모 절경"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img10.jpg"
+                                                                    alt="만좌모 절경"></li>
+                                                        </ul>
+                                                        <p>
+                                                            오키나와 중부 차탄초 미하마에 위치해 있으며, 선셋이 아름다운 선셋비치로 부터 불어오는 상쾌한 바닷바람을 맞으면서
+                                                            쇼핑이나
+                                                            레져를 즐길 수 있는 오키나와 인기 no1. 명소이다. 대관람차가 테마파크 분위기를 내는곳으로 대형 마트 이온몰을
+                                                            비롯해
+                                                            상점들이 모여 있어 쇼핑과 관광에 편리하다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="location">
+                                                <p>오키나와 최대 쇼핑몰 파르코시티 자유관광 (석식 자유식 진행)</p>
+                                            </div>
+                                            <div class="location">
+                                                <p>석식 후 호텔로 이동 체크인 및 휴식</p>
+                                                <div class="hotel_box">
+                                                    <h4>하얏트 리젠시 나하 오키나와</h4>
+                                                    <ul>
+                                                        <li><img src="/src/img/detailpage/japantour_img3.jpg"
+                                                                alt="호텔 건물 이미지"></li>
+                                                        <li><img src="/src/img/detailpage/japantour_img4.jpg"
+                                                                alt="호텔 내부 이미지"></li>
+                                                    </ul>
+                                                    <p>
+                                                        나하 시에 자리한 하얏트 리젠시 나하 오키나와는 숙박, 식사, 미팅 및 휴식을 취할 수 있는 인상 깊은 지역 랜드마크이다.
+                                                        객실
+                                                        내 무료 와이파이(Wi-Fi)가 완비되어 있다. 내부에는 수영장과 함께 피트니스센터가 있다. 각 객실에 슬리퍼, 샤워
+                                                        시설,
+                                                        헤어드라이어 등이 구비된 욕실이 있다. 나하 공항에서 차편으로 20분 거리이다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="meal_guide">
+                                            <span>식사</span>
+                                            <div class="meal_list">
+                                                <p>[조식] 호텔식</p>
+                                                <p>[중식] 현지식(토반야키)</p>
+                                                <p>[석식] 자유식(불포함)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2일차 /-->
+
+                                <!-- 3일차 -->
+                                <div class="timeline" id="day3">
+                                    <div class="day_title">
+                                        <p>3일차<span>2021.11.03(수) - 오키나와/인천</span></p>
+                                    </div>
+                                    <div class="timeline_contents">
+                                        <div class="location_box">
+                                            <div class="location">
+                                                <h3>오키나와</h3>
+                                            </div>
+                                            <div class="location">
+                                                <p>호텔 조식 및 체크아웃 후 이동</p>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>치넨미사키</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>치넨미사키</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img11.jpg"
+                                                                    alt="치넨미사키 풍경"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img12.jpg"
+                                                                    alt="치넨미사키 풍경"></li>
+                                                        </ul>
+                                                        <p>
+                                                            오키나와 남동부 해안 끝에 180도로 펼쳐지는 아름다운 바다와 푸른 하늘의 조화가 돋보이는 공원이다. 일출명소로
+                                                            유명하며,
+                                                            밤이되면 별을 조망할 수 있을정도로 맑은 날씨를 자랑하는 곳이며, 코발드 빛 바다와 자연 절경이 아름답다. 멀리
+                                                            구다카
+                                                            섬, 코마카 섬등 섬이 보이며 세이와우타키 바로 옆에 위치하고 있다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>마사히로 주조 공장</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>마사히로 주조 공장</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img13.jpg"
+                                                                    alt="공장 외관"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img14.jpg"
+                                                                    alt="공장 내부"></li>
+                                                        </ul>
+                                                        <p>
+                                                            창업 130 여년의 마사히로 주조는 전통적인 제법을 지키면서 매일 절차 탁마 항상 양질의 아와모리를 생산하고 있다.
+                                                            '아와모리'라 하는 일본 오키나와식 소주 제조과정을 볼 수 있으며, 공장에서 생산하는 다양한 제품은 물론이고, 무료
+                                                            시음도
+                                                            가능하다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>슈리성</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>슈리성</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img15.jpg"
+                                                                    alt="슈리성 입구"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img16.jpg"
+                                                                    alt="슈리성 풍경"></li>
+                                                        </ul>
+                                                        <p>
+                                                            오키나와의 옛 이름인 류큐왕조의 정치,외교,문화의 중심으로서 위용을 자랑하는 거성(구스쿠)으로 세계문화유산에 등재
+                                                            되었으며, 일본과 중국의 융합된 건축양식을 볼 수 있는 것이 특징이다. 성터 곳곳을 둘러보며 안내센터에서 받은
+                                                            스탬프랠리를
+                                                            체험해볼 수 있고, 돌길로 만들어진 이시타타미길은 힐링을 느끼게 해준다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="randmark_contents">
+                                                    <div class="mark_title">
+                                                        <p>우미카지테라스</p>
+                                                    </div>
+                                                    <div class="randmark_box">
+                                                        <h4>우미카지테라스</h4>
+                                                        <ul>
+                                                            <li><img src="/src/img/detailpage/japantour_img17.jpg"
+                                                                    alt="우미카지테라스 야경"></li>
+                                                            <li><img src="/src/img/detailpage/japantour_img18.jpg"
+                                                                    alt="우미카지테라스 낮 풍경"></li>
+                                                        </ul>
+                                                        <p>
+                                                            계단식으로 이루어진 상업시설로, 하얗고 아기자기한 샵들과 카페등의 각종 가게가 있고 야자수가 어우러진 지중해
+                                                            느낌으로
+                                                            오키나와의 산토리니라고 불리운다. 나하공항과 인접한 곳에 위치해 비행기들의 출도착 모습을 가까이에서 볼 수 있다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="location">
+                                                <p>면세점 쇼핑 1회 방문</p>
+                                            </div>
+                                            <div class="location">
+                                                <p>[17:30/KE908] 나하 국제공항 출발</p>
+                                            </div>
+                                            <div class="location">
+                                                <h3>인천</h3>
+                                            </div>
+                                            <div class="location">
+                                                <p>[19:55/KE908] 인천 국제공항 도착</p>
+                                            </div>
+                                        </div>
+                                        <div class="float_route">
+                                            <div class="way_start">
+                                                <p>오키나와출발</p>
+                                                <p>17:30</p>
+                                                <p>2021.11.03(수)</p>
+                                            </div>
+                                            <ul class="float_time">
+                                                <li><img src="/src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                                <li class="float_icon">
+                                                    <img src="/src/img/detailpage/ico_flight_39x22.jpg" alt="비행기 아이콘">
+                                                </li>
+                                                <li><img src="/src/img/detailpage/ico_now.jpg" alt="원형 아이콘"></li>
+                                            </ul>
+                                            <div class="way_fin">
+                                                <p>한국도착</p>
+                                                <p>19:55</p>
+                                                <p>2021.11.03(수)</p>
+                                            </div>
+                                        </div>
+                                        <div class="meal_guide">
+                                            <span>식사</span>
+                                            <div class="meal_list">
+                                                <p>[조식] 호텔식</p>
+                                                <p>[중식] 현지식(토반야키)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3일차 /-->
+                            </div>
+                            <!-- 일정 timeline /-->
+                        </div>
+                        <!-- 여행일정 / -->
+
+                        <!-- 쇼핑 -->
+                        <div class="tab_page shopping">
+                            쇼핑
+                        </div>
+                        <!-- 쇼핑 / -->
+
+                        <!-- 관광지 -->
+                        <div class="tab_page tourist_spots">
+                            관광지
+                        </div>
+                        <!-- 관광지 /-->
+
+                        <!-- 약관/취소수수료 -->
+                        <div class="tab_page tourist_spots">
+                            약관/취소수수료
+                        </div>
+                        <!-- 약관/취소수수료 /-->
+
+                        <!-- 여행자보험 -->
+                        <div class="tab_page tourist_insurance">
+                            여행자보험
+                        </div>
+                        <!-- 여행자보험 / -->
+
+                        <!-- 주의 및 참고사항 -->
+                        <div class="tab_page noted_items">
+                            주의 및 참고사항
+                        </div>
+                        <!-- 주의 및 참고사항 /-->
+
+                    </div>
+                </div>
+                <!-- 패키지 일정 및 안내사항 /-->
+
+                <!-- 방문도시 정보 -->
+                <div id="city_info">
+                    <h3 class="tit_style">방문 도시 정보</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>도시</th>
+                                <th>현재시간</th>
+                                <th>오늘의 환율</th>
+                                <th>콘센트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>오키나와</td>
+                                <td>한국과 시차 없음</td>
+                                <td>1100엔(JPY) = 1064.11원</td>
+                                <td>전압 : 100/120V<br />주파수 : 50/60HZ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 방문도시 정보 /-->
             </div>
         </div>
     </section>
