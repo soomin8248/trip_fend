@@ -14,6 +14,18 @@
     <script type="text/javascript" src="/src/js/w3.js"></script>
     <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
     <script type="text/javascript" src="/src/js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            let menus = document.querySelectorAll('.menu > a');
+
+            $(menus).click(function(){
+                $(this).toggleClass('on');
+                $(this).siblings('ul').toggle(0);
+                $(this).parent().siblings().children('ul').hide(0);
+                $(this).parent().siblings().children('a').removeClass('on');
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- 헤더 start-->
@@ -27,17 +39,77 @@
         <div class="container">
             <div id="mypage_left">
                 <div id="mypage_side_menu">
-                    <h2>마이페이지</h2>
+                    <h2><a href="#">마이페이지</a></h2>
                     <ul>
-                        <li><a href="#">예약/취소내역</a></li>
-                        <li><a href="#">플래너</a></li>
-                        <li><a href="#">관심내역</a></li>
-                        <li><a href="#">웨어투어 회원등급</a></li>
-                        <li><a href="#">포인트</a></li>
-                        <li><a href="#">쿠폰함</a></li>
-                        <li><a href="#">고객문의</a></li>
-                        <li><a href="#">참여내역</a></li>
-                        <li><a href="#">개인정보</a></li>
+                        <li class="menu">
+                            <a href="#">예약/취소내역</a>
+                            <ul>
+                                <li><a href="#">예약내역</a></li>
+                                <li><a href="#">취소내역</a></li>
+                                <li><a href="#">내 예약 찾기</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">플래너</a>
+                            <ul>
+                                <li><a href="#">플래너 목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">관심내역</a>
+                            <ul>
+                                <li><a href="#">최근 본 상품</a></li>
+                                <li><a href="#">위시 리스트</a></li>
+                                <li><a href="#">장바구니</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">웨어투어 회원등급</a>
+                            <ul>
+                                <li><a href="#">등급별 혜택</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">포인트</a>
+                            <ul>
+                                <li><a href="#">포인트 조회</a></li>
+                                <li><a href="#">포인트 선물</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">쿠폰함</a>
+                            <ul>
+                                <li><a href="#">내 쿠폰함</a></li>
+                                <li><a href="#">쿠폰존</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">고객문의</a>
+                            <ul>
+                                <li><a href="#">패키지여행 1:1 문의 내역</a></li>
+                                <li><a href="#">자유여행 문의 내역</a></li>
+                                <li><a href="#">견적 문의 내역</a></li>
+                                <li><a href="#">개선/건의하기 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">참여내역</a>
+                            <ul>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">나의 여행기</a></li>
+                                <li><a href="#">칭찬합시다</a></li>
+                                <li><a href="#">고객리뷰</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">개인정보</a>
+                            <ul>
+                                <li><a href="#">개인정보 수정</a></li>
+                                <li><a href="#">비밀번호 변경</a></li>
+                                <li><a href="#">SNS 연결 설정</a></li>
+                                <li><a href="#">회원탈퇴</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
