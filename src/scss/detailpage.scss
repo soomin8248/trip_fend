@@ -469,7 +469,15 @@
         .tabs_fixed{
             position:absolute;
             top:0; 
-            overflow:hidden
+            overflow:hidden;
+            &.fix{
+                position:fixed;
+                top:0;
+                width:910px;
+                background:#fff;
+                z-index:3; 
+                overflow:hidden;
+            }
         }
         .cont_tabs {
             .tab_page{
@@ -489,6 +497,16 @@
                         display:block;
                         clear:both;
                         content:'';
+                    }
+                    &.tabs_fixed{
+                        &.fix{
+                            top:62px;
+                            position:fixed;
+                            width:910px;
+                            background:#fff;
+                            z-index:3; 
+                            overflow:hidden;
+                        }
                     }
                     .scroll_area {
                         position:relative; 

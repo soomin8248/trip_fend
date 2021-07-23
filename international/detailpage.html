@@ -97,10 +97,16 @@
             });
 
             let tabfixlis = document.querySelectorAll('.tab_sub_prod > ul > li');
+            let timelines = document.querySelectorAll('.timeline');
+            timelines.forEach((timeline, index) =>{
+                timeline.setAttribute("index", index);
+                        
+            });
             tabfixlis.forEach((tabfitli, index) => {
                 tabfitli.setAttribute("index", index);
                 tabfitli.addEventListener('click',function(e){
                     e.preventDefault();
+                    let scrollTarget = ''
                     let viewIdx = this.getAttribute('index');
                     tabfixlis.forEach(thsIdx => {
                         if(thsIdx.getAttribute('index') == viewIdx){
@@ -109,9 +115,47 @@
                             thsIdx.classList.remove('on');
                         }
                     })
+                    timelines.forEach((timeline, index) =>{
+                        if(timeline.getAttribute('index') == viewIdx){
+                            scrollTarget = window.pageYOffset + timeline.getBoundingClientRect().top;
+                        }
+                    });
+                    window.scrollTo({ top: scrollTarget - 130, behavior: 'smooth' });
                 })
             });
+            document.addEventListener('scroll', function() {
+                // console.log('aaa');
+                let scrollTop = document.querySelector('html').scrollTop;
+                // console.log(scrollTop);
+                let tabsPS = document.querySelector(".box_guide_trip");
+                let tabsFixs = document.querySelectorAll(".tabs_fixed");
+
+                let tabpsindex =  window.pageYOffset + tabsPS.getBoundingClientRect().top;
+                
+                // var tabStop = $(".box_desc .ps_tab_out");
+                if (scrollTop > tabpsindex + 10) {
+                    tabsFixs.forEach(tabsFix => {
+                        tabsFix.classList.add("fix");
+                    })
+                } else if (scrollTop < tabpsindex + 10) {
+                    tabsFixs.forEach(tabsFix => {
+                        tabsFix.classList.remove("fix");
+                    })
+                }
+
+                    // tab 감추기
+                    // if (scrollTop > tabStop.offset().top - 150) {
+                    //     tabsFix.fadeOut("fast");
+
+                    // } else {
+                    //     tabsFix.fadeIn("fast");
+                    // }
+                
+            });
         });
+
+        
+
     </script>
 </head>
 

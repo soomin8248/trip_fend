@@ -561,6 +561,15 @@
   overflow: hidden;
 }
 
+#detail_page .box_guide_trip .tabs_fixed.fix {
+  position: fixed;
+  top: 0;
+  width: 910px;
+  background: #fff;
+  z-index: 3;
+  overflow: hidden;
+}
+
 #detail_page .box_guide_trip .cont_tabs .tab_page {
   display: none;
 }
@@ -584,6 +593,15 @@
   display: block;
   clear: both;
   content: '';
+}
+
+#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod.tabs_fixed.fix {
+  top: 62px;
+  position: fixed;
+  width: 910px;
+  background: #fff;
+  z-index: 3;
+  overflow: hidden;
 }
 
 #detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod .scroll_area {
