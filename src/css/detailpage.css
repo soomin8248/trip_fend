@@ -623,11 +623,16 @@
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod li.on span a {
   display: inline-block;
   height: 60px;
-  border-bottom: 3px solid #ffc72c;
+  border-bottom: 3px solid #4d8fd0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #222;
   z-index: 1;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod li:last-child {
+  background: none;
+  margin-left: 4px;
 }
 
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page h4 {
@@ -1272,6 +1277,7 @@
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .agree_box {
   margin-left: 10px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border: 1px solid #ddd;
   padding: 20px;
   color: #777;
@@ -1290,6 +1296,10 @@
   padding-left: 16px;
 }
 
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul > li {
+  padding-bottom: 10px;
+}
+
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul > li span {
   display: block;
   color: #777;
@@ -1302,6 +1312,7 @@
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit {
   font-size: 16px;
   font-weight: 500;
+  padding-top: 15px;
 }
 
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit::before {
@@ -1309,18 +1320,22 @@
 }
 
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit ul {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit ul li {
   font-size: 15px;
   font-weight: normal;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit ul li span {
   display: block;
   color: #777;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.visa .visa_con > ul > li {
+  padding-bottom: 15px;
 }
 
 #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.visa .visa_con > ul > li span {
@@ -1413,7 +1428,7 @@
   display: inline-block;
   width: 19px;
   height: 11px;
-  margin-right: 15px;
+  margin-right: 5px;
   background: url("/src/img/icon/ico_flight_w.png") no-repeat;
   vertical-align: middle;
   content: '';
@@ -1711,12 +1726,13 @@
   font-size: 18px;
   vertical-align: top;
   text-align: center;
-  background: #ffc72c !important;
-  color: #222 !important;
+  background: #4d8fd0 !important;
+  color: #fff !important;
   margin: 0 0 20px;
   cursor: pointer;
   overflow: visible;
   border: 0 none;
+  letter-spacing: -1px;
 }
 
 #detail_page .desc_body .box_booking .box_in .list_guide_info {

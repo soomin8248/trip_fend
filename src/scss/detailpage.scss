@@ -519,12 +519,16 @@
                                         a{
                                             display:inline-block; 
                                             height:60px; 
-                                            border-bottom:3px solid #ffc72c; 
+                                            border-bottom:3px solid $main-color; 
                                             box-sizing:border-box;
                                             color:#222;
                                             z-index:1
                                         }
                                     }
+                                }
+                                &:last-child{
+                                    background: none;
+                                    margin-left: 4px;
                                 }
                             }
                         }
@@ -1041,6 +1045,7 @@
                                 .agree_box {
                                     margin-left: 10px;
                                     margin-bottom: 20px;
+                                    margin-top: 20px;
                                     border: 1px solid #ddd;
                                     padding: 20px;
                                     color: #777;
@@ -1062,6 +1067,7 @@
                                 .matter_con {
                                     > ul {
                                         > li {
+                                            padding-bottom: 10px;
                                             span {
                                                 display: block;
                                                 color: #777;
@@ -1073,15 +1079,16 @@
                                         .matter_tit {
                                             font-size: $font-size-16;
                                             font-weight: $font-weight-500;
+                                            padding-top: 15px;
                                             &::before {
                                                 top: 10px;
                                             }
                                             ul {
-                                                padding-top: 10px;
+                                                padding-top: 15px;
                                                 li {
                                                     font-size: 15px;
                                                     font-weight: $font-weight-nomal;
-                                                    padding-bottom: 5px;
+                                                    padding-bottom: 10px;
                                                     span {
                                                         display: block;
                                                         color: #777;
@@ -1096,6 +1103,7 @@
                                 .visa_con {
                                     > ul {
                                         > li {
+                                            padding-bottom: 15px;
                                             span {
                                                 display: block;
                                                 color: #777;
@@ -1193,7 +1201,7 @@
                     display: inline-block;
                     width: 19px;
                     height: 11px;
-                    margin-right: 15px;
+                    margin-right: 5px;
                     background: url('/src/img/icon/ico_flight_w.png') no-repeat;
                     vertical-align: middle;
                     content: '';
@@ -1454,12 +1462,13 @@
                     font-size: 18px;
                     vertical-align: top;
                     text-align: center;
-                    background: #ffc72c !important;
-                    color: #222 !important;
+                    background: $main-color !important;
+                    color: #fff !important;
                     margin: 0 0 20px;
                     cursor: pointer;
                     overflow: visible;
                     border: 0 none;
+                    letter-spacing: -1px;
                 }
                 .list_guide_info{
                     padding: 11px 20px 20px;
