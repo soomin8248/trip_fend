@@ -7,11 +7,11 @@
   font-size: 15px;
 }
 
-#detail_page .box_desc {
-  width: 910px;
+#detail_page .desc_head {
+  margin-bottom: 60px;
 }
 
-#detail_page #detail_tit .pack_tag {
+#detail_page .desc_head .pack_tag {
   width: 100px;
   height: 30px;
   border-radius: 15px;
@@ -22,14 +22,14 @@
   font-size: 13px;
 }
 
-#detail_page #detail_tit h2 {
+#detail_page .desc_head h2 {
   padding: 30px 0;
   font-size: 30px;
   font-weight: 500;
   border-bottom: 2px solid #4d8fd0;
 }
 
-#detail_page #detail_tit .pack_num {
+#detail_page .desc_head .pack_num {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,16 +42,16 @@
   padding: 20px 0;
 }
 
-#detail_page #detail_tit .pack_num p {
+#detail_page .desc_head .pack_num p {
   color: #9d9d9d;
 }
 
-#detail_page #detail_tit .pack_num p span:nth-child(1) {
+#detail_page .desc_head .pack_num p span:nth-child(1) {
   margin-right: 40px;
   position: relative;
 }
 
-#detail_page #detail_tit .pack_num p span:nth-child(1)::after {
+#detail_page .desc_head .pack_num p span:nth-child(1)::after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -64,7 +64,7 @@
           transform: translateY(-50%);
 }
 
-#detail_page #detail_tit .pack_num .pack_info_btn {
+#detail_page .desc_head .pack_num .pack_info_btn {
   letter-spacing: -1px;
   border: none;
   outline: none;
@@ -76,13 +76,13 @@
   background: #4d8fd0;
 }
 
-#detail_page .packimg-swiper {
+#detail_page .desc_head .packimg-swiper {
   width: 1200px;
   height: 300px;
   overflow: hidden;
 }
 
-#detail_page .packimg-swiper .swiper-wrapper {
+#detail_page .desc_head .packimg-swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -93,40 +93,43 @@
           justify-content: space-between;
 }
 
-#detail_page .packimg-swiper .swiper-wrapper .swiper-slide {
+#detail_page .desc_head .packimg-swiper .swiper-wrapper .swiper-slide {
   height: 300px;
   width: 32%;
 }
 
-#detail_page .packimg-swiper .swiper-wrapper .swiper-slide img {
+#detail_page .desc_head .packimg-swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: 300px;
 }
 
-#detail_page .box_covid {
+#detail_page .desc_head .box_covid {
   margin-top: 40px;
 }
 
-#detail_page #detail_wrap {
-  padding-top: 60px;
-  max-width: 900px;
+#detail_page .desc_body {
+  position: relative;
 }
 
-#detail_page #detail_wrap .tit_style {
+#detail_page .desc_body .box_desc {
+  width: 910px;
+}
+
+#detail_page .desc_body .box_desc .tit_style {
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 30px;
 }
 
-#detail_page #detail_wrap #schedule {
+#detail_page .desc_body .box_desc #schedule {
   width: 100%;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box {
   border-top: 1px solid #333;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,16 +141,16 @@
   font-size: 15px;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .sceh_tit {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .sceh_tit {
   width: 20%;
   font-size: 16px;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con {
   width: 80%;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float_name {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float_name {
   padding-bottom: 20px;
   padding-left: 20px;
   border-bottom: 1px solid #ccc;
@@ -155,7 +158,7 @@
   line-height: 18px;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float_name::before {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float_name::before {
   content: "";
   display: inline-block;
   width: 18px;
@@ -166,13 +169,13 @@
   left: 0;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box {
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,13 +186,13 @@
   width: 50%;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_number {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_number {
   padding-top: 22px;
   position: relative;
   color: #4d8fd0;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_number::before {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_number::before {
   content: "";
   display: block;
   width: 27px;
@@ -202,16 +205,16 @@
           transform: translateX(-50%);
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_regular {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_regular {
   padding-left: 20px;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_regular p span {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_regular p span {
   margin-left: 30px;
   position: relative;
 }
 
-#detail_page #detail_wrap #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_regular p span::before {
+#detail_page .desc_body .box_desc #schedule .trip_schedule_box li .traffic_con .float-schedule .air_box .flight_regular p span::before {
   content: "";
   display: inline-block;
   width: 1px;
@@ -224,64 +227,64 @@
           transform: translateY(-50%);
 }
 
-#detail_page #product_price {
+#detail_page .desc_body .box_desc #product_price {
   padding: 60px 0;
 }
 
-#detail_page #product_price .tit_style {
+#detail_page .desc_body .box_desc #product_price .tit_style {
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 30px;
 }
 
-#detail_page #product_price table {
+#detail_page .desc_body .box_desc #product_price table {
   width: 100%;
 }
 
-#detail_page #product_price table thead {
+#detail_page .desc_body .box_desc #product_price table thead {
   height: 70px;
 }
 
-#detail_page #product_price table thead tr {
+#detail_page .desc_body .box_desc #product_price table thead tr {
   border-top: 1px solid #333;
   background: rgba(195, 225, 255, 0.3);
   font-size: 16px;
 }
 
-#detail_page #product_price table thead tr th {
+#detail_page .desc_body .box_desc #product_price table thead tr th {
   font-weight: normal;
   line-height: 1.2;
 }
 
-#detail_page #product_price table thead tr th span {
+#detail_page .desc_body .box_desc #product_price table thead tr th span {
   display: block;
   color: #777;
   font-size: 15px;
 }
 
-#detail_page #product_price table tbody {
+#detail_page .desc_body .box_desc #product_price table tbody {
   border-bottom: 1px solid #ccc;
 }
 
-#detail_page #product_price table tbody tr {
+#detail_page .desc_body .box_desc #product_price table tbody tr {
   text-align: center;
 }
 
-#detail_page #product_price table tbody tr td {
+#detail_page .desc_body .box_desc #product_price table tbody tr td {
   padding: 15px 0;
 }
 
-#detail_page #product_price table tbody .total_price td:not(:nth-child(1)) {
+#detail_page .desc_body .box_desc #product_price table tbody .total_price td:not(:nth-child(1)) {
   color: #4d8fd0;
   font-size: 17px;
   font-weight: 500;
 }
 
-#detail_page #product_price .price_matter {
+#detail_page .desc_body .box_desc #product_price .price_matter {
   padding-top: 20px;
 }
 
-#detail_page #product_price .price_matter li {
+#detail_page .desc_body .box_desc #product_price .price_matter li {
   padding-left: 10px;
   position: relative;
   color: #888;
@@ -289,7 +292,7 @@
   margin-bottom: 10px;
 }
 
-#detail_page #product_price .price_matter li::before {
+#detail_page .desc_body .box_desc #product_price .price_matter li::before {
   content: "";
   display: block;
   width: 5px;
@@ -303,7 +306,7 @@
           transform: translateY(-50%);
 }
 
-#detail_page #product_price .price_matter li:nth-child(1)::before {
+#detail_page .desc_body .box_desc #product_price .price_matter li:nth-child(1)::before {
   content: "";
   display: block;
   width: 5px;
@@ -315,17 +318,17 @@
   left: 0;
 }
 
-#detail_page #infomation {
+#detail_page .desc_body .box_desc #infomation {
   padding-bottom: 60px;
 }
 
-#detail_page #infomation .tit_style {
+#detail_page .desc_body .box_desc #infomation .tit_style {
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 30px;
 }
 
-#detail_page #infomation .info {
+#detail_page .desc_body .box_desc #infomation .info {
   border-bottom: 1px solid #ccc;
   padding: 45px 0;
   display: -webkit-box;
@@ -333,7 +336,7 @@
   display: flex;
 }
 
-#detail_page #infomation .info .incl_tit {
+#detail_page .desc_body .box_desc #infomation .info .incl_tit {
   display: block;
   width: 20%;
   padding: 46px 0;
@@ -345,13 +348,13 @@
           justify-content: center;
 }
 
-#detail_page #infomation .info .incl_tit span {
+#detail_page .desc_body .box_desc #infomation .info .incl_tit span {
   font-size: 18px;
   position: relative;
   text-align: center;
 }
 
-#detail_page #infomation .info .incl_tit span::before {
+#detail_page .desc_body .box_desc #infomation .info .incl_tit span::before {
   content: "";
   display: block;
   width: 40px;
@@ -363,17 +366,17 @@
           transform: translateX(-50%);
 }
 
-#detail_page #infomation ul {
+#detail_page .desc_body .box_desc #infomation ul {
   width: 80%;
   padding-left: 30px;
 }
 
-#detail_page #infomation ul li {
+#detail_page .desc_body .box_desc #infomation ul li {
   padding-bottom: 20px;
   position: relative;
 }
 
-#detail_page #infomation ul li::before {
+#detail_page .desc_body .box_desc #infomation ul li::before {
   content: "";
   display: inline-block;
   width: 5px;
@@ -385,86 +388,90 @@
   left: -10px;
 }
 
-#detail_page #infomation ul li span {
+#detail_page .desc_body .box_desc #infomation ul li span {
   display: block;
 }
 
-#detail_page #infomation .include {
+#detail_page .desc_body .box_desc #infomation .include {
   border-top: 1px solid #333;
 }
 
-#detail_page #infomation .include span::before {
+#detail_page .desc_body .box_desc #infomation .include span::before {
   background: url("/src/img/detailpage/info_circle.png") center center no-repeat;
 }
 
-#detail_page #infomation .not_include span::before {
+#detail_page .desc_body .box_desc #infomation .not_include span::before {
   background: url("/src/img/detailpage/info_x.png") center center no-repeat;
 }
 
-#detail_page #infomation .not_include ul li::before {
+#detail_page .desc_body .box_desc #infomation .not_include ul li::before {
   background: #d00000;
 }
 
-#detail_page #reservation {
+#detail_page .desc_body .box_desc #reservation {
   padding-bottom: 60px;
 }
 
-#detail_page #reservation .tit_style {
+#detail_page .desc_body .box_desc #reservation .tit_style {
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 30px;
 }
 
-#detail_page #reservation table {
+#detail_page .desc_body .box_desc #reservation table {
   width: 100%;
 }
 
-#detail_page #reservation table tbody {
+#detail_page .desc_body .box_desc #reservation table tbody {
   border-top: 1px solid #333;
   border-bottom: 1px solid #ccc;
 }
 
-#detail_page #reservation table tbody th {
+#detail_page .desc_body .box_desc #reservation table tbody th {
   padding: 15px 30px;
   text-align: left;
   background: rgba(195, 225, 255, 0.3);
   font-weight: normal;
 }
 
-#detail_page #reservation table tbody td {
+#detail_page .desc_body .box_desc #reservation table tbody td {
   padding: 15px 0 15px 30px;
 }
 
-#detail_page #product_info {
+#detail_page .desc_body .box_desc #product_info {
   padding-bottom: 60px;
   position: relative;
 }
 
-#detail_page #product_info .tit_style {
+#detail_page .desc_body .box_desc #product_info .tit_style {
   font-size: 24px;
   font-weight: 500;
   padding-bottom: 30px;
 }
 
-#detail_page #product_info .box_detail_prod {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod {
   position: relative;
   overflow: hidden;
   max-height: 403px;
 }
 
-#detail_page #product_info .box_detail_prod.open {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod.open {
   max-height: 10000px;
 }
 
-#detail_page #product_info .box_detail_prod.open .btn_more {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod.open .btn_more {
   position: relative;
 }
 
-#detail_page #product_info .box_detail_prod.open .btn_more::before {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod.open .btn_more::before {
   background-position: 0 -14px;
 }
 
-#detail_page #product_info .box_detail_prod .box_editor {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod .box_in {
+  height: auto;
+}
+
+#detail_page .desc_body .box_desc #product_info .box_guide_prod .box_in .box_editor {
   margin-bottom: 10px;
   overflow: hidden;
   font-size: 15px;
@@ -472,31 +479,36 @@
   line-height: 24px;
 }
 
-#detail_page #product_info .box_detail_prod .box_editor img {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod .box_in .box_editor img {
   max-width: 100%;
   height: auto;
   vertical-align: top;
 }
 
-#detail_page #product_info .box_detail_prod .btn_more {
-  width: 100%;
-  display: block;
-  height: 54px;
-  border: 1px solid #4d8fd0;
-  border-radius: 0;
-  background: #fff;
-  color: #4d8fd0;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: -1px;
-  font-weight: 500;
-  margin-top: 10px;
+#detail_page .desc_body .box_desc #product_info .box_guide_prod button {
+  cursor: pointer;
+  overflow: visible;
+  border: 0 none;
+  font-weight: normal;
+  font-size: 15px;
+  color: #555;
+  text-indent: 0;
+}
+
+#detail_page .desc_body .box_desc #product_info .box_guide_prod .btn_more {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 910px;
+  display: block;
+  height: 54px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 16px;
+  text-align: center;
 }
 
-#detail_page #product_info .box_detail_prod .btn_more::before {
+#detail_page .desc_body .box_desc #product_info .box_guide_prod .btn_more::before {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -505,23 +517,19 @@
   content: '';
 }
 
-#detail_page #product_info .box_detail_prod .btn_more span {
-  position: static;
-}
-
-#detail_page .box_guide_trip {
+#detail_page .desc_body .box_desc #tripDetail {
   margin: 60px 0;
   padding-top: 62px;
   position: relative;
 }
 
-#detail_page .box_guide_trip ul.tab_page_cont {
+#detail_page .desc_body .box_desc #tripDetail .tab_page_cont {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
 
-#detail_page .box_guide_trip ul.tab_page_cont li {
+#detail_page .desc_body .box_desc #tripDetail .tab_page_cont li {
   display: table-cell;
   height: 60px;
   line-height: 60px;
@@ -537,11 +545,7 @@
   cursor: pointer;
 }
 
-#detail_page .box_guide_trip ul.tab_page_cont li:first-child {
-  border-left: 1px solid #ddd;
-}
-
-#detail_page .box_guide_trip ul.tab_page_cont li.on {
+#detail_page .desc_body .box_desc #tripDetail .tab_page_cont li.on {
   border: 1px solid #222;
   border-bottom: 1px solid #fff;
   background: #fff;
@@ -549,19 +553,13 @@
   color: #222;
 }
 
-#detail_page .box_guide_trip ul.tab_page_cont li a {
-  display: block;
-  width: 100%;
-  height: 60px;
-}
-
-#detail_page .box_guide_trip .tabs_fixed {
+#detail_page .desc_body .box_desc #tripDetail .tabs_fixed {
   position: absolute;
   top: 0;
   overflow: hidden;
 }
 
-#detail_page .box_guide_trip .tabs_fixed.fix {
+#detail_page .desc_body .box_desc #tripDetail .tabs_fixed.fix {
   position: fixed;
   top: 0;
   width: 910px;
@@ -570,16 +568,16 @@
   overflow: hidden;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page {
   display: none;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.tab_day {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page.tab_day {
   padding-top: 60px;
   position: relative;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod {
   display: block;
   width: 100%;
   height: 60px;
@@ -589,27 +587,22 @@
           box-sizing: border-box;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod::after {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod.fix {
+  top: 62px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod::after {
   display: block;
   clear: both;
   content: '';
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod.tabs_fixed.fix {
-  top: 62px;
-  position: fixed;
-  width: 910px;
-  background: #fff;
-  z-index: 3;
-  overflow: hidden;
-}
-
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod .scroll_area {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod .scroll_area {
   position: relative;
   white-space: nowrap;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod li {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod li {
   display: inline-block;
   width: 70px;
   height: 60px;
@@ -622,16 +615,12 @@
   text-align: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod li:first-child {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod li:first-child {
   padding-left: 0;
-  margin-left: -17px;
+  margin-left: 0;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod li:last-child {
-  background: none;
-}
-
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod li.on > span > a {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tab_sub_prod li.on span a {
   display: inline-block;
   height: 60px;
   border-bottom: 3px solid #ffc72c;
@@ -641,18 +630,13 @@
   z-index: 1;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page .tab_sub_prod li > span {
-  display: block;
-  width: 100%;
-}
-
-#detail_page .box_guide_trip .cont_tabs .tab_page > h4 {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page h4 {
   padding: 30px 0;
   font-size: 24px;
   font-weight: 500;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_notice {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_notice {
   width: 100%;
   height: 120px;
   background: rgba(195, 225, 255, 0.3);
@@ -667,15 +651,15 @@
           align-items: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_notice div {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_notice div {
   width: 83%;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_notice div p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_notice div p {
   position: relative;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_notice div p::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_notice div p::before {
   content: "";
   display: block;
   width: 18px;
@@ -688,11 +672,11 @@
           transform: translateY(-50%);
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_notice div span {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_notice div span {
   display: block;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .meeting_info {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .meeting_info {
   margin: 30px 0;
   padding: 0 60px;
   width: 100%;
@@ -709,7 +693,7 @@
           align-items: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .meeting_info .meet_left {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .meeting_info .meet_left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -725,7 +709,7 @@
           align-items: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .meeting_info .meet_left .flag_circle {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .meeting_info .meet_left .flag_circle {
   width: 50px;
   height: 50px;
   background: #4d8fd0;
@@ -741,29 +725,29 @@
           align-items: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .meeting_info .meet_left p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .meeting_info .meet_left p {
   padding-top: 10px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .meeting_info .meet_text {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .meeting_info .meet_text {
   padding-left: 0px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .meeting_info .meet_text p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .meeting_info .meet_text p {
   padding-bottom: 15px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline {
   border: 1px solid #ddd;
   width: 100%;
   background: #fff;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline {
   width: 100%;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .day_title {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .day_title {
   width: 100%;
   background: rgba(195, 225, 255, 0.3);
   height: 60px;
@@ -777,20 +761,20 @@
           align-items: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .day_title p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .day_title p {
   font-size: 18px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .day_title p span {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .day_title p span {
   font-size: 14px;
   margin-left: 30px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents {
   padding: 40px 30px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -804,12 +788,12 @@
   padding-bottom: 40px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route .way_start {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route .way_start {
   text-align: center;
   padding-right: 10px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route .float_time {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route .float_time {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -818,12 +802,12 @@
           align-items: center;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon {
   padding: 0 120px;
   position: relative;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon::before {
   content: "";
   display: inline-block;
   width: 100px;
@@ -836,7 +820,7 @@
   background: #ddd;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon::after {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route .float_time .float_icon::after {
   content: "";
   display: inline-block;
   width: 100px;
@@ -849,17 +833,17 @@
   background: #ddd;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .float_route .way_fin {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .float_route .way_fin {
   text-align: center;
   padding-left: 10px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box {
   padding-left: 100px;
   position: relative;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box::before {
   content: "";
   display: block;
   width: 4px;
@@ -870,14 +854,14 @@
   left: 35px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location h3 {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location h3 {
   font-size: 18px;
   position: relative;
   font-weight: 500;
   padding: 8px 0 30px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location h3::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location h3::before {
   content: "";
   display: inline-block;
   width: 40px;
@@ -894,20 +878,20 @@
   left: -83px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .location_oki {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .location_oki {
   padding-top: 30px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .location_oki::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .location_oki::before {
   top: 22px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location > p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location > p {
   padding: 10px 0;
   position: relative;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location > p::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location > p::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -918,40 +902,40 @@
   left: -71px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location > span {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location > span {
   color: #d00000;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p {
   padding-left: 20px;
   position: relative;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p::before {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .mark_title p::before {
   content: "";
   display: inline-block;
   width: 12px;
   height: 25px;
-  background: url("../img/detailpage/pin.png") center center no-repeat;
+  background: url("/src/img/detailpage/pin.png") center center no-repeat;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box {
   border: 1px solid #ddd;
   margin: 30px 0;
   padding: 30px;
   width: 700px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box h4 {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box h4 {
   font-size: 18px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,33 +945,33 @@
   padding: 25px 0;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li {
   width: 49%;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li img {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box ul li img {
   width: 100%;
   height: 100%;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box > p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .randmark_contents .randmark_box > p {
   font-size: 14px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .hotel_box {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .hotel_box {
   border: 1px solid #ddd;
   margin: 30px 0;
   padding: 30px;
   width: 700px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .hotel_box h4 {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .hotel_box h4 {
   font-size: 18px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .hotel_box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -997,20 +981,20 @@
   padding: 25px 0;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul li {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .hotel_box ul li {
   width: 49%;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .hotel_box ul li img {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .hotel_box ul li img {
   width: 100%;
   height: 100%;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .location_box .hotel_box > p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .location_box .location .hotel_box > p {
   font-size: 14px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .meal_guide {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .meal_guide {
   border-top: 1px solid #ddd;
   margin-top: 40px;
   padding-top: 30px;
@@ -1019,7 +1003,7 @@
   display: flex;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .meal_guide > span {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .meal_guide > span {
   display: inline-block;
   width: 55px;
   height: 25px;
@@ -1031,17 +1015,853 @@
   margin-right: 30px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .meal_guide .meal_list {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .meal_guide .meal_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline .timeline_contents .meal_guide .meal_list p {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline .timeline_contents .meal_guide .meal_list p {
   padding-right: 20px;
 }
 
-#detail_page .box_guide_trip .cont_tabs .tab_page.calendar .trip_timeline .timeline#day3 .float_route {
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .trip_timeline .timeline#day3 .float_route {
   padding-top: 30px;
   padding-bottom: 0;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .shopping .shopping_box {
+  border: 1px solid #ddd;
+  padding: 30px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .shopping .shopping_box > p {
+  padding-bottom: 25px;
+  font-size: 16px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .shopping .shopping_box .shoptext h4 {
+  font-size: 16px;
+  color: #4d8fd0;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .shopping .shopping_box .shoptext p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .shopping .shopping_box .shoptext .notice_text {
+  font-size: 14px;
+  color: #d00000;
+  padding-top: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .shopping .shopping_box .shopping_detail {
+  padding-bottom: 20px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tourist_spots .tourLists_box {
+  width: 100%;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tourist_spots .tourLists_box .tourList {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tourist_spots .tourLists_box .tourList h4 {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tourist_spots .tourLists_box .tourList ul {
+  padding: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tourist_spots .tourLists_box .tourList ul li {
+  width: 49%;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .tourist_spots .tourLists_box .tourList ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms .terms_box {
+  border: 1px solid #ddd;
+  padding: 30px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4d8fd0;
+  padding-bottom: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms .terms_detail {
+  padding-bottom: 20px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms .terms_cancle .cancle_tit {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms .terms_cancle .cancle_tit ul {
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms .terms_cancle .cancle_tit ul li {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .terms .terms_cancle .cancle_tit ul .cancle_text_box {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #888;
+  width: 90%;
+  margin: 10px 0;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems {
+  display: none;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit p {
+  text-align: right;
+  padding-bottom: 10px;
+  color: #9d9d9d;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table {
+  width: 100%;
+  border-top: 2px solid #333;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table thead tr {
+  border-bottom: 1px solid #ddd;
+  height: 80px;
+  background: rgba(195, 225, 255, 0.3);
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table thead tr th {
+  font-weight: normal;
+  text-align: center;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table thead tr th:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table tbody tr td {
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  padding: 5px 15px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table tbody tr td:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.limit table tbody tr .limit_tit {
+  text-align: center;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con {
+  border: 1px solid #ddd;
+  padding: 30px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con div {
+  padding-bottom: 15px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con div h5 {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con div p {
+  color: #555;
+  padding-bottom: 5px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con ul {
+  color: #555;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con ul li {
+  padding-bottom: 5px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.standard .standard_con .example_box {
+  width: 90%;
+  border: 1px solid #ddd;
+  padding: 20px 30px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con {
+  border: 1px solid #ddd;
+  padding: 30px;
+  overflow-y: scroll;
+  height: 300px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con h5, #detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con h6 {
+  font-size: 16px;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con p {
+  color: #555;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con .agree_num {
+  padding-top: 15px;
+  color: #555;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con .agree_num > li {
+  padding-bottom: 15px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con .agree_num > li .agree_list {
+  padding-left: 18px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .insuranceitems.agree .insu_agree_con .agree_num > li .agree_list li {
+  padding-top: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items {
+  display: none;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .essential_items > ul > li::before {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .essential_items > ul > li:nth-child(2)::before {
+  position: absolute;
+  top: 29%;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .agree_box {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  color: #777;
+  width: 95%;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .agree_box li ol {
+  padding-top: 5px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .agree_box li ol li {
+  font-size: 14px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.essential .agree_box li ol:last-child {
+  padding-left: 16px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul > li span {
+  display: block;
+  color: #777;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul > li::before {
+  top: 8px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit::before {
+  top: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit ul {
+  padding-top: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit ul li {
+  font-size: 15px;
+  font-weight: normal;
+  padding-bottom: 5px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.matter .matter_con > ul .matter_tit ul li span {
+  display: block;
+  color: #777;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.visa .visa_con > ul > li span {
+  display: block;
+  color: #777;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.visa .visa_con > ul > li::before {
+  top: 8px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.safety_info .safety_con p {
+  padding-bottom: 10px;
+}
+
+#detail_page .desc_body .box_desc #tripDetail .cont_tabs .tab_page .noted_items.safety_info .safety_con a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  border: 1px solid #4d8fd0;
+  color: #4d8fd0;
+  text-align: center;
+  line-height: 40px;
+  letter-spacing: -1px;
+  margin-top: 10px;
+}
+
+#detail_page .desc_body .box_desc #city_info {
+  padding-top: 60px;
+}
+
+#detail_page .desc_body .box_desc #city_info table {
+  width: 100%;
+}
+
+#detail_page .desc_body .box_desc #city_info table thead tr {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #ddd;
+  background: rgba(195, 225, 255, 0.3);
+  height: 70px;
+  text-align: center;
+}
+
+#detail_page .desc_body .box_desc #city_info table thead tr th {
+  font-weight: normal;
+}
+
+#detail_page .desc_body .box_desc #city_info table tbody tr td {
+  width: 25%;
+  padding: 35px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#detail_page .desc_body .box_booking {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  z-index: 2;
+}
+
+#detail_page .desc_body .box_booking.lnb_fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: 340px;
+  background: #fff;
+  z-index: 4;
+}
+
+#detail_page .desc_body .box_booking .btn_nor_g {
+  width: 100%;
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  height: 38px;
+  line-height: 36px;
+  margin: 16px 0 0;
+  background: #555;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+#detail_page .desc_body .box_booking .btn_nor_g::before {
+  display: inline-block;
+  width: 19px;
+  height: 11px;
+  margin-right: 15px;
+  background: url("/src/img/icon/ico_flight_w.png") no-repeat;
+  vertical-align: middle;
+  content: '';
+}
+
+#detail_page .desc_body .box_booking .btn_nor_g::after {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 258px;
+  content: '';
+}
+
+#detail_page .desc_body .box_booking span, #detail_page .desc_body .box_booking .box_air {
+  display: inline-block;
+  font-size: 15px;
+  color: #555;
+}
+
+#detail_page .desc_body .box_booking .box_air {
+  width: 154px;
+  text-align: right;
+}
+
+#detail_page .desc_body .box_booking .box_in {
+  padding: 18px 20px 0px 20px;
+  border: 1px solid #222;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box {
+  position: relative;
+  padding-bottom: 21px;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+  border-bottom: 1px solid #ddd;
+  content: "";
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box .list_booking li {
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box .list_booking span {
+  text-align: left;
+  vertical-align: middle;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box .list_booking .tit {
+  width: 60px;
+  color: #222;
+  text-align: left;
+  display: inline-block;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box .list_booking .info {
+  width: 154px;
+  text-align: right;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_box .list_booking::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+  border-bottom: 1px solid #ddd;
+  content: "";
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price {
+  position: relative;
+  margin: 16px 0 16px;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price::after {
+  display: block;
+  position: absolute;
+  bottom: -17px;
+  left: -20px;
+  right: -20px;
+  border-bottom: 1px solid #ddd;
+  content: "";
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price li {
+  margin-bottom: 11px;
+  text-align: right;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .tit {
+  width: 134px;
+  font-size: 15px;
+  color: #222;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .tit .emp_red {
+  color: #ff5c46 !important;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .tit em {
+  font-size: 16px;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .tit em i {
+  font-size: 15px;
+  font-style: normal;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info {
+  width: 80px;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .select {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .select .currSel {
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #ddd;
+  background: #fff url("/src/img/icon/bl_sel_arrow.png") no-repeat 100% 50%;
+  text-indent: 10px;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .personnelCnt {
+  display: none;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .selectIn {
+  width: 17px;
+  min-width: 80px;
+  max-width: 80px;
+  position: relative;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .selectIn .button {
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .selectIn .list {
+  position: absolute;
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-top: none;
+  background: #fff;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_booking_price .info .selectIn .list button {
+  height: 38px;
+  padding: 0 10px;
+  color: #222;
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_coupon {
+  padding: 21px 20px 3px;
+  margin: 0 -20px;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_coupon li {
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_coupon li .tit {
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle;
+  width: 60px;
+  color: #222;
+  text-align: left;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_coupon li .info {
+  width: 154px;
+  text-align: right;
+  vertical-align: middle;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_coupon li .info .btn_wit {
+  display: inline-block;
+  width: 144px;
+  height: 38px;
+  line-height: 36px;
+  margin: 0;
+  border: 1px solid #bbb;
+  background: #fff;
+  font-size: 14px;
+  color: #222;
+  vertical-align: top;
+  text-align: center;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price {
+  padding: 0 0 17px;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .info {
+  width: 169px;
+  text-align: right;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 15px;
+  color: #555;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .info .emp_red {
+  margin-top: -2px;
+  font-size: 16px;
+  color: #ff5c46 !important;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .info .emp_red strong {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  font-size: 32px;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .info .emp_red strong i {
+  font-size: 15px;
+  font-style: normal;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .point_rel {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .point_rel .btn_mileage {
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  margin: 0 0 3px 8px;
+  background: url("/src/img/icon/ico_info.png") no-repeat 0 -40px;
+  vertical-align: middle;
+  text-indent: -99em;
+  content: '';
+}
+
+#detail_page .desc_body .box_booking .box_in .box_tatal_price .point_rel .btn_mileage .blind_ir {
+  position: absolute;
+  width: 1px;
+  height: 1px !important;
+  padding: 0;
+  margin: -1px;
+  border: none;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+#detail_page .desc_body .box_booking .box_in .cfrm {
+  width: 100%;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  vertical-align: top;
+  text-align: center;
+  background: #ffc72c !important;
+  color: #222 !important;
+  margin: 0 0 20px;
+  cursor: pointer;
+  overflow: visible;
+  border: 0 none;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_guide_info {
+  padding: 11px 20px 20px;
+  margin: 0 -20px;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_guide_info li {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #555;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_guide_info li .tit {
+  display: inline-block;
+  font-size: 14px;
+  color: #555;
+}
+
+#detail_page .desc_body .box_booking .box_in .list_guide_info li .tit::after {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 10px;
+  background: #ddd;
+  vertical-align: middle;
+  content: '';
+}
+
+#detail_page .desc_body .box_booking .box_in .list_guide_info li .emp_black {
+  color: #222 !important;
+  display: inline-block;
+  font-size: 14px;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn {
+  padding: 0 20px;
+  margin: 0 -20px;
+  height: 58px;
+  background: #f7f7f7;
+  position: relative;
+  display: block;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist {
+  display: table;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li {
+  display: table-cell;
+  width: 36px;
+  height: 36px;
+  border-left: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li:first-child {
+  border-left: none;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li button {
+  cursor: pointer;
+  overflow: visible;
+  border: 0 none;
+  font-weight: normal;
+  font-size: 15px;
+  color: #555;
+  text-indent: 0;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li .btn_mini_print {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("/src/img/icon/btn_mini_myico.png") no-repeat 0 0;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li .btn_mini_fav {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("/src/img/icon/btn_mini_myico.png") no-repeat -39px 0;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li .btn_mini_sns {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background: url("/src/img/icon/btn_mini_myico.png") no-repeat -78px 0;
+}
+
+#detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li span {
+  position: absolute;
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px !important;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  width: 1px;
+  display: inline-block;
+  font-size: 15px;
+  color: #555;
+}
+
+#detail_page .desc_body #topbtn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #4d8fd0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  top: 767px;
+}
+
+#detail_page .desc_body #topbtn.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#detail_page .desc_body #topbtn img {
+  margin-left: 12px;
+}
+
+#detail_page .desc_body #topbtn p {
+  text-align: center;
+  color: #4d8fd0;
+  font-weight: 500;
 }

@@ -1,5 +1,20 @@
+window.onload = function(){
+    let goodsInfoDetail = document.getElementById('goodsInfoDetail');
+    let box_detail_prod = document.getElementById('box_detail_prod');
+    let goodsMore = document.getElementById('goodsMore');
 
-// 상단 이미지 슬라이드
+    let goodsInfoDetailhight = goodsInfoDetail.offsetHeight;
+    
+    let box_detail_prodhight = box_detail_prod.offsetHeight;
+    
+    //btn more..
+    if( goodsInfoDetailhight > box_detail_prodhight ) {
+        goodsMore.style.display = 'block';
+    } else {
+        goodsMore.style.display = 'none';
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper('.packimg-swiper', {
         slidesPerView: 3,
@@ -9,181 +24,232 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 4000,
         },
     });
-});
 
+   
+    
 
-// 더보기 버튼 클릭하면 이미지 높이 길어지기
-const moreBtn = document.querySelector('#prod_more');
-const closeBtn = document.querySelector('#prod_close');
-const imgBox = document.querySelector('.prod_imgbox');
-let numch = 0;
+    let btnMoreBut = document.querySelector('.btn_more');
+    btnMoreBut.addEventListener('click',function(){
+        let boxDetailProd = document.querySelector('.box_detail_prod');
+        let body = document.querySelector('body');
+        let detailBox = this.closest('#boxDetailProd');
+        let openName = 'open';
+        let absoluteTop = window.pageYOffset + boxDetailProd.getBoundingClientRect().top;
 
-function moreImg() {
-    imgBox.classList.toggle('on');
-    moreBtn.classList.toggle('on');
-    closeBtn.classList.toggle('on');
-    if (numch == 0) {
-        numch = 1;
-    } else {
-        numch = 0;
-    }
-}
-
-
-const tripTabs = document.querySelectorAll('.guide_menu_tab > li');
-const content_tab = document.querySelector('#content_tab');
-const tabPage = document.querySelectorAll('.tabpage');
-const toplet = window.pageYOffset + content_tab.getBoundingClientRect().top;
-//메인 탭 이동
-tripTabs.forEach(function (item, index) {
-    item.addEventListener('click', function () {
-        tripTabs.forEach(item => item.classList.remove('on'));
-        item.classList.add('on');
-        tabPage.forEach(item => item.classList.remove('on'));
-        tabPage[index].classList.add('on');
-        if (numch == 1) {
-            window.scrollTo({ top: toplet + 3300, left: 0 });
+        if(boxDetailProd.classList.contains('open')){
+            this.innerHTML="상품안내 <span>더보기</span>"; 
+            boxDetailProd.classList.remove('open');
+            window.scrollTo({ top: absoluteTop, behavior: 'smooth' });
         } else {
-            window.scrollTo({ top: toplet - 210, left: 0 });
+            boxDetailProd.classList.add('open');
+            this.innerHTML="<span>닫기</span>"; 
         }
+
+    });
+
+    let tabList = document.querySelector('#tabList');
+    let tablis = document.querySelectorAll('.tabitembtn');
+    let tabPages = document.querySelectorAll('.tab_page');
+    let tripDetail = document.querySelector('#tripDetail');
+
+    tabList.children[0].classList.add('on');
+    tabPages[0].style.display = 'block';
+    tabPages.forEach((tabpage, index) => {
+        tabpage.setAttribute("index", index);
+    });
+    tablis.forEach((tab, index) => {
+        tab.setAttribute("index",index);
+        tab.addEventListener('click',function(e){
+            e.preventDefault();
+            let viewIdx = this.getAttribute('index');
+            tabPages.forEach(tabpage => {
+                if(tabpage.getAttribute("index") == viewIdx){
+                    tabpage.style.display = 'block';
+                } else {
+                    tabpage.style.display = 'none';
+                }
+            })
+            tablis.forEach(thsIdx => {
+                if(thsIdx.getAttribute('index') == viewIdx){
+                    thsIdx.classList.add('on');
+                } else {
+                    thsIdx.classList.remove('on');
+                }
+            })
+            let tripDetailindex = window.pageYOffset + tripDetail.getBoundingClientRect().top;
+            window.scrollTo({ top: tripDetailindex, behavior: 'smooth' });
+        })
+    });
+
+    //여행 일정 스크립트
+    let dayfixitems = document.querySelectorAll('.day');
+    let timelines = document.querySelectorAll('.timeline');
+    timelines.forEach((timeline, index) =>{
+        timeline.setAttribute("index", index);
+    });
+    dayfixitems.forEach((dayfixitem, index) => {
+        dayfixitem.setAttribute("index", index);
+        dayfixitem.addEventListener('click',function(e){
+            e.preventDefault();
+            let scrollTarget = ''
+            let viewIdx = this.getAttribute('index');
+            dayfixitems.forEach(thsIdx => {
+                if(thsIdx.getAttribute('index') == viewIdx){
+                    thsIdx.classList.add('on');
+                } else {
+                    thsIdx.classList.remove('on');
+                }
+            })
+            timelines.forEach((timeline, index) =>{
+                if(timeline.getAttribute('index') == viewIdx){
+                    scrollTarget = window.pageYOffset + timeline.getBoundingClientRect().top;
+                }
+            });
+            window.scrollTo({ top: scrollTarget - 130, behavior: 'smooth' });
+        })
+    });
+
+    //관광지 스크립트
+    let rooms = document.querySelectorAll('.room');
+    let tourListsCons = document.querySelectorAll('.tourLists_con');
+    tourListsCons.forEach((tourListsCon, index) =>{
+        tourListsCon.setAttribute("index", index);
+    });
+    rooms.forEach((room, index) => {
+        room.setAttribute("index", index);
+        room.addEventListener('click',function(e){
+            e.preventDefault();
+            let scrollTarget = ''
+            let viewIdx = this.getAttribute('index');
+            rooms.forEach(thsIdx => {
+                if(thsIdx.getAttribute('index') == viewIdx){
+                    thsIdx.classList.add('on');
+                } else {
+                    thsIdx.classList.remove('on');
+                }
+            })
+            tourListsCons.forEach((tourListsCon, index) =>{
+                if(tourListsCon.getAttribute('index') == viewIdx){
+                    scrollTarget = window.pageYOffset + tourListsCon.getBoundingClientRect().top;
+                }
+            });
+            window.scrollTo({ top: scrollTarget - 130, behavior: 'smooth' });
+        })
+    });
+
+
+    //여행자 보험 스크립트
+    let insurances = document.querySelectorAll('#scroll_area > li.insurance');
+    let insuranceitems = document.querySelectorAll('.insuranceitems');
+
+    insurances[0].classList.add('on');
+    insuranceitems[0].style.display = 'block';
+
+    insuranceitems.forEach((insuranceitem, index) => {
+        insuranceitem.setAttribute("index", index);
     })
-});
 
-const tripSubTab = document.querySelectorAll('.trip > .submenu_tab > li > a');
-const dayOne = document.querySelector('#day1');
-const dayTwo = document.querySelector('#day2');
-const dayThree = document.querySelector('#day3');
-// 서브 탭 이동
-tripSubTab.forEach(function (item, index) {
-    item.addEventListener('click', function () {
-        tripSubTab.forEach(item => item.classList.remove('on'));
-        item.classList.add('on');
+    insurances.forEach((insurance, index) => {
+        insurance.setAttribute("index", index);
+        insurance.addEventListener('click',function(e){
+            e.preventDefault();
+            let viewIdx = this.getAttribute('index');
+            insuranceitems.forEach(insuranceitem => {
+                if(insuranceitem.getAttribute("index") == viewIdx){
+                    insuranceitem.style.display = 'block';
+                } else {
+                    insuranceitem.style.display = 'none';
+                }
+            })
+            insurances.forEach(thsIdx => {
+                if(thsIdx.getAttribute('index') == viewIdx){
+                    thsIdx.classList.add('on');
+                } else {
+                    thsIdx.classList.remove('on');
+                }
+            })
+            let tripDetailindex = window.pageYOffset + tripDetail.getBoundingClientRect().top;
+            window.scrollTo({ top: tripDetailindex, behavior: 'smooth' });
+        })
     })
-});
 
-const tourSubTab = document.querySelectorAll('.tourist_spots > .submenu_tab > li > a');
-const tourListTab = document.querySelectorAll('.tourLists_con');
-// 관광지/숙소 이동
-tourSubTab.forEach(function (item, index) {
-    item.addEventListener('click', function () {
-        tourSubTab.forEach(item => item.classList.remove('on'));
-        item.classList.add('on');
-        tourListTab.forEach(item => item.classList.remove('on'));
-        tourListTab[index].classList.add('on');
+    //주의 및 참고사항 스크립트
+    let noteds = document.querySelectorAll('.noted');
+    let notedItems = document.querySelectorAll('.noted_items');
+    
+    noteds[0].classList.add('on');
+    notedItems[0].style.display = 'block';
+
+    notedItems.forEach((notedItem, index) => {
+        notedItem.setAttribute("index", index);
     })
-});
-
-const insurSubTab = document.querySelectorAll('.tourist_insurance > .submenu_tab > li > a');
-const insu = document.querySelectorAll('.insurance');
-// 여행자보험 탭 이동
-insurSubTab.forEach(function (item, index) {
-    item.addEventListener('click', function () {
-        insurSubTab.forEach(item => item.classList.remove('on'));
-        item.classList.add('on');
-        insu.forEach(item => item.classList.remove('on'));
-        insu[index].classList.add('on')
+    
+    noteds.forEach((noted, index) => {
+        noted.setAttribute("index", index);
+        noted.addEventListener('click',function(e){
+            e.preventDefault();
+            let viewIdx = this.getAttribute('index');
+            notedItems.forEach(notedItem => {
+                if(notedItem.getAttribute("index") == viewIdx){
+                    notedItem.style.display = 'block';
+                } else {
+                    notedItem.style.display = 'none';
+                }
+            })
+            noteds.forEach(thsIdx => {
+                if(thsIdx.getAttribute('index') == viewIdx){
+                    thsIdx.classList.add('on');
+                } else {
+                    thsIdx.classList.remove('on');
+                }
+            })
+            let tripDetailindex = window.pageYOffset + tripDetail.getBoundingClientRect().top;
+            window.scrollTo({ top: tripDetailindex, behavior: 'smooth' });
+        })
+        let topbut = document.querySelector('#topbtn');
+        topbut.addEventListener('click',function(e){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     })
-});
+    
+    document.addEventListener('scroll', function() {
+        let scrollTop = Math.floor(document.querySelector('html').scrollTop);
+        let tabsPS = document.querySelector(".box_guide_trip");
+        let tabsFixs = document.querySelectorAll(".tabs_fixed");
+        let detail_page = document.querySelector("#detail_page");
 
-const notedSubTab = document.querySelectorAll('.noted_items > .submenu_tab > li > a');
-const notedCon = document.querySelectorAll('.noted_content');
-// 주의 및 참고사항 탭 이동
-notedSubTab.forEach(function (item, index) {
-    item.addEventListener('click', function () {
-        notedSubTab.forEach(item => item.classList.remove('on'));
-        item.classList.add('on');
-        notedCon.forEach(item => item.classList.remove('on'));
-        notedCon[index].classList.add('on');
-    })
-});
+        let topbut = document.querySelector('#topbtn');
 
-// 스크롤하면 플로팅 박스 상단 고정
-const scheScroll = document.querySelector('#schedule');
-const floating = document.querySelector('#floating_box');
-addEventListener('scroll', function () {
-    let sctTop = scheScroll.offsetTop; // schedule이 떨어져있는 거리
-    let sct = document.documentElement.scrollTop; // 스크롤 값
-    if (sct >= sctTop + 200) {
-        let floatBox = document.querySelector('#floating_box');
-        floatBox.classList.add('on');
-    } else {
-        let floatBox = document.querySelector('#floating_box');
-        floatBox.classList.remove('on');
-    }
-});
-
-// 스크롤하면 메인 탭 박스 상단 고정
-const tabScroll = document.querySelector('.guide_menu_tab');
-const subTabScroll = document.querySelector('.submenu_tab');
-addEventListener('scroll', function () {
-    let sctTop = tabScroll.offsetTop;
-    let sct = document.documentElement.scrollTop;
-    if (numch == 1) {
-        if (sct > sctTop + 7150) {
-            tabScroll.classList.add('on');
-            subTabScroll.classList.add('on');
-        } else {
-            tabScroll.classList.remove('on');
-            subTabScroll.classList.remove('on');
+        let lnb_block = document.querySelector(".lnb_block");
+        let desc_body = document.querySelector(".desc_body");
+        
+        let lnbindex = Math.floor( window.pageYOffset + desc_body.getBoundingClientRect().top);
+        let footerindex = Math.floor(window.pageYOffset + detail_page.getBoundingClientRect().bottom) - 1000;
+        
+        if(scrollTop > lnbindex + 10 && scrollTop < footerindex){
+            lnb_block.style.top = 0 + 'px';
+            lnb_block.classList.add('lnb_fixed');
+            topbut.style.display = 'block';
+            topbut.style.top = 767 + 'px';
+        } else if(scrollTop > lnbindex + 10 && scrollTop > footerindex){ 
+            lnb_block.style.top = (footerindex - scrollTop) + 'px';
+            topbut.style.top = (footerindex - scrollTop) + 770 + 'px';
+        } else { 
+            lnb_block.style.top = 0 + 'px';
+            lnb_block.classList.remove('lnb_fixed');
+            topbut.style.display = 'none';
         }
-    } else {
-        if (sct > sctTop + 3605) {
-            tabScroll.classList.add('on');
-            subTabScroll.classList.add('on');
-        } else {
-            tabScroll.classList.remove('on');
-            subTabScroll.classList.remove('on');
+
+        let tabpsindex =  window.pageYOffset + tabsPS.getBoundingClientRect().top;
+        
+        if (scrollTop > tabpsindex + 10) {
+            tabsFixs.forEach(tabsFix => {
+                tabsFix.classList.add("fix");
+            })
+        } else if (scrollTop < tabpsindex + 10) {
+            tabsFixs.forEach(tabsFix => {
+                tabsFix.classList.remove("fix");
+            })
         }
-    }
+    });
 });
-
-// 여행일정 서브 탭 클릭 했을 때 클릭한 내용 위치로 스크롤
-const dayOneCon = document.querySelector('.day_title');
-const absoluteTop = window.pageYOffset + dayOneCon.getBoundingClientRect().top;
-
-const dayOnetit = document.querySelector('.dayOne');
-dayOnetit.addEventListener('click', function () {
-    if (numch == 1) {
-        window.scrollTo({ top: absoluteTop + 3155, left: 0, behavior: 'smooth' });
-    } else {
-        window.scrollTo({ top: absoluteTop - 250, left: 0, behavior: 'smooth' });
-    }
-})
-
-const dayTwotit = document.querySelector('.dayTwo');
-dayTwotit.addEventListener('click', function () {
-    if (numch == 1) {
-        window.scrollTo({ top: absoluteTop + 4800, left: 0, behavior: 'smooth' });
-    } else {
-        window.scrollTo({ top: absoluteTop + 1400, left: 0, behavior: 'smooth' });
-    }
-})
-
-const dayThreetit = document.querySelector('.dayThree');
-dayThreetit.addEventListener('click', function () {
-    if (numch == 1) {
-        window.scrollTo({ top: absoluteTop + 7190, left: 0, behavior: 'smooth' });
-    } else {
-        window.scrollTo({ top: absoluteTop + 3785, left: 0, behavior: 'smooth' });
-    }
-
-})
-
-// topbtn 클릭하면 상단으로 이동하기
-const topBtn = document.querySelector('#topbtn');
-
-topBtn.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-})
-// topbtn 스크롤하면 나타나기
-addEventListener('scroll', function () {
-    let sct = document.documentElement.scrollTop;
-    if (sct > 600) {
-        topBtn.classList.add('on');
-    } else {
-        topBtn.classList.remove('on');
-    }
-})
-
-
-
