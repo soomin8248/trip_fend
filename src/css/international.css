@@ -150,13 +150,13 @@
 }
 
 #package .package .pack_control ul li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 43px;
   width: 23%;
   height: 100%;
   background-color: #fff;
   cursor: pointer;
-  border-radius: 19.5px;
+  border-radius: 22px;
   border: 1px solid #4d8fd0;
   color: #4d8fd0;
   -webkit-transition: 0.5s;
@@ -254,8 +254,8 @@
 
 #package .package .pack_item .item .sub_item .info h4 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 #package .package .pack_item .item .sub_item .info h4 span {
@@ -390,8 +390,8 @@
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .info h4 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .info h4 span {
@@ -463,6 +463,33 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+#free_travel .free_travel .container .item_more_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+#free_travel .free_travel .container .item_more_btn .item_more_icon {
+  width: 180px;
+  height: 47px;
+  line-height: 43px;
+  font-size: 16px;
+  border: 1px solid #9d9d9d;
+  color: #9d9d9d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#free_travel .free_travel .container .item_more_btn .item_more_icon:hover {
+  color: #fff;
+  background-color: #4d8fd0;
+  border: 1px solid #4d8fd0;
 }
 
 #best_travel {
@@ -560,8 +587,8 @@
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 {
   font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 span {

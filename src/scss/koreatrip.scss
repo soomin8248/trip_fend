@@ -102,13 +102,13 @@
                 display: flex;
                 justify-content: space-between;
                 li {
-                    font-size: $font-size-18;
+                    font-size: $font-size-16;
                     line-height: 43px;
                     width: 23%;
                     height: 100%;
                     background-color: $white-color;
                     cursor: pointer;
-                    border-radius: 19.5px;
+                    border-radius: 22px;
                     border: 1px solid $main-color;
                     color: $main-color;
                     transition: 0.5s;
@@ -190,8 +190,8 @@
                         border-radius: 0  0 19.5px 19.5px;
                         h4 {
                             font-size: $font-size-16;
-                            font-weight: $font-weight-bold;
-                            margin-bottom: 18px;
+                            font-weight: $font-weight-500;
+                            margin-bottom: 12px;
                             span {
                                 padding-right: 5px;
                                 color: $main-color;
@@ -302,9 +302,9 @@
                             border: 1px solid $light-gray;
                             border-radius: 0  0 19.5px 19.5px;
                             h4 {
-                                font-size: 16px;
-                                font-weight: bold;
-                                margin-bottom: 18px;
+                                font-size: $font-size-16;
+                                font-weight: $font-weight-500;
+                                margin-bottom: 12px;
                                 span {
                                     padding-right: 5px;
                                     color: $main-color;
@@ -374,6 +374,26 @@
                         transform: translate(-50%,-50%);
                     }
                 }
+            }
+            .item_more_btn {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                .item_more_icon {
+                    width: 180px;
+                    height: 47px;
+                    line-height: 43px;
+                    font-size: $font-size-16;
+                    border: 1px solid $gray-color;
+                    color: $gray-color;
+                    transition: 0.5s;
+                    &:hover {
+                        color: $white-color;
+                        background-color: $main-color;
+                        border: 1px solid $main-color;
+                    }
+                }
+                
             }
         }
     }
@@ -460,8 +480,8 @@
                         border-radius: 0  0 19.5px 19.5px;
                         h4 {
                             font-size: $font-size-16;
-                            font-weight: bold;
-                            margin-bottom: 18px;
+                            font-weight: $font-weight-500;
+                            margin-bottom: 12px;
                             span {
                                 padding-right: 5px;
                                 color: $main-color;

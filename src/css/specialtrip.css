@@ -78,7 +78,7 @@
 }
 
 #specialtrip #special_contents {
-  padding-top: 80px;
+  padding: 80px 0;
 }
 
 #specialtrip #special_contents #tab_btn {
@@ -99,8 +99,9 @@
   transition: 0.5s;
 }
 
-#specialtrip #special_contents #tab_btn li:hover {
-  background: rgba(195, 225, 255, 0.3);
+#specialtrip #special_contents #tab_btn li:hover a {
+  color: #4d8fd0;
+  border: 1px solid #4d8fd0;
 }
 
 #specialtrip #special_contents #tab_btn li.on {
@@ -124,25 +125,59 @@
 }
 
 #specialtrip #special_contents #special_items {
-  padding-top: 50px;
+  padding: 50px 0 100px;
+  position: relative;
 }
 
 #specialtrip #special_contents #special_items .item_contents {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #fff;
+  margin-left: -24px;
+}
+
+#specialtrip #special_contents #special_items .item_contents#honeymoonCon, #specialtrip #special_contents #special_items .item_contents#europeCon, #specialtrip #special_contents #special_items .item_contents#accomCon, #specialtrip #special_contents #special_items .item_contents#liveCon {
+  display: none;
+}
+
+#specialtrip #special_contents #special_items .item_contents#honeymoonCon.on, #specialtrip #special_contents #special_items .item_contents#europeCon.on, #specialtrip #special_contents #special_items .item_contents#accomCon.on, #specialtrip #special_contents #special_items .item_contents#liveCon.on {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+#specialtrip #special_contents #special_items .item_contents#all {
+  height: 1150px;
+  overflow: hidden;
+}
+
+#specialtrip #special_contents #special_items .item_contents#all.view {
+  height: 4300px;
+}
+
+#specialtrip #special_contents #special_items .item_contents#all.view .morebtn {
+  display: none;
+}
+
+#specialtrip #special_contents #special_items .item_contents#all.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #specialtrip #special_contents #special_items .item_contents .itemBox {
+  margin-left: 24px;
+  width: 23%;
   height: 360px;
   border: 1px solid #ddd;
-  margin-bottom: 30px;
-  word-break: break-all;
+  margin-bottom: 24px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#specialtrip #special_contents #special_items .item_contents .itemBox:hover {
+  border: 1px solid #4d8fd0;
 }
 
 #specialtrip #special_contents #special_items .item_contents .itemBox:hover .itemImg .blackbg {
@@ -155,10 +190,15 @@
   position: relative;
 }
 
+#specialtrip #special_contents #special_items .item_contents .itemBox .itemImg img {
+  width: 100%;
+  height: 100%;
+}
+
 #specialtrip #special_contents #special_items .item_contents .itemBox .itemImg .blackbg {
   opacity: 0;
   width: 100%;
-  height: 100%;
+  height: 200px;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -190,13 +230,7 @@
   padding: 25px 30px;
   height: 160px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
 }
 
 #specialtrip #special_contents #special_items .item_contents .itemBox .itemText h4 {
@@ -208,21 +242,79 @@
 #specialtrip #special_contents #special_items .item_contents .itemBox .itemText p {
   font-size: 15px;
   color: #777;
-  background-color: pink;
-  word-wrap: break-word;
-  word-break: break-all;
-  width: 200px;
+  width: 100%;
 }
 
 #specialtrip #special_contents #special_items .item_contents .itemBox .itemText span {
   font-size: 14px;
   font-weight: 300;
   color: #777;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+}
+
+#specialtrip #special_contents #special_items .item_contents .morebtn {
+  width: 180px;
+  height: 45px;
+  margin: 20px auto 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+#specialtrip #special_contents #special_items .item_contents .morebtn button {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #4d8fd0;
+  border-radius: 30px;
+  font-size: 16px;
+  letter-spacing: -1px;
+  color: #4d8fd0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#specialtrip #special_contents #special_items .item_contents .morebtn button:hover {
+  background: #4d8fd0;
+  color: #fff;
+}
+
+#specialtrip #topbtn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #4d8fd0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  top: 800px;
+  right: 260px;
+}
+
+#specialtrip #topbtn.on {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 10px;
+}
+
+#specialtrip #topbtn img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#specialtrip #topbtn p {
+  text-align: center;
+  color: #4d8fd0;
+  font-weight: 500;
 }
