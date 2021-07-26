@@ -393,6 +393,26 @@
                     }
                 }
             }
+            .item_more_btn {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                .item_more_icon {
+                    width: 180px;
+                    height: 47px;
+                    line-height: 43px;
+                    font-size: $font-size-16;
+                    border: 1px solid $gray-color;
+                    color: $gray-color;
+                    transition: 0.5s;
+                    &:hover {
+                        color: $white-color;
+                        background-color: $main-color;
+                        border: 1px solid $main-color;
+                    }
+                }
+                
+            }
         }
     }
 }
