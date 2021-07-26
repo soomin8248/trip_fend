@@ -20,7 +20,7 @@
 }
 
 #notice .container #notice_left #service_side_menu {
-  height: 300px;
+  height: auto;
   border: 1px solid #9d9d9d;
   padding-top: 20px;
 }
@@ -37,6 +37,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+#notice .container #notice_left #service_side_menu ul li:last-child {
+  border-bottom: 0px;
+}
+
 #notice .container #notice_left #service_side_menu ul li a {
   padding-left: 20px;
   display: block;
@@ -44,7 +48,7 @@
   height: 100%;
 }
 
-#notice .container #notice_left #service_side_menu ul li:first-child {
+#notice .container #notice_left #service_side_menu ul li.on {
   background-color: #4d8fd0;
   color: #fff;
 }
