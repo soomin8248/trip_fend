@@ -111,11 +111,54 @@
                 <div id="reser_title">
                     <h1>예약 / 취소 내역</h1>
                 </div>
-                <div id="main_menu">
-                    <ul class="main_menus">
-                        <li class="main_menu">예약내역</li>
-                        <li class="main_menu">취소내역</li>
-                        <li class="main_menu">내 예약 찾기</li>
+                <div id="big_menu">
+                    <ul>
+                        <li class="big_menu">예약내역</li>
+                        <li class="big_menu">취소내역</li>
+                        <li class="big_menu">내 예약 찾기</li>
+                    </ul>
+                </div>
+                <div class="small_menus">
+                    <ul>
+                        <li class="small_menu on"><a href="#">패키지 예약 (0건)</a></li>
+                        <span></span>
+                        <li class="small_menu"><a href="#">자유여행 예약 (0건)</a></li>
+                    </ul>
+                </div>
+                <div class="search_menu">
+                    <select name="" class="search_day">
+                        <option value="" selected>예약일</option>
+                        <option value="">출발일</option>
+                    </select>
+                    <ul>
+                        <li><a href="#">1개월</a></li>
+                        <li><a href="#">3개월</a></li>
+                        <li class="on"><a href="#">전체</a></li>
+                    </ul>
+                    <div class="calendar">
+                        <input type="text" title="출발일 선택" id="fromDate" readonly="readonly" class="insert_calendar">
+                        <span>~</span>
+                        <input type="text" title="도착일 선택" id="toDate" readonly="readonly" class="insert_calendar">
+                    </div>
+                    <button type="button" class="btn_go">검색</button>
+                </div>
+                <div class="reser_list">
+                    <ul class="total">
+                        <li>총 0건</li>
+                        <li>· 2016년 3월 예약 내역부터 확인 가능합니다.</li>
+                    </ul>
+                    <ul class="list_menu">
+                        <li>예약번호</li>
+                        <li>예약일</li>
+                        <li>상품명</li>
+                        <li>출발일</li>
+                        <li>인원</li>
+                        <li>총금액</li>
+                        <li>남은금액</li>
+                        <li>진행상황</li>
+                    </ul>
+                    <ul class="list">
+                        <li>예약하신 내역이 없습니다.</li>
                     </ul>
                 </div>
             </div>
