@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <title>Where trip(어디까지 가봤니?) - 예약내역</title>
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="stylesheet" href="/src/css/reservation.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="/src/js/w3.js"></script>
+    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
+    <script type="text/javascript" src="/src/js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            let menus = document.querySelectorAll('.menu > a');
+
+            $(menus).click(function(){
+                $(this).toggleClass('on');
+                $(this).siblings('ul').toggle(0);
+                $(this).parent().siblings().children('ul').hide(0);
+                $(this).parent().siblings().children('a').removeClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 헤더 start-->
+    <header id="header">
+        <div w3-include-html="/component/head.html"></div>
+    </header>
+    <!-- 헤더 end -->    
+    
+    <!-- 예약내역 start -->
+    <section id="reservation">
+        <div class="container">
+            <div id="reser_left">
+                <div id="reser_side_menu">
+                    <h2><a href="#">마이페이지</a></h2>
+                    <ul>
+                        <li class="menu">
+                            <a href="#" class="on">예약/취소내역</a>
+                            <ul class="on">
+                                <li><a href="#" class="on">예약내역</a></li>
+                                <li><a href="#">취소내역</a></li>
+                                <li><a href="#">내 예약 찾기</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">관심내역</a>
+                            <ul>
+                                <li><a href="#">최근 본 상품</a></li>
+                                <li><a href="#">위시 리스트</a></li>
+                                <li><a href="#">장바구니</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">웨어투어 회원등급</a>
+                            <ul>
+                                <li><a href="#">등급별 혜택</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">포인트</a>
+                            <ul>
+                                <li><a href="#">포인트 조회</a></li>
+                                <li><a href="#">포인트 선물</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">쿠폰함</a>
+                            <ul>
+                                <li><a href="#">내 쿠폰함</a></li>
+                                <li><a href="#">쿠폰존</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">고객문의</a>
+                            <ul>
+                                <li><a href="#">패키지여행 1:1 문의 내역</a></li>
+                                <li><a href="#">자유여행 문의 내역</a></li>
+                                <li><a href="#">견적 문의 내역</a></li>
+                                <li><a href="#">개선/건의하기 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">참여내역</a>
+                            <ul>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">나의 여행기</a></li>
+                                <li><a href="#">칭찬합시다</a></li>
+                                <li><a href="#">고객리뷰</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu">
+                            <a href="#">개인정보</a>
+                            <ul>
+                                <li><a href="#">개인정보 수정</a></li>
+                                <li><a href="#">비밀번호 변경</a></li>
+                                <li><a href="#">SNS 연결 설정</a></li>
+                                <li><a href="#">회원탈퇴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="reser_right">
+                <div id="reser_title">
+                    <h1>예약 / 취소 내역</h1>
+                </div>
+                <div id="main_menu">
+                    <ul class="main_menus">
+                        <li class="main_menu">예약내역</li>
+                        <li class="main_menu">취소내역</li>
+                        <li class="main_menu">내 예약 찾기</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 예약내역 end -->
+
+    <!-- 푸터 start -->
+    <footer id="footer">
+        <div w3-include-html="/component/footer.html"></div>
+    </footer>
+    <!-- 푸터 end -->
+</body>
+</html>

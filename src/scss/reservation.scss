@@ -1,0 +1,112 @@
+@import "variable";
+
+#reservation {
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    letter-spacing: -1px;
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        #reser_left {
+            width: 22%;
+            height: 100%;
+            padding-right: 40px;
+            #reser_side_menu {
+                height: auto;
+                border: 1px solid #9d9d9d;
+                padding-top: 20px;
+                h2 {
+                    padding-left: 20px;
+                    font-size: $font-size-24;
+                    margin-bottom: 20px;
+                }
+                > ul {
+                    .menu {
+                        cursor: pointer;
+                        font-size: $font-size-16;
+                        line-height: 40px;
+                        > a {
+                            border-top: 1px solid $gray-color;
+                            border-bottom: 1px solid $gray-color;
+                            margin-bottom: -1px;
+                            padding-left: 20px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            &:hover {
+                                background-color: $main-color;
+                                color: $white-color;
+                            }
+                            &.on {
+                                background-color: $main-color;
+                                color: $white-color;
+                            }
+                        }
+                        > ul {
+                            display: none;
+                            font-size: $font-size-14;
+                            color: $dark-gray;
+                            &.on {
+                                display: block;
+                            }
+                            li {
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding-left: 35px;
+                                    &:hover {
+                                        background-color: $main-color;
+                                        color: $white-color;
+                                    }
+                                    &.on {
+                                        background-color: $main-color;
+                                        color: $white-color;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        #reser_right {
+            width: 78%;
+            height: auto;
+            #reser_title {
+                width: 100%;
+                h1 {
+                    font-size: $font-size-33;
+                    padding: 20px 0;
+                    span {
+                        &:nth-child(1) {
+                            color: $main-color;
+                            font-weight: $font-weight-bold;
+                        }
+                        &:nth-child(2) {
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+            }
+            #main_menu {
+                .main_menus {
+                    height: 60px;
+                    line-height: 58px;
+                    display: flex;
+                    justify-content: space-between;
+                    .main_menu {
+                        font-size: $font-size-18;
+                        text-align: center;
+                        cursor: pointer;
+                        width: 312px;
+                        border: 1px solid $light-gray;
+                    }
+                }
+            }
+        }
+    }
+}
