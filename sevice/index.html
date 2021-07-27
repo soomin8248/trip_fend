@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <title>Where tour(어디까지 가봤니?) - 고객센터</title>
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="stylesheet" href="/src/css/service.css">
+    <link rel="stylesheet" href="/src/css/lnb.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="/src/js/w3.js"></script>
+    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
+    <script type="text/javascript" src="/src/js/common.js"></script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 start-->
+        <header id="header">
+            <div w3-include-html="/component/head.html"></div>
+        </header>
+        <!-- 헤더 end -->
+        <!-- 메인 start -->
+        <main>
+            <section id="detail_page">
+                <div class="content_block">
+                    <div class="lnb_block">
+                        <div class="scroll_action">
+                            <a href="/sevice/index.html">
+                                <h2 class="tit_lnb_title">고객센터</h2>
+                            </a>
+                            <ul class="lnb_nav">
+                                <li class="lnb_menu off_close">
+                                    <a href="/sevice/notice/index.html">공지사항</a>
+                                </li>
+                                <li class="lnb_menu off_close">
+                                    <a href="/sevice/faqlist/index.html">자주하는 질문</a>
+                                </li>
+                                <li class="lnb_menu off_close">
+                                    <a href="/sevice/qnaWrite/index.htm">온라인 문의</a>
+                                </li>
+                                <li class="lnb_menu off_close">
+                                    <a href="/sevice/directionGuide/index.html">찾아오시는길</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content" id="content">
+                        <h3 class="stit_con_title">자주하는 질문</h3>
+                        <div class="faq_search">
+                            <label for="faq_insearch">여행에 대한 모든것을 물어보세요.</label>
+                            <input type="text" class="faq_insearch" id="faqSearchWrd" name="faqSearchWrd" placeholder="검색어를 입력하세요."/>
+                            <button type="button" class="btn_faq_search" onclick="goFaqSearch();">
+                                <span>검색</span>
+                            </button>
+                        </div>
+                        <h4 class="stit_con_basic">자주하는 질문 바로가기</h4>
+                        <ul class="faq_list">
+                            <li>
+                                <a href="#">패키치여행</a>
+                            </li>
+                            <li>
+                                <a href="#">항공</a>
+                            </li>
+                            <li>
+                                <a href="#">호텔</a>
+                            </li>
+                            <li>
+                                <a href="#">투어&액티비티</a>
+                            </li>
+                            <li>
+                                <a href="#">랜터카</a>
+                            </li>
+                            <li>
+                                <a href="#">회원</a>
+                            </li>
+                            <li>
+                                <a href="#">여행상품권</a>
+                            </li>
+                            <li>
+                                <a href="#">포인트</a>
+                            </li>
+                        </ul>
+                        <div class="content_area">
+                            <div class="part_area">
+                                <div class="block_tit_area_more">
+                                    <h4 class="stit_con_title">공지사항</h4>
+                                    <a href="/sevice/notice/index.html" class="btn_page_more">
+                                        <span class="blind_ir">더보기</span>
+                                    </a>
+                                </div>
+                                <ul class="latest_list">
+                                    <li>
+                                        <a href="#" class="link_ellipsis">
+                                            [공지사항] 홈쇼핑 상품안내 Q&A (유럽)
+                                        </a>
+                                        <span class="date">2021-06-21</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link_ellipsis">
+                                            <span class="blue_icon">상시</span>
+                                            [항공권소식] [공지사항] 해외항공 전화상담 중단 안내
+                                        </a>                                        </a>
+                                        <span class="date">2021-06-16</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link_ellipsis">
+                                            [공지사항] [중요]체코항공 파산 및 채권신청 관련 안내
+                                        </a>
+                                        <span class="date">2021-04-14</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link_ellipsis">
+                                            <span class="red_icon">긴급</span>
+                                            [공지사항] [수정][중요] 체코항공(OK) 파산 및 채권 신청 관련 안내                                        </a>
+                                        </a>
+                                        <span class="date">2021-04-06</span>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="link_ellipsis">
+                                            <span class="blue_icon">상시</span>
+                                            [공지사항] 노랑풍선 포인트 유효기간 연장 안내
+                                        </a>
+                                        <span class="date">2021-04-01</span>
+                                    </li>
+                                </ul>
+                                <div class="block_tit_area_more telnumber">
+                                    <h4 class="stit_con_title">고객센터 상담 대표번호</h4>
+                                </div>
+                                <div class="customer_tel_block">
+                                    <ul class="ctr_btn_link direct_num">
+                                        <li class="ctr_num_tour">
+                                            <h5 class="tit_list_block">패키지여행 상담</h5>
+                                            <span class="tel_num">1234-5678</span>
+                                        </li>
+                                        <li class="ctr_num_air">
+                                            <h5 class="tit_list_block">자유여행 상담</h5>
+                                            <span class="tel_num">1234-5678</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box_guide">
+                                    <h4 class="tit_time_info">상담 시간</h4>
+                                    <ul class="inquiry_time">
+                                        <li>
+                                            <p class="tit_heading">
+                                                <strong class="emp_black">패키지여행</strong>
+                                            </p>
+                                            <span class="time_txt">평일 오전9시~오후6시(토,일요일 및 공휴일 휴무)</span>
+                                        </li>
+                                        <li>
+                                            <p class="tit_heading">
+                                                <strong class="emp_black">자유여행</strong>
+                                            </p>
+                                            <span class="time_txt">
+                                                평일 오전 9시~오후 6시 (토,일요일 및 공휴일 휴무)
+                                                <br/>
+                                                *자유여행 취소/변경/환불 업무는 평일 오후 5시까지
+                                                <br/>
+                                                *호텔 취소/변경/환불 업무는 평일 오후 4시까지
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a class="btn_wit_g" href="/sevice/directionGuide/index.html">찾아오시는길</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- 메인 end -->
+
+        <!-- 푸터 start -->
+        <footer id="footer">
+            <div w3-include-html="/component/footer.html"></div>
+        </footer>
+        <!-- 푸터 end -->
+    </div>
+</body>
+</html>
