@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/img/favicon.ico" type="image/x-icon">
+    <title>Where trip(어디까지 가봤니?) - 이벤트</title>
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/base.css">
+    <link rel="stylesheet" href="/src/css/event.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="/src/js/w3.js"></script>
+    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
+    <script type="text/javascript" src="/src/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let tabitems = document.querySelectorAll('.tab_page_cont > li');
+            let tabconts = document.querySelectorAll('.taplits');
+            let eventenditems = document.querySelectorAll('.eventend > .promotion_block > .promotion_list > li');
+
+            tabitems[0].classList.add('on');
+            tabconts[0].style.display = 'block';
+
+            tabconts.forEach((tabcont, index) => {
+                tabcont.setAttribute("index", index);
+            });
+            tabitems.forEach((tabitem, index) => {
+                tabitem.setAttribute("index",index);
+                tabitem.addEventListener("click", function(e){
+                    e.preventDefault();
+                    let viewIdx = this.getAttribute('index');
+                    tabconts.forEach(tabcont => {
+                        if(tabcont.getAttribute("index") == viewIdx){
+                            tabcont.style.display = 'block';
+                        } else {
+                            tabcont.style.display = 'none';
+                        }
+                    })
+                    tabitems.forEach(thsIdx => {
+                        if(thsIdx.getAttribute('index') == viewIdx){
+                            thsIdx.classList.add('on');
+                        } else {
+                            thsIdx.classList.remove('on');
+                        }
+                    })
+                });
+            })
+            eventenditems.forEach(eventenditem => {
+                eventenditem.addEventListener('click', function(e){
+                    e.preventDefault();
+                    alert('종료된 이벤트입니다.');
+                    return false;
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+         <!-- 헤더 start-->
+         <header id="header">
+            <div w3-include-html="/component/head.html"></div>
+        </header>
+        <!-- 헤더 end -->
+        <!-- 메인 start -->
+        <main>
+             <section id="detail_page">
+                <div class="content_block" id="content">
+                    <form name="searchForm" id="searchForm" action="" method="GET">
+                        <h3 class="tit_con_title">이벤트</h3>
+                        <ul class="tab_page_cont" id="tab_page_cont">
+                            <li class=""><a href="#">진행중</a></li>
+                            <li class=""><a href="#">종료</a></li>
+                            <li class=""><a href="#">당첨자 발표</a></li>
+                        </ul>
+                        <div class="brd_search">
+                            <input type="text" name="srchWord" id="srchWord" value="" class="txt_brd_search" placeholder="검색어를 입력하세요." >
+                            <button type="button" class="btn_nor" id="search_btn">검색</button>
+                        </div>
+                    </form>
+                    <div class="taplits">
+                        <div class="eventing">
+                            <p class="tbl_count">총<strong>3</strong>건</p>
+                            <div class="promotion_block">
+                                <ul class="promotion_list">
+                                    <li>
+                                        <a href="https://obank.kbstar.com/quics?page=C016613&cc=b061496:b061645&isNew=N&prcode=DP01001495#loading" target="_blank">
+                                            <img src="/src/img/event/kbbankxwheretour.png" alt="wheretour X KB국민은행<br>여행적금" >
+                                            <div class="list_block_info">
+                                                <h5 class="tit_list_block">
+                                                    WhereTour X KB국민은행
+                                                    <br/>
+                                                    여행적금
+                                                </h5>
+                                                <span class="list_date">
+                                                    2021.07.15 ~ 2021.12.31
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ap.wifidosirak.com/?ybtour" target="_blank">
+                                            <img src="/src/img/event/wifi.png" alt="해외에서 데이터 고플 땐 와이파이 도시락" >
+                                            <div class="list_block_info">
+                                                <h5 class="tit_list_block">
+                                                    해외에서 데이터 고플 땐
+                                                    <br/>
+                                                    와이파이 도시락
+                                                </h5>
+                                                <span class="list_date">
+                                                    2018.12.14 ~ 2021.12.31
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/common/event/eventDetailimg.html" target="_blank">
+                                            <img src="/src/img/event/jeju.jpg" alt="제주중문면세점 빅세일!">
+                                            <div class="list_block_info">
+                                                <h5 class="tit_list_block">
+                                                    제주중문면세점
+                                                    <br/>
+                                                    빅세일!
+                                                </h5>
+                                                <span class="list_date">
+                                                    2019.02.25 ~ 2021.12.31
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="taplits">
+                        <div class="eventend">
+                            <p class="tbl_count">총<strong>1</strong>건</p>
+                            <div class="promotion_block">
+                                <ul class="promotion_list">
+                                    <li class="test">
+                                        <a href="#">
+                                            <img src="/src/img/event/talk.jpg" alt="wheretour X KB국민은행<br>여행적금" >
+                                            <div class="list_block_info">
+                                                <h5 class="tit_list_block">
+                                                    고객여러분의
+                                                    <br/>
+                                                    의견을 들려주세요
+                                                </h5>
+                                                <span class="list_date">
+                                                    2019.01.01 ~ 2019.12.31
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="taplits">
+                        <div class="eventwinner">
+                            <p class="tbl_count">총<strong>33</strong>건</p>
+                            <table class="tbl_board">
+                                <caption>당첨자 목록</caption>
+                                <colgroup>
+                                    <col style="width: 82px;">
+                                    <col>
+                                    <col style="width: 240px;">
+                                    <col style="width: 120px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">이벤트 기간</th>
+                                        <th scope="col">발표일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>
+                                            <a href="/common/event/eventDetailtext.html" class="title_link">
+                                                WhereTour 자유여행 플랫폼 오픈 기념 VIP다드림 이벤트 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2021.07.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                당첨안내) 카카오스토리 구독자를 위한 퀴즈 이벤트 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2019.10.08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                WhereTour reddot Design Award 2019 수상기념 SNS 이벤트 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2019.09.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                WhereTour 카카오톡 플러스친구 30만 돌파 기념이벤트 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2019.04.11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                WhereTour iF Design Award 2019 수상기념 이벤트 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2019.03.15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                CCM 4회연속 인증 댓글달기 이벤트 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2018.12.17~2019.01.13</td>
+                                        <td class="date">2019.01.23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                NEW TVCF & whereTour 크루 영상 공개 EVENT(태국편) 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2019.01.16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+	                                            NEW TVCF & whereTour 크루 영상 공개 EVENT(일본편) 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2019.01.02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+	                                            NEW TVCF & whereTour 크루 영상 공개 EVENT(스페인편) 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>~</td>
+                                        <td class="date">2018.12.17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                브랜드 리뉴얼 이벤트 당첨자 발표!
+                                            </a>
+                                        </td>
+                                        <td>2018.07.16~2018.08.05</td>
+                                        <td class="date">2018.08.10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                최고의 트립플래너를 찾아라! 이벤트 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2018.04.13~2018.04.22</td>
+                                        <td class="date">2018.04.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                1+1 트립플래너 이벤트 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2018.02.26~2018.03.07</td>
+                                        <td class="date">2018.03.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                2018 상반기 허니문 온라인 페스타 이벤트 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2017.11.20~2017.12.17</td>
+                                        <td class="date">2017.12.28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                보노보스 고급 스피커 무료 득템 이벤트 당첨자발표
+                                            </a>
+                                        </td>
+                                        <td>2017.12.11~2017.12.17</td>
+                                        <td class="date">2017.12.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                2017 트래블 어워즈 영상/사진 공모 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2017.11.08~2017.11.30</td>
+                                        <td class="date">2017.12.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                whereTour 창립 16주년 기념 이벤트 당첨자 공지
+                                            </a>
+                                        </td>
+                                        <td>2017.09.01~2017.09.30</td>
+                                        <td class="date">2017.10.18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                몰디브 관광청 소문내기 이벤트 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2017.07.14~2017.08.04</td>
+                                        <td class="date">2017.08.28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                2017 트랜드 허니문 페어 너랑! 나랑! 노랑허니문 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2017.06.21~2017.07.14</td>
+                                        <td class="date">2017.08.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                여행초대장 이벤트8월 출발 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2017.04.03~2017.04.17</td>
+                                        <td class="date">2017.07.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>
+                                            <a href="#" class="title_link">
+                                                여행초대장 이벤트 7월 출발 당첨자 발표
+                                            </a>
+                                        </td>
+                                        <td>2017.04.03~2017.04.17</td>
+                                        <td class="date">2017.06.26</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="paging" class="page">
+                        <span class="btn_page_first disabled">
+                            <span>맨처음</span>
+                        </span>
+                        <span class="btn_page_prev disabled">
+                            <span>이전</span>
+                        </span>
+                        <a href="#none" class="on">1</a>
+                        <span class="btn_page_next disabled">
+                            <span>다음</span>
+                        </span>
+                        <span class="btn_page_last disabled">
+                            <span>마지막</span>
+                        </span>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <!-- 메인 end -->
+        <!-- 푸터 start -->
+        <footer id="footer">
+            <div w3-include-html="/component/footer.html"></div>
+        </footer>
+        <!-- 푸터 end -->
+    </div>
+</body>
+</html>
