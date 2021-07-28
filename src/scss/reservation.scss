@@ -104,15 +104,21 @@
                         text-align: center;
                         cursor: pointer;
                         width: 312px;
-                        border: 1px solid $light-gray;
+                        border: 1px solid $more-light-gray;
+                        border-bottom:1px solid $black-color; 
+                        background:$sub-main-color;
                         &.on {
-                            background: $main-color;
-                            color: $white-color;
+                            border:1px solid $black-color; 
+                            border-bottom:1px solid $white-color; 
+                            background:$white-color;
+                            text-indent:-1px; 
+                            color:$black-color;
                         }
                     }
                 }
             }
             .reservation {
+                width: 100%;
                 .small_menus {
                     border-bottom: 1px solid $light-gray;
                     height: 60px;
@@ -273,6 +279,7 @@
                 }
             }
             .cancel {
+                width: 100%;
                 .small_menus {
                     border-bottom: 1px solid $light-gray;
                     height: 60px;
@@ -433,6 +440,7 @@
                 }
             }
             .my_reservation {
+                width: 100%;
                 .small_menus {
                     border-bottom: 1px solid $light-gray;
                     height: 60px;

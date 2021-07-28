@@ -124,12 +124,21 @@
   text-align: center;
   cursor: pointer;
   width: 312px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #333;
+  background: #f7f7f7;
 }
 
 #reservation .container #reser_right #big_menu ul .big_menu.on {
-  background: #4d8fd0;
-  color: #fff;
+  border: 1px solid #333;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  text-indent: -1px;
+  color: #333;
+}
+
+#reservation .container #reser_right .reservation {
+  width: 100%;
 }
 
 #reservation .container #reser_right .reservation .small_menus {
@@ -343,6 +352,10 @@
   border-bottom: 1px solid #ccc;
 }
 
+#reservation .container #reser_right .cancel {
+  width: 100%;
+}
+
 #reservation .container #reser_right .cancel .small_menus {
   border-bottom: 1px solid #ccc;
   height: 60px;
@@ -552,6 +565,10 @@
   line-height: 58px;
   text-align: center;
   border-bottom: 1px solid #ccc;
+}
+
+#reservation .container #reser_right .my_reservation {
+  width: 100%;
 }
 
 #reservation .container #reser_right .my_reservation .small_menus {
