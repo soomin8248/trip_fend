@@ -237,7 +237,7 @@
   text-align: left;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 0  0 19.5px 19.5px;
+  border-radius: 0 0 19.5px 19.5px;
 }
 
 #kor_jeju .kor_jeju .jeju_contents .item .sub_item .info h4 {
@@ -373,7 +373,8 @@
   text-align: left;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 0  0 19.5px 19.5px;
+  border-radius: 0 0 19.5px 19.5px;
+  background-color: #fff;
 }
 
 #kor_md .kor_md .container .md_show .md_items .sub_item .info h4 {
@@ -574,7 +575,7 @@
   text-align: left;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 0  0 19.5px 19.5px;
+  border-radius: 0 0 19.5px 19.5px;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 {
