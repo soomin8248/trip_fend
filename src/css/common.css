@@ -2,9 +2,10 @@
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 body {
   font-size: 14px;
-  font-family: 'Noto Sans KR','NanumSquare','sans-serif';
+  font-family: "Noto Sans KR", "NanumSquare", "sans-serif";
   line-height: 1.5;
   letter-spacing: -1px;
+  color: #333;
 }
 
 section {
