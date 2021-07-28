@@ -9,11 +9,18 @@
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/base.css">
     <link rel="stylesheet" href="/src/css/notice.css">
+    <link rel="stylesheet" href="/src/css/lnb.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
     <script type="text/javascript" src="/src/js/w3.js"></script>
     <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
     <script type="text/javascript" src="/src/js/common.js"></script>
+    <script type="text/javascript" src="/src/js/sevicelnb.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+        });
+    </script>
 </head>
 <body>
     <!-- 헤더 start-->
@@ -24,7 +31,342 @@
     
     <!-- 메인 start -->
     <main>
-        
+        <section id="detail_page">
+            <div class="content_block">
+                <div class="lnb_block">
+                    <div class="scroll_action">
+                        <a href="/sevice/index.html">
+                            <h2 class="tit_lnb_title">고객센터</h2>
+                        </a>
+                        <ul class="lnb_nav">
+                            <li class="lnb_menu off_close on">
+                                <a href="/sevice/notice/index.html">공지사항</a>
+                            </li>
+                            <li class="lnb_menu off_close">
+                                <a href="/sevice/faqlist/index.html">자주하는 질문</a>
+                            </li>
+                            <li class="lnb_menu off_close">
+                                <a href="/sevice/qnaWrite/index.htm">온라인 문의</a>
+                            </li>
+                            <li class="lnb_menu off_close">
+                                <a href="/sevice/directionGuide/index.html">찾아오시는길</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content" id="content">
+                    <h3 class="tit_con_title">공지사항</h3>
+                    <form name="searchForm" id="searchForm" method="POST" action="">
+                        <div class="brd_search">
+                            <div class="select normal" id="searchNoticeSelect">
+                                <div class="selectIn">
+                                    <button type="button" class="currSel">전체</button>
+                                    <ul class="list">
+                                        <li><button value="">전체</button></li>
+                                        <li><button value="notice">공지사항</button> </li>
+                                        <li><button value="hym">허니문</button></li>
+                                        <li><button value="glf">골프</button></li>
+                                        <li><button value="crs">크루즈</button>크루즈</li>
+                                        <li><button value="dmt">국내</button></li>
+                                        <li><button value="air">항공권 소식</button></li>
+                                        <li><button value="htl">호텔</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="select normal" id="searchCndSelect">
+                                <div class="selectIn">
+                                    <button type="button" class="currSel">전체</button>
+                                    <ul class="list">
+                                        <li><button value="">전체</button></li>
+                                        <li><button value="TITLE">제목</button></li>
+                                        <li><button value="CONTENTS">내용</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input type="text" class="txt_brd_search" placeholder="검색어를 입력하세요" name="searchWrd" id="searchWrd" title="검색어" value="">
+                            <button type="button" class="btn_nor" onclick="goPage();">검색</button>
+                        </div>
+                    </form>
+                    <p class="tbl_count">총 <strong>2630</strong>건</p>
+                    <table class="tbl_board">
+                        <caption>공지사항 목록</caption>
+                        <colgroup>
+                            <col style="width: 82px;">
+                            <col>
+                            <col style="width: 120px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+		                                [항공권소식] [공지사항] 해외항공 전화상담 중단 안내
+		                            </a>
+                                </td>
+                                <td class="date">2021.06.16</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                        [공지사항] WhereTour 포인트 유효기간 연장 안내
+                                    </a>
+                                </td>
+                                <td class="date">2021.04.01</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                        [공지사항] WhereTour롯데카드 발급 중단 안내
+                                    </a>
+                                </td>
+                                <td class="date">2020.12.28</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                        <span class="brd_tag">
+                                            <span class="ico_brd_red">긴급</span>
+                                        </span>
+                                        [항공권소식] 항공사별 환불 지침 안내
+                                    </a>
+                                </td>
+                                <td class="date">2020.09.09</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                        <span class="brd_tag">
+                                            <span class="ico_brd_red">긴급</span>
+                                        </span>
+                                        [항공권소식] [해외항공 이용 변경 안내] 코로나19관련 안내
+                                    </a>
+                                </td>
+                                <td class="date">2020.05.26</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [공지사항] WhereTour 휴면 계정 처리 안내
+                                    </a>
+                                </td>
+                                <td class="date">2015.07.17</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="ico_brd_blue">상시</span>
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [공지사항] 소비자분쟁해결기준 (공정거래위원회 고시 제2014-4호)
+                                    </a>
+                                </td>
+                                <td class="date">2014.03.20</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2623
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+		                            [공지사항] 홈쇼핑 상품안내 Q&A (유럽)
+                                    </a>
+                                </td>
+                                <td class="date">2021.06.21</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2622
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [공지사항] [중요]체코항공 파산 및 채권신청 관련 안내  
+		                            </a>
+                                </td>
+                                <td class="date">2021.04.14</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2621
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                        <span class="brd_tag">
+                                            <span class="ico_brd_red">긴급</span>
+                                        </span>
+		                                [공지사항] [수정][중요] 체코항공(OK) 파산 및 채권 신청 관련 안내
+		                            </a>
+                                </td>
+                                <td class="date">2021.04.06</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2620
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+		                            [공지사항] [중요]이스타항공 회생채권 신고철자 안내
+		                            </a>
+                                </td>
+                                <td class="date">2021.02.24</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2619
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [호텔] [국내] 베스트웨스턴 제주 & 호텔 휘슬락 조식당 휴업 안내
+		                            </a>
+                                </td>
+                                <td class="date">2021.02.05</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2618
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [항공권소식] 항공사별 환불 지침 안내 입니다.
+		                            </a>
+                                </td>
+                                <td class="date">2021.01.22</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2617
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+		                            [공지사항] WhereTour 홈페이지/ 모바일의 서비스 점검 안내
+		                            </a>
+                                </td>
+                                <td class="date">2021.01.22</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2616
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [항공권소식] [국제 관광비행]무착륙 선회비행(면세쇼핑 특별편) 관련 안내
+		                            </a>
+                                </td>
+                                <td class="date">2020.12.11</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2615
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [공지사항] WhereTour 이용약관 개정 안내
+		                            </a>
+                                </td>
+                                <td class="date">2020.12.08</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2614
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [항공권소식] (CX) 캐세이퍼시픽, 세계 각지로 다시 운항합니다.(2020년 12월 06일 부)
+		                            </a>
+                                </td>
+                                <td class="date">2020.12.02</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2613
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                        <span class="brd_tag">
+                                            <span class="ico_brd_red">긴급</span>
+                                        </span>
+                                        [항공권소식] 네이버 아이디 간편예약 내역 확인 가이드
+		                            </a>
+                                </td>
+                                <td class="date">2020.12.02</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2612
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+                                    [항공권소식]  (CX) 캐세이퍼시픽 '무제한 항공권 무료 변경' 연장 (2020년 12월 31일 까지)
+		                            </a>
+                                </td>
+                                <td class="date">2020.09.23</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2611
+                                </td>
+                                <td>
+                                    <a href="#" class="title_link" >
+		                            [공지사항] WhereTour 인터넷 회원 규정 변경 안내
+		                            </a>
+                                </td>
+                                <td class="date">2020.09.17</td>
+                            </tr>
+
+                        </tbody>
+                        
+                    </table>
+                    <div class="paging" id="paging">
+                        <span class="btn_page_first disabled">
+                            <span>맨처음</span>
+                        </span>
+                        <span class="btn_page_prev disabled">
+                            <span>이전</span>
+                        </span>
+                        <a href="#" class="on">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#" class="btn_page_next">
+                            <span>다음</span>
+                        </a>
+                        <a href="#" class="btn_page_last">
+                            <span>마지막</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- 메인 end -->
 

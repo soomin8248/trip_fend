@@ -14,11 +14,6 @@
   z-index: 0;
 }
 
-.lnb_block.on {
-  background-color: #4d8fd0;
-  color: #fff;
-}
-
 .lnb_block .tit_lnb_title {
   line-height: 1;
   margin-bottom: 7px;
@@ -37,6 +32,11 @@
   color: #222;
   line-height: 45px;
   border-bottom: 1px solid #ccc;
+}
+
+.lnb_block .lnb_nav li.on {
+  background-color: #4d8fd0;
+  color: #fff;
 }
 
 .lnb_block .lnb_nav li:last-child {
