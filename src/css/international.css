@@ -249,7 +249,7 @@
   text-align: left;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 0  0 19.5px 19.5px;
+  border-radius: 0 0 19.5px 19.5px;
 }
 
 #package .package .pack_item .item .sub_item .info h4 {
@@ -385,7 +385,8 @@
   text-align: left;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 0  0 19.5px 19.5px;
+  border-radius: 0 0 19.5px 19.5px;
+  background: #fff;
 }
 
 #free_travel .free_travel .container .free_item .f_item .sub_item .info h4 {
@@ -582,7 +583,7 @@
   text-align: left;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 0  0 19.5px 19.5px;
+  border-radius: 0 0 19.5px 19.5px;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item .info h4 {

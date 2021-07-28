@@ -11,15 +11,16 @@
 
 #detail_page .content_block::before {
   display: block;
-  content: ' ';
+  content: " ";
   clear: both;
 }
 
 #detail_page .content_block .tit_con_title {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   line-height: 1;
   font-size: 32px;
   color: #222;
+  font-weight: 500;
 }
 
 #detail_page .content_block .tab_page_cont {
@@ -34,7 +35,7 @@
   line-height: 60px;
   border: 1px solid #ddd;
   border-left: none;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #4d8fd0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #f7f7f7;
@@ -45,11 +46,11 @@
 }
 
 #detail_page .content_block .tab_page_cont li.on {
-  border: 1px solid #222;
+  border: 1px solid #4d8fd0;
   border-bottom: 1px solid #fff;
   background: #fff;
   text-indent: -1px;
-  color: #222;
+  color: #4d8fd0;
 }
 
 #detail_page .content_block .tab_page_cont li a {
@@ -82,7 +83,7 @@
   height: 38px;
   line-height: 38px;
   margin: 0 16px;
-  background: #555;
+  background: #4d8fd0;
   font-size: 14px;
   color: #fff;
   text-align: center;
@@ -178,7 +179,7 @@
 }
 
 #detail_page .content_block .taplits .eventing .promotion_block .promotion_list li .list_block_info .list_date::before {
-  content: '';
+  content: "";
   margin-right: 0;
 }
 
@@ -262,7 +263,7 @@
 }
 
 #detail_page .content_block .taplits .eventend .promotion_block .promotion_list li .list_block_info .list_date::before {
-  content: '';
+  content: "";
   margin-right: 0;
 }
 
