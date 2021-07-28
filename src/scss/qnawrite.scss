@@ -22,7 +22,7 @@
                 line-height: 1;
                 font-size: 32px;
                 color: #222;
-                padding: 10px 0 20px 0;
+                padding: 20px 0 30px 0;
                 border-bottom: 2px solid #222;
             }
             .ico_tbl_must {
@@ -41,15 +41,17 @@
             }
             .tbl_basic {
                 width: 100%;
-                border-top: 1px solid #222;
+                border-top: 1px solid #ccc;
                 th {
-                    height: 60px;
-                    padding: 0 20px;
+                    height: 75px;
+                    padding: 0 25px;
                     border-bottom: 1px solid #ddd;
                     background: #f7f7f7;
-                    color: #222;
+                    color: #333;
                     vertical-align: middle;
                     text-align: left;
+                    font-size: 15px;
+                    font-weight: 500;
                     label {
                         position: relative;
                         .ico_tbl_must {
@@ -165,8 +167,9 @@
                     text-align: center;
                 }
                 .cfrm {
-                    background: #ffc72c !important;
-                    color: #222 !important;
+                    background: #333 !important;
+                    color: #fff !important;
+                    font-size: 16px;
                 }
             }
         }

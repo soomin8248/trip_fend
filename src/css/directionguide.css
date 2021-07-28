@@ -27,12 +27,12 @@
   line-height: 1;
   font-size: 32px;
   color: #222;
-  padding: 10px 0 20px 0;
+  padding: 20px 0 30px 0;
   border-bottom: 2px solid #222;
 }
 
 #detail_page .content_block .content .map_page .office_pic {
-  margin: 40px 0;
+  margin: 50px 0 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,6 +94,7 @@
   line-height: 24px;
   font-size: 15px;
   color: #555;
+  margin-right: 20px;
 }
 
 #detail_page .content_block .content .map_page .map_con .address_info .office_number li span {

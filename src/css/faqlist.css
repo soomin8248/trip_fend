@@ -27,7 +27,7 @@
   line-height: 1;
   font-size: 32px;
   color: #222;
-  padding: 10px 0 20px 0;
+  padding: 20px 0 30px 0;
   border-bottom: 2px solid #222;
 }
 
@@ -109,8 +109,8 @@
   width: 110px;
   height: 38px;
   line-height: 38px;
-  margin: 0 2px;
-  background: #555;
+  margin: 0 5px;
+  background: #4d8fd0;
   font-size: 14px;
   color: #fff;
   text-align: center;
@@ -129,22 +129,22 @@
   line-height: 60px;
   border: 1px solid #ddd;
   border-left: none;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #4d8fd0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #f7f7f7;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: #777;
   cursor: pointer;
 }
 
 #detail_page .content_block .content .tab_page_cont li.on {
-  border: 1px solid #222;
+  border: 1px solid #4d8fd0;
   border-bottom: 1px solid #fff;
   background: #fff;
   text-indent: -1px;
-  color: #222;
+  color: #4d8fd0;
 }
 
 #detail_page .content_block .content .tab_page_sub .tab_sub {
@@ -173,7 +173,7 @@
 #detail_page .content_block .content .tab_page_sub .tab_sub li.on {
   display: block;
   height: 60px;
-  border-bottom: 3px solid #ffc72c;
+  border-bottom: 3px solid #4d8fd0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #222;
@@ -210,7 +210,8 @@
   line-height: 60px;
   padding: 0 70px;
   border-bottom: 1px solid #ddd;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 15px;
   cursor: pointer;
 }
 
@@ -250,7 +251,7 @@
 
 #detail_page .content_block .content .tab_page_sub .cont_faq .box_faq {
   display: none;
-  padding: 35px 20px 20px 75px;
+  padding: 35px 30px 30px 75px;
   background: #f7f7f7;
 }
 
