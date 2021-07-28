@@ -8,6 +8,13 @@
     float: left;
     background: #fff;
     z-index: 10;
+    &.lnb_fixed {
+        position:fixed; z-index:0
+    }
+    &.on {
+        background-color: $main-color;
+        color: $white-color;
+    }
     .tit_lnb_title {
         line-height: 1;
         margin-bottom: 7px;

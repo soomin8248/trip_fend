@@ -9,6 +9,16 @@
   z-index: 10;
 }
 
+.lnb_block.lnb_fixed {
+  position: fixed;
+  z-index: 0;
+}
+
+.lnb_block.on {
+  background-color: #4d8fd0;
+  color: #fff;
+}
+
 .lnb_block .tit_lnb_title {
   line-height: 1;
   margin-bottom: 7px;
