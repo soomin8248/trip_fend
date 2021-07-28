@@ -33,6 +33,9 @@
 
 #detail_page .content_block .content .map_page .office_pic {
   margin: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #detail_page .content_block .content .map_page .office_pic::after {
@@ -43,8 +46,122 @@
 
 #detail_page .content_block .content .map_page .office_pic li {
   float: left;
+  margin: 0 auto;
 }
 
 #detail_page .content_block .content .map_page .office_pic li img {
+  width: 98%;
   vertical-align: top;
+}
+
+#detail_page .content_block .content .map_page .map_con {
+  width: 910px;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f7f7f7;
+}
+
+#detail_page .content_block .content .map_page .map_con .loadmap_area {
+  height: 388px;
+}
+
+#detail_page .content_block .content .map_page .map_con .loadmap_area img {
+  width: 100%;
+}
+
+#detail_page .content_block .content .map_page .map_con .address_info {
+  padding: 36px 20px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+
+#detail_page .content_block .content .map_page .map_con .address_info .office_address {
+  line-height: 24px;
+  font-size: 18px;
+  color: #222;
+}
+
+#detail_page .content_block .content .map_page .map_con .address_info .office_number {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#detail_page .content_block .content .map_page .map_con .address_info .office_number li {
+  position: relative;
+  display: inline-block;
+  line-height: 24px;
+  font-size: 15px;
+  color: #555;
+}
+
+#detail_page .content_block .content .map_page .map_con .address_info .office_number li span {
+  margin-right: 18px;
+  color: #222;
+}
+
+#detail_page .content_block .content .map_page .transport_con {
+  margin-top: 40px;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type {
+  border-top: 1px solid #ddd;
+  padding: 34px 0;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .stit_con_title {
+  float: left;
+  width: 126px;
+  padding-left: 20px;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con {
+  float: right;
+  width: 764px;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con .station_txt {
+  margin-bottom: 12px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #222;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con .detail_method li {
+  line-height: 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con .detail_method li .flag_area {
+  display: inline-block;
+  margin-right: 16px;
+  max-width: 56px;
+  vertical-align: top;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con .detail_method li .flag_sq {
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 7px;
+  font-size: 12px;
+  color: #fff;
+  vertical-align: top;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con .detail_method li .color_pp {
+  background: #7587f1;
+}
+
+#detail_page .content_block .content .map_page .transport_con .transport_type .detail_con .detail_method li .method_txt {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#detail_page .content_block .content .map_page .stit_con_title {
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 24px;
+  color: #222;
 }
