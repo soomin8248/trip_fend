@@ -86,4 +86,51 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 4000,
         },
     });
+
+    let package = document.querySelector('#package');
+    let freeTravel = document.querySelector('#free_travel');
+    let bestTravel = document.querySelector('#best_travel');
+    
+    addEventListener('scroll', function(){
+        let secTop = package.offsetTop;
+        let sct = document.documentElement.scrollTop;
+        console.log(sct, secTop);
+        if(sct >= secTop-500) {
+            let items = document.querySelectorAll('.item');
+            items.forEach(function(item){
+                item.classList.add('on');
+            })
+        }else {
+            let items = document.querySelectorAll('.item');
+            items.forEach(function(item){
+                item.classList.remove('on');
+            })
+        }
+
+        let secTop2 = freeTravel.offsetTop;
+        let sct2 = document.documentElement.scrollTop;
+        let fItem = document.querySelector('.free_item');
+        let slideBtn = document.querySelector('#slide_con');
+        console.log(sct2, secTop2);
+        if(sct2 >= secTop2-550){
+            fItem.classList.add('on');
+            slideBtn.classList.add('on');
+        }else {
+            fItem.classList.remove('on');
+            slideBtn.classList.remove('on');
+        }
+        
+        
+        let secTop3 = bestTravel.offsetTop;
+        let sct3 = document.documentElement.scrollTop;
+        let bItemLeft = document.querySelector('.b_item:nth-child(1)');
+        let bItemRight = document.querySelector('.b_item:nth-child(2)');
+        if(sct3 >= secTop3-600){
+            bItemLeft.classList.add('on');
+            bItemRight.classList.add('on');
+        }else {
+            bItemLeft.classList.remove('on');
+            bItemRight.classList.remove('on');
+        }
+    })
 });
