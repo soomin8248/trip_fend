@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let package = document.querySelector('#package');
     let freeTravel = document.querySelector('#free_travel');
     let bestTravel = document.querySelector('#best_travel');
-    
     addEventListener('scroll', function(){
-        let secTop = package.offsetTop;
         let sct = document.documentElement.scrollTop;
+        let secTop = package.offsetTop;
+        
         console.log(sct, secTop);
         if(sct >= secTop-500) {
             let items = document.querySelectorAll('.item');
@@ -108,11 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         let secTop2 = freeTravel.offsetTop;
-        let sct2 = document.documentElement.scrollTop;
         let fItem = document.querySelector('.free_item');
         let slideBtn = document.querySelector('#slide_con');
-        console.log(sct2, secTop2);
-        if(sct2 >= secTop2-550){
+        console.log(sct, secTop2);
+        if(sct >= secTop2-550){
             fItem.classList.add('on');
             slideBtn.classList.add('on');
         }else {
@@ -122,10 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
         
         
         let secTop3 = bestTravel.offsetTop;
-        let sct3 = document.documentElement.scrollTop;
         let bItemLeft = document.querySelector('.b_item:nth-child(1)');
         let bItemRight = document.querySelector('.b_item:nth-child(2)');
-        if(sct3 >= secTop3-600){
+        if(sct >= secTop3-600){
             bItemLeft.classList.add('on');
             bItemRight.classList.add('on');
         }else {
