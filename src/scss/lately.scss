@@ -1,0 +1,367 @@
+@import "variable";
+
+#lately {
+    width: 100%;
+    height: 150vh;
+    padding-top: 40px;
+    letter-spacing: -1px;
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        #lately_left {
+            width: 22%;
+            height: 100%;
+            padding-right: 40px;
+            #lately_side_menu {
+                height: auto;
+                border: 1px solid #9d9d9d;
+                padding-top: 20px;
+                h2 {
+                    padding-left: 20px;
+                    font-size: $font-size-24;
+                    margin-bottom: 20px;
+                }
+                > ul {
+                    .side_menu {
+                        cursor: pointer;
+                        font-size: $font-size-16;
+                        line-height: 40px;
+                        > a {
+                            border-top: 1px solid $gray-color;
+                            border-bottom: 1px solid $gray-color;
+                            margin-bottom: -1px;
+                            padding-left: 20px;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            &:hover {
+                                background-color: $main-color;
+                                color: $white-color;
+                            }
+                            &.on {
+                                background-color: $main-color;
+                                color: $white-color;
+                            }
+                        }
+                        > ul {
+                            display: none;
+                            font-size: $font-size-14;
+                            color: $dark-gray;
+                            &.on {
+                                display: block;
+                            }
+                            li {
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding-left: 35px;
+                                    &:hover {
+                                        background-color: $main-color;
+                                        color: $white-color;
+                                    }
+                                    &.on {
+                                        background-color: $main-color;
+                                        color: $white-color;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        #lately_right {
+            width: 78%;
+            height: auto;
+            position: relative;
+            #lately_title {
+                width: 100%;
+                h1 {
+                    font-size: $font-size-33;
+                    padding: 20px 0;
+                    span {
+                        &:nth-child(1) {
+                            color: $main-color;
+                            font-weight: $font-weight-bold;
+                        }
+                        &:nth-child(2) {
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+            }
+            #big_menu {
+                ul {
+                    height: 60px;
+                    line-height: 58px;
+                    display: flex;
+                    justify-content: space-between;
+                    .big_menu {
+                        font-size: $font-size-18;
+                        text-align: center;
+                        cursor: pointer;
+                        width: 50%;
+                        border: 1px solid $more-light-gray;
+                        border-bottom:1px solid $black-color; 
+                        background:$sub-main-color;
+                        &.on {
+                            border:1px solid $black-color; 
+                            border-bottom:1px solid $white-color; 
+                            background:$white-color;
+                            text-indent:-1px; 
+                            color:$black-color;
+                        }
+                    }
+                }
+            }
+            .contents {
+                width: 100%;
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 150px;
+                &.on {
+                    display: block;
+                }
+                .small_menus {
+                    border-bottom: 1px solid $light-gray;
+                    height: 60px;
+                    > ul {
+                        display: flex;
+                        justify-content: space-between;
+                        > li {
+                            &.choice_item_btn {
+                                > ul {
+                                    >li {
+                                        width: 100px;
+                                        height: 35px;
+                                        border: 1px solid $light-gray;
+                                        cursor: pointer;
+                                        font-size: $font-size-14;
+                                        line-height: 33px;
+                                        text-align: center;
+                                        &:nth-child(1) {
+                                            margin-right: 6px;
+                                        }
+                                    }
+                                }
+                            }
+                            > ul {
+                                height: 60px;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                font-size: $font-size-16;
+                                .small_menu {
+                                    line-height: 60px;
+                                    height: 60px;
+                                    color: $gray-color;
+                                    &.on {
+                                        color: $black-color;
+                                        border-bottom: 3px solid $main-color;
+                                    }
+                                }
+                                span {
+                                    display: block;
+                                    content: "";
+                                    width: 1px;
+                                    height: 16px;
+                                    background-color: $gray-color;
+                                    margin: 0 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .lately_goods {
+                    display: flex;
+                    justify-content: space-between;
+                    .late_goods {
+                        width: 48%;
+                        > ul {
+                            > li {
+                                .goods {
+                                    position: relative;
+                                    .detailgoods {
+                                        height: 258px;
+                                        padding: 20px 0;
+                                        border-bottom: 1px solid $light-gray;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: space-between;
+                                        &.black_goods {
+                                            position: relative;
+                                        }
+                                        .detail_img {
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            margin-bottom: 30px;
+                                            .img {
+                                                position: relative;
+                                                margin-right: 20px;
+                                                img {
+                                                    display: block;
+                                                    width: 210px;
+                                                    height: 150px;
+                                                }
+                                                p {
+                                                    width: 55px;
+                                                    font-size: $font-size-12;
+                                                    height: 55px;
+                                                    line-height: 55px;
+                                                    background-color: $main-color;
+                                                    color: $white-color;
+                                                    text-align: center;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    top: 0;
+                                                }
+                                                span {
+                                                    position: absolute;
+                                                    right: 10px;
+                                                    top: 10px;
+                                                    z-index: 5;
+                                                    input {
+                                                        width: 20px;
+                                                        height: 20px;
+                                                        display: block;
+                                                    }
+                                                }
+                                            }
+                                            .text {
+                                                ul {
+                                                    font-size: $font-size-14;
+                                                    li {
+                                                        position: relative;
+                                                        p {
+                                                            position: absolute;
+                                                            left: 60px;
+                                                            top: 0;
+                                                            line-height: 24px;
+                                                            i {
+                                                                line-height: 24px;
+                                                            }
+                                                            span {
+                                                                width: 50px;
+                                                                position: absolute;
+                                                                left: 25px;
+                                                                top: 0;
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                    .text_title {
+                                                        font-size: $font-size-16;
+                                                        padding-bottom: 8px;
+                                                    }
+                                                    .price {
+                                                        font-size: $font-size-16;
+                                                        color: $main-color;
+                                                        padding-top: 8px;
+                                                    }
+                                                }
+                                                .price_text {
+                                                    margin-top: 10px;
+                                                    li {
+                                                        .blue_color {
+                                                            color: $main-color;
+                                                            font-size: $font-size-16;
+                                                        }
+                                                        span {
+                                                            padding: 0 15px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .detail_btn {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            ul {
+                                                display: flex;
+                                                &.social {
+                                                    li {
+                                                        width: 36px;
+                                                        height: 36px;
+                                                        border: 1px solid $light-gray;
+                                                        position: relative;
+                                                        cursor: pointer;
+                                                        margin-right: -1px;
+                                                        i {
+                                                            color: $dark-gray;
+                                                            position: absolute;
+                                                            top: 50%;
+                                                            left: 50%;
+                                                            transform: translate(-50%, -50%);
+                                                        }
+                                                    }
+                                                }
+                                                &.btn {
+                                                    li {
+                                                        width: 110px;
+                                                        height: 38px;
+                                                        line-height: 38px;
+                                                        font-size: 14px;
+                                                        text-align: center;
+                                                        border: 1px solid;
+                                                        &:nth-child(1) {
+                                                            border: 1px solid $light-gray;
+                                                            margin-right: 5px;
+                                                        }
+                                                        &:nth-child(2) {
+                                                            color: $white-color;
+                                                            background: $black-color;
+                                                        }
+                                                        a {
+                                                            display: block;
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+                                                    }
+                                                }
+                                                &.black_btn {
+                                                    li {
+                                                        &:nth-child(2) {
+                                                            color: $white-color;
+                                                            background: $dark-gray;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .black_bg {
+                                            background-color: rgba($color: #000000, $alpha: 0.7);
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            font-size: $font-size-16;
+                                            color: $white-color;
+                                            text-align: center;
+                                            line-height: 258px;
+                                        }
+                                        .not_list {
+                                            width: 100%;
+                                            height: 100%;
+                                            text-align: center;
+                                            line-height: 216px;
+                                            font-size: $font-size-16;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

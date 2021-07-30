@@ -8,7 +8,7 @@
     <title>Where trip(어디까지 가봤니?) - 최근 본 상품</title>
     <link rel="stylesheet" href="/src/css/reset.css">
     <link rel="stylesheet" href="/src/css/base.css">
-    <link rel="stylesheet" href="/src/css/reservation.css">
+    <link rel="stylesheet" href="/src/css/lately.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="/src/js/jquery-1.4.1.js"></script>
     <script type="text/javascript" src="/src/js/w3.js"></script>
@@ -56,42 +56,36 @@
                                 big_menu.classList.remove('on');
                             }
                         });
-                        side_sub_menus.forEach(function (thsIdx) {
-                            if (thsIdx.getAttribute('subSeq') == viewIdx) {
-                                thsIdx.classList.add('on');
-                            } else {
-                                thsIdx.classList.remove('on');
-                            }
-                        });
+
                     }
                 });
             });
-            side_sub_menus.forEach(side_sub_menu => {
-                side_sub_menu.addEventListener('click', function(){
-                    let viewIdx = this.getAttribute('subSeq');
-                    side_sub_menus.forEach(thsIdx => {
-                        if (thsIdx.getAttribute('subSeq') == viewIdx) {
-                            thsIdx.classList.add('on');
-                        } else {
-                            thsIdx.classList.remove('on');
-                        }
-                    });
-                    big_menus.forEach(big_menu => {
-                        if (big_menu.getAttribute('subSeq') == viewIdx) {
-                            big_menu.classList.add('on');
-                        } else {
-                            big_menu.classList.remove('on');
-                        }
-                    });
-                    contents.forEach(function (thsIdx, index) {
-                        if (index == viewIdx) {
-                            thsIdx.style.display = "block";
-                        } else {
-                            thsIdx.style.display = "none";
-                        }
-                    });
-                });
-            })
+            // side_sub_menus.forEach(side_sub_menu => {
+            //     side_sub_menu.addEventListener('click', function(){
+            //         let viewIdx = this.getAttribute('subSeq');
+            //         side_sub_menus.forEach(thsIdx => {
+            //             if (thsIdx.getAttribute('subSeq') == viewIdx) {
+            //                 thsIdx.classList.add('on');
+            //             } else {
+            //                 thsIdx.classList.remove('on');
+            //             }
+            //         });
+            //         big_menus.forEach(big_menu => {
+            //             if (big_menu.getAttribute('subSeq') == viewIdx) {
+            //                 big_menu.classList.add('on');
+            //             } else {
+            //                 big_menu.classList.remove('on');
+            //             }
+            //         });
+            //         contents.forEach(function (thsIdx, index) {
+            //             if (index == viewIdx) {
+            //                 thsIdx.style.display = "block";
+            //             } else {
+            //                 thsIdx.style.display = "none";
+            //             }
+            //         });
+            //     });
+            // })
 
 
         });
@@ -105,10 +99,10 @@
     <!-- 헤더 end -->    
     
     <!-- 예약내역 start -->
-    <section id="reservation">
+    <section id="lately">
         <div class="container">
-            <div id="reser_left">
-                <div id="reser_side_menu">
+            <div id="lately_left">
+                <div id="lately_side_menu">
                     <h2><a href="#">마이페이지</a></h2>
                     <ul>
                         <li class="side_menu">
@@ -177,32 +171,321 @@
                     </ul>
                 </div>
             </div>
-            <div id="reser_right">
-                <div id="reser_title">
-                    <h1>예약 / 취소 내역</h1>
+            <div id="lately_right">
+                <div id="lately_title">
+                    <h1>최근 본 상품</h1>
                 </div>
                 <div id="big_menu">
                     <ul>
-                        <li class="big_menu on" subSeq="0">예약내역</li>
-                        <li class="big_menu" subSeq="1">내 예약 찾기</li>
+                        <li class="big_menu on" subSeq="0">패키지 여행 상품</li>
+                        <li class="big_menu" subSeq="1">자유여행상품</li>
                     </ul>
                 </div>
-                <div class="reservation contents on" subSeq="0">
+                <div class="package_item contents on" subSeq="0">
                     <div class="small_menus">
                         <ul>
-                            <li class="small_menu on"><a href="#">패키지 예약 (0건)</a></li>
-                            <span></span>
-                            <li class="small_menu"><a href="#">자유여행 예약 (0건)</a></li>
+                            <li>
+                                <ul>
+                                    <li class="small_menu on"><a href="#">상품</a></li>
+                                    <span></span>
+                                    <li class="small_menu"><a href="#">출발일 지정 상품</a></li>
+                                </ul>
+                            </li>
+                            <li class="choice_item_btn">
+                                <ul>
+                                    <li>선택상품 비교</li>
+                                    <li>선택상품 삭제</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
-                    
+                    <div class="lately_goods">
+                        <div class="late_goods ">
+                            <ul>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="late_goods">
+                            <ul>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="black_bg">
+                                                <p>판매종료</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="goods">
+                                        <div class="detailgoods">
+                                            <div class="detail_img">
+                                                <div class="img">
+                                                    <img src="/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                                    <p>국내여행</p>
+                                                    <span class="choice">
+                                                        <input type="checkbox" title="선택">
+                                                    </span>
+                                                </div>
+                                                <div class="text">
+                                                    <ul>
+                                                        <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                                        <li>출발기간 2021.07 ~ 2021.09</li>
+                                                        <li class="price">319,000 원 ~ </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="detail_btn">
+                                                <ul class="social">
+                                                    <li><i class="material-icons">favorite_border</i></li>
+                                                    <li><i class="material-icons">share</i></li>
+                                                </ul>
+                                                <ul class="btn">
+                                                    <li><a href="#">자세히 보기</a></li>
+                                                    <li><a href="#">출발일 보기</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="my_reservation contents" subSeq="1">
+                <div class="free_item contents">
                     <div class="small_menus">
                         <ul>
-                            <li class="small_menu on"><a href="#">패키지여행 예약</a></li>
-                            <span></span>
-                            <li class="small_menu"><a href="#">자유여행 예약</a></li>
+                            <li>
+                                <ul>
+                                    <li class="small_menu on"><a href="#">상품</a></li>
+                                    <span></span>
+                                    <li class="small_menu"><a href="#">출발일 지정 상품</a></li>
+                                </ul>
+                            </li>
+                            <li class="choice_item_btn">
+                                <ul>
+                                    <li>선택상품 비교</li>
+                                    <li>선택상품 삭제</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
