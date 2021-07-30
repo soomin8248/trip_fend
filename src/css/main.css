@@ -181,7 +181,7 @@
 }
 
 #search {
-  height: 160px;
+  height: 170px;
   margin-top: -260px;
   position: relative;
   z-index: 99;
@@ -209,6 +209,7 @@
 
 #search > div ul li {
   padding-left: 60px;
+  cursor: pointer;
 }
 
 #search > div ul li.selected {
@@ -216,15 +217,6 @@
 }
 
 #search > div .package {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#search > div .package div {
-  width: 30%;
-  height: 90px;
-  padding: 0 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,27 +228,69 @@
           align-items: center;
 }
 
-#search > div .package div:not(:last-child) {
+#search > div .package > div {
+  width: 45%;
+  height: 100px;
+  padding: 0px 60px;
+}
+
+#search > div .package > div:not(:last-child) {
   border-right: 1px solid #ccc;
 }
 
-#search > div .package div img {
+#search > div .package > div img {
   width: 22px;
   height: 22px;
 }
 
-#search > div .package div p {
-  color: #888;
+#search > div .package > div p {
+  padding-top: 15px;
+  color: #4d8fd0;
 }
 
-#search > div .package div p span {
-  font-size: 16px;
-  color: #333;
+#search > div .package > div .inputbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+#search > div .package > div .inputbox input {
+  font-size: 15px;
+}
+
+#search > div .package > div .inputbox input::-webkit-input-placeholder {
+  font-size: 15px;
+  color: #9d9d9d;
+  letter-spacing: -1px;
+}
+
+#search > div .package > div .inputbox input:-ms-input-placeholder {
+  font-size: 15px;
+  color: #9d9d9d;
+  letter-spacing: -1px;
+}
+
+#search > div .package > div .inputbox input::-ms-input-placeholder {
+  font-size: 15px;
+  color: #9d9d9d;
+  letter-spacing: -1px;
+}
+
+#search > div .package > div .inputbox input::placeholder {
+  font-size: 15px;
+  color: #9d9d9d;
+  letter-spacing: -1px;
 }
 
 #search > div .package button {
   width: 10%;
-  height: 90px;
+  height: 100px;
   background-color: #4d8fd0;
   color: #fff;
   font-size: 16px;

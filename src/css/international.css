@@ -190,6 +190,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+#package .package .pack_item .item.on {
+  opacity: 1;
 }
 
 #package .package .pack_item .item .sub_item {
@@ -315,6 +322,13 @@
   width: 1196px;
   height: 356px;
   border-radius: 19.5px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#free_travel .free_travel .container .free_item.on {
+  opacity: 1;
 }
 
 #free_travel .free_travel .container .free_item .f_item {
@@ -414,6 +428,14 @@
   color: #4d8fd0;
 }
 
+#free_travel .free_travel .container #slide_con {
+  opacity: 0;
+}
+
+#free_travel .free_travel .container #slide_con.on {
+  opacity: 1;
+}
+
 #free_travel .free_travel .container #slide_con .swiper-button-prev {
   display: block;
   width: 40px;
@@ -500,6 +522,7 @@
 }
 
 #best_travel .best_travel {
+  height: 100%;
   text-align: center;
 }
 
@@ -509,7 +532,8 @@
 
 #best_travel .best_travel .best_item {
   width: 100%;
-  height: 356px;
+  height: 800px;
+  overflow: hidden;
 }
 
 #best_travel .best_travel .best_item .b_item {
@@ -522,8 +546,33 @@
           justify-content: space-between;
 }
 
+#best_travel .best_travel .best_item .b_item:nth-child(1) {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  opacity: 0;
+}
+
+#best_travel .best_travel .best_item .b_item:nth-child(1).on {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 #best_travel .best_travel .best_item .b_item:nth-child(2) {
   margin-top: 30px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.8s 0.3s;
+  transition: 0.8s 0.3s;
+  opacity: 0;
+}
+
+#best_travel .best_travel .best_item .b_item:nth-child(2).on {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item {
