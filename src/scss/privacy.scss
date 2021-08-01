@@ -82,9 +82,10 @@ section {
             font-size:15px; 
             color:#555; 
             border-bottom:1px solid #ddd; 
-            border-right:1px solid #ddd; 
+            border-right:1px solid #ddd;
             vertical-align:middle; 
             text-align:left;
+            
         }
         .tbl_vertical 
         {
@@ -129,6 +130,9 @@ section {
             li {
                 line-height:28px;
             }
+        }
+        .tbl_vertical .no_border {
+            border-right: none;
         }
     }
 }
