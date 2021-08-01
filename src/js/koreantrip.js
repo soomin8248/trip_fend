@@ -114,4 +114,39 @@ document.addEventListener("DOMContentLoaded", function () {
     //         invert: true,
     //     },
     // });
+
+    addEventListener('scroll', function() {
+        let scrolltop = document.documentElement.scrollTop;
+
+        const kor_jeju = document.querySelector('#kor_jeju');
+        if(scrolltop >= kor_jeju.offsetTop - 500) {
+            const jeju_control = document.querySelector('.jeju_control');
+            const jeju_contents = document.querySelector('.jeju_contents');
+
+            jeju_control.style.margin = '0 auto 54px auto';
+            jeju_contents.style.opacity = 1;
+        }
+
+        const kor_md = document.querySelector('#kor_md');
+        if(scrolltop >= kor_md.offsetTop - 300) {
+            const blue_title = document.querySelector('#kor_md .main_title span');
+            blue_title.style.opacity = 1;
+        }
+
+        const best_travel = document.querySelector('#best_travel');
+        if(scrolltop >= best_travel.offsetTop - 700) {
+            const blue_title = document.querySelector('#best_travel .main_title span');
+            blue_title.style.opacity = 1;
+        }
+        if(scrolltop >= best_travel.offsetTop - 500) {
+            const b_item1 = document.querySelector('.b_item1');
+            b_item1.style.opacity = 1;
+            b_item1.style.marginTop = 0;
+        }
+        if(scrolltop >= best_travel.offsetTop - 100) {
+            const b_item2 = document.querySelector('.b_item2');
+            b_item2.style.opacity = 1;
+            b_item2.style.marginTop = '30px';
+        }
+    })
 })

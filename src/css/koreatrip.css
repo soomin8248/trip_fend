@@ -10,6 +10,7 @@
 
 .main_title h3 span {
   color: #4d8fd0;
+  opacity: 0;
 }
 
 #kor_visual {
@@ -124,7 +125,9 @@
   text-align: center;
   width: 850px;
   height: 45px;
-  margin: 0 auto 54px auto;
+  margin: 0 auto 100px auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #kor_jeju .kor_jeju .jeju_control ul {
@@ -165,6 +168,9 @@
   width: 100%;
   position: relative;
   height: 356px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #kor_jeju .kor_jeju .jeju_contents .item {
@@ -512,10 +518,17 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#best_travel .best_travel .best_item .b_item:nth-child(2) {
-  margin-top: 30px;
+#best_travel .best_travel .best_item .b_item.b_item1 {
+  margin-top: 100px;
+}
+
+#best_travel .best_travel .best_item .b_item.b_item2 {
+  margin-top: 60px;
 }
 
 #best_travel .best_travel .best_item .b_item .sub_item {
