@@ -40,7 +40,14 @@ topBtn.addEventListener('click', function () {
 // topbtn 스크롤하면 나타나기
 addEventListener('scroll', function () {
     let sct = document.documentElement.scrollTop;
+    let itemDiv = document.querySelector('#special_items');
+    let itemDivTop = itemDiv.offsetTop;
     if (sct > 100) {
+        topBtn.classList.add('view');
+    } else {
+        topBtn.classList.remove('view');
+    }
+    if (sct > itemDivTop + 350) {
         topBtn.classList.add('on');
     } else {
         topBtn.classList.remove('on');
