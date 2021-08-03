@@ -80,6 +80,7 @@
 
 #specialtrip #special_contents {
   padding: 80px 0;
+  position: relative;
 }
 
 #specialtrip #special_contents #tab_btn {
@@ -284,7 +285,7 @@
   color: #fff;
 }
 
-#specialtrip #topbtn {
+#specialtrip #special_contents #topbtn {
   width: 50px;
   height: 50px;
   background: #fff;
@@ -301,26 +302,26 @@
           justify-content: center;
   cursor: pointer;
   position: fixed;
-  bottom: 30px;
+  bottom: 100px;
   right: 250px;
   opacity: 1;
 }
 
-#specialtrip #topbtn.view {
+#specialtrip #special_contents #topbtn.view {
   opacity: 1;
 }
 
-#specialtrip #topbtn.on {
+#specialtrip #special_contents #topbtn.on {
   position: absolute;
   right: -100px;
 }
 
-#specialtrip #topbtn img {
+#specialtrip #special_contents #topbtn img {
   width: 50%;
   margin: 0 auto;
 }
 
-#specialtrip #topbtn p {
+#specialtrip #special_contents #topbtn p {
   text-align: center;
   color: #4d8fd0;
   font-weight: 500;
