@@ -145,3 +145,7 @@ section {
 #detail_page .wrap_agree .list_number li {
   line-height: 28px;
 }
+
+#detail_page .wrap_agree .tbl_vertical .no_border {
+  border-right: none;
+}

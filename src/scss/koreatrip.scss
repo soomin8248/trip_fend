@@ -9,6 +9,7 @@
     margin-bottom: 48px;
     span {
       color: $main-color;
+      opacity: 0;
     }
   }
 }
@@ -96,7 +97,8 @@
       text-align: center;
       width: 850px;
       height: 45px;
-      margin: 0 auto 54px auto;
+      margin: 0 auto 100px auto;
+      transition: 0.5s;
       ul {
         height: 45px;
         display: flex;
@@ -127,6 +129,8 @@
       width: 100%;
       position: relative;
       height: 356px;
+      opacity: 0;
+      transition: 0.5s;
       .item {
         width: 100%;
         position: absolute;
@@ -421,8 +425,13 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        &:nth-child(2) {
-          margin-top: 30px;
+        opacity: 0;
+        transition: 0.5s;
+        &.b_item1 {
+          margin-top: 100px;
+        }
+        &.b_item2 {
+          margin-top: 60px;
         }
         .sub_item {
           width: 282px;
