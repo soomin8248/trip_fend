@@ -37,19 +37,59 @@ const topBtn = document.querySelector('#topbtn');
 topBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
+
+
+
+
+window.onload = function(){
+    
 // topbtn 스크롤하면 나타나기
 addEventListener('scroll', function () {
-    let sct = document.documentElement.scrollTop;
+    let scrollTop = Math.floor(document.querySelector('html').scrollTop);
+    let specialContents = document.querySelector('#special_contents');
     let itemDiv = document.querySelector('#special_items');
-    let itemDivTop = itemDiv.offsetTop;
-    if (sct > 100) {
+
+    let topindex = '';
+    let bottomindex = '';
+
+    topindex = Math.floor( window.pageYOffset + specialContents.getBoundingClientRect().top);
+    bottomindex = Math.floor(window.pageYOffset + specialContents.getBoundingClientRect().bottom) - 800;
+
+    // console.log("topindex ====>?" + topindex);
+    // console.log("bottomindex ====>?" + bottomindex);
+    
+    // console.log("scrollTop ====> ?" + scrollTop);
+    // console.log("bottomindex ====> ?" + bottomindex);
+    if(scrollTop > topindex - 500 && scrollTop < bottomindex){
+        // console.log("play");
         topBtn.classList.add('view');
-    } else {
-        topBtn.classList.remove('view');
-    }
-    if (sct > itemDivTop + 350) {
-        topBtn.classList.add('on');
-    } else {
+        topBtn.style.display = "flex";
         topBtn.classList.remove('on');
+    } else if(scrollTop > topindex - 500 && scrollTop > bottomindex){ 
+        // console.log("play stop");
+        topBtn.classList.add('on');
+        // topBtn.style.top = (bottomindex - scrollTop) + 2000 + 'px';
+    } else { 
+        // console.log("stop");
+        topBtn.classList.remove('view');
+        topBtn.style.display = "none";
     }
+
+
+
+
+    // let sct = document.documentElement.scrollTop;
+    // let itemDiv = document.querySelector('#special_items');
+    // let itemDivTop = itemDiv.offsetTop;
+    // if (sct > 100) {
+    //     topBtn.classList.add('view');
+    // } else {
+    //     topBtn.classList.remove('view');
+    // }
+    // if (sct > itemDivTop + 350) {
+    //     topBtn.classList.add('on');
+    // } else {
+    //     topBtn.classList.remove('on');
+    // }
 })
+}

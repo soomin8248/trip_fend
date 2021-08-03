@@ -256,13 +256,13 @@ $font-weight-700: 700;
     position: fixed;
     bottom: 30px;
     right: 250px;
-    opacity: 0;
+    opacity: 1;
     &.view {
       opacity: 1;
     }
     &.on {
       position: absolute;
-      bottom: 200px;
+      // bottom: 200px;
       right: -100px;
     }
     img {
