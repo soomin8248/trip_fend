@@ -27,69 +27,63 @@ tabBtns.forEach(function(item, index){
 // 전체탭에서 더보기 버튼 클릭 했을 때 높이 늘어나기
 const moreBtn = document.querySelector('.morebtn');
 const allItem = document.querySelector('#all');
+let floating = document.querySelector('.floating');
 moreBtn.addEventListener('click', function(){
     allItem.classList.add('view');
+    floating.style.bottom = "40px";
 })
-
 // topbtn 클릭하면 상단으로 이동하기
 const topBtn = document.querySelector('#topbtn');
-
 topBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 
-
-
-
-window.onload = function(){
+document.addEventListener('scroll', function () {
+    // console.log('aaa');
+    let scrollTop = Math.floor(document.documentElement.scrollTop) + 40;
     
-// topbtn 스크롤하면 나타나기
-addEventListener('scroll', function () {
-    let scrollTop = Math.floor(document.querySelector('html').scrollTop);
     let specialContents = document.querySelector('#special_contents');
-    let itemDiv = document.querySelector('#special_items');
 
     let topindex = '';
     let bottomindex = '';
 
     topindex = Math.floor( window.pageYOffset + specialContents.getBoundingClientRect().top);
     bottomindex = Math.floor(window.pageYOffset + specialContents.getBoundingClientRect().bottom) - 800;
-
-    // console.log("topindex ====>?" + topindex);
-    // console.log("bottomindex ====>?" + bottomindex);
+    floating.style.display = 'block';
     
-    // console.log("scrollTop ====> ?" + scrollTop);
-    // console.log("bottomindex ====> ?" + bottomindex);
     if(scrollTop > topindex - 500 && scrollTop < bottomindex){
-        // console.log("play");
-        topBtn.classList.add('view');
-        topBtn.style.display = "flex";
-        topBtn.classList.remove('on');
-    } else if(scrollTop > topindex - 500 && scrollTop > bottomindex){ 
-        // console.log("play stop");
-        topBtn.classList.add('on');
-        // topBtn.style.top = (bottomindex - scrollTop) + 2000 + 'px';
-    } else { 
-        // console.log("stop");
-        topBtn.classList.remove('view');
-        topBtn.style.display = "none";
+        floating.style.bottom = "40px";
+        floating.style.display = 'block';
+    } else if(scrollTop > topindex - 500 && scrollTop > bottomindex) {
+        floating.style.bottom = "300px";
+        // console.log('aaaa');
+    } else {
+        floating.style.display = 'none';
+    }
+});
+
+window.onload = function() {
+    let scrollTop = Math.floor(document.documentElement.scrollTop) + 40;
+    let floating = document.querySelector('.floating');
+    let specialContents = document.querySelector('#special_contents');
+
+    let topindex = '';
+    let bottomindex = '';
+
+    topindex = Math.floor( window.pageYOffset + specialContents.getBoundingClientRect().top);
+    bottomindex = Math.floor(window.pageYOffset + specialContents.getBoundingClientRect().bottom) - 800;
+    
+    floating.style.display = 'none';
+    
+    console.log("scrollTop ==>" + scrollTop);
+    // console.log(bottomindex);
+    // floating.style.bottom = scrollTop + 'px';
+    if(scrollTop > topindex - 500 && scrollTop < bottomindex){
+        floating.style.display = 'block';
+        floating.style.bottom = "40px";
+    } else if(scrollTop > topindex - 500 && scrollTop > bottomindex) {
+        floating.style.display = 'block';
+        floating.style.bottom = "300px";
     }
 
-
-
-
-    // let sct = document.documentElement.scrollTop;
-    // let itemDiv = document.querySelector('#special_items');
-    // let itemDivTop = itemDiv.offsetTop;
-    // if (sct > 100) {
-    //     topBtn.classList.add('view');
-    // } else {
-    //     topBtn.classList.remove('view');
-    // }
-    // if (sct > itemDivTop + 350) {
-    //     topBtn.classList.add('on');
-    // } else {
-    //     topBtn.classList.remove('on');
-    // }
-})
 }
