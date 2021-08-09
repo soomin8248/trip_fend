@@ -55,7 +55,7 @@ document.addEventListener('scroll', function () {
         floating.style.bottom = "40px";
         floating.style.display = 'block';
     } else if(scrollTop > topindex - 500 && scrollTop > bottomindex) {
-        floating.style.bottom = "300px";
+        floating.style.bottom = "380px";
         // console.log('aaaa');
     } else {
         floating.style.display = 'none';
@@ -83,7 +83,7 @@ window.onload = function() {
         floating.style.bottom = "40px";
     } else if(scrollTop > topindex - 500 && scrollTop > bottomindex) {
         floating.style.display = 'block';
-        floating.style.bottom = "300px";
+        floating.style.bottom = "380px";
     }
 
 }
