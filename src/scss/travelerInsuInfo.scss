@@ -24,24 +24,24 @@ section {
             display:table-cell;
             height:60px; 
             line-height:60px; 
-            border:1px solid #ddd; 
+            border:1px solid $more-light-gray; 
             border-left:none; 
-            border-bottom:1px solid #222; 
+            border-bottom:1px solid $black-color; 
             box-sizing:border-box; 
-            background:#f7f7f7;
+            background:$sub-main-color;
             text-align:center; 
             font-size:18px; 
             color:#777; 
             cursor:pointer;
             &:first-child {
-                border-left:1px solid #ddd
+                border-left:1px solid $more-light-gray
             }
             &.on {
-                border:1px solid #222; 
-                border-bottom:1px solid #fff; 
-                background:#fff;
+                border:1px solid $black-color; 
+                border-bottom:1px solid $white-color; 
+                background:$white-color;
                 text-indent:-1px; 
-                color:#222;
+                color:$black-color;
             }
             a {
                 display:block;

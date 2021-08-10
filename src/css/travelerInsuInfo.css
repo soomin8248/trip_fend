@@ -26,7 +26,7 @@ section {
   line-height: 60px;
   border: 1px solid #ddd;
   border-left: none;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #333;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #f7f7f7;
@@ -41,11 +41,11 @@ section {
 }
 
 #detail_page .tab_page_cont li.on {
-  border: 1px solid #222;
+  border: 1px solid #333;
   border-bottom: 1px solid #fff;
   background: #fff;
   text-indent: -1px;
-  color: #222;
+  color: #333;
 }
 
 #detail_page .tab_page_cont li a {
