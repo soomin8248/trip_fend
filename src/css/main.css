@@ -320,7 +320,7 @@
   height: 565px;
   padding: 50px 40px;
   border-radius: 15px;
-  background: center center/cover url(src/img/main/local_trip_menubg.jpg);
+  background: center center/cover url('src/img/main/local_trip_menubg.jpg');
   color: #fff;
 }
 
