@@ -32,7 +32,7 @@
 }
 
 #detail_page .content_block .content .ico_tbl_must {
-  background: url("/src/img/icon/ico_must.png") no-repeat;
+  background: url("src/img/icon/ico_must.png") no-repeat;
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -155,7 +155,7 @@
   line-height: 24px;
   padding-left: 13px;
   font-size: 15px;
-  background: url("/src/img/icon/bl_info_dot.png") no-repeat 0 11px;
+  background: url("src/img/icon/bl_info_dot.png") no-repeat 0 11px;
 }
 
 #detail_page .content_block .content .tbl_info_list .emp_blue {

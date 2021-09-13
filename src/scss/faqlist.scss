@@ -53,7 +53,7 @@
                             line-height: 36px;
                             padding-right: 20px;
                             border: 1px solid #ddd;
-                            background: #fff url('/src/img/icon/bl_sel_arrow.png') no-repeat 100% 50%;
+                            background: #fff url('src/img/icon/bl_sel_arrow.png') no-repeat 100% 50%;
                             text-indent: 10px;
                             overflow: hidden;
                         }
@@ -141,7 +141,7 @@
                         line-height: 60px;
                         padding: 0 15px;
                         box-sizing: border-box;
-                        background: url('/src/img/icon/bl_comment_bar.png') no-repeat 0 50%;
+                        background: url('src/img/icon/bl_comment_bar.png') no-repeat 0 50%;
                         color: #777;
                         text-align: center;
                         &.on {
@@ -198,7 +198,7 @@
                             left: 20px;
                             width: 13px;
                             height: 13px;
-                            background: url('/src/img/icon/ico_faq.jpeg') no-repeat;
+                            background: url('src/img/icon/ico_faq.jpeg') no-repeat;
                             content: '';
                         }
                         .btn_more {
@@ -214,7 +214,7 @@
                                 width: 11px;
                                 height: 7px;
                                 margin: 27px auto;
-                                background: url('/src/img/icon/ico_arr.png') no-repeat 0 -7px;
+                                background: url('src/img/icon/ico_arr.png') no-repeat 0 -7px;
                                 content: '';
                             }
                         }
@@ -233,7 +233,7 @@
                                 display: block;
                                 width: 13px;
                                 height: 13px;
-                                background: url('/src/img/icon/ico_faq.png') no-repeat;
+                                background: url('src/img/icon/ico_faq.png') no-repeat;
                                 content: '';
                                 top: 5px;
                                 left: -56px;
@@ -271,7 +271,7 @@
                     margin-right: 5px;
                     width: 30px;
                     height: 30px;
-                    background: url('/src/img/icon/btn_page_first.png') no-repeat 0 0;
+                    background: url('src/img/icon/btn_page_first.png') no-repeat 0 0;
                     &:hover {
                         border: none;
                         background-position: 0 -30px;
@@ -281,7 +281,7 @@
                     margin-right: 13px;
                     width: 30px;
                     height: 30px;
-                    background: url('/src/img/icon/btn_page_prev.png') no-repeat 0 0;
+                    background: url('src/img/icon/btn_page_prev.png') no-repeat 0 0;
                     &:hover {
                         border: none;
                         background-position: 0 -30px;
@@ -291,7 +291,7 @@
                     margin-left: 13px;
                     width: 30px;
                     height: 30px;
-                    background: url('/src/img/icon/btn_page_next.png') no-repeat 0 0;
+                    background: url('src/img/icon/btn_page_next.png') no-repeat 0 0;
                     &:hover {
                         border: none;
                         background-position: 0 -30px;
@@ -301,7 +301,7 @@
                     margin-left: 13px;
                     width: 30px;
                     height: 30px;
-                    background: url('/src/img/icon/btn_page_next.png') no-repeat 0 0;
+                    background: url('src/img/icon/btn_page_next.png') no-repeat 0 0;
                     &:hover {
                         border: none;
                         background-position: 0 -30px;
@@ -311,7 +311,7 @@
                     margin-left: 5px;
                     width: 30px;
                     height: 30px;
-                    background: url('/src/img/icon/btn_page_last.png') no-repeat 0 0;
+                    background: url('src/img/icon/btn_page_last.png') no-repeat 0 0;
                     &:hover {
                         border: none;
                         background-position: 0 -30px;
@@ -366,7 +366,7 @@
                 .tit_tbl_info {
                     line-height: 20px;
                     padding-left: 30px;
-                    background: url('/src/img/icon/ico_info.png') no-repeat 0 -20px;
+                    background: url('src/img/icon/ico_info.png') no-repeat 0 -20px;
                     color: #222;
                 }
                 .tbl_info_list {
@@ -374,7 +374,7 @@
                     li {
                         line-height: 24px;
                         padding-left: 13px;
-                        background: url('/src/img/icon/bl_info_dot.png') no-repeat 0 11px;
+                        background: url('src/img/icon/bl_info_dot.png') no-repeat 0 11px;
                         font-size: 14px;
                         .btn_go_page {
                             display: inline-block;

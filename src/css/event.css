@@ -357,7 +357,7 @@
   margin-right: 5px;
   width: 30px;
   height: 30px;
-  background: url("/src/img/icon/btn_page_first.png") no-repeat 0 0;
+  background: url("src/img/icon/btn_page_first.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .page .btn_page_first:hover {
@@ -369,7 +369,7 @@
   margin-right: 13px;
   width: 30px;
   height: 30px;
-  background: url("/src/img/icon/btn_page_prev.png") no-repeat 0 0;
+  background: url("src/img/icon/btn_page_prev.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .page .btn_page_prev:hover {
@@ -406,7 +406,7 @@
   margin-left: 13px;
   width: 30px;
   height: 30px;
-  background: url("/src/img/icon/btn_page_next.png") no-repeat 0 0;
+  background: url("src/img/icon/btn_page_next.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .page .btn_page_next:hover {
@@ -418,7 +418,7 @@
   margin-left: 5px;
   width: 30px;
   height: 30px;
-  background: url("/src/img/icon/btn_page_last.png") no-repeat 0 0;
+  background: url("src/img/icon/btn_page_last.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .page .btn_page_last:hover {

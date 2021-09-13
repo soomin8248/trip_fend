@@ -91,7 +91,7 @@ section {
   line-height: 24px;
   padding-left: 13px;
   margin-top: 5px;
-  background: url("/src/img/icon/bl_info_dot.png") no-repeat 0 10px;
+  background: url("src/img/icon/bl_info_dot.png") no-repeat 0 10px;
 }
 
 #detail_page .cont_insurance .con_info_list li:first-child {
@@ -102,7 +102,7 @@ section {
   line-height: 24px;
   padding-left: 13px;
   font-size: 15px;
-  background: url("/src/img/icon/bl_info_dot.png") no-repeat 0 11px;
+  background: url("src/img/icon/bl_info_dot.png") no-repeat 0 11px;
 }
 
 #detail_page .cont_insurance .tbl_title_box {

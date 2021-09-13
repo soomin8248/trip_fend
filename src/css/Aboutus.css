@@ -62,7 +62,7 @@ main #company_outline table tr td {
 
 main #management {
   height: 550px;
-  background: url("/src/img/Aboutus/manage_figure.png") center center no-repeat;
+  background: url("src/img/Aboutus/manage_figure.png") center center no-repeat;
   position: relative;
 }
 
