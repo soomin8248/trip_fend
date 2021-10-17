@@ -1,0 +1,501 @@
+//공통 부분 scss
+@import "variable";
+
+.product_box {
+  position: relative;
+  .show_travel {
+    width: 100%;
+    height: 352px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 19.5px;
+    .lists_travel {
+      width: 1196px;
+      height: 348px;
+      transition: 0.5s;
+      display: flex;
+      align-items: center;
+      .item_travel {
+        margin-right: 20px;
+        height: 100%;
+        border-radius: 19.5px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+        .img_travel {
+          width: 100%;
+          height: 50%;
+          position: relative;
+          overflow: hidden;
+          img {
+            border-radius: 19.5px 19.5px 0 0;
+            width: 100%;
+            height: 100%;
+          }
+          .blackbg {
+            width: 100%;
+            height: 100%;
+            background-color: $black-bg;
+            @include position($t: 0, $l: 0);
+            border-radius: 19.5px 19.5px 0 0;
+            opacity: 0;
+            transition: 0.5s;
+            .view_icon {
+              @include position($t: 50%, $l: 50%);
+              transform: translate(-50%, -50%);
+              p {
+                color: $white-color;
+              }
+              &:hover {
+                background: none;
+                border: 2px solid $white-color;
+              }
+            }
+          }
+          &:hover .blackbg {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .text_travel {
+      width: 100%;
+      height: 50%;
+      padding: 25px;
+      background-color: $white-color;
+      position: relative;
+      border-radius: 0 0 19.5px 19.5px;
+      border: 1px solid $light-gray;
+      p:nth-child(1) {
+        font-size: $font-size-16;
+        font-weight: $font-weight-500;
+        margin-bottom: 10px;
+      }
+      span {
+        margin-right: 5px;
+        font-size: $font-size-16;
+        color: $main-color;
+      }
+      span.free {
+        color: $orange-color;
+      }
+      span.cost {
+        @include position($b: 25px, $r: 25px);
+      }
+    }
+  }
+  #slide_con {
+    a {
+      p {
+        i {
+          color: $light-gray;
+        }
+      }
+    }
+  }
+}
+
+//비주얼
+#visual {
+  .show_visual {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    .lists_visual {
+      width: auto;
+      height: 100%;
+      .jejudo {
+        color: $white-color;
+        display: block;
+      }
+      .philippines {
+        color: $black-color;
+        display: block;
+        a {
+          border: 2px solid $black-color;
+          color: $black-color;
+          p {
+            transition: 0.2s;
+          }
+          &:hover {
+            border: 2px solid $main-color;
+          }
+          &:hover p {
+            color: $white-color;
+          }
+        }
+      }
+      .item_visual {
+        width: 50%;
+        img {
+          width: 100%;
+          min-height: 550px;
+        }
+        div {
+          @include position($t: 50%, $l: 18.5%);
+          transform: translateY(-50%);
+          h3 {
+            font-size: 44px;
+            font-weight: 700;
+            // text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+          }
+          > p {
+            font-size: 20px;
+            margin: 20px 0;
+            // text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+//검색
+#search {
+  height: 170px;
+  margin-top: -260px;
+  position: relative;
+  z-index: 99;
+  > div {
+    width: 100%;
+    height: 100%;
+    background-color: $white-color;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 3px 0px 16px rgba(0, 0, 0, 0.3);
+    ul {
+      height: 70px;
+      line-height: 70px;
+      display: flex;
+      border-bottom: 1px solid $light-gray;
+      font-size: 16px;
+      li {
+        padding-left: 60px;
+        cursor: pointer;
+        &.selected {
+          color: $main-color;
+        }
+      }
+    }
+    .package {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      > div {
+        width: 45%;
+        height: 100px;
+        padding: 0px 60px;
+        &:not(:last-child) {
+          border-right: 1px solid $light-gray;
+        }
+        img {
+          width: 22px;
+          height: 22px;
+        }
+        p {
+          padding-top: 15px;
+          color: $main-color;
+        }
+        .inputbox {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #ccc;
+          padding: 10px 0;
+          input {
+            font-size: 15px;
+            &::placeholder {
+              font-size: 15px;
+              color: #9d9d9d;
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+      button {
+        width: 10%;
+        height: 100px;
+        background-color: $main-color;
+        color: $white-color;
+        font-size: 16px;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+// 해외여행
+#oversea {
+  .title_box {
+    @include flex;
+    margin-bottom: 45px;
+  }
+}
+
+// 국내여행
+#local_trip {
+  .container {
+    position: relative;
+    .title_box {
+      width: 435px;
+      height: 565px;
+      padding: 50px 40px;
+      border-radius: 15px;
+      background: center center/cover url('src/img/main/local_trip_menubg.jpg');
+      color: $white-color;
+      .title {
+        margin-bottom: 50px;
+      }
+      li {
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid $white-color;
+        border-radius: 19.5px;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        font-size: 16px;
+        position: relative;
+        transition: 0.5s;
+        cursor: pointer;
+        i {
+          line-height: 40px;
+          @include position($t: 50%, $r: 30px);
+          transform: translateY(-50%);
+        }
+        &:hover {
+          background-color: $main-color;
+          border: 1px solid $main-color;
+        }
+        &.on {
+          background-color: $main-color;
+          border: 1px solid $main-color;
+        }
+      }
+    }
+    .product_box {
+      width: 900px;
+      @include position($t: 50%, $r: -10px);
+      transform: translateY(-50%);
+      .show_travel {
+        .lists_travel {
+          width: 100%;
+          .item_travel {
+            width: 284px !important;
+            height: 348px;
+            margin-right: 20px !important;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+      .slide_bar {
+        width: 895px;
+        height: 3px;
+        background-color: $light-gray;
+        margin-top: 35px;
+        border-radius: 1px;
+        .swiper-scrollbar-drag {
+          background-color: $main-color !important;
+        }
+      }
+    }
+    .train_swiper {
+      display: flex;
+    }
+    .inland_swiper {
+      display: none;
+    }
+    .jeju_swiper {
+      display: none;
+    }
+  }
+}
+
+// 호텔/펜션
+#hotel {
+  .title_box {
+    @include flex;
+    margin-bottom: 45px;
+  }
+  .img_travel {
+    height: 230px;
+    overflow: hidden;
+    .gangwon {
+      width: 100%;
+      height: 100%;
+      background: url(../img/lodgment/hotel_img1.jpg) center top/cover no-repeat;
+      border-radius: 15px 15px 0 0;
+    }
+    .jeju {
+      width: 100%;
+      height: 100%;
+      background: url(../img/lodgment/hotel_img2.jpg) left top/cover no-repeat;
+      border-radius: 15px 15px 0 0;
+    }
+    .seoul {
+      width: 100%;
+      height: 100%;
+      background: url(../img/lodgment/hotel_img3.jpg) no-repeat;
+      background-size: cover;
+      background-position: left -150px top 0;
+      border-radius: 15px 15px 0 0;
+    }
+    .busan {
+      width: 100%;
+      height: 100%;
+      background: url(../img/lodgment/hotel_img4.jpg) no-repeat;
+      background-size: cover;
+      background-position: left -320px top 0;
+      border-radius: 15px 15px 0 0;
+    }
+    .incheon {
+      width: 100%;
+      height: 100%;
+      background: url(../img/lodgment/hotel_img5.jpg) left top/cover no-repeat;
+      border-radius: 15px 15px 0 0;
+    }
+  }
+  .text_travel {
+    height: 118px;
+  }
+}
+
+//배너
+#banner {
+  .show_banner {
+    width: 100%;
+    height: 330px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    .lists_banner {
+      width: 300%;
+      height: 100%;
+      position: relative;
+      .item_banner {
+        width: 33.3333%;
+        img {
+          width: 100%;
+        }
+        p {
+          @include position($t: 90px, $l: 100px);
+          font-size: $font-size-36;
+        }
+        span {
+          @include position($t: 145px, $l: 100px);
+          font-size: $font-size-18;
+        }
+        .btn_banner {
+          @include position($t: 190px, $l: 100px);
+          font-size: $font-size-16;
+          width: 150px;
+          line-height: 40px;
+          border-radius: 19.5px;
+          text-align: center;
+          color: $white-color;
+        }
+      }
+      .waterpark {
+        color: $white-color;
+        .btn_banner {
+          background-color: $violet-color;
+        }
+      }
+      .hotel {
+        img {
+          @include position($t: -200px);
+        }
+        .btn_banner {
+          background-color: $main-color;
+        }
+      }
+      .restautant {
+        img {
+          @include position($t: -100px);
+        }
+        .btn_banner {
+          background-color: $green-color;
+        }
+      }
+    }
+  }
+  .slidebtn {
+    display: flex;
+    @include position($b: 23px, $l: 50%);
+    transform: translateX(-50%);
+  }
+}
+
+//공지사항
+#notice {
+  background-color: $notice-color;
+  margin: 0;
+  .container {
+    display: flex;
+    padding: 60px 0;
+    .notice_left {
+      width: 50%;
+      > div {
+        &:nth-child(1) {
+          display: flex;
+          div {
+            display: flex;
+            width: 50%;
+            img {
+              width: 55px;
+              height: 54px;
+              margin-right: 20px;
+            }
+            p {
+              font-size: 24px;
+              line-height: 1;
+              span {
+                font-size: 32px;
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          p {
+            font-size: 16px;
+            margin-top: 35px;
+            margin-bottom: 10px;
+          }
+          span {
+            display: block;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .notice_right {
+      width: 50%;
+      padding-left: 40px;
+      p {
+        font-size: $font-size-30;
+        line-height: 1;
+        margin-bottom: 15px;
+        span {
+          float: right;
+        }
+      }
+      li {
+        line-height: 30px;
+        margin-left: 15px;
+        position: relative;
+        span {
+          float: right;
+        }
+        &:before {
+          content: "";
+          display: block;
+          @include position($t: 50%, $l: -10px);
+          transform: translate(-50%, -50%);
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}
