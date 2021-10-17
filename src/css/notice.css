@@ -67,7 +67,7 @@
   line-height: 36px;
   padding-right: 20px;
   border: 1px solid #ddd;
-  background: #fff url("src/img/icon/bl_sel_arrow.png") no-repeat 100% 50%;
+  background: #fff url("/wheretrip/src/img/icon/bl_sel_arrow.png") no-repeat 100% 50%;
   text-indent: 10px;
   overflow: hidden;
 }
@@ -248,7 +248,7 @@
   margin-right: 5px;
   width: 30px;
   height: 30px;
-  background: url("src/img/icon/btn_page_first.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/btn_page_first.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .content .paging .btn_page_first:hover {
@@ -260,7 +260,7 @@
   margin-right: 13px;
   width: 30px;
   height: 30px;
-  background: url("src/img/icon/btn_page_prev.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/btn_page_prev.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .content .paging .btn_page_prev:hover {
@@ -272,7 +272,7 @@
   margin-left: 13px;
   width: 30px;
   height: 30px;
-  background: url("src/img/icon/btn_page_next.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/btn_page_next.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .content .paging .btn_page_next:hover {
@@ -284,7 +284,7 @@
   margin-left: 13px;
   width: 30px;
   height: 30px;
-  background: url("src/img/icon/btn_page_next.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/btn_page_next.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .content .paging .btn_page_next:hover {
@@ -296,7 +296,7 @@
   margin-left: 5px;
   width: 30px;
   height: 30px;
-  background: url("src/img/icon/btn_page_last.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/btn_page_last.png") no-repeat 0 0;
 }
 
 #detail_page .content_block .content .paging .btn_page_last:hover {
