@@ -66,7 +66,7 @@
   font-size: 15px;
   color: #555;
   text-indent: 0;
-  background: #fff url("src/img/icon/serch_icon.png") no-repeat 50% 50%;
+  background: #fff url("/wheretrip/src/img/icon/serch_icon.png") no-repeat 50% 50%;
   width: 65px;
   height: 50px;
   border: 1px solid #ddd;
@@ -149,7 +149,7 @@
   position: absolute;
   right: 0;
   bottom: 20px;
-  background: url("src/img/icon/btn_page_more.png") no-repeat 50% 50%;
+  background: url("/wheretrip/src/img/icon/btn_page_more.png") no-repeat 50% 50%;
   display: block;
   width: 18px;
   height: 18px;
@@ -261,7 +261,7 @@
   width: 60px;
   height: 60px;
   margin-left: -30px;
-  background: url("src/img/icon/ico_ctr_tell.png") no-repeat;
+  background: url("/wheretrip/src/img/icon/ico_ctr_tell.png") no-repeat;
   content: '';
 }
 
@@ -318,7 +318,7 @@
 #detail_page .content_block .content .content_area .part_area .box_guide .tit_time_info {
   line-height: 20px;
   padding-left: 30px;
-  background: url("src/img/icon/ico_info.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/ico_info.png") no-repeat 0 0;
   color: #222;
 }
 
