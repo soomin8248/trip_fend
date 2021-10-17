@@ -25,18 +25,18 @@ tabBtns.forEach(function(item, index){
 })
 
 // 전체탭에서 더보기 버튼 클릭 했을 때 높이 늘어나기
-const moreBtn = document.querySelector('.morebtn');
-const allItem = document.querySelector('#all');
+let moreBtn = document.querySelector('.morebtn');
+let allItem = document.querySelector('#all');
 let floating = document.querySelector('.floating');
 moreBtn.addEventListener('click', function(){
     allItem.classList.add('view');
     floating.style.bottom = "40px";
-})
+});
 // topbtn 클릭하면 상단으로 이동하기
 const topBtn = document.querySelector('#topbtn');
 topBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-})
+});
 
 document.addEventListener('scroll', function () {
     // console.log('aaa');
