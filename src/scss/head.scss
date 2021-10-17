@@ -1,0 +1,207 @@
+//공통 부분 scss
+@import "variable";
+
+#header {
+    width: 100%; 
+    height: 150px;
+    border-bottom: 1px solid $more-light-gray;
+    letter-spacing: -1px;
+    #top { 
+        width: 100%; 
+        height: 50px; 
+        background-color: $main-color; 
+        color: $white-color;
+        .top_menu_wrap {
+            width: 100%; 
+            height: 50px; 
+            display: flex; 
+            justify-content: space-between;
+            .top_menu_left {
+                @include flex;
+                width: 200px;
+            }
+            .top_menu_right{
+                @include flex;
+                width: 220px;
+            }
+        }
+    }
+    #nav {
+        width: 100%; 
+        height: 100px;
+        .nav_menu { 
+            height: 100px; 
+            @include flex;
+            .logo_wrap {
+                width: 200px; 
+                height: 100%;
+                a { 
+                    display: flex; 
+                    align-items: center; 
+                    width: 200px; 
+                    height: 100px; 
+                    img { 
+                        width: 90%; 
+                    }
+                } 
+            }
+            ul {
+                font-size: $font-size-16; 
+                display: flex; 
+                justify-content: space-between; 
+                width: 450px;
+                li {
+                    transition: 0.5s;
+                    &:hover {
+                        color: $main-color;
+                    }
+                    p {
+                        height: 23px; 
+                        display: flex; 
+                        flex-direction: column; 
+                        justify-content: space-between; 
+                        cursor: pointer;
+                    }
+                    a { 
+                        height: 23px;
+                        display: flex;
+                        flex-direction: column; 
+                        justify-content: space-between;
+                        span {
+                             width: 25px; 
+                             height: 3px; 
+                             background-color: $black-color; 
+                        }
+                    }
+                }   
+            }
+        }
+    }
+    #sub_nav {
+        margin-top: 1px;
+        font-size: $font-size-16;
+        display: none;
+        .sub_nav_body {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            #side_list {
+                width: 15%;
+                background-color: $side-list-color;
+                border-bottom: 1px solid $more-light-gray;
+                border-left: 1px solid $more-light-gray;
+                cursor: pointer;
+                z-index: 3;
+                ul {
+                    text-align: center;
+                    margin-top: 22px;
+                    li {
+                        a {
+                            padding: 17px 0;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+                .leftsubtitle.on {
+                    background: $white-color;
+                }
+            }
+            .sub_wrap {
+                width: 85%;
+                z-index: 3;
+                border-bottom: 1px solid $more-light-gray;
+                border-right: 1px solid $more-light-gray;
+                #sub_menu {
+                    width: 100%;
+                    height: 390px;
+                    padding: 0 25px 32px 70px;
+                    background-color: $white-color;
+                    .sub_menu_title {
+                        height: 88px;
+                        @include flex;
+                        .smenu_t {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            h2 {
+                                color: $main-color;
+                                font-size: 20px;
+                                margin-right: 40px;
+                            }
+                            .goMain{
+                                display: flex;
+                                align-items: center;
+                                p {
+                                    font-size: $font-size-14;
+                                    color: $dark-gray;
+                                    cursor: pointer;
+                                    transition: 0.5s;
+                                    z-index: 3;
+                                }
+                                .rightIcon {
+                                    padding-left: 5px;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    i {
+                                        font-size: 15px;
+                                        color: $white-color;
+                                        width: 15px;
+                                        height: 15px;
+                                        border-radius: 50%;
+                                        background-color: $dark-gray;
+                                        line-height: 15px;
+                                        transition: 0.5s;
+                                    }
+                                }
+                                &:hover p {
+                                    color: $main-color;
+                                }
+                                &:hover i {
+                                    background-color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                    #sub_menu_list {
+                        display: flex;
+                        .menu_list {
+                            width: 252px;
+                            margin-right: 110px;
+                            ul {
+                                .menu_item {
+                                    font-size: $font-size-14;
+                                    margin-bottom: 14px;
+                                    &:hover {
+                                        color: $main-color;
+                                        transition: 0.5s;
+                                    }
+                                }
+                                .menu_title {
+                                    font-size: $font-size-16;
+                                    padding-bottom: 10px;
+                                    border-bottom: 2px solid $main-color;
+                                    margin-bottom: 25px;
+                                    a {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        .material-icons {
+                                            transition: 0.5s;
+                                        }
+                                    }
+                                    &:hover .material-icons {
+                                        color: $main-color;
+                                    }
+                                }
+                                
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
