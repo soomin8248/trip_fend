@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/wheretrip/src/img/favicon.ico" type="image/x-icon">
     <title>Where tour(어디까지 가봤니?) - 이벤트(이미지 상세페이지)</title>
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/base.css">
-    <link rel="stylesheet" href="src/css/eventDetailimg.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/reset.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/base.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/eventDetailimg.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-    <script type="text/javascript" src="src/js/jquery-1.4.1.js"></script>
-    <script type="text/javascript" src="src/js/w3.js"></script>
-    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
-    <script type="text/javascript" src="src/js/common.js"></script>
+    
+    <script type="text/javascript" src="/wheretrip/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+    
+    <script type="text/javascript" src="/wheretrip/src/js/common.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let listBack = document.querySelector('#listBack');
             listBack.addEventListener('click',function(e){
                 e.preventDefault();
-                location.href= "/event/index.html";
+                location.href= "/wheretrip/event/index.html";
             })
         });
     </script>
@@ -29,7 +32,7 @@
     <div class="wrap">
         <!-- 헤더 start-->
         <header id="header">
-           <div w3-include-html="component/head.html"></div>
+           <div w3-include-html="/wheretrip/component/head.html"></div>
         </header>
         <!-- 헤더 end -->
         <!-- 메인 start -->
@@ -38,8 +41,8 @@
                 <div class="content_block" id="content">
                     <div class="promotion_div">
                         <div class="promotion_view img_block">
-                            <img src="src/img/event/0122_ev_jejudfs01.jpg" alt="제주관광공사면세점 이용객특별혜택 SPECIAL COUPON. 제주여행 하시나요? 제주관광공사 면세점 특별 할인쿠폰을 드립니다!"/>
-                            <img src="src/img/event/0122_ev_jejudfs02.jpg" alt="이벤트 아래설명" usemap="#mapSite"/>
+                            <img src="/wheretrip/src/img/event/0122_ev_jejudfs01.jpg" alt="제주관광공사면세점 이용객특별혜택 SPECIAL COUPON. 제주여행 하시나요? 제주관광공사 면세점 특별 할인쿠폰을 드립니다!"/>
+                            <img src="/wheretrip/src/img/event/0122_ev_jejudfs02.jpg" alt="이벤트 아래설명" usemap="#mapSite"/>
                             <div class="blind_ir">
                                 <p>EVENT1. 온라인 면세점 할인쿠폰 증정</p>
                                 <p>COUPON 10,000원 (10만원 이상 구매시)(온라인여행사 전용 혜택)</p>
@@ -70,7 +73,7 @@
                             <map name="mapSite" id="mapSite">
                                 <area shape="rect" coords="365,715,828,794" href="https://www.jejudfs.com/" target="_blank" alt="제주관광공사 온라인면세점 바로가기">
                             </map>
-                            <img src="src/img/event/0122_ev_jejudfs03.jpg" alt="면세점 입점브랜드, 오시는 길 아래설명" />
+                            <img src="/wheretrip/src/img/event/0122_ev_jejudfs03.jpg" alt="면세점 입점브랜드, 오시는 길 아래설명" />
                             <div class="blind_ir">
                                 <dl>
                                     <dt>면세점 입점브랜드</dt>
@@ -91,7 +94,7 @@
                                     </dd>
                                 </dl>
                             </div>
-                            <img src="src/img/event/0328_ev_jejudfs07.jpg" alt="국내 제주 상품 예약 고객 대상 노랑풍선 회원, 비회원 모두 참여 가능한 이벤트입니다. 비회원인 경우 간단한 개인정보 수집에 동의해 주셔야 교환권을 받으실 수 있습니다. ※ 본 행사는 사은품 조기소진시 종료 될 수 있습니다." usemap="#Map">
+                            <img src="/wheretrip/src/img/event/0328_ev_jejudfs07.jpg" alt="국내 제주 상품 예약 고객 대상 노랑풍선 회원, 비회원 모두 참여 가능한 이벤트입니다. 비회원인 경우 간단한 개인정보 수집에 동의해 주셔야 교환권을 받으실 수 있습니다. ※ 본 행사는 사은품 조기소진시 종료 될 수 있습니다." usemap="#Map">
                             <map name="Map" id="Map">
                                 <area shape="rect" coords="315,132,595,192" onclick="CustMms();" alt="회원 교환권 받기">
                                 <area shape="rect" coords="607,132,888,193" onclick="NonCustMms();" alt="비회원 교환권 받기">
@@ -107,7 +110,7 @@
         <!-- 메인 end -->
         <!-- 푸터 start -->
         <footer id="footer">
-            <div w3-include-html="component/footer.html"></div>
+            <div w3-include-html="/wheretrip/component/footer.html"></div>
         </footer>
         <!-- 푸터 end -->
     </div>
