@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <title>Where tour(어디까지 가봤니?) - 이벤트(이미지 상세페이지)</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/eventDetailimg.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script type="text/javascript" src="src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="src/js/w3.js"></script>
+    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
+    <script type="text/javascript" src="src/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let listBack = document.querySelector('#listBack');
+            listBack.addEventListener('click',function(e){
+                e.preventDefault();
+                location.href= "/event/index.html";
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 start-->
+        <header id="header">
+           <div w3-include-html="component/head.html"></div>
+        </header>
+        <!-- 헤더 end -->
+        <!-- 메인 start -->
+        <main>
+            <section id="detail_page">
+                <div class="content_block" id="content">
+                    <div class="promotion_div">
+                        <div class="promotion_view img_block">
+                            <img src="src/img/event/0122_ev_jejudfs01.jpg" alt="제주관광공사면세점 이용객특별혜택 SPECIAL COUPON. 제주여행 하시나요? 제주관광공사 면세점 특별 할인쿠폰을 드립니다!"/>
+                            <img src="src/img/event/0122_ev_jejudfs02.jpg" alt="이벤트 아래설명" usemap="#mapSite"/>
+                            <div class="blind_ir">
+                                <p>EVENT1. 온라인 면세점 할인쿠폰 증정</p>
+                                <p>COUPON 10,000원 (10만원 이상 구매시)(온라인여행사 전용 혜택)</p>
+                                <p>쿠폰번호 G20209371</p>
+                                <ol>
+                                    <li>상품결제</li>
+                                    <li>홈페이지 회원가입/로그인 www.jejudfs.com</li>
+                                    <li>마이페이지</li>
+                                    <li>쿠폰</li>
+                                    <li>쿠폰 바로등록</li>
+                                    <li>쿠폰번호 등록</li>
+                                </ol>
+                                <p>EVENT2. 중문면세점 매장 방문시 사용가능 쿠폰 증정</p>
+                                <ul>
+                                    <li>COUPON 12,000원 (12만원 이상 구매시) (온라인여행사 전용혜택)</li>
+                                    <li>COUPON 24,000원 (24만원 이상 구매시) (온라인여행사 전용혜택)</li>
+                                </ul>
+                                <p>6만원 이상 구매시 메디힐 클렌징폼 증정!</p>
+                                <ol>
+                                    <li>상품결제</li>
+                                    <li>MMS발송 or 이미지다운</li>
+                                    <li>안내데스크 방문 시 MMS or 이미지 제시 후 쿠폰 교환</li>
+                                    <li>면세 쇼핑 시 쿠폰사용</li>
+                                    <li>MMS문자 or 이미지 + 6만원 이상 구매시 사은품</li>
+                                </ol>
+                                <p>본 행사는 사은품소진 시 종료될 수 있습니다.</p>
+                            </div>
+                            <map name="mapSite" id="mapSite">
+                                <area shape="rect" coords="365,715,828,794" href="https://www.jejudfs.com/" target="_blank" alt="제주관광공사 온라인면세점 바로가기">
+                            </map>
+                            <img src="src/img/event/0122_ev_jejudfs03.jpg" alt="면세점 입점브랜드, 오시는 길 아래설명" />
+                            <div class="blind_ir">
+                                <dl>
+                                    <dt>면세점 입점브랜드</dt>
+                                    <dd>
+                                        SK2, LANCOME, BIOTHERM, CLARINS, LOCCITANE, 오휘, 후, 빌리프, 숨, 다나한, BVLGARI, GUCCI, JHON VARVATOS, LANVIN, VERSACE, KENZO, CK, MBMJ, METROCITY, LOUIS QUATORZE, MANDARINA DUCK, OURONNE, FERRAGAMO, SAMSONITE, DAKS, HAZZYS, JILL STUART, PRIMA CLASSE, RAYBAN, OAKLEY, PRADA, TOP FORD, POLICE, ESCADA, ROSEMONT, EARMANI, SEIKO, ALBA, SWATCH, GOLDEN DEW, SWAROVSKI, PARKER, WATERMAN, MOLESKINE, PRISMA COLOR BRUDER, HABA, 정관장
+                                    </dd>
+                                    <dt>오시는 길</dt>
+                                    <dd>
+                                        <p>관광객 누구나 이용가능</p>
+                                        <ul>
+                                            <li>운영시간 저녁8시까지 [10:00~20:00]</li>
+                                            <li>중문관광단지 내 제주국제컨벤션센터 1층</li>
+                                            <li>네비주소:제주도 서귀포시 중문동 2700</li>
+                                            <li>문의 064 780 7700</li>
+                                        </ul>
+                                        <p>JEJU DUTY FREE 제주관광공사 중문면세점</p>
+                                        <p>면세점 수익금은 제주관광 발전을 위해 쓰입니다.</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <img src="src/img/event/0328_ev_jejudfs07.jpg" alt="국내 제주 상품 예약 고객 대상 노랑풍선 회원, 비회원 모두 참여 가능한 이벤트입니다. 비회원인 경우 간단한 개인정보 수집에 동의해 주셔야 교환권을 받으실 수 있습니다. ※ 본 행사는 사은품 조기소진시 종료 될 수 있습니다." usemap="#Map">
+                            <map name="Map" id="Map">
+                                <area shape="rect" coords="315,132,595,192" onclick="CustMms();" alt="회원 교환권 받기">
+                                <area shape="rect" coords="607,132,888,193" onclick="NonCustMms();" alt="비회원 교환권 받기">
+                            </map>
+                        </div>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="btn_cof cfrm" id="listBack">목록</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- 메인 end -->
+        <!-- 푸터 start -->
+        <footer id="footer">
+            <div w3-include-html="component/footer.html"></div>
+        </footer>
+        <!-- 푸터 end -->
+    </div>
+</body>
+</html>
