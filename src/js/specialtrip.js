@@ -29,8 +29,9 @@ let moreBtn = document.querySelector('.morebtn');
 let allItem = document.querySelector('#all');
 let floating = document.querySelector('.floating');
 moreBtn.addEventListener('click', function(){
-    allItem.classList.add('view');
-    floating.style.bottom = "40px";
+    alert("aaa");
+    // allItem.classList.add('view');
+    // floating.style.bottom = "40px";
 });
 // topbtn 클릭하면 상단으로 이동하기
 const topBtn = document.querySelector('#topbtn');
