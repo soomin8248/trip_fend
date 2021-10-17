@@ -1,0 +1,206 @@
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+}
+
+main h2 {
+  font-size: 32px;
+  font-weight: 500;
+  padding: 50px 0;
+}
+
+main h3 {
+  font-size: 22px;
+}
+
+main h4 {
+  font-size: 18px;
+  position: relative;
+  padding-left: 10px;
+}
+
+main h4::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #4d8fd0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+main #company_outline table {
+  width: 100%;
+  margin: 30px 0 50px;
+}
+
+main #company_outline table tr {
+  height: 60px;
+  border: 1px solid #eee;
+}
+
+main #company_outline table tr th {
+  width: 10%;
+  font-weight: normal;
+  text-align: left;
+  border-right: 1px solid #eee;
+  background: #f8f8f8;
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+main #company_outline table tr td {
+  width: 23%;
+  border-right: 1px solid #eee;
+  padding: 0 20px;
+}
+
+main #management {
+  height: 550px;
+  background: url("/wheretrip/src/img/Aboutus/manage_figure.png") center center no-repeat;
+  position: relative;
+}
+
+main #management .philosophy {
+  width: 320px;
+}
+
+main #management .philosophy.phil-text1 {
+  text-align: right;
+  position: absolute;
+  top: 17%;
+  left: 60px;
+}
+
+main #management .philosophy.phil-text2 {
+  text-align: left;
+  position: absolute;
+  top: 17%;
+  right: 60px;
+}
+
+main #management .philosophy.phil-text3 {
+  text-align: left;
+  position: absolute;
+  bottom: 17%;
+  right: 60px;
+}
+
+main #management .philosophy.phil-text4 {
+  text-align: right;
+  position: absolute;
+  bottom: 17%;
+  left: 60px;
+}
+
+main #management .philosophy h5 {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+main #management .philosophy p {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+main #business .business-container {
+  padding: 50px 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #business .business-container .business-content {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+main #business .business-container .business-content:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 300px;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main #business .business-container .business-content .busi-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #4d8fd0;
+  background: #f8f8f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #business .business-container .business-content h5 {
+  padding: 20px 0 5px;
+  font-size: 22px;
+}
+
+main #business .business-container .business-content p {
+  font-size: 18px;
+  color: #4d8fd0;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+main #business .business-container .business-content span {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #777;
+}
+
+main #cooperation ul {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #cooperation ul li {
+  width: 16%;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
