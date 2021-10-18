@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/wheretrip/src/img/favicon.ico" type="image/x-icon">
+    <title>Where tour(어디까지 가봤니?) - 마이페이지</title>
+    <link rel="stylesheet" href="/wheretrip/src/css/reset.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/base.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/mypage.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    
+    <script type="text/javascript" src="/wheretrip/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+    
+    <script type="text/javascript" src="/wheretrip/src/js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            let menus = document.querySelectorAll('.side_menu > a');
+
+            $(menus).click(function(){
+                $(this).toggleClass('on');
+                $(this).siblings('ul').toggle(0);
+                $(this).parent().siblings().children('ul').hide(0);
+                $(this).parent().siblings().children('a').removeClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 헤더 start-->
+    <header id="header">
+        <div w3-include-html="/wheretrip/component/head.html"></div>
+    </header>
+    <!-- 헤더 end -->
+
+    <!-- 메인 start-->
+    <section id="mypage">
+        <div class="container">
+            <div id="mypage_left">
+                <div id="mypage_side_menu">
+                    <h2><a href="#">마이페이지</a></h2>
+                    <ul>
+                        <li class="side_menu">
+                            <a href="#">예약/취소내역</a>
+                            <ul>
+                                <li><a href="/wheretrip/mypage/reservation_cancel/reservation.html">예약내역</a></li>
+                                <li><a href="#">취소내역</a></li>
+                                <li><a href="#">내 예약 찾기</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">관심내역</a>
+                            <ul>
+                                <li><a href="/wheretrip/mypage/interest/lately.html">최근 본 상품</a></li>
+                                <li><a href="#">위시 리스트</a></li>
+                                <li><a href="#">장바구니</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">웨어투어 회원등급</a>
+                            <ul>
+                                <li><a href="#">등급별 혜택</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">포인트</a>
+                            <ul>
+                                <li><a href="#">포인트 조회</a></li>
+                                <li><a href="#">포인트 선물</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">쿠폰함</a>
+                            <ul>
+                                <li><a href="#">내 쿠폰함</a></li>
+                                <li><a href="#">쿠폰존</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">고객문의</a>
+                            <ul>
+                                <li><a href="#">패키지여행 1:1 문의 내역</a></li>
+                                <li><a href="#">자유여행 문의 내역</a></li>
+                                <li><a href="#">견적 문의 내역</a></li>
+                                <li><a href="#">개선/건의하기 내역</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">참여내역</a>
+                            <ul>
+                                <li><a href="#">이벤트</a></li>
+                                <li><a href="#">나의 여행기</a></li>
+                                <li><a href="#">칭찬합시다</a></li>
+                                <li><a href="#">고객리뷰</a></li>
+                            </ul>
+                        </li>
+                        <li class="side_menu">
+                            <a href="#">개인정보</a>
+                            <ul>
+                                <li><a href="#">개인정보 수정</a></li>
+                                <li><a href="#">비밀번호 변경</a></li>
+                                <li><a href="#">SNS 연결 설정</a></li>
+                                <li><a href="#">회원탈퇴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mypage_right">
+                <div id="mypage_title">
+                    <h1>안녕하세요, 웨어투어 <span>FAMILY</span> <span>아이유</span> 님!</h1>
+                </div>
+                <ul class="mypage_btn_link">
+                    <li>
+                        <a href="#">
+                            <p><i class="material-icons">perm_identity</i></p>
+                            <p>개인정보 수정</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><i class="material-icons">local_parking</i><span>0 P</span></p>
+                            <p>보유 포인트</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><i class="material-icons">credit_card</i><span>0 개</span></p>
+                            <p>보유 쿠폰</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><i class="material-icons">shopping_cart</i><span>0 개</span></p>
+                            <p>나의 장바구니</p>
+                        </a>
+                    </li>
+                </ul>
+                <div id="reservation">
+                    <div class="reser_btn">
+                        <h3>예약내역</h3>
+                        <ul>
+                            <li><a href="#">내 예약찾기</a></li>
+                            <li><a href="#">전체보기</a></li>
+                        </ul>
+                    </div>
+                    <div class="reser_sub">
+                        <ul class="booking_count">
+                            <li>
+                                <span>· 패키지여행 예약<a href="#"><em>0</em>건</a></span>
+                            </li>
+                            <li>
+                                <span>· 자유여행 예약<a href="#"><em>0</em>건</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="activity">
+                    <div class="act">
+                        <h3>문의내역</h3>
+                        <ul>
+                            <li>
+                                <span>· 패키지여행 1:1문의<a href="#"><em>0</em>건</a></span>
+                            </li>
+                            <li>
+                                <span>· 견적 문의<a href="#"><em>0</em>건</a></span>
+                            </li>
+                            <li>
+                                <span>· 개선/건의하기<a href="#"><em>0</em>건</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="act">
+                        <h3>참여내역</h3>
+                        <ul>
+                            <li>
+                                <span>· 이벤트<a href="#"><em>0</em>건</a></span>
+                            </li>
+                            <li>
+                                <span>· 나의 여행기<a href="#"><em>0</em>건</a></span>
+                            </li>
+                            <li>
+                                <span>· 칭찬합시다<a href="#"><em>0</em>건</a></span>
+                            </li>
+                            <li>
+                                <span>· 고객리뷰<a href="#"><em>0</em>건</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="goods">
+                    <h3>최근 본 상품</h3>
+                    <div class="lately">
+                        <div class="goods">
+                            <div class="more_btn">
+                                <h4>상품</h4>
+                                <a href="#"><img src="/wheretrip/src/img/icon/btn_more.png" alt="더보기 아이콘"></a>
+                            </div>
+                            <div class="detailgoods">
+                                <div class="detail_img">
+                                    <div class="img">
+                                        <img src="/wheretrip/src/img/detailpage/japantour_img12.jpg" alt="최근본상품1">
+                                        <p>국내여행</p>
+                                    </div>
+                                    <div class="text">
+                                        <ul>
+                                            <li class="text_title">[아시아나항공] 낭만가득 남...</li>
+                                            <li>출발기간 2021.07 ~ 2021.09</li>
+                                            <li class="price">319,000 원 ~ 479,000 원</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="detail_btn">
+                                    <ul class="social">
+                                        <li><i class="material-icons">favorite_border</i></li>
+                                        <li><i class="material-icons">share</i></li>
+                                    </ul>
+                                    <ul class="btn">
+                                        <li><a href="#">자세히 보기</a></li>
+                                        <li><a href="#">출발일 보기</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods">
+                            <div class="more_btn">
+                                <h4>출발일 지정 상품</h4>
+                                <a href="#"><img src="/wheretrip/src/img/icon/btn_more.png" alt="더보기 아이콘"></a>
+                            </div>
+                            <div class="detailgoods black_goods">
+                                <div class="detail_img">
+                                    <div class="img">
+                                        <img src="/wheretrip/src/img/detailpage/japantour_img11.jpg" alt="최근본상품1">
+                                        <p>국내여행</p>
+                                    </div>
+                                    <div class="text">
+                                        <ul>
+                                            <li class="text_title">[현지 개별집합] 낭만가득 남...</li>
+                                            <li>출발일<p>2021.07.10일(토)</p></li>
+                                            <li>도착일<p>2021.07.11일(일)</p></li>
+                                            <li>교통<p><i class="material-icons">drive_eta</i><span>불포함</span></p></li>
+                                        </ul>
+                                        <ul class="price_text">
+                                            <li>성인<span class="blue_color">279,000원</span></li>
+                                            <li>아동<span>279,000원</span>유아<span>별도문의</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="detail_btn">
+                                    <ul class="social">
+                                        <li><i class="material-icons">favorite_border</i></li>
+                                        <li><i class="material-icons">share</i></li>
+                                    </ul>
+                                    <ul class="btn black_btn">
+                                        <li><a href="#">자세히 보기</a></li>
+                                        <li><a href="#">예약마감</a></li>
+                                    </ul>
+                                </div>
+                                <div class="black_bg">
+                                    <p>판매종료</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="goods">
+                    <h3>위시 리스트</h3>
+                    <div class="lately">
+                        <div class="goods">
+                            <div class="more_btn">
+                                <h4>상품</h4>
+                                <a href="#"><img src="/wheretrip/src/img/icon/btn_more.png" alt="더보기 아이콘"></a>
+                            </div>
+                            <div class="detailgoods">
+                                <p class="not_list">등록된 위시 리스트가 없습니다.</p>
+                            </div>
+                        </div>
+                        <div class="goods">
+                            <div class="more_btn">
+                                <h4>출발일 지정 상품</h4>
+                                <a href="#"><img src="/wheretrip/src/img/icon/btn_more.png" alt="더보기 아이콘"></a>
+                            </div>
+                            <div class="detailgoods">
+                                <p class="not_list">등록된 위시 리스트가 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 메인 end -->
+
+    <!-- 푸터 start -->
+    <footer id="footer">
+        <div w3-include-html="/wheretrip/component/footer.html"></div>
+    </footer>
+    <!-- 푸터 end -->
+</body>
+</html>
