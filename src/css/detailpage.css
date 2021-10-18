@@ -163,7 +163,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background: url("src/img/detailpage/KE.png") center center no-repeat;
+  background: url("/wheretrip/src/img/detailpage/KE.png") center center no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -197,7 +197,7 @@
   display: block;
   width: 27px;
   height: 16px;
-  background: url("src/img/detailpage/ico_flight.jpg");
+  background: url("/wheretrip/src/img/detailpage/ico_flight.jpg");
   position: absolute;
   top: 5px;
   left: 50%;
@@ -397,11 +397,11 @@
 }
 
 #detail_page .desc_body .box_desc #infomation .include span::before {
-  background: url("src/img/detailpage/info_circle.png") center center no-repeat;
+  background: url("/wheretrip/src/img/detailpage/info_circle.png") center center no-repeat;
 }
 
 #detail_page .desc_body .box_desc #infomation .not_include span::before {
-  background: url("src/img/detailpage/info_x.png") center center no-repeat;
+  background: url("/wheretrip/src/img/detailpage/info_x.png") center center no-repeat;
 }
 
 #detail_page .desc_body .box_desc #infomation .not_include ul li::before {
@@ -513,7 +513,7 @@
   width: 14px;
   height: 14px;
   margin-right: 10px;
-  background: url("src/img/icon/ico_more_prod.png") no-repeat;
+  background: url("/wheretrip/src/img/icon/ico_more_prod.png") no-repeat;
   content: '';
 }
 
@@ -611,7 +611,7 @@
   margin-left: -4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("src/img/icon/bl_comment_bar.png") no-repeat 100% 50%;
+  background: url("/wheretrip/src/img/icon/bl_comment_bar.png") no-repeat 100% 50%;
   color: #777;
   text-align: center;
 }
@@ -670,7 +670,7 @@
   display: block;
   width: 18px;
   height: 18px;
-  background: url("src/img/detailpage/trip_notice_icon.png") center center no-repeat;
+  background: url("/wheretrip/src/img/detailpage/trip_notice_icon.png") center center no-repeat;
   position: absolute;
   top: 50%;
   left: -25px;
@@ -873,7 +873,7 @@
   width: 40px;
   height: 40px;
   background-color: #fff;
-  background-image: url("../img/detailpage/ico_place.jpg");
+  background-image: url("/wheretrip/src/img/detailpage/ico_place.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -902,7 +902,7 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url("../img/detailpage/ico_now.jpg") center center no-repeat;
+  background: url("/wheretrip/src/img/detailpage/ico_now.jpg") center center no-repeat;
   position: absolute;
   top: 12px;
   left: -71px;
@@ -922,7 +922,7 @@
   display: inline-block;
   width: 12px;
   height: 25px;
-  background: url("src/img/detailpage/pin.png") center center no-repeat;
+  background: url("/wheretrip/src/img/detailpage/pin.png") center center no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -1430,7 +1430,7 @@
   width: 19px;
   height: 11px;
   margin-right: 5px;
-  background: url("src/img/icon/ico_flight_w.png") no-repeat;
+  background: url("/wheretrip/src/img/icon/ico_flight_w.png") no-repeat;
   vertical-align: middle;
   content: '';
 }
@@ -1568,7 +1568,7 @@
   height: 38px;
   line-height: 38px;
   border: 1px solid #ddd;
-  background: #fff url("src/img/icon/bl_sel_arrow.png") no-repeat 100% 50%;
+  background: #fff url("/wheretrip/src/img/icon/bl_sel_arrow.png") no-repeat 100% 50%;
   text-indent: 10px;
 }
 
@@ -1702,7 +1702,7 @@
   width: 18px;
   height: 19px;
   margin: 0 0 3px 8px;
-  background: url("src/img/icon/ico_info.png") no-repeat 0 -40px;
+  background: url("/wheretrip/src/img/icon/ico_info.png") no-repeat 0 -40px;
   vertical-align: middle;
   text-indent: -99em;
   content: '';
@@ -1818,21 +1818,21 @@
   display: block;
   width: 36px;
   height: 36px;
-  background: url("src/img/icon/btn_mini_myico.png") no-repeat 0 0;
+  background: url("/wheretrip/src/img/icon/btn_mini_myico.png") no-repeat 0 0;
 }
 
 #detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li .btn_mini_fav {
   display: block;
   width: 36px;
   height: 36px;
-  background: url("src/img/icon/btn_mini_myico.png") no-repeat -39px 0;
+  background: url("/wheretrip/src/img/icon/btn_mini_myico.png") no-repeat -39px 0;
 }
 
 #detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li .btn_mini_sns {
   display: block;
   width: 36px;
   height: 36px;
-  background: url("src/img/icon/btn_mini_myico.png") no-repeat -78px 0;
+  background: url("/wheretrip/src/img/icon/btn_mini_myico.png") no-repeat -78px 0;
 }
 
 #detail_page .desc_body .box_booking .box_in .box_btn .mini_ilist li span {
