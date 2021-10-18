@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/wheretrip/src/img/favicon.ico" type="image/x-icon">
     <title>Where trip(어디까지 가봤니?) - 예약내역</title>
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/base.css">
-    <link rel="stylesheet" href="src/css/reservation.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/reset.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/base.css">
+    <link rel="stylesheet" href="/wheretrip/src/css/reservation.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="src/js/jquery-1.4.1.js"></script>
-    <script type="text/javascript" src="src/js/w3.js"></script>
-    <!-- <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script> -->
-    <script type="text/javascript" src="src/js/common.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    
+    <script type="text/javascript" src="/wheretrip/src/js/jquery-1.4.1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
+    
+    <script type="text/javascript" src="/wheretrip/src/js/common.js"></script>
     <script>
         $(document).ready(function(){
             let menus = document.querySelectorAll('.side_menu > a');
@@ -100,7 +104,7 @@
 <body>
     <!-- 헤더 start-->
     <header id="header">
-        <div w3-include-html="component/head.html"></div>
+        <div w3-include-html="/wheretrip/component/head.html"></div>
     </header>
     <!-- 헤더 end -->    
     
@@ -112,17 +116,17 @@
                     <h2><a href="#">마이페이지</a></h2>
                     <ul>
                         <li class="side_menu">
-                            <a href="#" class="on">예약/취소내역</a>
-                            <ul class="on">
-                                <li><a href="http://127.0.0.1:5502/mypage/reservation_cancel/reservation.html" class="side_sub_menu on" subSeq="0">예약내역</a></li>
-                                <li><a href="#" class="side_sub_menu" subSeq="1">취소내역</a></li>
-                                <li><a href="#" class="side_sub_menu" subSeq="2">내 예약 찾기</a></li>
+                            <a href="#">예약/취소내역</a>
+                            <ul>
+                                <li><a href="/wheretrip/mypage/reservation_cancel/reservation.html">예약내역</a></li>
+                                <li><a href="#">취소내역</a></li>
+                                <li><a href="#">내 예약 찾기</a></li>
                             </ul>
                         </li>
                         <li class="side_menu">
                             <a href="#">관심내역</a>
                             <ul>
-                                <li><a href="http://127.0.0.1:5502/mypage/interest/lately.html">최근 본 상품</a></li>
+                                <li><a href="/wheretrip/mypage/interest/lately.html">최근 본 상품</a></li>
                                 <li><a href="#">위시 리스트</a></li>
                                 <li><a href="#">장바구니</a></li>
                             </ul>
@@ -321,7 +325,7 @@
 
     <!-- 푸터 start -->
     <footer id="footer">
-        <div w3-include-html="component/footer.html"></div>
+        <div w3-include-html="/wheretrip/component/footer.html"></div>
     </footer>
     <!-- 푸터 end -->
 </body>
