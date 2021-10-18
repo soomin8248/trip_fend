@@ -21,9 +21,9 @@
     <script type="text/javascript" src="/wheretrip/src/js/common.js"></script>
     <script>
         $(document).ready(function(){
-            let nextbut = document.querySelector('#agr-joinbtn');
+            let finshbtn = document.querySelector('#finsh');
 
-            $(nextbut).click(function(){
+            $(finshbtn).click(function(){
                 location.href = "/wheretrip/member/signup_fin.html";
             });
         });
@@ -148,7 +148,7 @@
             </div>
         </div>
         <div class="fin-btn">
-            <button>정보입력 완료</button>
+            <button id="finsh">정보입력 완료</button>
         </div>
     </section>
     <!-- 메인 end -->
