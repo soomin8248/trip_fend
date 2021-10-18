@@ -19,6 +19,20 @@
     <script type="text/javascript" src="https://www.w3schools.com/lib/w3.js"></script>
     
     <script type="text/javascript" src="/wheretrip/src/js/common.js"></script>
+    <script>
+        $(document).ready(function(){
+            let loginbtn = document.querySelector('.loginBtn');
+            let mainbtn = document.querySelector('.mainBtn');
+
+            $(loginbtn).click(function(){
+                location.href = "/wheretrip/member/login.html";
+            });
+
+            $(mainbtn).click(function(){
+                location.href = "/wheretrip/index.html";
+            });
+        });
+    </script>
 </head>
 
 <body>
