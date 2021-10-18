@@ -1,0 +1,1597 @@
+@import "variable";
+
+#detail_page {
+    padding: 50px 0 100px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    font-size: $font-size-15;
+    .desc_head{
+        margin-bottom: 60px;
+        .pack_tag {
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            background: $main-color;
+            color: $white-color;
+            line-height: 30px;
+            text-align: center;
+            font-size: $font-size-13;
+        }
+        h2 {
+            padding: 30px 0;
+            font-size: $font-size-30;
+            font-weight: $font-weight-500;
+            border-bottom: 2px solid $main-color;   
+        }
+        .pack_num {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            p {
+                color: $gray-color;
+                span {
+                    &:nth-child(1) {
+                        margin-right: 40px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            width: 1px;
+                            height: 15px;
+                            background: $light-gray;
+                            position: absolute;
+                            top: 50%; right: -20px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .pack_info_btn {
+                letter-spacing: -1px;
+                border: none;
+                outline: none;
+                width: 150px;
+                height: 45px;
+                border-radius: 22.5px;
+                padding: 6px;
+                color: #fff;
+                background: $main-color;
+            }
+        }
+        // swiper 슬라이드
+        .packimg-swiper {
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                .swiper-slide {
+                    height: 300px;
+                    width: 32%;
+                    img {
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+        .box_covid {
+            margin-top:40px
+        }
+    }
+    .desc_body{
+        position: relative;
+        .box_desc {
+            width: 910px;
+            .tit_style{
+				font-size: $font-size-24;
+				font-weight: $font-weight-500;
+				padding-bottom: 30px;
+			}
+            // 여행 주요 일정
+            #schedule {
+                width: 100%;
+                .trip_schedule_box {
+                    border-top: 1px solid $black-color;
+                    li {
+                        display: flex;
+						align-items: center;
+						padding: 20px;
+						border-bottom: 1px solid $light-gray;
+						font-size: $font-size-15;
+						.sceh_tit{
+							width: 20%;
+							font-size: $font-size-16;
+						}
+                        .traffic_con {
+                            width: 80%;
+							.float_name {
+								padding-bottom: 20px;
+								padding-left: 20px;
+								border-bottom: 1px solid $light-gray;
+								position: relative;
+								line-height: 18px;
+								&::before {
+									content: "";
+									display: inline-block;
+									width: 18px;
+									height: 18px;
+									background: url('src/img/detailpage/KE.png') center center no-repeat;
+									position: absolute;
+									top: 0;
+									left: 0;
+								}
+							}
+                            .float-schedule {
+                                display: flex;
+                                .air_box {
+                                    padding-top: 20px;
+									display: flex;
+									align-items: center;
+									width: 50%;
+									.flight_number {
+										padding-top: 22px;
+										position: relative;
+										color: $main-color;
+										&::before {
+											content: "";
+											display: block;
+											width: 27px;
+											height: 16px;
+											background: url('src/img/detailpage/ico_flight.jpg');
+											position: absolute;
+											top: 5px; 
+											left: 50%;
+											transform: translateX(-50%);
+										}
+									}
+                                    .flight_regular {
+                                        padding-left: 20px;
+										p {
+											span {
+												margin-left: 30px;
+												position: relative;
+												&::before {
+													content: "";
+													display: inline-block;
+													width: 1px;
+													height: 15px;
+													background: $light-gray;
+													position: absolute;
+													top: 50%; 
+													left: -15px;
+													transform: translateY(-50%);
+												}
+											}
+										}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 상품가격
+		    #product_price {
+                padding: 60px 0;
+                .tit_style{
+                    font-size: $font-size-24;
+                    font-weight: $font-weight-500;
+                    padding-bottom: 30px;
+                }
+                table {
+                    width: 100%;
+                    thead {
+                        height: 70px;
+                        tr{
+                            border-top: 1px solid $black-color;
+                            background: rgba(195,225,255,0.3);
+                            font-size: $font-size-16;
+                            th {
+                                font-weight: $font-weight-nomal;
+                                line-height: 1.2;
+                                span {
+                                    display: block;
+                                    color: #777;
+                                    font-size: $font-size-15;
+                                }
+                            }
+                        }    
+                    }
+                    tbody {
+                        border-bottom: 1px solid $light-gray;
+                        tr {
+                            text-align: center;
+                            td {
+                                padding: 15px 0;
+                            }
+                        }
+                        .total_price {
+                            td {
+                                &:not(:nth-child(1)) {
+                                    color: $main-color;
+                                    font-size: $font-size-17;
+                                    font-weight: $font-weight-500;
+                                }
+                            }
+                        }
+                    }
+                }
+                .price_matter {
+                    padding-top: 20px;
+                    li {
+                        padding-left: 10px;
+                        position: relative;
+                        color: #888;
+                        font-size: $font-size-14;
+                        margin-bottom: 10px;
+                        &::before {
+                            content: "";
+                            display: block;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            background: $main-color;
+                            position: absolute;
+                            top: 50%; 
+                            left: 0;
+                            transform: translateY(-50%);
+                        }
+                        &:nth-child(1) {
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background: $main-color;
+                                position: absolute;
+                                top: 11px; 
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            // 포함/불포함/선택경비 정보
+		    #infomation {
+                padding-bottom: 60px;
+                .tit_style{
+                    font-size: $font-size-24;
+                    font-weight: $font-weight-500;
+                    padding-bottom: 30px;
+                }
+                .info{
+                    border-bottom: 1px solid $light-gray;
+                    padding: 45px 0;
+                    display: flex;
+                    .incl_tit {
+                        display: block;
+                        width: 20%;
+                        padding: 46px 0;
+                        display: flex;
+                        justify-content: center;
+                        span{
+                            font-size: $font-size-18;
+                            position: relative;
+                            text-align: center;
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 40px;
+                                height: 40px;
+                                position: absolute;
+                                top: -40px; left: 50%;
+                                transform: translateX(-50%);
+                            }
+                        }
+                    }
+                }
+                ul {
+                    width: 80%;
+                    padding-left: 30px;
+                    li {
+                        padding-bottom: 20px;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 5px; height: 5px;
+                            border-radius: 50%;
+                            background: $main-color;
+                            position: absolute;
+                            top: 9px; left: -10px;
+                        }
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                .include {
+                    border-top: 1px solid $black-color;
+                    span {
+                        &::before {
+                            background: url('src/img/detailpage/info_circle.png') center center no-repeat;
+                        }
+                    }
+                }
+                .not_include {
+                    span {
+                        &::before {
+                            background: url('src/img/detailpage/info_x.png') center center no-repeat;
+                        }
+                    }
+                    ul {
+                        li {
+                            &::before {
+                                background: $red-color;
+                            }
+                        }
+                    }
+                }
+            }
+            // 예약시 유의사항
+		    #reservation {
+                padding-bottom: 60px;
+                .tit_style{
+                    font-size: $font-size-24;
+                    font-weight: $font-weight-500;
+                    padding-bottom: 30px;
+                }
+                table {
+                    width: 100%;
+                    tbody {
+                        border-top: 1px solid $black-color;
+                        border-bottom: 1px solid $light-gray;
+                        th {
+                            padding: 15px 30px;
+                            text-align: left;
+                            background: rgba(195, 225, 255, 0.3);
+                            font-weight: $font-weight-nomal;
+                        }
+                        td {
+                            padding: 15px 0 15px 30px;
+                        }
+                    }
+                }   
+            }
+            // 상품안내
+		    #product_info {
+                padding-bottom: 60px;
+                position: relative;
+                .tit_style{
+                    font-size: $font-size-24;
+                    font-weight: $font-weight-500;
+                    padding-bottom: 30px;
+                }
+                .box_guide_prod{
+                    position: relative;
+                    overflow: hidden;
+                    max-height: 403px;
+                    &.open {
+                        max-height:10000px;
+                        .btn_more{
+                            position:relative;
+                            &::before{
+                                background-position:0 -14px
+                            }
+                        }
+                    }
+                    .box_in{
+                        height: auto;
+                        .box_editor{
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                            font-size: 15px;
+                            color: #555;
+                            line-height: 24px;
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                    button {
+                        cursor: pointer;
+                        overflow: visible;
+                        border: 0 none;
+                        font-weight: normal;
+                        font-size: 15px;
+                        color: #555;
+                        text-indent: 0;
+                    }
+                    .btn_more {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 910px;
+                        display: block;
+                        height: 54px;
+                        border: 1px solid #ddd;
+                        background: #fff;
+                        font-size: 16px;
+                        text-align: center;
+                        &::before {
+                            display: inline-block;
+                            width: 14px;
+                            height: 14px;
+                            margin-right: 10px;
+                            background: url('src/img/icon/ico_more_prod.png') no-repeat;
+                            content: '';
+                        }
+
+                    }
+                }
+            }
+            // 여행상세
+            #tripDetail {
+                margin: 60px 0;
+                padding-top: 62px;
+                position: relative;
+                .tab_page_cont {
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                    li {
+                        display: table-cell;
+                        height: 60px;
+                        line-height: 60px;
+                        border: 1px solid #ddd;
+                        border-left: none;
+                        border-bottom: 1px solid #222;
+                        box-sizing: border-box;
+                        background: #f7f7f7;
+                        text-align: center;
+                        font-size: 18px;
+                        color: #777;
+                        cursor: pointer;
+                        &.on {
+                            border: 1px solid #222;
+                            border-bottom: 1px solid #fff;
+                            background: #fff;
+                            text-indent: -1px;
+                            color: #222;
+                        }
+                    }
+                }
+                .tabs_fixed {
+                    position: absolute;
+                    top: 0;
+                    overflow: hidden;
+                    &.fix {
+                        position:fixed;
+                        top:0;
+                        width:910px;
+                        background:#fff;
+                        z-index:3; 
+                        overflow:hidden;
+                    }
+                }
+                .cont_tabs {
+                    .tab_page {
+                        display: none;
+                        &.tab_day {
+                            padding-top: 60px;
+                            position: relative;
+                        }
+                        .tab_sub_prod {
+                            display: block;
+                            width: 100%;
+                            height: 60px;
+                            margin-bottom: 40px;
+                            border-bottom: 1px solid #ddd;
+                            box-sizing: border-box;
+                            &.fix{
+                                width: 47.9%;
+                                top:62px;
+                            }
+                            &::after {
+                                display: block;
+                                clear: both;
+                                content: '';
+                            }
+                            .scroll_area {
+                                position: relative;
+                                white-space: nowrap;
+                            }
+                            li {
+                                display: inline-block;
+                                width: 70px;
+                                height: 60px;
+                                line-height: 60px;
+                                margin-left: -4px;
+                                box-sizing: border-box;
+                                background: url('src/img/icon/bl_comment_bar.png') no-repeat 100% 50%;
+                                color: #777;
+                                text-align: center;
+                                &:first-child {
+                                    padding-left: 0;
+                                    margin-left: 0;
+                                }
+                                &.on{
+                                    span{
+                                        a{
+                                            display:inline-block; 
+                                            height:60px; 
+                                            border-bottom:3px solid $main-color; 
+                                            box-sizing:border-box;
+                                            color:#222;
+                                            z-index:1
+                                        }
+                                    }
+                                }
+                                &:last-child{
+                                    background: none;
+                                    margin-left: 4px;
+                                }
+                            }
+                        }
+                        h4 {
+                            padding: 30px 0;
+                            font-size: $font-size-24;
+                            font-weight: $font-weight-500;
+                        }
+                        .trip_notice {
+                            width: 100%;
+							height: 120px;
+							background: rgba(195,225,255,0.3);
+							display: flex;
+							justify-content: center;
+							align-items: center;
+                            div {
+								width: 83%;
+								p {
+									position: relative;
+									&::before {
+										content: "";
+										display: block;
+										width: 18px;
+										height: 18px;
+										background: url('src/img/detailpage/trip_notice_icon.png') center center no-repeat;
+										position: absolute;
+										top: 50%; left: -25px;
+										transform: translateY(-50%);
+									}
+								}
+								span {
+									display: block;
+								}
+							}
+                        }
+                        .meeting_info {
+							margin: 30px 0;
+							padding: 0 60px;
+							width: 100%;
+							height: 200px;
+							border: 1px solid #ddd;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							.meet_left {
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								align-items: center;
+								.flag_circle {
+									width: 50px;
+									height: 50px;
+									background: $main-color;
+									border-radius: 50%;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+								}
+								p {
+									padding-top: 10px;
+								}
+							}
+							.meet_text {
+								padding-left: 0px;
+								p {
+									padding-bottom: 15px;
+								}
+							}
+						}
+                        .trip_timeline{
+                            border: 1px solid #ddd;
+                            width: 100%;
+                            background: #fff;
+                            .timeline {
+                                width: 100%;
+                                .day_title {
+                                    width: 100%;
+                                    background: rgba(195,225,255,0.3);
+                                    height: 60px;
+                                    line-height: 60px;
+                                    padding: 0 30px;
+                                    display: flex;
+                                    align-items: center;
+                                    p {
+                                        font-size: $font-size-18;
+                                        span {
+                                            font-size: $font-size-14;
+                                            margin-left: 30px;
+                                        }
+                                    }
+                                }
+                                .timeline_contents {
+                                    padding: 40px 30px;
+                                    .float_route {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        font-size: $font-size-16;
+                                        padding-bottom: 40px;
+                                        .way_start {
+                                            text-align: center;
+                                            padding-right: 10px;
+                                        }
+                                        .float_time {
+                                            display: flex;
+                                            align-items: center;
+                                            .float_icon {
+                                                padding: 0 120px;
+                                                position: relative;
+                                                &::before {
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 100px;
+                                                    height: 4px;
+                                                    position: absolute;
+                                                    top: 50%; left: 10px;
+                                                    transform: translateY(-50%);
+                                                    background: #ddd;
+                                                }
+                                                &::after {
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 100px;
+                                                    height: 4px;
+                                                    position: absolute;
+                                                    top: 50%; right: 10px;
+                                                    transform: translateY(-50%);
+                                                    background: #ddd;
+                                                }
+                                            }
+                                        }
+                                        .way_fin {
+                                            text-align: center;
+                                            padding-left: 10px;
+                                        }
+                                    }
+                                    .location_box {
+                                        padding-left: 100px;
+                                        position: relative;
+                                        &::before {
+                                            content: "";
+                                            display: block;
+                                            width: 4px;
+                                            height: 100%;
+                                            background: #f1f1f1;
+                                            position: absolute;
+                                            top: 0; left: 35px;
+                                        }
+                                        .location {
+                                            h3 {
+                                                font-size: $font-size-18;
+                                                position: relative;
+                                                font-weight: $font-weight-500;
+                                                padding: 8px 0 30px;
+                                                &::before {
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    background-color: #fff;
+                                                    background-image: url('../img/detailpage/ico_place.jpg');
+                                                    background-position: center center;
+                                                    background-repeat: no-repeat;
+                                                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                                                    border-radius: 50%;
+                                                    position: absolute;
+                                                    top: 0; left: -83px;
+                                                }
+                                            }
+                                            .location_oki {
+                                                padding-top: 30px;
+                                                &::before {
+                                                    top: 22px;
+                                                }
+                                            }
+                                            > p {
+                                                padding: 10px 0;
+                                                position: relative;
+                                                &::before {
+                                                    content: "";
+                                                    display: inline-block;
+                                                    width: 16px;
+                                                    height: 16px;
+                                                    background: url('../img/detailpage/ico_now.jpg') center center no-repeat;
+                                                    position: absolute;
+                                                    top: 12px; left: -71px;
+                                                }
+                                            }
+                                            > span {
+                                                color: $red-color;
+                                            }
+                                            .randmark_contents {
+                                                .mark_title {
+                                                    p {
+                                                        padding-left: 20px;
+                                                        position: relative;
+                                                        &::before {
+                                                            content: "";
+                                                            display: inline-block;
+                                                            width: 12px;
+                                                            height: 25px;
+                                                            background: url('src/img/detailpage/pin.png') center center no-repeat;
+                                                            position: absolute;
+                                                            top: 0; left: 0;
+                                                        }
+                                                    }
+                                                }
+                                                .randmark_box {
+                                                    border: 1px solid #ddd;
+                                                    margin: 30px 0;
+                                                    padding: 30px;
+                                                    width: 700px;
+                                                    h4 {
+                                                        font-size: $font-size-18;
+                                                        padding-bottom: 10px;
+                                                        border-bottom: 1px solid #ddd;
+                                                    }
+                                                    ul {
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        padding: 25px 0;
+                                                        li {
+                                                            width: 49%;
+                                                            img {
+                                                                width: 100%;
+                                                                height: 100%;
+                                                            }
+                                                        }
+                                                    }
+                                                    > p {
+                                                        font-size: $font-size-14;
+                                                    }
+                                                }
+                                            }
+                                            .hotel_box {
+                                                border: 1px solid #ddd;
+                                                margin: 30px 0;
+                                                padding: 30px;
+                                                width: 700px;
+                                                h4 {
+                                                    font-size: $font-size-18;
+                                                    padding-bottom: 10px;
+                                                    border-bottom: 1px solid #ddd;
+                                                }
+                                                ul {
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    padding: 25px 0;
+                                                    li {
+                                                        width: 49%;
+                                                        img {
+                                                            width: 100%;
+                                                            height: 100%;
+                                                        }
+                                                    }
+                                                }
+                                                > p {
+                                                    font-size: $font-size-14;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .meal_guide {
+                                        border-top: 1px solid #ddd;
+                                        margin-top: 40px;
+                                        padding-top: 30px;
+                                        display: flex;
+                                        > span {
+                                            display: inline-block;
+                                            width: 55px;
+                                            height: 25px;
+                                            color: $main-color;
+                                            border: 1px solid $main-color;
+                                            border-radius: 12.5px;
+                                            text-align: center;
+                                            font-size: $font-size-14;
+                                            margin-right: 30px;
+                                        }
+                                        .meal_list {
+                                            display: flex;
+                                            p {
+                                                padding-right: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .timeline#day3 {
+                                .float_route {
+                                    padding-top: 30px;
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+                        .shopping {
+                            .shopping_box {
+                                border: 1px solid #ddd;
+                                padding: 30px;
+                                > p {
+                                    padding-bottom: 25px;
+                                    font-size: $font-size-16;
+                                }
+                                .shoptext {
+                                    h4 {
+                                        font-size: $font-size-16;
+                                        color: $main-color;
+                                        font-weight: $font-weight-500;
+                                        padding-bottom: 10px;
+                                    }
+                                    p {
+                                        font-size: 15px;
+                                        margin-bottom: 10px;                             
+                                    }
+                                    .notice_text {
+                                        font-size: $font-size-14;
+                                        color: $red-color;
+                                        padding-top: 10px;
+                                    }
+                                }
+                                .shopping_detail {
+                                    padding-bottom: 20px;
+                                }
+                            }
+                        }
+                        // 관광지/숙소
+                        .tourist_spots {
+                            .tourLists_box {
+                                width: 100%;
+                                .tourList {
+                                    width: 100%;
+                                    border: 1px solid #ddd;
+                                    padding: 30px;
+                                    margin-bottom: 40px;
+                                    h4 {
+                                        padding-bottom: 20px;
+                                        border-bottom: 1px solid #ddd;
+                                        font-size: $font-size-18;
+                                        font-weight: $font-weight-500;
+                                    }
+                                    ul {
+                                        padding: 25px 0;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        li {
+                                            width: 49%;
+                                            img{ 
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .terms {
+                            .terms_box {
+                                border: 1px solid #ddd;
+                                padding: 30px;
+                            }
+                            h5 {
+                                font-size: $font-size-18;
+                                font-weight: $font-weight-500;
+                                color: $main-color;
+                                padding-bottom: 10px;
+                            }
+                            .terms_detail {
+                                padding-bottom: 20px;
+                            }
+                            .terms_cancle {
+                                .cancle_tit {
+                                    font-size: $font-size-16;
+                                    padding-bottom: 20px;
+                                    ul {
+                                        padding-top: 10px;
+                                        padding-left: 15px;
+                                        li {
+                                            font-size: 15px;
+                                            line-height: 1.8;
+                                        }
+                                        .cancle_text_box {
+                                            border: 1px solid #ddd;
+                                            padding: 10px 15px;
+                                            font-size: $font-size-14;
+                                            color: #888;
+                                            width: 90%;
+                                            margin: 10px 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .insuranceitems{
+                            display: none;
+                            &.limit {
+                                p {
+                                    text-align: right;
+                                    padding-bottom: 10px;
+                                    color: $gray-color;
+                                }
+                                table {
+                                    width: 100%;
+                                    border-top: 2px solid $black-color;
+                                    thead {
+                                        tr {
+                                            border-bottom: 1px solid #ddd;
+                                            height: 80px;
+                                            background: rgba(195, 225, 255, 0.3);
+                                            th {
+                                                font-weight: $font-weight-nomal;
+                                                text-align: center;
+                                                &:not(:last-child){
+                                                    border-right: 1px solid #ddd;
+                                                } 
+                                            }
+                                        }
+                                    }
+                                    tbody {
+                                        tr {
+                                            td {
+                                                border-bottom: 1px solid #ddd;
+                                                height: 50px;
+                                                padding: 5px 15px;
+                                                &:not(:last-child){
+                                                    border-right: 1px solid #ddd;
+                                                }
+                                            }
+                                            .limit_tit {
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.standard {
+                                .standard_con {
+                                    border: 1px solid #ddd;
+                                    padding: 30px;
+                                    div {
+                                        padding-bottom: 15px;
+                                        h5 {
+                                            font-size: $font-size-16;
+                                            font-weight: $font-weight-500;
+                                            padding-bottom: 10px;
+                                        }
+                                        p {
+                                            color: #555;
+                                            padding-bottom: 5px;
+                                        }
+                                    }
+                                    ul {
+                                        color: #555;
+                                        li {
+                                            padding-bottom: 5px;
+                                        }
+                                    }
+                                    .example_box {
+                                        width: 90%;
+                                        border: 1px solid #ddd;
+                                        padding: 20px 30px;
+                                        font-size: $font-size-14;
+                                        margin: 10px 0;
+                                    }
+                                }
+                            }
+                            &.agree {
+                                .insu_agree_con {
+                                    border: 1px solid #ddd;
+                                    padding: 30px;
+                                    overflow-y: scroll;
+                                    height: 300px;
+                                    h5, h6 {
+                                        font-size: $font-size-16;
+                                        padding: 10px 0;
+                                        font-weight: $font-weight-500;
+                                    }
+                                    p {
+                                        color: #555;
+                                    }
+                                    .agree_num {
+                                        padding-top: 15px;
+                                        color: #555;
+                                        > li {
+                                            padding-bottom: 15px;
+                                            .agree_list {
+                                                padding-left: 18px;
+                                                li {
+                                                    padding-top: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .noted_items {
+                            display: none;
+                            &.essential {
+                                .essential_items {
+                                    > ul {
+                                        > li {
+                                            &::before {
+                                                top: 50%; left: 0;
+                                                transform: translateY(-50%);
+                                            }
+                                            &:nth-child(2) {
+                                                &::before {
+                                                    position: absolute;
+                                                    top: 29%;
+                                                }
+                                            }
+                                        }
+                                    }   
+                                }
+                                .agree_box {
+                                    margin-left: 10px;
+                                    margin-bottom: 20px;
+                                    margin-top: 20px;
+                                    border: 1px solid #ddd;
+                                    padding: 20px;
+                                    color: #777;
+                                    width: 95%;
+                                    li {
+                                        ol {
+                                            padding-top: 5px;
+                                            li {
+                                                font-size: $font-size-14;
+                                            }
+                                            &:last-child {
+                                                padding-left: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.matter {
+                                .matter_con {
+                                    > ul {
+                                        > li {
+                                            padding-bottom: 10px;
+                                            span {
+                                                display: block;
+                                                color: #777;
+                                            }
+                                            &::before {
+                                                top: 8px;
+                                            }
+                                        }
+                                        .matter_tit {
+                                            font-size: $font-size-16;
+                                            font-weight: $font-weight-500;
+                                            padding-top: 15px;
+                                            &::before {
+                                                top: 10px;
+                                            }
+                                            ul {
+                                                padding-top: 15px;
+                                                li {
+                                                    font-size: 15px;
+                                                    font-weight: $font-weight-nomal;
+                                                    padding-bottom: 10px;
+                                                    span {
+                                                        display: block;
+                                                        color: #777;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.visa{
+                                .visa_con {
+                                    > ul {
+                                        > li {
+                                            padding-bottom: 15px;
+                                            span {
+                                                display: block;
+                                                color: #777;
+                                            }
+                                            &::before {
+                                                top: 8px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.safety_info {
+                                .safety_con {
+                                    p { 
+                                        padding-bottom: 10px;
+                                    }
+                                    a {
+                                        display: block;
+                                        width: 150px;
+                                        height: 40px;
+                                        border: 1px solid $main-color;
+                                        color: $main-color;
+                                        text-align: center;
+                                        line-height: 40px;
+                                        letter-spacing: -1px;
+                                        margin-top: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 방문도시 정보
+            #city_info {
+                padding-top: 60px;
+                table {
+                    width: 100%;
+                    thead {
+                        tr {
+                            border-top: 1px solid $black-color;
+                            border-bottom: 1px solid #ddd;
+                            background: rgba(195, 225, 255, 0.3);
+                            height: 70px;
+                            text-align: center;
+                            th {
+                                font-weight: $font-weight-nomal;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                width: 25%;
+                                padding: 35px 0;
+                                text-align: center;
+                                border-bottom: 1px solid #ddd;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .box_booking {
+            box-sizing: border-box;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 260px;
+            z-index: 2;
+            &.lnb_fixed{
+                position:fixed;
+                top:0;
+                left:50%;
+                margin-left:340px;
+                background:#fff;
+                z-index:4;
+            }
+            .btn_nor_g {
+                width: 100%;
+                position: relative;
+                display: block;
+                padding: 0 20px;
+                height: 38px;
+                line-height: 36px;
+                margin: 16px 0 0;
+                background: #555;
+                font-size: 14px;
+                color: #fff;
+                text-align: center;
+                &::before {
+                    display: inline-block;
+                    width: 19px;
+                    height: 11px;
+                    margin-right: 5px;
+                    background: url('src/img/icon/ico_flight_w.png') no-repeat;
+                    vertical-align: middle;
+                    content: '';
+                }
+                &::after {
+                    display: block;
+                    position: absolute;
+                    top: -20px;
+                    left: -20px;
+                    width: 258px;
+                    content: '';
+                }
+            }
+            span, .box_air{
+                display: inline-block;
+                font-size: 15px;
+                color: #555;
+            }
+            .box_air{
+                width: 154px;
+                text-align: right;
+            }
+            .box_in {
+                padding: 18px 20px 0px 20px;
+                border: 1px solid #222;
+                .list_booking_box{
+                    position: relative;
+                    padding-bottom: 21px;
+                    &::after{
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: -20px;
+                        right: -20px;
+                        border-bottom: 1px solid #ddd;
+                        content: "";
+                    }
+                    .list_booking{
+                        li {
+                            margin-bottom: 6px;
+                            text-align: right;
+                        }
+                        span {
+                            text-align: left;
+                            vertical-align: middle;
+                        }
+                        .tit {
+                            width: 60px;
+                            color: #222;
+                            text-align: left;
+                            display: inline-block;
+                        }
+                        .info {
+                            width: 154px;
+                            text-align: right;
+                        }
+                        &::after {
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            left: -20px;
+                            right: -20px;
+                            border-bottom: 1px solid #ddd;
+                            content: "";
+                        }
+                    }
+                }
+                .list_booking_price{
+                    position: relative;
+                    margin: 16px 0 16px;
+                    &::after {
+                        display: block;
+                        position: absolute;
+                        bottom: -17px;
+                        left: -20px;
+                        right: -20px;
+                        border-bottom: 1px solid #ddd;
+                        content: "";
+                    }
+                    li {
+                        margin-bottom: 11px;
+                        text-align: right;
+                    }
+                    .tit {
+                        width: 134px;
+                        font-size: 15px;
+                        color: #222;
+                        text-align: left;
+                        vertical-align: middle;
+                        .emp_red {
+                           color: #ff5c46 !important;
+                        }
+                        em {
+                            font-size: 16px;
+                            i {
+                                font-size: 15px;
+                                font-style: normal;
+                            }
+                        }
+                    }
+                    .info {
+                        width: 80px;
+                        .select {
+                            position: relative;
+                            display: inline-block;
+                            margin: 0;
+                            vertical-align: middle;
+                            // display: none;
+                            .currSel{
+                                display: block;
+                                width: 100%;
+                                text-align: left;
+                                cursor: pointer;
+                                position: relative;
+                                height: 38px;
+                                line-height: 38px;
+                                border: 1px solid #ddd;
+                                background: #fff url('src/img/icon/bl_sel_arrow.png') no-repeat 100% 50%;
+                                text-indent: 10px;
+                            }
+                        }
+                        .personnelCnt {
+                            display: none
+                        }
+                        .selectIn {
+                            width: 17px;
+                            min-width: 80px;
+                            max-width: 80px;
+                            position: relative;
+                            .button{
+                                display: block;
+                                width: 100%;
+                                border: none;
+                                background: none;
+                                text-align: left;
+                                cursor: pointer;
+                            }
+                            .list{
+                                position: absolute;
+                                display: none;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+                                max-width: 80px;
+                                box-sizing: border-box;
+                                border: 1px solid #ddd;
+                                border-top: none;
+                                background: #fff;
+                                button {
+                                    height: 38px;
+                                    padding: 0 10px;
+                                    color: #222;
+                                    display: block;
+                                    width: 100%;
+                                    border: none;
+                                    background: none;
+                                    text-align: left;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .list_coupon {
+                    padding: 21px 20px 3px;
+                    margin: 0 -20px;
+                    li {
+                        margin-bottom: 6px;
+                        text-align: right;
+                        .tit {
+                            display: inline-block;
+                            font-size: 15px;
+                            vertical-align: middle;
+                            width: 60px;
+                            color: #222;
+                            text-align: left;
+                        }
+                        .info{
+                            width: 154px;
+                            text-align: right;
+                            vertical-align: middle;
+                            .btn_wit{
+                                display: inline-block;
+                                width: 144px;
+                                height: 38px;
+                                line-height: 36px;
+                                margin: 0;
+                                border: 1px solid #bbb;
+                                background: #fff;
+                                font-size: 14px;
+                                color: #222;
+                                vertical-align: top;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .box_tatal_price{
+                    padding: 0 0 17px;
+                    .info {
+                        width: 169px;
+                        text-align: right;
+                        vertical-align: middle;
+                        display: inline-block;
+                        font-size: 15px;
+                        color: #555;
+                        .emp_red{
+                            margin-top: -2px;
+                            font-size: 16px;
+                            color: #ff5c46 !important;
+                            display: inline-block;
+                            text-align: left;
+                            vertical-align: middle;
+                            strong {
+                                font-weight: 600;
+                                letter-spacing: -0.03em;
+                                font-size: 32px;
+                                i {
+                                    font-size: 15px;
+                                    font-style: normal;
+                                }
+                            }
+                        }    
+                    }
+                    .point_rel{
+                        display: block;
+                        font-size: 14px;
+                        text-align: right;
+                        .btn_mileage{
+                            display: inline-block;
+                            width: 18px;
+                            height: 19px;
+                            margin: 0 0 3px 8px;
+                            background: url('src/img/icon/ico_info.png') no-repeat 0 -40px;
+                            vertical-align: middle;
+                            text-indent: -99em;
+                            content: '';
+                            .blind_ir{
+                                position: absolute;
+                                width: 1px;
+                                height: 1px !important;
+                                padding: 0;
+                                margin: -1px;
+                                border: none;
+                                clip: rect(0 0 0 0);
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+                .cfrm{
+                    width: 100%;
+                    display: inline-block;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 18px;
+                    vertical-align: top;
+                    text-align: center;
+                    background: $main-color !important;
+                    color: #fff !important;
+                    margin: 0 0 20px;
+                    cursor: pointer;
+                    overflow: visible;
+                    border: 0 none;
+                    letter-spacing: -1px;
+                }
+                .list_guide_info{
+                    padding: 11px 20px 20px;
+                    margin: 0 -20px;
+                    height: 100%;
+                    background: #f7f7f7;
+                    li {
+                        margin-top: 4px;
+                        font-size: 14px;
+                        color: #555;
+                        .tit {
+                            display: inline-block;
+                            font-size: 14px;
+                            color: #555;
+                            &::after{
+                                display: inline-block;
+                                width: 1px;
+                                height: 12px;
+                                margin: 0 10px;
+                                background: #ddd;
+                                vertical-align: middle;
+                                content: '';
+                            }
+                        }
+                        .emp_black {
+                            color: #222 !important;
+                            display: inline-block;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .box_btn {
+                    padding: 0 20px;
+                    margin: 0 -20px;
+                    height: 58px;
+                    background: #f7f7f7;
+                    position: relative;
+                    display: block;
+                    .mini_ilist{
+                        display: table;
+                        border: 1px solid #ddd;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 0;
+                        right: 20px;
+                        li {
+                            display: table-cell;
+                            width: 36px;
+                            height: 36px;
+                            border-left: 1px solid #ddd;
+                            box-sizing: border-box;
+                            &:first-child {
+                                border-left: none;
+                            }
+                            button{
+                                cursor: pointer;
+                                overflow: visible;
+                                border: 0 none;
+                                font-weight: normal;
+                                font-size: 15px;
+                                color: #555;
+                                text-indent: 0;
+                            }
+                            .btn_mini_print{
+                                display: block;
+                                width: 36px;
+                                height: 36px;
+                                background: url('src/img/icon/btn_mini_myico.png') no-repeat 0 0;
+                            }
+                            .btn_mini_fav {
+                                display: block;
+                                width: 36px;
+                                height: 36px;
+                                background: url('src/img/icon/btn_mini_myico.png') no-repeat -39px 0;
+                            }
+                            .btn_mini_sns {
+                                display: block;
+                                width: 36px;
+                                height: 36px;
+                                background: url('src/img/icon/btn_mini_myico.png') no-repeat -78px 0;
+                            }
+                            span {
+                                position: absolute;
+                                border: none;
+                                clip: rect(0 0 0 0);
+                                height: 1px !important;
+                                margin: -1px;
+                                overflow: hidden;
+                                padding: 0;
+                                width: 1px;
+                                display: inline-block;
+                                font-size: 15px;
+                                color: #555;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #topbtn {
+            width: 50px; height: 50px;
+            background: #fff;
+            border: 1px solid $main-color;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            position: fixed;
+            top: 767px;
+            &.on {
+                display: flex;
+            }
+            img {
+                margin-left: 12px;
+            }
+            p {
+                text-align: center;
+                color: $main-color;
+                font-weight: $font-weight-500;
+            }
+        }
+    }
+}
+
