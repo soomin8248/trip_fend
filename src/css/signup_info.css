@@ -71,7 +71,7 @@
           transform: translateY(-50%);
 }
 
-#agree-info.container .info-contents .joinbox div.agreebox {
+#agree-info.container .info-contents .joinbox div.formbox {
   background: #4d8fd0;
   color: #fff;
 }
