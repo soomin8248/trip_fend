@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 서브메뉴에 메인페이지로 이동을 눌렀을때 이동
         international_main.addEventListener("click", function () {
-            location.href = "/international/index.html";
+            location.href = "/wheretrip/international/index.html";
         });
 
         koreatrip_main.addEventListener("click", function () {
-            location.href = "/koreatrip/index.html";
+            location.href = "/wheretrip/koreatrip/index.html";
         });
 
     });
